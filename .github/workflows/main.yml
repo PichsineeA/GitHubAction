@@ -7,3 +7,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: print-step
         run: bash ./os_check.sh ${{ runner.os }}
+        
+      - name: API-step
+        run: bash ./rest_API.sh
