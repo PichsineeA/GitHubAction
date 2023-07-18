@@ -6,6 +6,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: print-step
-        run: 
-          pwd
+        run: ./os_check.sh ${{ runner.os }}
         shell: bash
