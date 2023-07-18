@@ -6,7 +6,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: print-step
-        run: 
-          git update-index --chmod=+x ./os_check.sh
-          ./os_check.sh ${{ runner.os }}
-        shell: bash
+        run: bash ./os_check.sh ${{ runner.os }}
