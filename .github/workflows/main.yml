@@ -4,5 +4,9 @@ jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: print-step
-        run: ./os_check.sh ${{ runner.os }}
+        run: 
+          chmod +x ./os_check.sh
+          ./os_check.sh ${{ runner.os }}
+        shell: bash
