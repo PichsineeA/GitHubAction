@@ -9,4 +9,10 @@ jobs:
         run: bash ./os_check.sh ${{ runner.os }}
         
       - name: API-step
-        run: bash ./rest_API.sh
+        run: 
+          git clone https://github.com/apache/superset.git
+          cd superset
+          git checkout 2.0.0
+          TAG=2.0.0 docker-compose -f docker-compose-non-dev.yml pull
+          TAG=2.0.0 docker-compose -f docker-compose-non-dev.yml up
+          bash ./rest_API.sh
