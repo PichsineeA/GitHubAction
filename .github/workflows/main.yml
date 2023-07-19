@@ -8,8 +8,8 @@ jobs:
       - name: print-step
         run: bash ./os_check.sh ${{ runner.os }}
         
-      - name: Superset-step
-        run: sh ./superset_setup.sh
+#       - name: Superset-step
+#         run: sh ./superset_setup.sh
         
 #       - name: API-step
 #         run: 
