@@ -9,6 +9,9 @@ jobs:
         run: bash ./os_check.sh ${{ runner.os }}
         
       - name: API-step
+        run: sh ./superset_setup.sh
+        
+      - name: API-step
         run: 
 #             git clone https://github.com/apache/superset.git
 #             cd superset
