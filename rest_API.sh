@@ -1,8 +1,3 @@
-git clone https://github.com/apache/superset.git
-cd superset
-git checkout 2.0.0
-TAG=2.0.0 docker-compose -f docker-compose-non-dev.yml pull
-#TAG=2.0.0 docker-compose -f docker-compose-non-dev.yml up
 #!/bin/bash
 
 cookie=$(curl -sSL -D - http://localhost:8088/login -o /dev/null | grep Set-Cookie | cut -d : -f 2 | sed 's/ //')
