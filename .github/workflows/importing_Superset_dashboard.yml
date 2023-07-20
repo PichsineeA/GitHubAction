@@ -6,7 +6,7 @@ on:
 
 env:
   SUPERSET_USERNAME: admin
-  SUPERSET_PASSWORD: admin
+  SUPERSET_PASSWORD: 123456
 
 jobs:
   deploy:
