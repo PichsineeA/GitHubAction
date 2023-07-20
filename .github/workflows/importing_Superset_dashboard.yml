@@ -7,6 +7,7 @@ on:
 env:
   SUPERSET_USERNAME: admin
   SUPERSET_PASSWORD: 123456
+  DBS_PASSWORDS: {}
 
 jobs:
   deploy:
