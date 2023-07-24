@@ -31,3 +31,9 @@
 #             }'
 curl --location 'https://simple-books-api.glitch.me/status'
 curl --location 'https://simple-books-api.glitch.me/books'
+curl --location 'https://simple-books-api.glitch.me/api-clients' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+   "clientName": "Postman",
+   "clientEmail": "pichs@example.com"
+}'
