@@ -27,5 +27,5 @@ curl --location 'https://superset-sit.dev.kea.ifdsfs.com/api/v1/security/login' 
               "password": "MoOk-484521",
               "provider": "db",
               "refresh": true,
-              "username": "pichsinee.angsuchaikij@uk.sscinc.com"
+              "username": "pichsinee.angsuchaikij@sscinc.com"
             }'
