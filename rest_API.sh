@@ -21,7 +21,7 @@
 #     -H "X-CSRFToken: $csrf_token" \
 #     -H "Authorization: Bearer $bearer" \
 #     -H "Cookie: $cookie" >export.zip
-curl --location 'https://superset-sit.dev.kea.ifdsfs.com/api/v1/status' \
+curl --location 'https://superset-sit.dev.kea.ifdsfs.com/api/v1/security/login' \
             --header 'Content-Type: application/json' \
             --data-raw '{
               "password": "MoOk-484521",
