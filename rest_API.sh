@@ -30,3 +30,4 @@
 #               "username": "pichsinee.angsuchaikij@sscinc.com"
 #             }'
 curl --location 'https://simple-books-api.glitch.me/status'
+curl --location 'https://simple-books-api.glitch.me/books'
