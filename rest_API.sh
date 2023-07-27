@@ -21,19 +21,19 @@
 #     -H "X-CSRFToken: $csrf_token" \
 #     -H "Authorization: Bearer $bearer" \
 #     -H "Cookie: $cookie" >export.zip
-# curl --location 'https://superset-sit.dev.kea.ifdsfs.com/api/v1/security/login' \
-#             --header 'Content-Type: application/json' \
-#             --data-raw '{
-#               "password": "MoOk-484521",
-#               "provider": "db",
-#               "refresh": true,
-#               "username": "pichsinee.angsuchaikij@sscinc.com"
-#             }'
-curl --location 'https://simple-books-api.glitch.me/status'
-curl --location 'https://simple-books-api.glitch.me/books'
-curl --location 'https://simple-books-api.glitch.me/api-clients' \
---header 'Content-Type: application/json' \
---data-raw '{
-   "clientName": "Postman",
-   "clientEmail": "pichs@example.com"
-}'
+curl --location 'https://superset-sit.dev.kea.ifdsfs.com/api/v1/security/login' \
+            --header 'Content-Type: application/json' \
+            --data-raw '{
+              "password": "MoOk-484521",
+              "provider": "db",
+              "refresh": true,
+              "username": "pichsinee.angsuchaikij@sscinc.com"
+            }'
+# curl --location 'https://simple-books-api.glitch.me/status'
+# curl --location 'https://simple-books-api.glitch.me/books'
+# curl --location 'https://simple-books-api.glitch.me/api-clients' \
+# --header 'Content-Type: application/json' \
+# --data-raw '{
+#    "clientName": "Postman",
+#    "clientEmail": "pichs@example.com"
+# }'
