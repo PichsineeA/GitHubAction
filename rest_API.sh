@@ -25,10 +25,10 @@ curl -X 'POST' \
             'https://superset-sit.dev.kea.ifdsfs.com/api/v1/security/login' \
             --header 'Content-Type: application/json' \
             --data-raw '{
-              "password": "MoOk-484521",
+              "password": "@26ismyAge",
               "provider": "db",
               "refresh": true,
-              "username": "pichsinee.angsuchaikij@sscinc.com"
+              "username": "anatda.planoi@sscinc.com"
             }'
 # curl --location 'https://simple-books-api.glitch.me/status'
 # curl --location 'https://simple-books-api.glitch.me/books'
