@@ -21,15 +21,15 @@
 #     -H "X-CSRFToken: $csrf_token" \
 #     -H "Authorization: Bearer $bearer" \
 #     -H "Cookie: $cookie" >export.zip
-curl -X 'POST' \
-            'https://superset-sit.dev.kea.ifdsfs.com/api/v1/security/login' \
-            --header 'Content-Type: application/json' \
-            --data-raw '{
-              "password": "@26ismyAge",
-              "provider": "ldap",
-              "refresh": true,
-              "username": "anatda.planoi@sscinc.com"
-            }'
+# curl -X 'POST' \
+#             'https://superset-sit.dev.kea.ifdsfs.com/api/v1/security/login' \
+#             --header 'Content-Type: application/json' \
+#             --data-raw '{
+#               "password": "@26ismyAge",
+#               "provider": "ldap",
+#               "refresh": true,
+#               "username": "anatda.planoi@sscinc.com"
+#             }'
 # curl --location 'https://simple-books-api.glitch.me/status'
 # curl --location 'https://simple-books-api.glitch.me/books'
 # curl --location 'https://simple-books-api.glitch.me/api-clients' \
@@ -38,4 +38,4 @@ curl -X 'POST' \
 #    "clientName": "Postman",
 #    "clientEmail": "pichs@example.com"
 # }'
-#curl --header 'Content-Type: application/json' --header "Cookie: $cookie" -XPOST  https://superset-sit.dev.kea.ifdsfs.com/api/v1/security/login --data '{ "username": "Pichsinee.angsuchaikij@sscinc.com", "password": "MoOk-484521", "provider": "ldap", "refresh": true}'
+curl --header 'Content-Type: application/json' --header "Cookie: $cookie" -XPOST  https://superset-sit.dev.kea.ifdsfs.com/api/v1/security/login --data '{ "username": "Pichsinee.angsuchaikij@sscinc.com", "password": "MoOk-484521", "provider": "ldap", "refresh": true}'
