@@ -38,4 +38,4 @@
 #    "clientName": "Postman",
 #    "clientEmail": "pichs@example.com"
 # }'
-curl https://superset-sit.dev.kea.ifdsfs.com/api/v1/example/greeting2
+curl https://superset-sit.dev.kea.ifdsfs.com/api/v1/support
