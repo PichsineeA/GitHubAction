@@ -38,4 +38,4 @@
 #    "clientName": "Postman",
 #    "clientEmail": "pichs@example.com"
 # }'
-curl --header 'Content-Type: application/json' --header "Cookie: $cookie" -XPOST  https://superset-sit.dev.kea.ifdsfs.com/api/v1/security/login --data '{ "username": "Pichsinee.angsuchaikij@sscinc.com", "password": "MoOk-484521", "provider": "db"ม "refresh": true}'
+curl --header 'Content-Type: application/json' --header "Cookie: $cookie" -XPOST  https://superset-sit.dev.kea.ifdsfs.com/api/v1/security/login --data '{ "username": "Pichsinee.angsuchaikij@sscinc.com", "password": "MoOk-484521", "provider": "db", "refresh": true}'
