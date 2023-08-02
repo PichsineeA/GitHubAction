@@ -38,4 +38,5 @@
 #    "clientName": "Postman",
 #    "clientEmail": "pichs@example.com"
 # }'
-curl https://superset-sit.dev.kea.ifdsfs.com/api/v1/_openapi
+curl -X 'GET' \
+            'https://superset-sit.dev.kea.ifdsfs.com/api/v1/_openapi'
