@@ -22,4 +22,4 @@ curl -X 'GET' \
     -H "Authorization: Bearer $bearer" \
     -H "Cookie: $cookie">export.zip
 #unzip
-unzip export.zip
+# unzip export.zip
