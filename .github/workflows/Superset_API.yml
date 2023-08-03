@@ -1,4 +1,4 @@
-name: importing Superset dashboard
+name: Superset API
 
 on: push
 jobs:
