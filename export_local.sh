@@ -21,3 +21,5 @@ curl -X 'GET' \
     -H "X-CSRFToken: $csrf_token" \
     -H "Authorization: Bearer $bearer" \
     -H "Cookie: $cookie">export.zip
+#unzip
+unzip export.zip
