@@ -1,2 +1,2 @@
 #!/usr/bin/tclsh
-Puts "Hello World"
+puts "Hello World"
