@@ -14,7 +14,7 @@ echo ${csrf_token}
 echo "================================================================================"
 
 curl -X 'GET' \
-    'https://superset-sit.dev.kea.ifdsfs.com/api/v1/dashboard/export' \
+    'https://superset-sit.dev.kea.ifdsfs.com/api/v1/assets/export/' \
     -H 'accept: */*' \
     -H 'Accept-Encoding: gzip, deflate, br' \
     -H 'Content-Type: multipart/form-data' \
