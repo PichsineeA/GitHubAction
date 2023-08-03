@@ -60,5 +60,7 @@ curl -X 'GET' \
     -H "X-CSRFToken: $csrf_token" \
     -H "Authorization: Bearer $bearer" \
     -H "Cookie: $cookie" >export.zip
+pwd
+ls
 #unzip
 # unzip export.zip
