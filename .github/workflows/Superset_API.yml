@@ -1,1 +1,21 @@
+name: importing Superset dashboard
 
+on: push
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        
+      - name: API-step
+        run: 
+           bash ./rest_API.sh
+           
+      # - name: Commit export
+      #   run: |
+      #     git config --global user.name 'PichsineeA'
+      #     git config --global user.email 'happypich.mk@gmail.com'
+      #     git add -A
+      #     git commit -am "GitHubAction"
+      #     git push
+        
