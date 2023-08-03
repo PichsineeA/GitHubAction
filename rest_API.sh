@@ -38,12 +38,10 @@
 #    "clientName": "Postman",
 #    "clientEmail": "pichs@example.com"
 # }'
-# curl --header 'Content-Type: application/json' --header "Cookie: $cookie" -XPOST  https://superset-sit.dev.kea.ifdsfs.com/api/v1/security/login --data '{ "username": "Pichsinee.angsuchaikij@sscinc.com", "password": "MoOk-484521", "provider": "ldap", "refresh": true}'
-#!/bin/bash
-clear
+
 cookie=$(curl -sSL -D - http://localhost:8088/login -o /dev/null | grep Set-Cookie | cut -d : -f 2 | sed 's/ //')
 
-bearer=$(curl --header 'Content-Type: application/json' --header "Cookie: $cookie" -XPOST  http://localhost:8088/api/v1/security/login --data '{ "username": "admin", "password": "admin", "provider": "db"}' | jq -r '.access_token')
+bearer=$(curl --header 'Content-Type: application/json' --header "Cookie: $cookie" -XPOST  http://localhost:8088/api/v1/security/login --data '{ "username": "admin", "password": "123456", "provider": "db"}' | jq -r '.access_token')
 
 csrf_token=$(curl --header "Authorization: Bearer $bearer" --header "Cookie: $cookie" http://localhost:8088/api/v1/security/csrf_token/ | jq -r '.result')
 
@@ -63,4 +61,4 @@ curl -X 'GET' \
     -H "Authorization: Bearer $bearer" \
     -H "Cookie: $cookie" >export.zip
 #unzip
-unzip export.zip
+# unzip export.zip
