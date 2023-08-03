@@ -20,7 +20,7 @@ curl -X 'GET' \
     -H 'Content-Type: multipart/form-data' \
     -H "X-CSRFToken: $csrf_token" \
     -H "Authorization: Bearer $bearer" \
-    -H "Cookie: $cookie" >export.zip
+    -H "Cookie: $cookie" 
 # curl -X 'POST' \
 #             'https://superset-sit.dev.kea.ifdsfs.com/api/v1/security/login' \
 #             --header 'Content-Type: application/json' \
