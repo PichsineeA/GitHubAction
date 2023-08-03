@@ -13,14 +13,14 @@ echo "==========================================================================
 echo ${csrf_token}
 echo "================================================================================"
 
-# curl -X 'GET' \
-#     'https://superset-sit.dev.kea.ifdsfs.com/api/v1/dashboard/export/?q=!(7%2C8%2C9)' \
-#     -H 'accept: */*' \
-#     -H 'Accept-Encoding: gzip, deflate, br' \
-#     -H 'Content-Type: multipart/form-data' \
-#     -H "X-CSRFToken: $csrf_token" \
-#     -H "Authorization: Bearer $bearer" \
-#     -H "Cookie: $cookie" >export.zip
+curl -X 'GET' \
+    'https://superset-sit.dev.kea.ifdsfs.com/api/v1/dashboard/export' \
+    -H 'accept: */*' \
+    -H 'Accept-Encoding: gzip, deflate, br' \
+    -H 'Content-Type: multipart/form-data' \
+    -H "X-CSRFToken: $csrf_token" \
+    -H "Authorization: Bearer $bearer" \
+    -H "Cookie: $cookie" >export.zip
 # curl -X 'POST' \
 #             'https://superset-sit.dev.kea.ifdsfs.com/api/v1/security/login' \
 #             --header 'Content-Type: application/json' \
