@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: print-step
-        run: bash ./os_check.sh ${{ runner.os }}
+        run: tclsh ./tcl_test.tcl #os_check.sh ${{ runner.os }}
         
 #       - name: Superset-step
 #         run: sh ./superset_setup.sh
