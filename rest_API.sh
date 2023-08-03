@@ -59,7 +59,8 @@ curl -X 'GET' \
     -H 'Content-Type: multipart/form-data' \
     -H "X-CSRFToken: $csrf_token" \
     -H "Authorization: Bearer $bearer" \
-    -H "Cookie: $cookie" >export.zip
+    -H "Cookie: $cookie" 
+    # >export.zip
 pwd
 ls
 #unzip
