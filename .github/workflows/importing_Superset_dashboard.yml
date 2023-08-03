@@ -9,5 +9,6 @@ jobs:
         
       - name: API-step
         run: 
-           bash ./rest_API.sh
+           # bash ./rest_API.sh
+           bash ./import_local.sh
 
