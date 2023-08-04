@@ -27,14 +27,14 @@
 #unzip
 #unzip export.zip
 
-bearer=$(curl --location 'https://superset.dev.kea.ifdsfs.com/api/v1/security/login' \
---header 'Content-Type: application/json' \
---data '{
-  "password": "admin",
-  "provider": "db",
-  "username": "admin"
-}')
+# bearer=$(curl --location 'https://superset.dev.kea.ifdsfs.com/api/v1/security/login' \
+# --header 'Content-Type: application/json' \
+# --data '{
+#   "password": "admin",
+#   "provider": "db",
+#   "username": "admin"
+# }')
 curl -X 'GET' \
   'https://superset.dev.kea.ifdsfs.com/api/v1/security/csrf_token/' \
   -H 'accept: application/json' \
-  -H 'Authorization: Bearer $bearer'
+  -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjkxMTI5NzIxLCJqdGkiOiIwM2M5ODhhNC1kMzc0LTQ4NzYtODhlYy00OTgwZGEwOTk3ZjYiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoxLCJuYmYiOjE2OTExMjk3MjEsImV4cCI6MTY5MTEzMDYyMX0.Mkl_sv8bkPkshvuAS2CuVhWjhnGu945fGtn9I-rrdGg'
