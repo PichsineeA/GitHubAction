@@ -15,7 +15,7 @@ echo "==========================================================================
 curl -X 'GET' \
   'https://superset.dev.kea.ifdsfs.com/api/v1/assets/export/' \
   -H 'accept: application/zip' \
-  -H 'Authorization: Bearer $bearer' >assets.zip
+  -H 'Authorization: Bearer $bearer'
 # curl -X 'GET' \
 #     'https://superset.dev.kea.ifdsfs.com/api/v1/assets/export/' \
 #     -H 'accept: */*' \
