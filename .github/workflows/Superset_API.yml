@@ -11,11 +11,11 @@ jobs:
         run: 
            bash ./SIT_API.sh
            
-      # - name: Commit export
-      #   run: |
-      #     git config --global user.name 'PichsineeA'
-      #     git config --global user.email 'happypich.mk@gmail.com'
-      #     git add -A
-      #     git commit -am "GitHubAction"
-      #     git push
+      - name: Commit export
+        run: |
+          git config --global user.name 'PichsineeA'
+          git config --global user.email 'happypich.mk@gmail.com'
+          git add -A
+          git commit -am "GitHubAction"
+          git push
         
