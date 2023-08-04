@@ -27,11 +27,14 @@
 #unzip
 #unzip export.zip
 
-curl --location 'https://superset.dev.kea.ifdsfs.com/api/v1/security/login' \
+bearer=$(curl --location 'https://superset.dev.kea.ifdsfs.com/api/v1/security/login' \
 --header 'Content-Type: application/json' \
 --data '{
   "password": "admin",
   "provider": "db",
-  "refresh": true,
   "username": "admin"
-}'
+}')
+curl -X 'GET' \
+  'https://superset.dev.kea.ifdsfs.com/api/v1/security/csrf_token/' \
+  -H 'accept: application/json' \
+  -H 'Authorization: Bearer $bearer'
