@@ -12,15 +12,18 @@ echo ${bearer}
 echo "================================================================================"
 echo ${csrf_token}
 echo "================================================================================"
-
 curl -X 'GET' \
-    'https://superset.dev.kea.ifdsfs.com/api/v1/assets/export/' \
-    -H 'accept: */*' \
-    -H 'Accept-Encoding: gzip, deflate, br' \
-    -H 'Content-Type: multipart/form-data' \
-    -H "X-CSRFToken: $csrf_token" \
-    -H "Authorization: Bearer $bearer" \
-    -H "Cookie: $cookie" >assets.zip
+  'https://superset.dev.kea.ifdsfs.com/api/v1/assets/export/' \
+  -H 'accept: application/zip' \
+  -H 'Authorization: Bearer $bearer' >assets.zip
+# curl -X 'GET' \
+#     'https://superset.dev.kea.ifdsfs.com/api/v1/assets/export/' \
+#     -H 'accept: */*' \
+#     -H 'Accept-Encoding: gzip, deflate, br' \
+#     -H 'Content-Type: multipart/form-data' \
+#     -H "X-CSRFToken: $csrf_token" \
+#     -H "Authorization: Bearer $bearer" \
+#     -H "Cookie: $cookie" >assets.zip
 #unzip
 #unzip export.zip
 # curl -X 'GET' \
