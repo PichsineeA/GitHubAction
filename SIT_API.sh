@@ -35,6 +35,6 @@
 #   "username": "admin"
 # }')
 curl -X 'GET' \
-  'https://superset.dev.kea.ifdsfs.com/api/v1/assets/export/' \
-  -H 'accept: application/zip' \
-  -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjkxMTMwNjg5LCJqdGkiOiI3M2IzMmJmYi05ZjExLTRkZGYtOWRhZS01MjQyODRhYzg2OTMiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoxLCJuYmYiOjE2OTExMzA2ODksImV4cCI6MTY5MTEzMTU4OX0.9HdyHNvjq1Bv_F8kg8tlUemfMNVLFd26pfD1lgLFqOg'
+  'https://superset.dev.kea.ifdsfs.com/api/v1/security/csrf_token/' \
+  -H 'accept: application/json' \
+  -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjkxMTMxNTYxLCJqdGkiOiJhZGRhYzc3ZS02ZmM4LTRmYWItOGZlYy0zZTdkNTE1MjllZDUiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoxLCJuYmYiOjE2OTExMzE1NjEsImV4cCI6MTY5MTEzMjQ2MX0.Du3krIqrHOQvPZ1MKKpXZaTMKYDPsMuE5LFwutsOxDM'
