@@ -12,7 +12,7 @@ echo ${bearer}
 echo "================================================================================"
 echo ${csrf_token}
 echo "================================================================================"
-dashboard=export.zip #dashboard_export_20230630T021218.zip
+dashboard=assets.zip #dashboard_export_20230630T021218.zip
 
 curl -X 'POST' \
     'http://localhost:8088/api/v1/dashboard/import/' \
