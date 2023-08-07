@@ -14,7 +14,7 @@ echo ${csrf_token}
 echo "================================================================================"
 
 curl -X 'GET' \
-    'http://localhost:8088/api/v1/chart/export/?q=!(7)' \
+    'http://localhost:8088/api/v1/chart/export/?q=!(71)' \
     -H 'accept: */*' \
     -H 'Accept-Encoding: gzip, deflate, br' \
     -H 'Content-Type: multipart/form-data' \
