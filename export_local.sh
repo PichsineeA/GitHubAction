@@ -14,12 +14,12 @@ echo ${csrf_token}
 echo "================================================================================"
 
 curl -X 'GET' \
-    'http://localhost:8088/api/v1/dataset/export/?q=!(11)' \
+    'http://localhost:8088/api/v1/dataset/export/?q=!(11,2)' \
     -H 'accept: */*' \
     -H 'Accept-Encoding: gzip, deflate, br' \
     -H 'Content-Type: multipart/form-data' \
     -H "X-CSRFToken: $csrf_token" \
     -H "Authorization: Bearer $bearer" \
-    -H "Cookie: $cookie" >exportDataset.zip
+    -H "Cookie: $cookie" >exportDatasets.zip
 #unzip
 # unzip export.zip
