@@ -12,10 +12,10 @@ echo ${bearer}
 echo "================================================================================"
 echo ${csrf_token}
 echo "================================================================================"
-dashboard=exportDatasets.zip #dashboard_export_20230630T021218.zip
+dashboard=exportDatabase.zip #dashboard_export_20230630T021218.zip
 
 curl -X 'POST' \
-    'http://localhost:8088/api/v1/dataset/import/' \
+    'http://localhost:8088/api/v1/database/import/' \
     -H 'accept: application/json' \
     -H 'Content-Type: multipart/form-data' \
     -H "X-CSRFToken: $csrf_token" \
