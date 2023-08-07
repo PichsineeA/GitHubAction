@@ -14,12 +14,12 @@ echo ${csrf_token}
 echo "================================================================================"
 
 curl -X 'GET' \
-    'http://localhost:8088/api/v1/chart/export/?q=!(71,113)' \
+    'http://localhost:8088/api/v1/chart/export/?q=!(18,24)' \
     -H 'accept: */*' \
     -H 'Accept-Encoding: gzip, deflate, br' \
     -H 'Content-Type: multipart/form-data' \
     -H "X-CSRFToken: $csrf_token" \
     -H "Authorization: Bearer $bearer" \
-    -H "Cookie: $cookie" >exportCharts.zip
+    -H "Cookie: $cookie" >exportDatasets.zip
 #unzip
 # unzip export.zip
