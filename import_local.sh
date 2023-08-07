@@ -15,7 +15,7 @@ echo "==========================================================================
 dashboard=exportChart.zip #dashboard_export_20230630T021218.zip
 
 curl -X 'POST' \
-    'http://localhost:8088/api/v1/dashboard/import/' \
+    'http://localhost:8088/api/v1/chart/import/' \
     -H 'accept: application/json' \
     -H 'Content-Type: multipart/form-data' \
     -H "X-CSRFToken: $csrf_token" \
