@@ -23,4 +23,5 @@ curl -X 'POST' \
     -H 'Origin: http://localhost:8088' \
     -H "Cookie: $cookie" \
     -F "formData=@${dashboard}" \
-    -F "overwrite=true"
+    -F "overwrite=true" \
+    -F "password={}"
