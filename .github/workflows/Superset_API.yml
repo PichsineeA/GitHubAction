@@ -9,8 +9,8 @@ jobs:
         
       - name: API-step
         run: 
-           bash ./SIT_API.sh
-           #bash ./DEV_API.sh
+           #bash ./SIT_API.sh
+           bash ./DEV_API.sh
            
       - name: Commit export
         run: |
