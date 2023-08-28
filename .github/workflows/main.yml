@@ -7,15 +7,3 @@ jobs:
       - uses: actions/checkout@v2
       - name: print-step
         run: tclsh ./tcl.tcl #os_check.sh ${{ runner.os }}
-        
-#       - name: Superset-step
-#         run: sh ./superset_setup.sh
-        
-#       - name: API-step
-#         run: 
-#             git clone https://github.com/apache/superset.git
-#             cd superset
-#             git checkout 2.0.0
-#             TAG=2.0.0 docker-compose -f docker-compose-non-dev.yml pull
-#             TAG=2.0.0 docker-compose -f docker-compose-non-dev.yml up
-#            bash ./rest_API.sh
