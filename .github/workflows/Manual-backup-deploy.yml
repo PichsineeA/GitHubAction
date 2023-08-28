@@ -39,24 +39,24 @@ jobs:
           path: "./pipeline_script_github/backup/${{ inputs.environment }}_backup_assets.zip"
 
 
-  deploy:
-    runs-on: [ ubuntu-latest ]
-    environment: ${{ inputs.environment }}
-    needs: [backup]
+  # deploy:
+  #   runs-on: [ ubuntu-latest ]
+  #   environment: ${{ inputs.environment }}
+  #   needs: [backup]
     
-    steps:
-      - name: superset Checkout
-        uses: actions/checkout@v2
-        with:
-            ref: ${{github.ref_name}}
-            fetch-depth: 0
+  #   steps:
+  #     - name: superset Checkout
+  #       uses: actions/checkout@v2
+  #       with:
+  #           ref: ${{github.ref_name}}
+  #           fetch-depth: 0
 
-      - name: deploy
-        run: |
-            ./pipeline_script_github/deploy.sh
-        env:
-            ENV_NAME: ${{ inputs.environment }}
-            CI_COMMIT_TAG: ${{github.ref_name}}
-            DB_HOST: ${{secrets.DB_HOST}}
-            DB_PASS: ${{secrets.DB_PASS}}  
-            DB_USER: ${{secrets.DB_USER}}
+  #     - name: deploy
+  #       run: |
+  #           ./pipeline_script_github/deploy.sh
+  #       env:
+  #           ENV_NAME: ${{ inputs.environment }}
+  #           CI_COMMIT_TAG: ${{github.ref_name}}
+  #           DB_HOST: ${{secrets.DB_HOST}}
+  #           DB_PASS: ${{secrets.DB_PASS}}  
+  #           DB_USER: ${{secrets.DB_USER}}
