@@ -23,8 +23,9 @@ jobs:
 
       - name: Backup
         run: |
-            git update-index --chmod=+x ./pipeline_script_github/backup.sh
             cd pipeline_script_github
+            pwd
+            git update-index --chmod=+x backup.sh
             ./backup.sh
         env:
             ENV_NAME: ${{ inputs.environment }}
