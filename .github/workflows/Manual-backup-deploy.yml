@@ -40,6 +40,7 @@ jobs:
         #   name: ${{ inputs.environment }}-${{github.sha}}
         #   path: "./pipeline_script_github/backup/${{ inputs.environment }}_backup_assets.zip"
         run: |
+          cd /pipeline_script_github/backup
           git config --global user.name 'PichsineeA'
           git config --global user.email 'happypich.mk@gmail.com'
           git add -A
