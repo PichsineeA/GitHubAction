@@ -19,6 +19,6 @@ curl -X 'GET' \
     -H 'Content-Type: multipart/form-data' \
     -H "X-CSRFToken: $csrf_token" \
     -H "Authorization: Bearer $bearer" \
-    -H "Cookie: $cookie" >${ENV_NAME}_backup_assets.zip
+    -H "Cookie: $cookie" >${ENV_NAME}_${date+%d%m%Y%H%M%S}_backup_assets.zip
 #unzip
 # unzip export.zip
