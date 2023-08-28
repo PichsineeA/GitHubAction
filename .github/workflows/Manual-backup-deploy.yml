@@ -23,9 +23,7 @@ jobs:
 
       - name: Backup
         run: |
-            cd pipeline_script_github
-            pwd
-            ./backup.sh
+            ./pipeline_script_github/backup.sh
         env:
             ENV_NAME: ${{ inputs.environment }}
             ENV_HOST: ${{ secrets.ENV_HOST }}
