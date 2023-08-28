@@ -1,25 +1,24 @@
 #!/bin/bash
 
-cookie=$(curl -sSL -D - http://localhost:8088/login -o /dev/null | grep Set-Cookie | cut -d : -f 2 | sed 's/ //')
+cookie=$(curl -sSL -D - ${ENV_HOST}/login -o /dev/null | grep Set-Cookie | cut -d : -f 2 | sed 's/ //')
 
-bearer=$(curl --header 'Content-Type: application/json' --header "Cookie: $cookie" -XPOST  http://localhost:8088/api/v1/security/login --data '{ "username": "admin", "password": "123456", "provider": "db"}' | jq -r '.access_token')
+bearer=$(curl --header 'Content-Type: application/json' --header "Cookie: $cookie" -XPOST  ${ENV_HOST}/api/v1/security/login --data '{ "username": "${ENV_USER}", "password": "${ENV_PASS}", "provider": "db"}' | jq -r '.access_token')
 
-csrf_token=$(curl --header "Authorization: Bearer $bearer" --header "Cookie: $cookie" http://localhost:8088/api/v1/security/csrf_token/ | jq -r '.result')
+csrf_token=$(curl --header "Authorization: Bearer $bearer" --header "Cookie: $cookie" ${ENV_HOST}/api/v1/security/csrf_token/ | jq -r '.result')
 
 echo ${cookie}
 echo "================================================================================"
 echo ${bearer}
 echo "================================================================================"
 echo ${csrf_token}
-echo "================================================================================"
 
 curl -X 'GET' \
-    'http://localhost:8088/api/v1/dataset/export/?q=!(11,2)' \
+    '${ENV_HOST}/api/v1/assets/export/' \
     -H 'accept: */*' \
     -H 'Accept-Encoding: gzip, deflate, br' \
     -H 'Content-Type: multipart/form-data' \
     -H "X-CSRFToken: $csrf_token" \
     -H "Authorization: Bearer $bearer" \
-    -H "Cookie: $cookie" >exportDatasets.zip
+    -H "Cookie: $cookie" >${{ ENV_NAME }}_backup_assets.zip
 #unzip
 # unzip export.zip
