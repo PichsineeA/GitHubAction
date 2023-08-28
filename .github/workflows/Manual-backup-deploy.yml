@@ -26,9 +26,9 @@ jobs:
             ./pipeline_script_github/backup.sh
         env:
             ENV_NAME: ${{ inputs.environment }}
-            DB_HOST: ${{ secrets.DB_HOST }}
-            DB_PASS: ${{ secrets.DB_PASS }} 
-            DB_USER: ${{ secrets.DB_USER }}
+            ENV_HOST: ${{ secrets.ENV_HOST }}
+            ENV_PASS: ${{ secrets.ENV_PASS }} 
+            ENV_USER: ${{ secrets.ENV_USER }}
             COMMIT: ${GITHUB_SHA::7}
 
             
@@ -57,6 +57,6 @@ jobs:
   #       env:
   #           ENV_NAME: ${{ inputs.environment }}
   #           CI_COMMIT_TAG: ${{github.ref_name}}
-  #           DB_HOST: ${{secrets.DB_HOST}}
-  #           DB_PASS: ${{secrets.DB_PASS}}  
-  #           DB_USER: ${{secrets.DB_USER}}
+  #           ENV_HOST: ${{secrets.ENV_HOST}}
+  #           ENV_PASS: ${{secrets.ENV_PASS}}  
+  #           ENV_USER: ${{secrets.ENV_USER}}
