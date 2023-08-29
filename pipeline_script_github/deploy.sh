@@ -20,7 +20,7 @@ curl -X 'POST' \
     -H 'Content-Type: multipart/form-data' \
     -H "X-CSRFToken: $csrf_token" \
     -H "Authorization: Bearer $bearer" \
-    -H 'Origin: http://localhost:8088' \
+    -H 'Origin: '${ENV_HOST}'' \
     -H "Cookie: $cookie" \
     -F "formData=@${ASSETS}" \
     -F "overwrite=true" \
