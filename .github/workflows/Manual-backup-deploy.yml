@@ -1,4 +1,4 @@
-run-name: Manual Backup-${{ inputs.environment }} Deploy
+run-name: Manual Backup-${{ github.event.inputs.env }} Deploy
 
 on:
   workflow_dispatch:
