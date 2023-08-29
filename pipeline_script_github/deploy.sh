@@ -12,7 +12,7 @@ echo ${bearer}
 echo "================================================================================"
 echo ${csrf_token}
 
-#dashboard=exportDatabaseDeleteDS.zip #dashboard_export_20230630T021218.zip
+ASSETS=assets_export_20230829T045823.zip
 
 curl -X 'POST' \
     ''${ENV_HOST}'/api/v1/assets/import/' \
