@@ -26,6 +26,7 @@
 #     -F "overwrite=true" \
 #     -F "passwords="{}""
 
+
 cookie=$(curl -sSL -D - http://localhost:8088/login -o /dev/null | grep Set-Cookie | cut -d : -f 2 | sed 's/ //')
 
 bearer=$(curl --header 'Content-Type: application/json' --header "Cookie: $cookie" -XPOST  http://localhost:8088/api/v1/security/login --data '{ "username": "admin", "password": "admin", "provider": "db"}' | jq -r '.access_token')
@@ -48,5 +49,5 @@ curl -X 'POST' \
     -H "Authorization: Bearer $bearer" \
     -H 'Origin: http://localhost:8088' \
     -H "Cookie: $cookie" \
-    -F "formData=@${dashboard}" \
+    -F "bundle=@${dashboard}" \
     -F "overwrite=true"
