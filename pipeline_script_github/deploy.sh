@@ -41,7 +41,7 @@ echo "==========================================================================
 dashboard=assets_export_20230829T045823.zip
 
 curl -X 'POST' \
-    'http://localhost:8088/api/v1/dashboard/import/' \
+    'http://localhost:8088/api/v1/assets/import/' \
     -H 'accept: application/json' \
     -H 'Content-Type: multipart/form-data' \
     -H "X-CSRFToken: $csrf_token" \
