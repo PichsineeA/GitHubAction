@@ -23,5 +23,5 @@ curl -X 'POST' \
     -H 'Origin: '${ENV_HOST}'' \
     -H "Cookie: $cookie" \
     -F "formData=@${ASSETS}" \
-    -F "overwrite=true" \
-    -F "passwords="{}""
+    -F "overwrite=true" 
+    #-F "passwords="{}""
