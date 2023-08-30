@@ -1,3 +1,4 @@
+name: Rollback
 run-name: Rollback-${{ inputs.environment }}
 
 on:
