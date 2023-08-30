@@ -31,7 +31,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
             name: ${{ inputs.environment }}-${{ inputs.version }}
-            path: pipeline_script_github/backup/     
+            path: pipeline_script_github/backup/${{inputs.environment}}_backup_assets.zip
       
       - name: build
         run: |           
