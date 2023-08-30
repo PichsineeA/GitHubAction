@@ -25,7 +25,7 @@ jobs:
       - name: Backup-${{ inputs.environment }}
         run: |
             chmod +x ./pipeline_script_github/backup.sh
-            ./pipeline_script_github/backup.sh/${{ inputs.environment }}_backup_assets.zip
+            ./pipeline_script_github/backup.sh
             
         env:
             ENV_NAME: ${{ inputs.environment }}
@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{ inputs.environment }}-${{github.sha}}
-          path: pipeline_script_github/backup/
+          path: pipeline_script_github/backup/${{ inputs.environment }}_backup_assets.zip
 
 
   deploy:
