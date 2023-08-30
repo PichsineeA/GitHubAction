@@ -24,4 +24,4 @@ curl -X 'GET' \
     -H 'Content-Type: multipart/form-data' \
     -H "X-CSRFToken: $csrf_token" \
     -H "Authorization: Bearer $bearer" \
-    -H "Cookie: $cookie" >${ENV_NAME}_backup_assets.zip
+    -H "Cookie: $cookie" >pipeline_script_github/backup/${ENV_NAME}_backup_assets.zip
