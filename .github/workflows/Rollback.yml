@@ -30,7 +30,7 @@ jobs:
       - name: Download cached backup artifact
         uses: actions/cache@v3
         with:
-            key: ${{ runner.OS }}-${{ inputs.environment }}-${{ inputs.version }}
+            key: ${{ inputs.environment }}-${{ inputs.version }}
             path: pipeline_script_github/backup/     
       
       - name: build
