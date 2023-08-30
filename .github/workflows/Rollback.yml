@@ -23,14 +23,14 @@ jobs:
     
     steps:
       - name: superset Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
         with:
             ref: ${{github.ref_name}}
             fetch-depth: 0
       - name: Download cached backup artifact
-        uses: actions/download-artifact@v3
+        uses: actions/cache@v3
         with:
-            name: ${{ inputs.environment }}-${{ inputs.version }}
+            key: ${{ inputs.environment }}-${{ inputs.version }}
             path: pipeline_script_github/backup/${{inputs.environment}}_backup_assets.zip
       
       - name: build
