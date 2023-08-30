@@ -41,6 +41,14 @@ jobs:
           name: ${{ inputs.environment }}-${{github.sha}}
           path: pipeline_script_github/backup/
 
+      - name: Cache Dependencies
+        uses: actions/cache@v2
+        with:
+          path: pipeline_script_github/backup/
+          key: ${{ runner.OS }}-${{ inputs.environment }}-${{ inputs.version }}
+          restore-keys: |
+            ${{ runner.os }}-zip-
+
 
   deploy:
     runs-on: [ self-hosted ]
