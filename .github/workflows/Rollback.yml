@@ -34,8 +34,8 @@ jobs:
       
       - name: build
         run: |           
-            chmod +x ./pipeline_script_github/restore.sh
-            ./pipeline_script_github/restore.sh
+            chmod +x ./pipeline_script_github/rollback.sh
+            ./pipeline_script_github/rollback.sh
             
         env:
             ENV_NAME: ${{ inputs.environment }}
