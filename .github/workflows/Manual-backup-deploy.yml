@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{ inputs.environment }}-${{github.sha}}
-          path: pipeline_script_github/backup/${{ inputs.environment }}_backup_assets.zip
+          path: pipeline_script_github/backup/
 
 
   deploy:
