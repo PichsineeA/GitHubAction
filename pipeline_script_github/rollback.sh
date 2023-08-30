@@ -1,6 +1,4 @@
 #!/bin/bash
-pwd
-cd ${ARTIFACT_BACKUP_PATH}
 
 cookie=$(curl -sSL -D - http://localhost:8088/login -o /dev/null | grep Set-Cookie | cut -d : -f 2 | sed 's/ //')
 
