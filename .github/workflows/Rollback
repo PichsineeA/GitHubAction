@@ -1,0 +1,45 @@
+run-name: Rollback-${{ inputs.environment }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        required: true
+        type: environment
+        description: Pick Environment to Rollback
+      version:
+        description: Enter full commit for backup artifact
+        required: true
+        type: string
+
+
+
+
+jobs:
+  build-dev:
+    runs-on: [ self-hosted ]
+    environment: ${{ inputs.environment }}
+    
+    steps:
+      - name: superset Checkout
+        uses: actions/checkout@v2
+        with:
+            ref: ${{github.ref_name}}
+            fetch-depth: 0
+      - name: Download cached backup artifact
+        uses: actions/cache@v3
+        with:
+            key: ${{ runner.OS }}-${{ inputs.environment }}-${{ inputs.version }}
+            path: pipeline_script_github/backup/${{inputs.environment}}_backup_assets.zip      
+      
+      - name: build
+        run: |           
+            chmod +x ./pipeline_script_github/restore.sh
+            ./pipeline_script_github/restore.sh
+            
+        env:
+            ENV_NAME: ${{ inputs.environment }}
+            ENV_HOST: ${{secrets.ENV_HOST}}
+            ENV_PASS: ${{secrets.ENV_PASS}}  
+            ENV_USER: ${{secrets.ENV_USER}}  
+            ARTIFACT_BACKUP_PATH: "./pipeline_script_github/backup/${{inputs.environment}}_backup_assets.zip"
