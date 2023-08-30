@@ -12,7 +12,7 @@ echo ${bearer}
 echo "================================================================================"
 echo ${csrf_token}
 echo "================================================================================"
-ASSETS=assets_export_20230829T045823.zip
+#ASSETS=assets_export_20230829T045823.zip
 
 curl -X 'POST' \
     ''${ENV_HOST}'/api/v1/assets/import/' \
@@ -22,5 +22,5 @@ curl -X 'POST' \
     -H "Authorization: Bearer $bearer" \
     -H 'Origin: '${ENV_HOST}'' \
     -H "Cookie: $cookie" \
-    -F "bundle=@${ASSETS}" \
+    -F "bundle=@${ARTIFACT_BACKUP_File}" \
     -F "overwrite=true"
