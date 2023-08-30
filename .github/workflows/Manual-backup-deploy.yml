@@ -1,3 +1,4 @@
+name: Manual Backup Deploy
 run-name: Manual Backup Deploy-${{ inputs.environment }}
 
 on:
