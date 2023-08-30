@@ -25,7 +25,7 @@ jobs:
       - name: Backup-${{ inputs.environment }}
         run: |
             chmod +x ./pipeline_script_github/backup.sh
-            ./pipeline_script_github/backup.sh
+            ./pipeline_script_github/backup.sh/${{ inputs.environment }}_backup_db.sql
             
         env:
             ENV_NAME: ${{ inputs.environment }}
