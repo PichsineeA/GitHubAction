@@ -31,7 +31,7 @@ jobs:
         uses: actions/cache@v3
         with:
             key: ${{ runner.OS }}-${{ inputs.environment }}-${{ inputs.version }}
-            path: pipeline_script_github/backup/${{inputs.environment}}_backup_assets.zip      
+            path: pipeline_script_github/backup/     
       
       - name: build
         run: |           
