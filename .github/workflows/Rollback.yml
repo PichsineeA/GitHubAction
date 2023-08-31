@@ -1,5 +1,5 @@
 name: Rollback
-run-name: Rollback-${{ github.ref }}-${{ inputs.environment }}
+run-name: Rollback-${{ github.ref_name }}-${{ inputs.environment }}
 
 on:
   workflow_dispatch:
