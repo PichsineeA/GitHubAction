@@ -41,6 +41,13 @@ jobs:
           name: ${{ inputs.environment }}-${{github.sha}}
           path: pipeline_script_github/backup/
 
+      - uses: actions/cache/save@v3
+        id: cache
+        with:
+          path: pipeline_script_github/backup/
+          key: ${{ runner.os }}-${{ inputs.environment }}-${{github.sha}}
+
+
   deploy:
     runs-on: [ self-hosted ]
     environment: ${{ inputs.environment }}
