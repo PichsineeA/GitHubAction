@@ -12,7 +12,9 @@ echo ${bearer}
 echo "================================================================================"
 echo ${csrf_token}
 echo "================================================================================"
-ASSETS=assets_export_20230829T045823.zip
+
+zip -r assets_export.zip assets_export_20230829T045823
+ASSETS=assets_export.zip
 
 curl -X 'POST' \
     ''${ENV_HOST}'/api/v1/assets/import/' \
