@@ -21,5 +21,5 @@ curl -X 'POST' \
     -H "Authorization: Bearer $bearer" \
     -H 'Origin: '${ENV_HOST}'' \
     -H "Cookie: $cookie" \
-    -F "bundle=@${ARTIFACT_BACKUP_PATH}/${ARTIFACT_BACKUP_File}" \
+    -F "bundle=@${ARTIFACT_BACKUP_PATH}" \
     -F "overwrite=true"
