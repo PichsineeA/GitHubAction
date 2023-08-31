@@ -14,7 +14,7 @@ echo ${csrf_token}
 echo "================================================================================"
 
 zip -r assets_export.zip assets_export_20230829T045823
-ASSETS=assets_export_20230829T045823.zip
+ASSETS=assets_export.zip
 
 curl -X 'POST' \
     ''${ENV_HOST}'/api/v1/assets/import/' \
