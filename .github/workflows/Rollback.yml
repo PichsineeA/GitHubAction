@@ -46,5 +46,5 @@ jobs:
             ARTIFACT_BACKUP_PATH: "pipeline_script_github/backup/${{inputs.environment}}_backup_assets.zip"
       - name: Extract branch name
         shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        run: echo ${GITHUB_REF#refs/heads/}
         id: extract_branch
