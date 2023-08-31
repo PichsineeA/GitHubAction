@@ -13,7 +13,7 @@ echo "==========================================================================
 echo ${csrf_token}
 echo "================================================================================"
 
-zip -r assets_export.zip assets_export_20230829T045823
+zip -r assets_export.zip Superset_assets
 ASSETS=assets_export.zip
 
 curl -X 'POST' \
