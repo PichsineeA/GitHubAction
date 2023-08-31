@@ -44,7 +44,3 @@ jobs:
             ENV_PASS: ${{secrets.ENV_PASS}}  
             ENV_USER: ${{secrets.ENV_USER}}  
             ARTIFACT_BACKUP_PATH: "pipeline_script_github/backup/${{inputs.environment}}_backup_assets.zip"
-      - name: Extract branch name
-        shell: bash
-        run: echo ${GITHUB_REF#refs/heads/}
-        id: extract_branch
