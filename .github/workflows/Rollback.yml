@@ -43,5 +43,4 @@ jobs:
             ENV_HOST: ${{secrets.ENV_HOST}}
             ENV_PASS: ${{secrets.ENV_PASS}}  
             ENV_USER: ${{secrets.ENV_USER}}  
-            ARTIFACT_BACKUP_PATH: "pipeline_script_github/backup"
-            ARTIFACT_BACKUP_File: "${{inputs.environment}}_backup_assets.zip"
+            ARTIFACT_BACKUP_PATH: "pipeline_script_github/backup/${{inputs.environment}}_backup_assets.zip"
