@@ -12,8 +12,6 @@ echo ${bearer}
 echo "================================================================================"
 echo ${csrf_token}
 echo "================================================================================"
-#ASSETS=assets_export_20230829T045823.zip
-# ${ARTIFACT_BACKUP_PATH}
 
 curl -X 'POST' \
     ''${ENV_HOST}'/api/v1/assets/import/' \
