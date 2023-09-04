@@ -14,13 +14,6 @@ params:
     searchAllOptions: false
   - asc: true
     clearable: true
-    column: product_category
-    key: jJ7x2cuIc
-    label: Vaccine Approach
-    multiple: true
-    searchAllOptions: false
-  - asc: true
-    clearable: true
     column: clinical_stage
     key: EgGwwAUU6
     label: Clinical Stage
