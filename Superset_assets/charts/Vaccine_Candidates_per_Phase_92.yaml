@@ -1,5 +1,5 @@
 slice_name: Vaccine Candidates per Phase
-viz_type: dist_bar
+viz_type: pie
 params:
   adhoc_filters: []
   bottom_margin: auto
@@ -15,7 +15,7 @@ params:
   show_legend: false
   time_range: No filter
   url_params: {}
-  viz_type: dist_bar
+  viz_type: pie
   x_ticks_layout: auto
   y_axis_format: SMART_NUMBER
 cache_timeout: null
