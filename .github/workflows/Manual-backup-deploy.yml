@@ -1,5 +1,5 @@
 name: Manual Backup Deploy
-run-name: Manual Backup Deploy-${{ inputs.environment }}
+run-name: Manual Backup Deploy-${{ github.ref_name }}-${{ inputs.environment }}
 
 on:
   workflow_dispatch:
