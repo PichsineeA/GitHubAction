@@ -2,10 +2,16 @@ slice_name: Filter Segments
 viz_type: filter_box
 params:
   adhoc_filters: []
-  datasource: 15__table
-  date_filter: true
-  extra_form_data: {}
+  datasource: 42__table
+  date_filter: false
   filter_configs:
+  - asc: true
+    clearable: true
+    column: ethnic_minority
+    key: -xNBqpfQo
+    label: Ethnic Minority
+    multiple: true
+    searchAllOptions: false
   - asc: true
     clearable: true
     column: gender
@@ -21,16 +27,24 @@ params:
     multiple: true
     searchAllOptions: false
   - asc: true
-    clearable: false
-    column: job_location_preference
-    key: jcLEeZSlx
-    label: job
+    clearable: true
+    column: lang_at_home
+    key: Fn-YClyhb
+    label: Language at Home
+    multiple: true
+    searchAllOptions: false
+  - asc: true
+    clearable: true
+    column: country_live
+    key: 2fNskRCLJ
+    label: Country live
     multiple: true
     searchAllOptions: false
   granularity_sqla: time_start
-  slice_id: 79
-  time_grain_sqla: P1D
+  queryFields: {}
+  slice_id: 1387
   time_range: No filter
+  url_params: {}
   viz_type: filter_box
 cache_timeout: null
 uuid: 6420629a-ce74-2c6b-ef7d-b2e78baa3cfe
