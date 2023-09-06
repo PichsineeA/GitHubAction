@@ -7,20 +7,28 @@ params:
     expressionType: SIMPLE
     operator: ==
     subject: gender
-  compare_lag: '10'
-  compare_suffix: o10Y
+  all_columns: []
+  color_pn: true
+  datasource: 2__table
+  extra_form_data: {}
   granularity_sqla: ds
   groupby:
   - name
-  limit: '25'
-  markup_type: markdown
+  include_time: true
   metrics:
   - sum__num
+  order_by_cols: []
+  order_desc: false
+  percent_metrics: []
+  query_mode: aggregate
   row_limit: 50
-  since: 100 years ago
-  time_range: No filter
+  server_page_length: 10
+  show_cell_bars: true
+  slice_id: 1062
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: '100 years ago : now'
   timeseries_limit_metric: sum__num
-  until: now
   viz_type: table
 cache_timeout: null
 uuid: 94ad6bbd-d8c4-4d27-bd6e-3392a1c7b224
