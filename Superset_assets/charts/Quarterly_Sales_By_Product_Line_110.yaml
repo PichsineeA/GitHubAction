@@ -1,30 +1,21 @@
 slice_name: Quarterly Sales (By Product Line)
-viz_type: bar
+viz_type: pie
 params:
   adhoc_filters: []
-  annotation_layers: []
-  bar_stacked: true
-  bottom_margin: auto
   color_scheme: supersetColors
-  comparison_type: null
-  datasource: 23__table
+  datasource: 17__table
+  date_format: smart_date
+  extra_form_data: {}
   granularity_sqla: order_date
   groupby:
   - product_line
-  label_colors:
-    Classic Cars: '#5AC189'
-    Motorcycles: '#666666'
-    Planes: '#FCC700'
-    QuantityOrdered: '#454E7C'
-    SUM(Sales): '#1FA8C9'
-    Ships: '#A868B7'
-    Trains: '#3CCCCB'
-    Trucks and Buses: '#E04355'
-    Vintage Cars: '#FF7F44'
-  left_margin: auto
-  line_interpolation: linear
-  metrics:
-  - aggregate: SUM
+  innerRadius: 30
+  label_type: key
+  labels_outside: true
+  legendOrientation: top
+  legendType: scroll
+  metric:
+    aggregate: SUM
     column:
       column_name: sales
       description: null
@@ -43,30 +34,16 @@ params:
     label: SUM(Sales)
     optionName: metric_tjn8bh6y44_7o4etwsqhal
     sqlExpression: null
-  order_desc: true
-  queryFields:
-    groupby: groupby
-    metrics: metrics
-  rich_tooltip: true
-  rolling_type: null
-  row_limit: 10000
-  show_brush: auto
-  show_controls: false
+  number_format: SMART_NUMBER
+  outerRadius: 70
+  row_limit: 100
+  show_labels: true
+  show_labels_threshold: 5
   show_legend: true
-  slice_id: 2806
-  time_compare: null
-  time_grain_sqla: P3M
+  slice_id: 110
+  sort_by_metric: true
   time_range: No filter
-  url_params: {}
-  viz_type: bar
-  x_axis_format: '%m/%d/%Y'
-  x_axis_label: Quarter starting
-  x_ticks_layout: "45\xB0"
-  y_axis_bounds:
-  - null
-  - null
-  y_axis_format: null
-  y_axis_label: Revenue ($)
+  viz_type: pie
 cache_timeout: null
 uuid: db9609e4-9b78-4a32-87a7-4d9e19d51cd8
 version: 1.0.0

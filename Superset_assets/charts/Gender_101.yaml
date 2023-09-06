@@ -1,30 +1,19 @@
 slice_name: Gender
-viz_type: pie
+viz_type: big_number_total
 params:
   adhoc_filters: []
-  color_scheme: supersetColors
-  datasource: 42__table
-  donut: true
+  datasource: 15__table
+  extra_form_data: {}
   granularity_sqla: time_start
-  groupby:
-  - gender
-  innerRadius: 44
-  label_line: true
-  labels_outside: true
+  header_font_size: 0.4
   metric: count
-  number_format: SMART_NUMBER
-  outerRadius: 69
-  label_type: key
-  queryFields:
-    groupby: groupby
-    metric: metrics
-  row_limit: 10000
-  show_labels: true
-  show_legend: false
-  slice_id: 1385
+  slice_id: 101
+  subheader_font_size: 0.15
+  time_format: smart_date
+  time_grain_sqla: P1D
   time_range: No filter
-  url_params: {}
-  viz_type: pie
+  viz_type: big_number_total
+  y_axis_format: SMART_NUMBER
 cache_timeout: null
 uuid: 0f6b447c-828c-e71c-87ac-211bc412b214
 version: 1.0.0
