@@ -1,4 +1,4 @@
-dashboard_title: FCC New Coder Survey 2018
+dashboard_title: Coder Survey
 description: null
 css: ''
 slug: null
@@ -150,7 +150,7 @@ position:
     - GRID_ID
     - TABS-L-d9eyOE-b
     - TAB-AsMaxdYL_t
-    - ROW-y-GwJPgxLr
+    - ROW-mOvr_xWm1
     type: CHART
   CHART-QVql08s5Bv:
     children: []
@@ -182,7 +182,8 @@ position:
     - GRID_ID
     - TABS-L-d9eyOE-b
     - TAB-AsMaxdYL_t
-    - ROW-mOvr_xWm1
+    - ROW-UsW-_RPAb
+    - COLUMN-OJ5spdMmNh
     type: CHART
   CHART-VvFbGxi3X_:
     children: []
@@ -198,7 +199,8 @@ position:
     - GRID_ID
     - TABS-L-d9eyOE-b
     - TAB-AsMaxdYL_t
-    - ROW-mOvr_xWm1
+    - ROW-UsW-_RPAb
+    - COLUMN-OJ5spdMmNh
     type: CHART
   CHART-XHncHuS5pZ:
     children: []
@@ -274,13 +276,13 @@ position:
       sliceName: Filter Segments
       sliceNameOverride: Filter By
       uuid: 6420629a-ce74-2c6b-ef7d-b2e78baa3cfe
-      width: 3
+      width: 5
     parents:
     - ROOT_ID
     - GRID_ID
     - TABS-L-d9eyOE-b
     - TAB-AsMaxdYL_t
-    - ROW-mOvr_xWm1
+    - ROW-y-GwJPgxLr
     type: CHART
   CHART-fLpTSAHpAO:
     children: []
@@ -323,13 +325,13 @@ position:
       height: 50
       sliceName: Gender
       uuid: 0f6b447c-828c-e71c-87ac-211bc412b214
-      width: 2
+      width: 3
     parents:
     - ROOT_ID
     - GRID_ID
     - TABS-L-d9eyOE-b
     - TAB-AsMaxdYL_t
-    - ROW-y-GwJPgxLr
+    - ROW-mOvr_xWm1
     type: CHART
   CHART-v22McUFMtx:
     children: []
@@ -381,7 +383,9 @@ position:
     - ROW--BIzjz9F0
     type: COLUMN
   COLUMN-OJ5spdMmNh:
-    children: []
+    children:
+    - CHART-VvFbGxi3X_
+    - CHART-UtSaz4pfV6
     id: COLUMN-OJ5spdMmNh
     meta:
       background: BACKGROUND_TRANSPARENT
@@ -404,7 +408,7 @@ position:
   HEADER_ID:
     id: HEADER_ID
     meta:
-      text: FCC New Coder Survey 2018
+      text: Coder Survey
     type: HEADER
   MARKDOWN-BUmyHM2s0x:
     children: []
@@ -503,6 +507,26 @@ position:
     - TAB-AsMaxdYL_t
     - ROW-y-GwJPgxLr
     type: MARKDOWN
+  MARKDOWN-zc2mWxZeox:
+    children: []
+    id: MARKDOWN-zc2mWxZeox
+    meta:
+      code: "# Demographics\n\nFreeCodeCamp is a completely-online community of people\
+        \ learning to code and consists of aspiring & current developers from all\
+        \ over the world. That doesn't necessarily mean that acccess to these types\
+        \ of opportunities are evenly distributed. \n\nThe following charts can begin\
+        \ to help us understand:\n\n- the original citizenship of the survey respondents\n\
+        - minority representation among both aspiring and current developers\n- their\
+        \ age distribution\n- household languages"
+      height: 52
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-L-d9eyOE-b
+    - TAB-AsMaxdYL_t
+    - ROW-mOvr_xWm1
+    type: MARKDOWN
   ROOT_ID:
     children:
     - GRID_ID
@@ -580,10 +604,10 @@ position:
     type: ROW
   ROW-mOvr_xWm1:
     children:
-    - CHART-d6vjW6rC6V
+    - MARKDOWN-zc2mWxZeox
+    - CHART-Q3pbwsH3id
+    - CHART-o-JPAWMZK-
     - CHART-YSzS5GOOLf
-    - CHART-VvFbGxi3X_
-    - CHART-UtSaz4pfV6
     id: ROW-mOvr_xWm1
     meta:
       background: BACKGROUND_TRANSPARENT
@@ -610,8 +634,7 @@ position:
     children:
     - MARKDOWN-__u6CsUyfh
     - CHART-aytwlT4GAq
-    - CHART-Q3pbwsH3id
-    - CHART-o-JPAWMZK-
+    - CHART-d6vjW6rC6V
     id: ROW-y-GwJPgxLr
     meta:
       background: BACKGROUND_TRANSPARENT
@@ -674,10 +697,14 @@ metadata:
   timed_refresh_immune_slices: []
   expanded_slices: {}
   refresh_frequency: 0
-  default_filters: '{"79": {"__time_range": "No filter"}}'
+  default_filters: '{}'
   color_scheme: supersetColors
   filter_scopes:
     '79':
+      ethnic_minority:
+        scope:
+        - ROOT_ID
+        immune: []
       gender:
         scope:
         - ROOT_ID
@@ -686,11 +713,11 @@ metadata:
         scope:
         - ROOT_ID
         immune: []
-      job_location_preference:
+      lang_at_home:
         scope:
         - ROOT_ID
         immune: []
-      __time_range:
+      country_live:
         scope:
         - ROOT_ID
         immune: []
@@ -736,12 +763,12 @@ metadata:
   show_native_filters: true
   shared_label_colors:
     age: '#1FA8C9'
-    No Answer: '#1f86c9'
     No, not an ethnic minority: '#666666'
     Yes, an ethnic minority: '#5ac19e'
-    <NULL>: '#5AC189'
-    Female: '#47457c'
+    No Answer: '#1f86c9'
     Male: '#e05043'
+    Female: '#47457c'
+    <NULL>: '#5AC189'
     Prefer not to say: '#ffa444'
   chart_configuration: {}
 version: 1.0.0

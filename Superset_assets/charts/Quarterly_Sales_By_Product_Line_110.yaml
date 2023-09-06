@@ -3,14 +3,24 @@ viz_type: bar
 params:
   adhoc_filters: []
   annotation_layers: []
+  bar_stacked: true
   bottom_margin: auto
-  color_scheme: d3Category20
+  color_scheme: supersetColors
   comparison_type: null
-  datasource: 17__table
-  extra_form_data: {}
+  datasource: 23__table
   granularity_sqla: order_date
   groupby:
   - product_line
+  label_colors:
+    Classic Cars: '#5AC189'
+    Motorcycles: '#666666'
+    Planes: '#FCC700'
+    QuantityOrdered: '#454E7C'
+    SUM(Sales): '#1FA8C9'
+    Ships: '#A868B7'
+    Trains: '#3CCCCB'
+    Trucks and Buses: '#E04355'
+    Vintage Cars: '#FF7F44'
   left_margin: auto
   line_interpolation: linear
   metrics:
@@ -34,23 +44,29 @@ params:
     optionName: metric_tjn8bh6y44_7o4etwsqhal
     sqlExpression: null
   order_desc: true
+  queryFields:
+    groupby: groupby
+    metrics: metrics
   rich_tooltip: true
   rolling_type: null
-  row_limit: 100
+  row_limit: 10000
   show_brush: auto
+  show_controls: false
   show_legend: true
-  slice_id: 110
+  slice_id: 2806
   time_compare: null
-  time_grain_sqla: P1D
+  time_grain_sqla: P3M
   time_range: No filter
-  timeseries_limit_metric: []
+  url_params: {}
   viz_type: bar
-  x_axis_format: smart_date
-  x_ticks_layout: auto
+  x_axis_format: '%m/%d/%Y'
+  x_axis_label: Quarter starting
+  x_ticks_layout: "45\xB0"
   y_axis_bounds:
   - null
   - null
   y_axis_format: null
+  y_axis_label: Revenue ($)
 cache_timeout: null
 uuid: db9609e4-9b78-4a32-87a7-4d9e19d51cd8
 version: 1.0.0

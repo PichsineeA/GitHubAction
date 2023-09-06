@@ -1,41 +1,30 @@
 slice_name: Are you an ethnic minority in your city?
-viz_type: echarts_timeseries_bar
+viz_type: pie
 params:
   adhoc_filters: []
-  annotation_layers: []
   color_scheme: supersetColors
-  comparison_type: values
-  datasource: 15__table
-  extra_form_data: {}
-  forecastInterval: 0.8
-  forecastPeriods: 10
+  datasource: 42__table
+  donut: true
   granularity_sqla: time_start
   groupby:
   - ethnic_minority
-  legendOrientation: top
-  legendType: scroll
-  metrics:
-  - count
-  only_total: true
-  order_desc: true
-  orientation: vertical
-  rich_tooltip: true
+  innerRadius: 44
+  label_line: true
+  labels_outside: true
+  metric: count
+  number_format: SMART_NUMBER
+  outerRadius: 69
+  label_type: key
+  queryFields:
+    groupby: groupby
+    metric: metrics
   row_limit: 10000
+  show_labels: true
   show_legend: false
-  slice_id: 91
-  time_grain_sqla: P1D
+  slice_id: 1383
   time_range: No filter
-  tooltipTimeFormat: smart_date
-  truncate_metric: true
-  viz_type: echarts_timeseries_bar
-  x_axis_time_format: smart_date
-  x_axis_title_margin: 15
-  y_axis_bounds:
-  - null
-  - null
-  y_axis_format: SMART_NUMBER
-  y_axis_title_margin: 15
-  y_axis_title_position: Left
+  url_params: {}
+  viz_type: pie
 cache_timeout: null
 uuid: def07750-b5c0-0b69-6228-cb2330916166
 version: 1.0.0

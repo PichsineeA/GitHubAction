@@ -5,17 +5,17 @@ params:
   all_columns_x:
   - age
   color_scheme: supersetColors
-  cumulative: true
-  datasource: 15__table
-  extra_form_data: {}
+  datasource: 42__table
   granularity_sqla: time_start
   groupby: null
+  label_colors: {}
   link_length: '25'
-  normalized: false
+  queryFields:
+    groupby: groupby
   row_limit: 10000
-  show_legend: false
-  slice_id: 72
+  slice_id: 1380
   time_range: No filter
+  url_params: {}
   viz_type: histogram
   x_axis_label: age
   y_axis_label: count
