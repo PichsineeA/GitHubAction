@@ -1,6 +1,10 @@
-dashboard_title: Sales Dashboard
+dashboard_title: Information of sale
 description: null
-css: ''
+css: "/* ---------------------------------------------------- */\n/* Big number charts\
+  \                                    */\n/* ----------------------------------------------------\
+  \ */\n\n \n\n/* Big number charts - SSNC Teal */\n.big_number_total {\n    text-align:\
+  \ center;\n    background-color: #00667D;\n    color: white;\n    border-radius:\
+  \ 5px;\n}"
 slug: null
 uuid: 04f79081-fb49-7bac-7f14-cc76cd2ad93b
 position:
@@ -9,7 +13,7 @@ position:
     id: CHART-1NOOLm5YPs
     meta:
       chartId: 71
-      height: 25
+      height: 24
       sliceName: Total Items Sold
       sliceNameOverride: Total Products Sold
       uuid: c3d643cd-fd6f-4659-a5b7-59402487a8d0
@@ -19,7 +23,7 @@ position:
     - TABS-e5Ruro0cjP
     - TAB-d-E0Zc1cTH
     - ROW-Tyv02UA_6W
-    - COLUMN-8Rp54B6ikC
+    - COLUMN-K40NkIkrxc
     type: CHART
   CHART-AYpv8gFi_q:
     children: []
@@ -89,7 +93,7 @@ position:
     meta:
       chartId: 123
       height: 62
-      sliceName: Revenue by Deal SIze
+      sliceName: Revenue by Deal Size
       sliceNameOverride: Monthly Revenue by Deal SIze
       uuid: f065a533-2e13-42b9-bd19-801a21700dff
       width: 6
@@ -98,6 +102,22 @@ position:
     - TABS-e5Ruro0cjP
     - TAB-4fthLQmdX
     - ROW-E7MDSGfnm
+    type: CHART
+  CHART-explore-1062-1:
+    children: []
+    id: CHART-explore-1062-1
+    meta:
+      chartId: 1062
+      height: 59
+      sliceName: Boys
+      uuid: 94ad6bbd-d8c4-4d27-bd6e-3392a1c7b224
+      width: 3
+    parents:
+    - ROOT_ID
+    - TABS-e5Ruro0cjP
+    - TAB-d-E0Zc1cTH
+    - ROW-Tyv02UA_6W
+    - COLUMN-BptpWfu0VM
     type: CHART
   CHART-id4RGv80N-:
     children: []
@@ -122,7 +142,7 @@ position:
     meta:
       chartId: 103
       height: 39
-      sliceName: Filter
+      sliceName: Vehicle Sales Filter
       uuid: a5689df7-98fc-7c51-602c-ebd92dc3ec70
       width: 2
     parents:
@@ -146,48 +166,43 @@ position:
     - ROOT_ID
     - TABS-e5Ruro0cjP
     - TAB-d-E0Zc1cTH
-    - ROW-oAtmu5grZ
+    - ROW-Tyv02UA_6W
     type: CHART
   CHART-lFanAaYKBK:
     children: []
     id: CHART-lFanAaYKBK
     meta:
       chartId: 86
-      height: 26
+      height: 33
       sliceName: Total Revenue
       uuid: 7b12a243-88e0-4dc5-ac33-9a840bb0ac5a
-      width: 3
+      width: 2
     parents:
     - ROOT_ID
     - TABS-e5Ruro0cjP
     - TAB-d-E0Zc1cTH
     - ROW-Tyv02UA_6W
-    - COLUMN-8Rp54B6ikC
-    type: CHART
-  CHART-vomBOiI7U9:
-    children: []
-    id: CHART-vomBOiI7U9
-    meta:
-      chartId: 83
-      height: 53
-      sliceName: Quarterly Sales
-      sliceNameOverride: Quarterly Revenue
-      uuid: 692aca26-a526-85db-c94c-411c91cc1077
-      width: 7
-    parents:
-    - ROOT_ID
-    - TABS-e5Ruro0cjP
-    - TAB-d-E0Zc1cTH
-    - ROW-Tyv02UA_6W
+    - COLUMN-K40NkIkrxc
     type: CHART
   COLUMN-8Rp54B6ikC:
-    children:
-    - CHART-lFanAaYKBK
-    - CHART-1NOOLm5YPs
+    children: []
     id: COLUMN-8Rp54B6ikC
     meta:
       background: BACKGROUND_TRANSPARENT
       width: 2
+    parents:
+    - ROOT_ID
+    - TABS-e5Ruro0cjP
+    - TAB-d-E0Zc1cTH
+    - ROW-Tyv02UA_6W
+    type: COLUMN
+  COLUMN-BptpWfu0VM:
+    children:
+    - CHART-explore-1062-1
+    id: COLUMN-BptpWfu0VM
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 3
     parents:
     - ROOT_ID
     - TABS-e5Ruro0cjP
@@ -206,6 +221,20 @@ position:
     - TABS-e5Ruro0cjP
     - TAB-d-E0Zc1cTH
     - ROW-oAtmu5grZ
+    type: COLUMN
+  COLUMN-K40NkIkrxc:
+    children:
+    - CHART-1NOOLm5YPs
+    - CHART-lFanAaYKBK
+    id: COLUMN-K40NkIkrxc
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 4
+    parents:
+    - ROOT_ID
+    - TABS-e5Ruro0cjP
+    - TAB-d-E0Zc1cTH
+    - ROW-Tyv02UA_6W
     type: COLUMN
   COLUMN-jlNWyWCfTC:
     children:
@@ -231,29 +260,8 @@ position:
   HEADER_ID:
     id: HEADER_ID
     meta:
-      text: Sales Dashboard
+      text: Information of sale
     type: HEADER
-  MARKDOWN--AtDSWnapE:
-    children: []
-    id: MARKDOWN--AtDSWnapE
-    meta:
-      code: "# \U0001F697 Vehicle Sales Dashboard \U0001F3CD\n\nThis example dashboard\
-        \ provides insight into the business operations of vehicle seller. The dataset\
-        \ powering this dashboard can be found [here on Kaggle](https://www.kaggle.com/kyanyoga/sample-sales-data).\n\
-        \n### Timeline\n\nThe dataset contains data on all orders from the 2003 and\
-        \ 2004 fiscal years, and some orders from 2005.\n\n### Products Sold\n\nThis\
-        \ shop mainly sells the following products:\n\n- \U0001F697 Classic Cars\n\
-        - \U0001F3CE\uFE0F Vintage Cars\n- \U0001F3CD\uFE0F Motorcycles\n- \U0001F69A\
-        \ Trucks & Buses \U0001F68C\n- \U0001F6E9\uFE0F Planes\n- \U0001F6A2 Ships\n\
-        - \U0001F688 Trains"
-      height: 53
-      width: 3
-    parents:
-    - ROOT_ID
-    - TABS-e5Ruro0cjP
-    - TAB-d-E0Zc1cTH
-    - ROW-Tyv02UA_6W
-    type: MARKDOWN
   MARKDOWN-HrzsMmvGQo:
     children: []
     id: MARKDOWN-HrzsMmvGQo
@@ -310,8 +318,9 @@ position:
   ROW-Tyv02UA_6W:
     children:
     - COLUMN-8Rp54B6ikC
-    - CHART-vomBOiI7U9
-    - MARKDOWN--AtDSWnapE
+    - CHART-j24u8ve41b
+    - COLUMN-BptpWfu0VM
+    - COLUMN-K40NkIkrxc
     id: ROW-Tyv02UA_6W
     meta:
       background: BACKGROUND_TRANSPARENT
@@ -324,7 +333,6 @@ position:
     children:
     - COLUMN-G6_2DvG8aK
     - CHART-KKT9BsnUst
-    - CHART-j24u8ve41b
     id: ROW-oAtmu5grZ
     meta:
       background: BACKGROUND_TRANSPARENT
@@ -364,6 +372,16 @@ position:
     parents:
     - ROOT_ID
     type: TABS
+  CHART-MCNA7S6S:
+    children: []
+    id: CHART-MCNA7S6S
+    meta:
+      chartId: 83
+      height: 50
+      sliceName: Quarterly Sales
+      uuid: 692aca26-a526-85db-c94c-411c91cc1077
+      width: 4
+    type: CHART
 metadata:
   timed_refresh_immune_slices: []
   expanded_slices: {}
@@ -371,11 +389,11 @@ metadata:
   default_filters: '{"103": {"__time_range": "No filter"}}'
   filter_scopes:
     '103':
-      ProductLine:
+      product_line:
         scope:
-        - TAB-4fthLQmdX
+        - ROOT_ID
         immune: []
-      DealSize:
+      deal_size:
         scope:
         - ROOT_ID
         immune: []
@@ -396,4 +414,14 @@ metadata:
     Planes: '#E04355'
     Ships: '#FCC700'
     Trains: '#A868B7'
+  show_native_filters: true
+  shared_label_colors:
+    Classic Cars: '#1f86c9'
+    Vintage Cars: '#47457c'
+    Motorcycles: '#5ac19e'
+    Trucks and Buses: '#ffa444'
+    Planes: '#666666'
+    Ships: '#e05043'
+    Trains: '#fcf900'
+  chart_configuration: {}
 version: 1.0.0
