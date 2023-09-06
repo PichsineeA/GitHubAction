@@ -13,8 +13,7 @@ params:
     subject: lang_at_home
   all_columns: []
   color_pn: true
-  datasource: 15__table
-  extra_form_data: {}
+  datasource: 42__table
   granularity_sqla: time_start
   groupby:
   - lang_at_home
@@ -23,15 +22,17 @@ params:
   order_by_cols: []
   order_desc: true
   percent_metrics: []
+  queryFields:
+    groupby: groupby
+    metrics: metrics
   query_mode: aggregate
   row_limit: '15'
-  server_page_length: 10
   show_cell_bars: true
-  show_totals: false
-  slice_id: 120
+  slice_id: 1386
   table_timestamp_format: smart_date
   time_grain_sqla: P1D
   time_range: No filter
+  url_params: {}
   viz_type: table
 cache_timeout: null
 uuid: 03a74c97-52fc-cf87-233c-d4275f8c550c

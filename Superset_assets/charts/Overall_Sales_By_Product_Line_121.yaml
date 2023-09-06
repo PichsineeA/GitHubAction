@@ -1,21 +1,18 @@
 slice_name: Overall Sales (By Product Line)
-viz_type: echarts_timeseries_bar
+viz_type: pie
 params:
   adhoc_filters: []
-  annotation_layers: []
   color_scheme: supersetColors
-  comparison_type: values
-  datasource: 17__table
-  extra_form_data: {}
-  forecastInterval: 0.8
-  forecastPeriods: 10
+  datasource: 23__table
+  donut: true
   granularity_sqla: order_date
   groupby:
   - product_line
-  legendOrientation: top
-  legendType: scroll
-  metrics:
-  - aggregate: SUM
+  innerRadius: 41
+  label_line: true
+  labels_outside: true
+  metric:
+    aggregate: SUM
     column:
       column_name: sales
       description: null
@@ -34,26 +31,20 @@ params:
     label: (Sales)
     optionName: metric_3sk6pfj3m7i_64h77bs4sly
     sqlExpression: null
-  only_total: true
-  order_desc: true
-  orientation: vertical
-  rich_tooltip: true
+  number_format: SMART_NUMBER
+  outerRadius: 65
+  label_type: key
+  queryFields:
+    groupby: groupby
+    metric: metrics
   row_limit: null
-  show_legend: true
-  slice_id: 121
-  time_grain_sqla: P1D
+  show_labels: true
+  show_labels_threshold: 2
+  show_legend: false
+  slice_id: 670
   time_range: No filter
-  tooltipTimeFormat: smart_date
-  truncate_metric: true
-  viz_type: echarts_timeseries_bar
-  x_axis_time_format: smart_date
-  x_axis_title_margin: 15
-  y_axis_bounds:
-  - null
-  - null
-  y_axis_format: SMART_NUMBER
-  y_axis_title_margin: 15
-  y_axis_title_position: Left
+  url_params: {}
+  viz_type: pie
 cache_timeout: null
 uuid: 09c497e0-f442-1121-c9e7-671e37750424
 version: 1.0.0
