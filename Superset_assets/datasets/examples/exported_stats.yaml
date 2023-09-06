@@ -3,7 +3,7 @@ main_dttm_col: Date
 description: null
 default_endpoint: null
 offset: 0
-cache_timeout: null
+cache_timeout: 60
 schema: public
 sql: ''
 params: null
@@ -19,10 +19,11 @@ metrics:
   expression: COUNT(*)
   description: null
   d3format: null
-  extra: null
+  extra:
+    warning_markdown: ''
   warning_text: null
 columns:
-- column_name: new_members
+- column_name: members
   verbose_name: New Members
   is_dttm: false
   is_active: true
@@ -33,7 +34,7 @@ columns:
   expression: total_membership - LAG(total_membership) OVER (ORDER BY date)
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: date
   verbose_name: null
   is_dttm: true
@@ -45,7 +46,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: percent_of_messages_private_channels
   verbose_name: null
   is_dttm: false
@@ -57,7 +58,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: percent_of_messages_public_channels
   verbose_name: null
   is_dttm: false
@@ -69,7 +70,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: percent_of_views_private_channels
   verbose_name: null
   is_dttm: false
@@ -81,7 +82,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: percent_of_views_public_channels
   verbose_name: null
   is_dttm: false
@@ -93,7 +94,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: percent_of_messages_dms
   verbose_name: null
   is_dttm: false
@@ -105,7 +106,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: percent_of_views_dms
   verbose_name: null
   is_dttm: false
@@ -117,7 +118,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: messages_in_shared_channels
   verbose_name: null
   is_dttm: false
@@ -129,7 +130,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: messages_in_private_channels
   verbose_name: null
   is_dttm: false
@@ -141,7 +142,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: public_channels_single_workspace
   verbose_name: null
   is_dttm: false
@@ -153,7 +154,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: messages_in_public_channels
   verbose_name: null
   is_dttm: false
@@ -165,7 +166,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: daily_members_posting_messages
   verbose_name: null
   is_dttm: false
@@ -177,7 +178,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: weekly_members_posting_messages
   verbose_name: null
   is_dttm: false
@@ -189,7 +190,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: daily_active_members
   verbose_name: null
   is_dttm: false
@@ -201,7 +202,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: weekly_active_members
   verbose_name: null
   is_dttm: false
@@ -213,7 +214,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: messages_in_dms
   verbose_name: null
   is_dttm: false
@@ -225,7 +226,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: total_membership
   verbose_name: null
   is_dttm: false
@@ -237,7 +238,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: messages_posted
   verbose_name: null
   is_dttm: false
@@ -249,7 +250,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: full_members
   verbose_name: null
   is_dttm: false
@@ -261,7 +262,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: name
   verbose_name: null
   is_dttm: false
@@ -273,7 +274,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: guests
   verbose_name: null
   is_dttm: false
@@ -285,6 +286,6 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 version: 1.0.0
 database_uuid: a2dc77af-e654-49bb-b321-40f6b559a1ee

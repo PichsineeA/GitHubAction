@@ -3,9 +3,9 @@ main_dttm_col: bot_profile__updated
 description: null
 default_endpoint: null
 offset: 0
-cache_timeout: null
+cache_timeout: 60
 schema: public
-sql: null
+sql: ''
 params: null
 template_params: null
 filter_select_enabled: true
@@ -19,7 +19,8 @@ metrics:
   expression: COUNT(*)
   description: null
   d3format: null
-  extra: null
+  extra:
+    warning_markdown: ''
   warning_text: null
 columns:
 - column_name: bot_profile__updated
@@ -33,7 +34,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: last_read
   verbose_name: null
   is_dttm: true
@@ -45,7 +46,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: ts
   verbose_name: null
   is_dttm: true
@@ -57,7 +58,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: bot_profile__team_id
   verbose_name: null
   is_dttm: false
@@ -69,7 +70,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: bot_profile__app_id
   verbose_name: null
   is_dttm: false
@@ -81,7 +82,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: bot_profile__name
   verbose_name: null
   is_dttm: false
@@ -93,7 +94,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: bot_profile__id
   verbose_name: null
   is_dttm: false
@@ -105,7 +106,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: parent_user_id
   verbose_name: null
   is_dttm: false
@@ -117,7 +118,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: client_msg_id
   verbose_name: null
   is_dttm: false
@@ -129,7 +130,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: icons__emoji
   verbose_name: null
   is_dttm: false
@@ -141,7 +142,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: channel_id
   verbose_name: null
   is_dttm: false
@@ -153,7 +154,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: source_team
   verbose_name: null
   is_dttm: false
@@ -165,7 +166,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: thread_ts
   verbose_name: null
   is_dttm: false
@@ -177,7 +178,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: old_name
   verbose_name: null
   is_dttm: false
@@ -189,7 +190,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: latest_reply
   verbose_name: null
   is_dttm: false
@@ -201,7 +202,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: user_team
   verbose_name: null
   is_dttm: false
@@ -213,7 +214,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: bot_id
   verbose_name: null
   is_dttm: false
@@ -225,7 +226,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: file_id
   verbose_name: null
   is_dttm: false
@@ -237,7 +238,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: username
   verbose_name: null
   is_dttm: false
@@ -249,7 +250,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: permalink
   verbose_name: null
   is_dttm: false
@@ -261,7 +262,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: name
   verbose_name: null
   is_dttm: false
@@ -273,7 +274,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: team
   verbose_name: null
   is_dttm: false
@@ -285,7 +286,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: subtype
   verbose_name: null
   is_dttm: false
@@ -297,7 +298,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: topic
   verbose_name: null
   is_dttm: false
@@ -309,7 +310,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: inviter
   verbose_name: null
   is_dttm: false
@@ -321,7 +322,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: purpose
   verbose_name: null
   is_dttm: false
@@ -333,7 +334,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: type
   verbose_name: null
   is_dttm: false
@@ -345,7 +346,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: user
   verbose_name: null
   is_dttm: false
@@ -357,7 +358,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: bot_profile__deleted
   verbose_name: null
   is_dttm: false
@@ -369,7 +370,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: display_as_bot
   verbose_name: null
   is_dttm: false
@@ -381,7 +382,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: is_delayed_message
   verbose_name: null
   is_dttm: false
@@ -393,7 +394,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: is_starred
   verbose_name: null
   is_dttm: false
@@ -405,7 +406,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: is_intro
   verbose_name: null
   is_dttm: false
@@ -417,7 +418,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: upload
   verbose_name: null
   is_dttm: false
@@ -429,7 +430,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: subscribed
   verbose_name: null
   is_dttm: false
@@ -441,7 +442,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: reply_users_count
   verbose_name: null
   is_dttm: false
@@ -453,7 +454,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: unread_count
   verbose_name: null
   is_dttm: false
@@ -465,7 +466,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: reply_count
   verbose_name: null
   is_dttm: false
@@ -477,7 +478,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: file_ids
   verbose_name: null
   is_dttm: false
@@ -489,7 +490,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: pinned_to
   verbose_name: null
   is_dttm: false
@@ -501,7 +502,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: reply_users
   verbose_name: null
   is_dttm: false
@@ -513,7 +514,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: reactions
   verbose_name: null
   is_dttm: false
@@ -525,7 +526,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: blocks
   verbose_name: null
   is_dttm: false
@@ -537,7 +538,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: text
   verbose_name: null
   is_dttm: false
@@ -549,6 +550,6 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 version: 1.0.0
 database_uuid: a2dc77af-e654-49bb-b321-40f6b559a1ee
