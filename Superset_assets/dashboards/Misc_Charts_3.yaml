@@ -8,7 +8,7 @@ position:
     children: []
     id: CHART-BkeVbh8ANQ
     meta:
-      chartId: 63
+      chartId: 305
       height: 34
       sliceName: Multi Line
       width: 8
@@ -27,7 +27,7 @@ position:
     children: []
     id: CHART-HJOYVMV0E7
     meta:
-      chartId: 31
+      chartId: 273
       height: 63
       sliceName: Mapbox Long/Lat
       width: 6
@@ -37,7 +37,7 @@ position:
     children: []
     id: CHART-S1WYNz4AVX
     meta:
-      chartId: 43
+      chartId: 392
       height: 25
       sliceName: Parallel Coordinates
       width: 4
@@ -65,7 +65,7 @@ position:
     children: []
     id: CHART-rkgF4G4A4X
     meta:
-      chartId: 32
+      chartId: 274
       height: 25
       sliceName: Birth in France by department in 2016
       width: 8
@@ -103,6 +103,7 @@ position:
     - ROW-SytNzNA4X
     - ROW-S1MK4M4A4X
     - ROW-HkFFEzVRVm
+    - ROW-N-69NXGU90
     id: GRID_ID
     type: GRID
   HEADER_ID:
@@ -140,4 +141,44 @@ position:
       background: BACKGROUND_TRANSPARENT
     type: ROW
   DASHBOARD_VERSION_KEY: v2
+  ROW-N-69NXGU90:
+    children:
+    - CHART-XDDX6VM8
+    - CHART-6R1IX7O6
+    id: ROW-N-69NXGU90
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+    parents:
+    - ROOT_ID
+    - GRID_ID
+  CHART-XDDX6VM8:
+    children: []
+    id: CHART-XDDX6VM8
+    meta:
+      chartId: 323
+      height: 50
+      sliceName: Parallel Coordinates
+      uuid: f5e6634d-9b9d-4cba-ae49-1138d2619374
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-69NXGU90
+  CHART-6R1IX7O6:
+    children: []
+    id: CHART-6R1IX7O6
+    meta:
+      chartId: 375
+      height: 50
+      sliceName: Multi Line
+      uuid: 2fadcc1f-0416-421d-9f74-72fc7adb6e49
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-69NXGU90
 version: 1.0.0

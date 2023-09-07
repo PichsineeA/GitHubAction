@@ -89,7 +89,7 @@ position:
     meta:
       chartId: 123
       height: 62
-      sliceName: Revenue by Deal SIze
+      sliceName: Revenue by Deal Size
       sliceNameOverride: Monthly Revenue by Deal SIze
       uuid: f065a533-2e13-42b9-bd19-801a21700dff
       width: 6
@@ -122,7 +122,7 @@ position:
     meta:
       chartId: 103
       height: 39
-      sliceName: Filter
+      sliceName: Vehicle Sales Filter
       uuid: a5689df7-98fc-7c51-602c-ebd92dc3ec70
       width: 2
     parents:
@@ -163,22 +163,6 @@ position:
     - TAB-d-E0Zc1cTH
     - ROW-Tyv02UA_6W
     - COLUMN-8Rp54B6ikC
-    type: CHART
-  CHART-vomBOiI7U9:
-    children: []
-    id: CHART-vomBOiI7U9
-    meta:
-      chartId: 83
-      height: 53
-      sliceName: Quarterly Sales
-      sliceNameOverride: Quarterly Revenue
-      uuid: 692aca26-a526-85db-c94c-411c91cc1077
-      width: 7
-    parents:
-    - ROOT_ID
-    - TABS-e5Ruro0cjP
-    - TAB-d-E0Zc1cTH
-    - ROW-Tyv02UA_6W
     type: CHART
   COLUMN-8Rp54B6ikC:
     children:
@@ -233,27 +217,6 @@ position:
     meta:
       text: Sales Dashboard
     type: HEADER
-  MARKDOWN--AtDSWnapE:
-    children: []
-    id: MARKDOWN--AtDSWnapE
-    meta:
-      code: "# \U0001F697 Vehicle Sales Dashboard \U0001F3CD\n\nThis example dashboard\
-        \ provides insight into the business operations of vehicle seller. The dataset\
-        \ powering this dashboard can be found [here on Kaggle](https://www.kaggle.com/kyanyoga/sample-sales-data).\n\
-        \n### Timeline\n\nThe dataset contains data on all orders from the 2003 and\
-        \ 2004 fiscal years, and some orders from 2005.\n\n### Products Sold\n\nThis\
-        \ shop mainly sells the following products:\n\n- \U0001F697 Classic Cars\n\
-        - \U0001F3CE\uFE0F Vintage Cars\n- \U0001F3CD\uFE0F Motorcycles\n- \U0001F69A\
-        \ Trucks & Buses \U0001F68C\n- \U0001F6E9\uFE0F Planes\n- \U0001F6A2 Ships\n\
-        - \U0001F688 Trains"
-      height: 53
-      width: 3
-    parents:
-    - ROOT_ID
-    - TABS-e5Ruro0cjP
-    - TAB-d-E0Zc1cTH
-    - ROW-Tyv02UA_6W
-    type: MARKDOWN
   MARKDOWN-HrzsMmvGQo:
     children: []
     id: MARKDOWN-HrzsMmvGQo
@@ -310,8 +273,6 @@ position:
   ROW-Tyv02UA_6W:
     children:
     - COLUMN-8Rp54B6ikC
-    - CHART-vomBOiI7U9
-    - MARKDOWN--AtDSWnapE
     id: ROW-Tyv02UA_6W
     meta:
       background: BACKGROUND_TRANSPARENT
@@ -371,11 +332,11 @@ metadata:
   default_filters: '{"103": {"__time_range": "No filter"}}'
   filter_scopes:
     '103':
-      ProductLine:
+      product_line:
         scope:
-        - TAB-4fthLQmdX
+        - ROOT_ID
         immune: []
-      DealSize:
+      deal_size:
         scope:
         - ROOT_ID
         immune: []
@@ -396,4 +357,14 @@ metadata:
     Planes: '#E04355'
     Ships: '#FCC700'
     Trains: '#A868B7'
+  show_native_filters: true
+  shared_label_colors:
+    Classic Cars: '#1f86c9'
+    Vintage Cars: '#47457c'
+    Motorcycles: '#5ac19e'
+    Trucks and Buses: '#ffa444'
+    Planes: '#666666'
+    Ships: '#e05043'
+    Trains: '#fcf900'
+  chart_configuration: {}
 version: 1.0.0

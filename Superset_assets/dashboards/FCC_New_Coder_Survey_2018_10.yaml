@@ -108,7 +108,7 @@ position:
     meta:
       chartId: 75
       height: 50
-      sliceName: "\U0001F393 Highest degree held"
+      sliceName: Highest degree held
       uuid: 9f7d2b9c-6b3a-69f9-f03e-d3a141514639
       width: 2
     parents:
@@ -283,22 +283,6 @@ position:
     - TABS-L-d9eyOE-b
     - TAB-AsMaxdYL_t
     - ROW-y-GwJPgxLr
-    type: CHART
-  CHART-fLpTSAHpAO:
-    children: []
-    id: CHART-fLpTSAHpAO
-    meta:
-      chartId: 77
-      height: 118
-      sliceName: Country of Citizenship
-      uuid: 2ba66056-a756-d6a3-aaec-0c243fb7062e
-      width: 9
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - TABS-L-d9eyOE-b
-    - TAB-AsMaxdYL_t
-    - ROW-UsW-_RPAb
     type: CHART
   CHART-lQVSAw0Or3:
     children: []
@@ -507,26 +491,6 @@ position:
     - TAB-AsMaxdYL_t
     - ROW-y-GwJPgxLr
     type: MARKDOWN
-  MARKDOWN-zc2mWxZeox:
-    children: []
-    id: MARKDOWN-zc2mWxZeox
-    meta:
-      code: "# Demographics\n\nFreeCodeCamp is a completely-online community of people\
-        \ learning to code and consists of aspiring & current developers from all\
-        \ over the world. That doesn't necessarily mean that acccess to these types\
-        \ of opportunities are evenly distributed. \n\nThe following charts can begin\
-        \ to help us understand:\n\n- the original citizenship of the survey respondents\n\
-        - minority representation among both aspiring and current developers\n- their\
-        \ age distribution\n- household languages"
-      height: 52
-      width: 3
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - TABS-L-d9eyOE-b
-    - TAB-AsMaxdYL_t
-    - ROW-mOvr_xWm1
-    type: MARKDOWN
   ROOT_ID:
     children:
     - GRID_ID
@@ -564,7 +528,6 @@ position:
   ROW-UsW-_RPAb:
     children:
     - COLUMN-OJ5spdMmNh
-    - CHART-fLpTSAHpAO
     id: ROW-UsW-_RPAb
     meta:
       background: BACKGROUND_TRANSPARENT
@@ -604,7 +567,6 @@ position:
     type: ROW
   ROW-mOvr_xWm1:
     children:
-    - MARKDOWN-zc2mWxZeox
     - CHART-Q3pbwsH3id
     - CHART-o-JPAWMZK-
     - CHART-YSzS5GOOLf
@@ -701,15 +663,15 @@ metadata:
   color_scheme: supersetColors
   filter_scopes:
     '79':
-      Ethnic Minority:
+      ethnic_minority:
         scope:
-        - TAB-AsMaxdYL_t
+        - ROOT_ID
         immune: []
       gender:
         scope:
         - ROOT_ID
         immune: []
-      Developer Type:
+      developer_type:
         scope:
         - ROOT_ID
         immune: []
@@ -760,4 +722,15 @@ metadata:
     In an Office (with Other Developers): '#9EE5E5'
     No Preference: '#D1C6BC'
     From Home: '#1FA8C9'
+  show_native_filters: true
+  shared_label_colors:
+    age: '#1FA8C9'
+    No, not an ethnic minority: '#666666'
+    Yes, an ethnic minority: '#5ac19e'
+    No Answer: '#1f86c9'
+    Male: '#e05043'
+    Female: '#47457c'
+    <NULL>: '#5AC189'
+    Prefer not to say: '#ffa444'
+  chart_configuration: {}
 version: 1.0.0
