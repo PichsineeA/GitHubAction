@@ -3,7 +3,7 @@ main_dttm_col: Date
 description: null
 default_endpoint: null
 offset: 0
-cache_timeout: 60
+cache_timeout: 90
 schema: public
 sql: ''
 params: null
