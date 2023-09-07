@@ -5,14 +5,13 @@ on:
   workflow_dispatch:
     inputs:
       environment:
+        required: true
         type: environment
-        description: 'Select the environment'
-        required: True
+        description: 'Pick Environment to Promote'
         
 jobs:
-
   backup:
-    runs-on: self-hosted #[ self-hosted ]
+    runs-on: [ self-hosted ]
     environment: ${{ inputs.environment }}
     
     steps:
