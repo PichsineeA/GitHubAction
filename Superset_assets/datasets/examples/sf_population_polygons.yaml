@@ -11,7 +11,7 @@ template_params: null
 filter_select_enabled: true
 fetch_values_predicate: null
 extra: null
-uuid: 57460bd7-68dd-4dae-ac6a-b77ebe43ea65
+uuid: 0fc9ccff-5b5f-4ad8-9ab9-207abb94e8b7
 metrics:
 - metric_name: count
   verbose_name: COUNT(*)
@@ -30,7 +30,7 @@ columns:
   advanced_data_type: null
   groupby: true
   filterable: true
-  expression: ''
+  expression: null
   description: null
   python_date_format: null
   extra: null
@@ -42,7 +42,7 @@ columns:
   advanced_data_type: null
   groupby: true
   filterable: true
-  expression: ''
+  expression: null
   description: null
   python_date_format: null
   extra: null
@@ -54,7 +54,7 @@ columns:
   advanced_data_type: null
   groupby: true
   filterable: true
-  expression: ''
+  expression: null
   description: null
   python_date_format: null
   extra: null
@@ -66,7 +66,7 @@ columns:
   advanced_data_type: null
   groupby: true
   filterable: true
-  expression: ''
+  expression: null
   description: null
   python_date_format: null
   extra: null

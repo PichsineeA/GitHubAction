@@ -1,32 +1,33 @@
-table_name: bart_lines
+table_name: new_members_daily
 main_dttm_col: null
-description: BART lines
+description: null
 default_endpoint: null
 offset: 0
 cache_timeout: null
 schema: public
-sql: null
+sql: SELECT date, total_membership - lag(total_membership) OVER (ORDER BY date) AS
+  new_members FROM exported_stats
 params: null
 template_params: null
 filter_select_enabled: true
 fetch_values_predicate: null
 extra: null
-uuid: b36cff57-1c5f-4242-b55b-53dc791ea0d0
+uuid: 9dd99cda-ff6b-4575-9a74-684d06e871ab
 metrics:
 - metric_name: count
-  verbose_name: COUNT(*)
-  metric_type: count
-  expression: COUNT(*)
+  verbose_name: null
+  metric_type: null
+  expression: count(*)
   description: null
   d3format: null
   extra: null
   warning_text: null
 columns:
-- column_name: name
+- column_name: date
   verbose_name: null
-  is_dttm: false
+  is_dttm: true
   is_active: true
-  type: VARCHAR(255)
+  type: DATETIME
   advanced_data_type: null
   groupby: true
   filterable: true
@@ -34,35 +35,11 @@ columns:
   description: null
   python_date_format: null
   extra: null
-- column_name: color
+- column_name: new_members
   verbose_name: null
   is_dttm: false
   is_active: true
-  type: VARCHAR(255)
-  advanced_data_type: null
-  groupby: true
-  filterable: true
-  expression: null
-  description: null
-  python_date_format: null
-  extra: null
-- column_name: path_json
-  verbose_name: null
-  is_dttm: false
-  is_active: true
-  type: TEXT
-  advanced_data_type: null
-  groupby: true
-  filterable: true
-  expression: null
-  description: null
-  python_date_format: null
-  extra: null
-- column_name: polyline
-  verbose_name: null
-  is_dttm: false
-  is_active: true
-  type: TEXT
+  type: LONGLONG
   advanced_data_type: null
   groupby: true
   filterable: true
