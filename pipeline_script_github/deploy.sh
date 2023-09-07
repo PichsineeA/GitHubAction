@@ -13,9 +13,6 @@ echo "==========================================================================
 echo ${csrf_token}
 echo "================================================================================"
 
-#zip -r assets_export.zip Superset_assets
-#ASSETS=assets_export.zip
-
 curl -X 'POST' \
     ''${ENV_HOST}'/api/v1/assets/import/' \
     -H 'accept: application/json' \
