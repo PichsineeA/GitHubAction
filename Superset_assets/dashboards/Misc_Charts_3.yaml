@@ -8,11 +8,11 @@ position:
     children: []
     id: CHART-BkeVbh8ANQ
     meta:
-      chartId: 445
+      chartId: 265
       height: 34
       sliceName: Multi Line
       width: 8
-      uuid: 6dd1f42b-bdff-48b1-aea5-8ef1e3281f80
+      uuid: d6eabc45-a94f-4f12-bf9b-d49a09689388
     type: CHART
   CHART-H1HYNzEANX:
     children: []
@@ -27,21 +27,21 @@ position:
     children: []
     id: CHART-HJOYVMV0E7
     meta:
-      chartId: 413
+      chartId: 233
       height: 63
       sliceName: Mapbox Long/Lat
       width: 6
-      uuid: e0ddb43f-aa5a-42b2-a561-80063304dee6
+      uuid: 44dc97cb-c679-405f-ab2b-481a76e5dc78
     type: CHART
   CHART-S1WYNz4AVX:
     children: []
     id: CHART-S1WYNz4AVX
     meta:
-      chartId: 425
+      chartId: 245
       height: 25
       sliceName: Parallel Coordinates
       width: 4
-      uuid: 93fc27b3-252e-4d0d-bba4-d65edafec52a
+      uuid: 7309550f-83a4-497e-95d5-8f1b0e6fca42
     type: CHART
   CHART-r19KVMNCE7:
     children: []
@@ -65,11 +65,11 @@ position:
     children: []
     id: CHART-rkgF4G4A4X
     meta:
-      chartId: 414
+      chartId: 234
       height: 25
       sliceName: Birth in France by department in 2016
       width: 8
-      uuid: aca4b199-44ba-43f3-9e76-7a82a78ec878
+      uuid: 006e2b14-57f7-4db4-88bc-b98d7b70e8ee
     type: CHART
   CHART-rywK4GVR4X:
     children: []
@@ -103,7 +103,6 @@ position:
     - ROW-SytNzNA4X
     - ROW-S1MK4M4A4X
     - ROW-HkFFEzVRVm
-    - ROW-N-1WXRFPOB
     id: GRID_ID
     type: GRID
   HEADER_ID:
@@ -141,74 +140,4 @@ position:
       background: BACKGROUND_TRANSPARENT
     type: ROW
   DASHBOARD_VERSION_KEY: v2
-  ROW-N-1WXRFPOB:
-    children:
-    - CHART-TSWKARZO
-    - CHART-WYPJX4E6
-    - CHART-8A29C781
-    - CHART-KZE54T1E
-    id: ROW-N-1WXRFPOB
-    meta:
-      '0': ROOT_ID
-      background: BACKGROUND_TRANSPARENT
-    type: ROW
-    parents:
-    - ROOT_ID
-    - GRID_ID
-  CHART-TSWKARZO:
-    children: []
-    id: CHART-TSWKARZO
-    meta:
-      chartId: 374
-      height: 50
-      sliceName: Birth in France by department in 2016
-      uuid: 47fa3d47-41b0-4e4b-bde4-029f05ab9579
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-1WXRFPOB
-  CHART-WYPJX4E6:
-    children: []
-    id: CHART-WYPJX4E6
-    meta:
-      chartId: 385
-      height: 50
-      sliceName: Parallel Coordinates
-      uuid: 2711e660-3e21-45e4-930e-b7ede2a0d7f3
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-1WXRFPOB
-  CHART-8A29C781:
-    children: []
-    id: CHART-8A29C781
-    meta:
-      chartId: 373
-      height: 50
-      sliceName: Mapbox Long/Lat
-      uuid: 9096ed32-af47-4308-b38f-fa0b84edfcc1
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-1WXRFPOB
-  CHART-KZE54T1E:
-    children: []
-    id: CHART-KZE54T1E
-    meta:
-      chartId: 405
-      height: 50
-      sliceName: Multi Line
-      uuid: 1d721464-634d-4ca0-8283-ac111d2aebba
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-1WXRFPOB
 version: 1.0.0

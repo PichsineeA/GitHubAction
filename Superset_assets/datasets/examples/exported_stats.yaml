@@ -3,7 +3,7 @@ main_dttm_col: Date
 description: null
 default_endpoint: null
 offset: 0
-cache_timeout: 60
+cache_timeout: null
 schema: public
 sql: ''
 params: null
@@ -19,8 +19,7 @@ metrics:
   expression: COUNT(*)
   description: null
   d3format: null
-  extra:
-    warning_markdown: ''
+  extra: null
   warning_text: null
 columns:
 - column_name: new_members

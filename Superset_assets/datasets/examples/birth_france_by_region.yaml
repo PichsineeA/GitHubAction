@@ -11,7 +11,7 @@ template_params: null
 filter_select_enabled: true
 fetch_values_predicate: null
 extra: null
-uuid: ce1a8a52-4f20-4711-a85b-6a5599ffa8c0
+uuid: 6f28a454-0b16-477b-8043-868819b7012e
 metrics:
 - metric_name: avg__2004
   verbose_name: null

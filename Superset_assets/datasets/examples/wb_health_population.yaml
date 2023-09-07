@@ -301,7 +301,7 @@ template_params: null
 filter_select_enabled: true
 fetch_values_predicate: null
 extra: null
-uuid: 51ee505c-9969-4526-8e72-46d002aa3889
+uuid: 7425b821-932d-408a-a7be-3e10a3e463a5
 metrics:
 - metric_name: sum__SP_DYN_LE00_IN
   verbose_name: null
