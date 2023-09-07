@@ -2,107 +2,107 @@ dashboard_title: World Bank's Data
 description: null
 css: null
 slug: world_health
-uuid: 6711a0cd-6f2f-44df-a569-a88e85b42ad4
+uuid: 408a30e6-b9a7-4fc1-8a09-aa4f37bc2e98
 position:
   CHART-36bfc934:
     children: []
     id: CHART-36bfc934
     meta:
-      chartId: 795
+      chartId: 33
       height: 25
       sliceName: Region Filter
       width: 2
-      uuid: 62135001-2a5e-42da-9fc6-6009f842293b
+      uuid: ef2671b3-5388-4c66-887c-26c342482d05
     type: CHART
   CHART-37982887:
     children: []
     id: CHART-37982887
     meta:
-      chartId: 796
+      chartId: 34
       height: 25
       sliceName: World's Population
       width: 2
-      uuid: f1fe37ec-941b-424b-83fa-95b086b15d42
+      uuid: ee17b80b-00c3-42e9-bfbf-cc231b1b039d
     type: CHART
   CHART-17e0f8d8:
     children: []
     id: CHART-17e0f8d8
     meta:
-      chartId: 797
+      chartId: 35
       height: 92
       sliceName: Most Populated Countries
       width: 3
-      uuid: 04d5e5f6-9f9e-4f37-802d-16484bc9259c
+      uuid: d368237e-130a-4fe3-85a7-d03bbdfe4897
     type: CHART
   CHART-2ee52f30:
     children: []
     id: CHART-2ee52f30
     meta:
-      chartId: 798
+      chartId: 36
       height: 38
       sliceName: Growth Rate
       width: 6
-      uuid: 7a720429-4b4f-4e8c-bcd7-2c31e89197b8
+      uuid: 6ebeca93-a0d0-45e1-86db-eafb88d62fbe
     type: CHART
   CHART-2d5b6871:
     children: []
     id: CHART-2d5b6871
     meta:
-      chartId: 799
+      chartId: 37
       height: 52
       sliceName: '% Rural'
       width: 7
-      uuid: 3e48d18a-3dcb-4d3d-8228-9a0f961d4be5
+      uuid: 9c26b8ed-a41a-4295-bb9b-faa4519d82f0
     type: CHART
   CHART-0fd0d252:
     children: []
     id: CHART-0fd0d252
     meta:
-      chartId: 800
+      chartId: 38
       height: 50
       sliceName: Life Expectancy VS Rural %
       width: 8
-      uuid: 337749ab-730d-4262-8794-83ff1d876805
+      uuid: cca0118e-515d-467a-a435-98b57c943d58
     type: CHART
   CHART-97f4cb48:
     children: []
     id: CHART-97f4cb48
     meta:
-      chartId: 801
+      chartId: 39
       height: 38
       sliceName: Rural Breakdown
       width: 3
-      uuid: 5c1cad49-9a19-4ae3-8798-e5f0c1dbef1c
+      uuid: 1bec93f8-fc1e-4997-a6ca-3a65ab16483f
     type: CHART
   CHART-b5e05d6f:
     children: []
     id: CHART-b5e05d6f
     meta:
-      chartId: 802
+      chartId: 40
       height: 50
       sliceName: World's Pop Growth
       width: 4
-      uuid: 59df4cde-1d75-45cf-9e8e-dbe548b10e40
+      uuid: 664dbcbe-84cd-4fd3-a9c4-cb0d4991f21f
     type: CHART
   CHART-e76e9f5f:
     children: []
     id: CHART-e76e9f5f
     meta:
-      chartId: 803
+      chartId: 41
       height: 50
       sliceName: Box plot
       width: 4
-      uuid: 253380e5-50e2-409d-a26e-dd82a66710ea
+      uuid: 13e192ef-1350-4e00-990a-4b2990aba354
     type: CHART
   CHART-a4808bba:
     children: []
     id: CHART-a4808bba
     meta:
-      chartId: 804
+      chartId: 42
       height: 50
       sliceName: Treemap
       width: 8
-      uuid: 67ccb002-25e6-4d69-8ddd-0430a460764c
+      uuid: 5c2560de-efbb-4696-b83c-88020b778a56
     type: CHART
   COLUMN-071bbbad:
     children:
