@@ -8,7 +8,7 @@ position:
     children: []
     id: CHART-BkeVbh8ANQ
     meta:
-      chartId: 265
+      chartId: 482
       height: 34
       sliceName: Multi Line
       width: 8
@@ -27,7 +27,7 @@ position:
     children: []
     id: CHART-HJOYVMV0E7
     meta:
-      chartId: 233
+      chartId: 459
       height: 63
       sliceName: Mapbox Long/Lat
       width: 6
@@ -37,7 +37,7 @@ position:
     children: []
     id: CHART-S1WYNz4AVX
     meta:
-      chartId: 245
+      chartId: 475
       height: 25
       sliceName: Parallel Coordinates
       width: 4
@@ -65,7 +65,7 @@ position:
     children: []
     id: CHART-rkgF4G4A4X
     meta:
-      chartId: 234
+      chartId: 471
       height: 25
       sliceName: Birth in France by department in 2016
       width: 8
@@ -103,6 +103,7 @@ position:
     - ROW-SytNzNA4X
     - ROW-S1MK4M4A4X
     - ROW-HkFFEzVRVm
+    - ROW-N-9NRPO8SF
     id: GRID_ID
     type: GRID
   HEADER_ID:
@@ -140,4 +141,134 @@ position:
       background: BACKGROUND_TRANSPARENT
     type: ROW
   DASHBOARD_VERSION_KEY: v2
+  ROW-N-9NRPO8SF:
+    children:
+    - CHART-OR52QSGF
+    - CHART-OEMJ94FT
+    - CHART-Q1TQMZ8E
+    - CHART-9JFT96AI
+    - CHART-S37RKLHA
+    - CHART-T6PXDAA1
+    - CHART-YFSMFF6E
+    - CHART-Y4V4N1JN
+    id: ROW-N-9NRPO8SF
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+    parents:
+    - ROOT_ID
+    - GRID_ID
+  CHART-OR52QSGF:
+    children: []
+    id: CHART-OR52QSGF
+    meta:
+      chartId: 414
+      height: 50
+      sliceName: Birth in France by department in 2016
+      uuid: aca4b199-44ba-43f3-9e76-7a82a78ec878
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-9NRPO8SF
+  CHART-OEMJ94FT:
+    children: []
+    id: CHART-OEMJ94FT
+    meta:
+      chartId: 385
+      height: 50
+      sliceName: Parallel Coordinates
+      uuid: 2711e660-3e21-45e4-930e-b7ede2a0d7f3
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-9NRPO8SF
+  CHART-Q1TQMZ8E:
+    children: []
+    id: CHART-Q1TQMZ8E
+    meta:
+      chartId: 445
+      height: 50
+      sliceName: Multi Line
+      uuid: 6dd1f42b-bdff-48b1-aea5-8ef1e3281f80
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-9NRPO8SF
+  CHART-9JFT96AI:
+    children: []
+    id: CHART-9JFT96AI
+    meta:
+      chartId: 405
+      height: 50
+      sliceName: Multi Line
+      uuid: 1d721464-634d-4ca0-8283-ac111d2aebba
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-9NRPO8SF
+  CHART-S37RKLHA:
+    children: []
+    id: CHART-S37RKLHA
+    meta:
+      chartId: 374
+      height: 50
+      sliceName: Birth in France by department in 2016
+      uuid: 47fa3d47-41b0-4e4b-bde4-029f05ab9579
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-9NRPO8SF
+  CHART-T6PXDAA1:
+    children: []
+    id: CHART-T6PXDAA1
+    meta:
+      chartId: 413
+      height: 50
+      sliceName: Mapbox Long/Lat
+      uuid: e0ddb43f-aa5a-42b2-a561-80063304dee6
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-9NRPO8SF
+  CHART-YFSMFF6E:
+    children: []
+    id: CHART-YFSMFF6E
+    meta:
+      chartId: 425
+      height: 50
+      sliceName: Parallel Coordinates
+      uuid: 93fc27b3-252e-4d0d-bba4-d65edafec52a
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-9NRPO8SF
+  CHART-Y4V4N1JN:
+    children: []
+    id: CHART-Y4V4N1JN
+    meta:
+      chartId: 373
+      height: 50
+      sliceName: Mapbox Long/Lat
+      uuid: 9096ed32-af47-4308-b38f-fa0b84edfcc1
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-9NRPO8SF
 version: 1.0.0
