@@ -5,14 +5,13 @@ on:
   workflow_dispatch:
     inputs:
       environment:
+        required: true
         type: environment
-        description: 'Select the environment'
-        required: True
+        description: 'Pick Environment to Promote'
         
 jobs:
-
   backup:
-    runs-on: self-hosted #[ self-hosted ]
+    runs-on: [ self-hosted ]
     environment: ${{ inputs.environment }}
     
     steps:
@@ -62,12 +61,14 @@ jobs:
 
       - name: deploy
         run: |
+            chmod +x ./Superset_assets
+            zip -r assets_export.zip Superset_assets
             chmod +x ./pipeline_script_github/deploy.sh
             ./pipeline_script_github/deploy.sh
             
         env:
             ENV_NAME: ${{ inputs.environment }}
-            CI_COMMIT_TAG: ${{github.ref_name}}
             ENV_HOST: ${{secrets.ENV_HOST}}
             ENV_PASS: ${{secrets.ENV_PASS}}  
             ENV_USER: ${{secrets.ENV_USER}}
+            PROMOTE_ZIP_FILE: "assets_export.zip"

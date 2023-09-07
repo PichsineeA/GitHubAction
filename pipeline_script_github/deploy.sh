@@ -13,9 +13,6 @@ echo "==========================================================================
 echo ${csrf_token}
 echo "================================================================================"
 
-zip -r assets_export.zip Superset_assets
-ASSETS=assets_export.zip
-
 curl -X 'POST' \
     ''${ENV_HOST}'/api/v1/assets/import/' \
     -H 'accept: application/json' \
@@ -24,5 +21,5 @@ curl -X 'POST' \
     -H "Authorization: Bearer $bearer" \
     -H 'Origin: '${ENV_HOST}'' \
     -H "Cookie: $cookie" \
-    -F "bundle=@${ASSETS}" \
+    -F "bundle=@${PROMOTE_ZIP_FILE}" \
     -F "overwrite=true"
