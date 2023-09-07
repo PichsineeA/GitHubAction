@@ -3,7 +3,11 @@ main_dttm_col: Date
 description: null
 default_endpoint: null
 offset: 0
+<<<<<<< HEAD:Superset_assets/datasets/database/exported_stats.yaml
 cache_timeout: null
+=======
+cache_timeout: 60
+>>>>>>> cbbabb0ef9fbce045774dd4aa2b627449bf02d61:Superset_assets/datasets/examples/exported_stats.yaml
 schema: public
 sql: ''
 params: null
