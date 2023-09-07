@@ -3,7 +3,7 @@ main_dttm_col: Date
 description: null
 default_endpoint: null
 offset: 0
-cache_timeout: 60
+cache_timeout: 90
 schema: public
 sql: ''
 params: null
@@ -23,7 +23,7 @@ metrics:
     warning_markdown: ''
   warning_text: null
 columns:
-- column_name: Members
+- column_name: new_members
   verbose_name: New Members
   is_dttm: false
   is_active: true
