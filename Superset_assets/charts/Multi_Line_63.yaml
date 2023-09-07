@@ -1,0 +1,18 @@
+slice_name: Multi Line
+viz_type: line_multi
+params:
+  slice_name: Multi Line
+  viz_type: line_multi
+  line_charts:
+  - 36
+  line_charts_2:
+  - 46
+  since: '1970'
+  until: '1995'
+  prefix_metric_with_slice_name: true
+  show_legend: false
+  x_axis_format: '%Y'
+cache_timeout: null
+uuid: 7b8c9c48-1de4-4658-b565-c15ddcf04fa1
+version: 1.0.0
+dataset_uuid: e9c5987d-8a14-4bde-8114-202ca029eac2

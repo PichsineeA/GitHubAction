@@ -2,75 +2,75 @@ dashboard_title: deck.gl Demo
 description: null
 css: null
 slug: deck
-uuid: 9b4e7e93-3004-4e89-a73a-c5ae8eacbe97
+uuid: 93ecadaa-2678-4745-8ce3-9c0f87e6df6e
 position:
   CHART-3afd9d70:
     meta:
-      chartId: 492
+      chartId: 64
       sliceName: Deck.gl Scatterplot
       width: 6
       height: 50
-      uuid: ed2fbe9a-7819-4544-bab2-f7b984429d6d
+      uuid: f8bf12cb-8f09-49b7-94fd-fc401792cc8e
     type: CHART
     id: CHART-3afd9d70
     children: []
   CHART-2ee7fa5e:
     meta:
-      chartId: 491
+      chartId: 65
       sliceName: Deck.gl Screen grid
       width: 6
       height: 50
-      uuid: 1ca78472-7faf-481f-9d79-6ee3d0ccd607
+      uuid: 559f4647-9a8d-45f0-828d-90dae59ef485
     type: CHART
     id: CHART-2ee7fa5e
     children: []
   CHART-201f7715:
     meta:
-      chartId: 461
+      chartId: 66
       sliceName: Deck.gl Hexagons
       width: 6
       height: 50
-      uuid: d318dd8a-fab0-45d6-b9ec-8837697ec15b
+      uuid: 453cd084-8e22-478d-9cca-0ca1a2a22c55
     type: CHART
     id: CHART-201f7715
     children: []
   CHART-d02f6c40:
     meta:
-      chartId: 469
+      chartId: 67
       sliceName: Deck.gl Grid
       width: 6
       height: 50
-      uuid: b6fcbf6d-36b4-45f5-bee0-2d98dda176b5
+      uuid: d0f0415d-bf1a-434a-bbfd-cb1f2e9bd7eb
     type: CHART
     id: CHART-d02f6c40
     children: []
   CHART-2673431d:
     meta:
-      chartId: 486
+      chartId: 68
       sliceName: Deck.gl Polygons
       width: 6
       height: 50
-      uuid: f06b8602-edeb-4e5b-90a4-c93191f87726
+      uuid: abce04f0-802a-4f20-8034-a03b646846f5
     type: CHART
     id: CHART-2673431d
     children: []
   CHART-85265a60:
     meta:
-      chartId: 465
+      chartId: 69
       sliceName: Deck.gl Arcs
       width: 6
       height: 50
-      uuid: 6eec70a4-7c4d-49e0-aadb-da30645fe2db
+      uuid: 831d5ca2-4779-43f3-8ac0-32f85c2c1656
     type: CHART
     id: CHART-85265a60
     children: []
   CHART-2b87513c:
     meta:
-      chartId: 468
+      chartId: 70
       sliceName: Deck.gl Path
       width: 6
       height: 50
-      uuid: 1bb6d85b-7e0e-4317-a8a0-dc425d9926bb
+      uuid: 890cb8ff-0fdc-45be-9f65-58b3dc363106
     type: CHART
     id: CHART-2b87513c
     children: []
@@ -82,7 +82,6 @@ position:
     - ROW-72c218a5
     - ROW-957ba55b
     - ROW-af041bdd
-    - ROW-N-BROL3WX4
   HEADER_ID:
     meta:
       text: deck.gl Demo
@@ -125,224 +124,4 @@ position:
     children:
     - CHART-2b87513c
   DASHBOARD_VERSION_KEY: v2
-  ROW-N-BROL3WX4:
-    children:
-    - CHART-XTJ2RCLY
-    - CHART-J40QDFX3
-    - CHART-Q8G3WTWU
-    - CHART-9QXFUDTW
-    - CHART-I0BSXNBS
-    - CHART-U4Y0LG48
-    - CHART-S98DFEYY
-    - CHART-FVCJOS78
-    - CHART-1FPZY9S6
-    - CHART-L96IJEMF
-    - CHART-MELO1OW7
-    - CHART-7JTZE6AI
-    - CHART-MLZKUVGD
-    - CHART-X0SRFGV1
-    id: ROW-N-BROL3WX4
-    meta:
-      '0': ROOT_ID
-      background: BACKGROUND_TRANSPARENT
-    type: ROW
-    parents:
-    - ROOT_ID
-    - GRID_ID
-  CHART-XTJ2RCLY:
-    children: []
-    id: CHART-XTJ2RCLY
-    meta:
-      chartId: 408
-      height: 50
-      sliceName: Deck.gl Hexagons
-      uuid: 8b47854d-cea8-437b-a3b8-31695f76189a
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-BROL3WX4
-  CHART-J40QDFX3:
-    children: []
-    id: CHART-J40QDFX3
-    meta:
-      chartId: 450
-      height: 50
-      sliceName: Deck.gl Polygons
-      uuid: a9c4967d-09c8-4868-a78f-47b68a6df9ad
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-BROL3WX4
-  CHART-Q8G3WTWU:
-    children: []
-    id: CHART-Q8G3WTWU
-    meta:
-      chartId: 412
-      height: 50
-      sliceName: Deck.gl Path
-      uuid: 7ee402e4-96ca-49bb-92af-28124d9cbfeb
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-BROL3WX4
-  CHART-9QXFUDTW:
-    children: []
-    id: CHART-9QXFUDTW
-    meta:
-      chartId: 451
-      height: 50
-      sliceName: Deck.gl Arcs
-      uuid: 6b2602de-84ef-45a2-8495-f993d237dcf6
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-BROL3WX4
-  CHART-I0BSXNBS:
-    children: []
-    id: CHART-I0BSXNBS
-    meta:
-      chartId: 409
-      height: 50
-      sliceName: Deck.gl Grid
-      uuid: 1c79bd03-e3a2-4a9c-bb7b-5d3802b4b1f6
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-BROL3WX4
-  CHART-U4Y0LG48:
-    children: []
-    id: CHART-U4Y0LG48
-    meta:
-      chartId: 448
-      height: 50
-      sliceName: Deck.gl Hexagons
-      uuid: 946a1e5d-9b27-4358-a9b8-c5e7461220a6
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-BROL3WX4
-  CHART-S98DFEYY:
-    children: []
-    id: CHART-S98DFEYY
-    meta:
-      chartId: 446
-      height: 50
-      sliceName: Deck.gl Scatterplot
-      uuid: bbec5cda-e5a3-4c69-817c-f5afbba37757
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-BROL3WX4
-  CHART-FVCJOS78:
-    children: []
-    id: CHART-FVCJOS78
-    meta:
-      chartId: 411
-      height: 50
-      sliceName: Deck.gl Arcs
-      uuid: 4a02776a-fa32-4a2d-b9bb-f9cfa47eff31
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-BROL3WX4
-  CHART-1FPZY9S6:
-    children: []
-    id: CHART-1FPZY9S6
-    meta:
-      chartId: 407
-      height: 50
-      sliceName: Deck.gl Screen grid
-      uuid: 6d012107-2948-4b7e-a6fb-904374852c66
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-BROL3WX4
-  CHART-L96IJEMF:
-    children: []
-    id: CHART-L96IJEMF
-    meta:
-      chartId: 447
-      height: 50
-      sliceName: Deck.gl Screen grid
-      uuid: 7e75e03c-e653-4af9-b8f4-684f6adeb993
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-BROL3WX4
-  CHART-MELO1OW7:
-    children: []
-    id: CHART-MELO1OW7
-    meta:
-      chartId: 452
-      height: 50
-      sliceName: Deck.gl Path
-      uuid: 9acbfe55-343c-4f25-824f-7f41d40b7f70
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-BROL3WX4
-  CHART-7JTZE6AI:
-    children: []
-    id: CHART-7JTZE6AI
-    meta:
-      chartId: 410
-      height: 50
-      sliceName: Deck.gl Polygons
-      uuid: 887b4da1-781f-40da-a879-0d12f5ccd6ce
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-BROL3WX4
-  CHART-MLZKUVGD:
-    children: []
-    id: CHART-MLZKUVGD
-    meta:
-      chartId: 449
-      height: 50
-      sliceName: Deck.gl Grid
-      uuid: 5b5524f2-4bdb-4724-bebf-d30fc8eb1c1d
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-BROL3WX4
-  CHART-X0SRFGV1:
-    children: []
-    id: CHART-X0SRFGV1
-    meta:
-      chartId: 406
-      height: 50
-      sliceName: Deck.gl Scatterplot
-      uuid: d691c5ff-f10d-40c1-9571-34cf77cd2e2d
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-BROL3WX4
 version: 1.0.0

@@ -2,17 +2,17 @@ dashboard_title: USA Births Names
 description: null
 css: null
 slug: births
-uuid: d9df8a57-48bb-4fb1-8dcc-a42a7a34ef91
+uuid: 2eb23b51-df29-46f4-85e1-886a8dd23f42
 position:
   CHART-6GdlekVise:
     children: []
     id: CHART-6GdlekVise
     meta:
-      chartId: 484
+      chartId: 52
       height: 50
       sliceName: Top 10 Girl Name Share
       width: 5
-      uuid: 417ddb34-104c-4027-99e5-24bab25c368a
+      uuid: 258b09aa-fe2f-4bcc-b219-9b5b62aaf22d
     parents:
     - ROOT_ID
     - GRID_ID
@@ -22,11 +22,11 @@ position:
     children: []
     id: CHART-6n9jxb30JG
     meta:
-      chartId: 454
+      chartId: 47
       height: 36
       sliceName: Genders by State
       width: 5
-      uuid: d35bdc98-8179-4351-9d55-3314980d6bde
+      uuid: 2c583314-5bee-4c02-a2e2-88b27bf2d8be
     parents:
     - ROOT_ID
     - GRID_ID
@@ -36,11 +36,11 @@ position:
     children: []
     id: CHART-Jj9qh1ol-N
     meta:
-      chartId: 488
+      chartId: 51
       height: 50
       sliceName: Boy Name Cloud
       width: 4
-      uuid: 8bb8df51-2d08-4b93-b0f0-5a707ed2ea09
+      uuid: fd1d5d80-8469-4068-bdf3-68dec0b1846b
     parents:
     - ROOT_ID
     - GRID_ID
@@ -50,11 +50,11 @@ position:
     children: []
     id: CHART-ODvantb_bF
     meta:
-      chartId: 487
+      chartId: 53
       height: 50
       sliceName: Top 10 Boy Name Share
       width: 5
-      uuid: 46d1e19f-5c24-4c08-b8d3-31a184c0b159
+      uuid: 58212cc6-6475-445d-93f6-23044a0e6750
     parents:
     - ROOT_ID
     - GRID_ID
@@ -64,11 +64,11 @@ position:
     children: []
     id: CHART-PAXUUqwmX9
     meta:
-      chartId: 485
+      chartId: 45
       height: 34
       sliceName: Genders
       width: 3
-      uuid: 5db9d107-a79f-4057-affe-85b4902adb26
+      uuid: 7bc54e0f-fb64-478b-a1a2-b5d030e2a827
     parents:
     - ROOT_ID
     - GRID_ID
@@ -78,11 +78,11 @@ position:
     children: []
     id: CHART-_T6n_K9iQN
     meta:
-      chartId: 464
+      chartId: 46
       height: 36
       sliceName: Trends
       width: 7
-      uuid: 3f9ca1dd-03c8-4c1c-8ccb-82b4256a2165
+      uuid: 19771cb4-d346-4348-a6b7-862d3ecc5deb
     parents:
     - ROOT_ID
     - GRID_ID
@@ -92,11 +92,11 @@ position:
     children: []
     id: CHART-eNY0tcE_ic
     meta:
-      chartId: 477
+      chartId: 44
       height: 34
       sliceName: Participants
       width: 3
-      uuid: 812178c8-6eb7-4732-a054-5bd417733252
+      uuid: af4a9b2d-14ac-4340-94db-0066944afdf6
     parents:
     - ROOT_ID
     - GRID_ID
@@ -106,11 +106,11 @@ position:
     children: []
     id: CHART-g075mMgyYb
     meta:
-      chartId: 467
+      chartId: 48
       height: 50
       sliceName: Girls
       width: 3
-      uuid: 19ba098c-b5c7-488f-99c2-dfa458e44710
+      uuid: 55669278-b5d3-4d02-97ae-658c52bf6120
     parents:
     - ROOT_ID
     - GRID_ID
@@ -120,11 +120,11 @@ position:
     children: []
     id: CHART-n-zGGE6S1y
     meta:
-      chartId: 473
+      chartId: 49
       height: 50
       sliceName: Girl Name Cloud
       width: 4
-      uuid: 89911b96-6398-4bd7-b0b6-439a5651a2e8
+      uuid: 73bea07f-c1cc-4262-9c5a-d4d9a5e83581
     parents:
     - ROOT_ID
     - GRID_ID
@@ -134,11 +134,11 @@ position:
     children: []
     id: CHART-vJIPjmcbD3
     meta:
-      chartId: 455
+      chartId: 50
       height: 50
       sliceName: Boys
       width: 3
-      uuid: 1426a75b-bc53-460a-8eb4-4e3ee9fc90f3
+      uuid: 8297b551-127a-4f52-9632-56882574ec5b
     parents:
     - ROOT_ID
     - GRID_ID
@@ -151,8 +151,7 @@ position:
     - ROW--EyBZQlDi
     - ROW-eh0w37bWbR
     - ROW-kzWtcvo8R1
-    - ROW-N-L6L31YR7
-    - ROW-N-HK2UNI07
+    - ROW-N-Z2AJ6MMA
     id: GRID_ID
     parents:
     - ROOT_ID
@@ -227,10 +226,10 @@ position:
     - ROOT_ID
     - GRID_ID
     type: ROW
-  ROW-N-L6L31YR7:
+  ROW-N-Z2AJ6MMA:
     children:
-    - CHART-9RYFDZLK
-    id: ROW-N-L6L31YR7
+    - CHART-MFGK789G
+    id: ROW-N-Z2AJ6MMA
     meta:
       '0': ROOT_ID
       background: BACKGROUND_TRANSPARENT
@@ -238,360 +237,20 @@ position:
     parents:
     - ROOT_ID
     - GRID_ID
-  CHART-9RYFDZLK:
+  CHART-MFGK789G:
     children: []
-    id: CHART-9RYFDZLK
+    id: CHART-MFGK789G
     meta:
-      chartId: 480
+      chartId: 54
       height: 50
       sliceName: Pivot Table v2
-      uuid: d8fc883b-c9a5-4e26-88af-11fd5628e155
+      uuid: 3fd91b97-5022-4791-b5fa-027a9c543e47
       width: 4
     type: CHART
     parents:
     - ROOT_ID
     - GRID_ID
-    - ROW-N-L6L31YR7
-  ROW-N-HK2UNI07:
-    children:
-    - CHART-SP2A1WT0
-    - CHART-JV13W6RV
-    - CHART-3QXXMUKA
-    - CHART-D4KZJZNK
-    - CHART-FSBMWAWT
-    - CHART-88WKIUNM
-    - CHART-8UASX6Q7
-    - CHART-FTZFJL05
-    - CHART-IY6WRL1F
-    - CHART-GS9G5IC0
-    - CHART-ZZLKG8Y9
-    - CHART-6UO0PKCP
-    - CHART-777AY8UA
-    - CHART-CRY7N6MC
-    - CHART-VM3TCPAY
-    - CHART-T26HPLQY
-    - CHART-8FOEJOZF
-    - CHART-G9MGEVZM
-    - CHART-XSOUW872
-    - CHART-GQDWEUIW
-    - CHART-NPQQPIO1
-    - CHART-LMT6751N
-    id: ROW-N-HK2UNI07
-    meta:
-      '0': ROOT_ID
-      background: BACKGROUND_TRANSPARENT
-    type: ROW
-    parents:
-    - ROOT_ID
-    - GRID_ID
-  CHART-SP2A1WT0:
-    children: []
-    id: CHART-SP2A1WT0
-    meta:
-      chartId: 435
-      height: 50
-      sliceName: Top 10 Boy Name Share
-      uuid: aa70278d-a802-4071-bd88-f8dca1cc125c
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-HK2UNI07
-  CHART-JV13W6RV:
-    children: []
-    id: CHART-JV13W6RV
-    meta:
-      chartId: 426
-      height: 50
-      sliceName: Participants
-      uuid: dfd3d255-c770-4542-b3ae-89aa4490c8e9
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-HK2UNI07
-  CHART-3QXXMUKA:
-    children: []
-    id: CHART-3QXXMUKA
-    meta:
-      chartId: 432
-      height: 50
-      sliceName: Boys
-      uuid: f2be73c4-0824-4fc6-818e-55199074da7a
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-HK2UNI07
-  CHART-D4KZJZNK:
-    children: []
-    id: CHART-D4KZJZNK
-    meta:
-      chartId: 431
-      height: 50
-      sliceName: Girl Name Cloud
-      uuid: 8fc7b532-c372-47b6-b640-06609b9f73b3
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-HK2UNI07
-  CHART-FSBMWAWT:
-    children: []
-    id: CHART-FSBMWAWT
-    meta:
-      chartId: 428
-      height: 50
-      sliceName: Trends
-      uuid: b1960346-af26-4ad1-9d35-7315b91e0828
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-HK2UNI07
-  CHART-88WKIUNM:
-    children: []
-    id: CHART-88WKIUNM
-    meta:
-      chartId: 387
-      height: 50
-      sliceName: Genders
-      uuid: 9f19b068-237b-4779-a111-8085c71dd811
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-HK2UNI07
-  CHART-8UASX6Q7:
-    children: []
-    id: CHART-8UASX6Q7
-    meta:
-      chartId: 396
-      height: 50
-      sliceName: Pivot Table v2
-      uuid: bfd6ad90-2aac-4784-9d7f-3cbf74535818
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-HK2UNI07
-  CHART-FTZFJL05:
-    children: []
-    id: CHART-FTZFJL05
-    meta:
-      chartId: 389
-      height: 50
-      sliceName: Genders by State
-      uuid: bba77a9a-ddc5-47bf-8813-70ceca3a519d
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-HK2UNI07
-  CHART-IY6WRL1F:
-    children: []
-    id: CHART-IY6WRL1F
-    meta:
-      chartId: 395
-      height: 50
-      sliceName: Top 10 Boy Name Share
-      uuid: 782ff733-5ea4-4119-a659-7a5c96021e14
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-HK2UNI07
-  CHART-GS9G5IC0:
-    children: []
-    id: CHART-GS9G5IC0
-    meta:
-      chartId: 388
-      height: 50
-      sliceName: Trends
-      uuid: 088cf37d-2867-4845-b4b5-eec1d8197eb5
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-HK2UNI07
-  CHART-ZZLKG8Y9:
-    children: []
-    id: CHART-ZZLKG8Y9
-    meta:
-      chartId: 433
-      height: 50
-      sliceName: Boy Name Cloud
-      uuid: e925be87-29d7-4701-847d-96c71f5c2f20
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-HK2UNI07
-  CHART-6UO0PKCP:
-    children: []
-    id: CHART-6UO0PKCP
-    meta:
-      chartId: 393
-      height: 50
-      sliceName: Boy Name Cloud
-      uuid: 8da67bf6-c351-4e52-9c05-9e19f75cf066
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-HK2UNI07
-  CHART-777AY8UA:
-    children: []
-    id: CHART-777AY8UA
-    meta:
-      chartId: 391
-      height: 50
-      sliceName: Girl Name Cloud
-      uuid: 54fa0d13-2ccd-4c87-ab7c-790e0413dc5c
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-HK2UNI07
-  CHART-CRY7N6MC:
-    children: []
-    id: CHART-CRY7N6MC
-    meta:
-      chartId: 390
-      height: 50
-      sliceName: Girls
-      uuid: b78e97f9-ff42-4d2c-b6bd-b74f2e350dde
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-HK2UNI07
-  CHART-VM3TCPAY:
-    children: []
-    id: CHART-VM3TCPAY
-    meta:
-      chartId: 394
-      height: 50
-      sliceName: Top 10 Girl Name Share
-      uuid: 6612e73a-58dc-47f0-931d-5afae2151be4
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-HK2UNI07
-  CHART-T26HPLQY:
-    children: []
-    id: CHART-T26HPLQY
-    meta:
-      chartId: 430
-      height: 50
-      sliceName: Girls
-      uuid: 1c31bf88-4915-4c12-922a-e5a45c6755f5
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-HK2UNI07
-  CHART-8FOEJOZF:
-    children: []
-    id: CHART-8FOEJOZF
-    meta:
-      chartId: 434
-      height: 50
-      sliceName: Top 10 Girl Name Share
-      uuid: 6988fed9-42f2-4055-bfba-a6c05c40ae0c
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-HK2UNI07
-  CHART-G9MGEVZM:
-    children: []
-    id: CHART-G9MGEVZM
-    meta:
-      chartId: 436
-      height: 50
-      sliceName: Pivot Table v2
-      uuid: 0f4f6059-0481-463f-9a78-68ebb8ea3a24
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-HK2UNI07
-  CHART-XSOUW872:
-    children: []
-    id: CHART-XSOUW872
-    meta:
-      chartId: 429
-      height: 50
-      sliceName: Genders by State
-      uuid: 89c182e6-a40d-42b6-ae66-4ae0a6ba9ded
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-HK2UNI07
-  CHART-GQDWEUIW:
-    children: []
-    id: CHART-GQDWEUIW
-    meta:
-      chartId: 427
-      height: 50
-      sliceName: Genders
-      uuid: fa2547c0-52c8-42ae-924e-fcbae3f07126
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-HK2UNI07
-  CHART-NPQQPIO1:
-    children: []
-    id: CHART-NPQQPIO1
-    meta:
-      chartId: 386
-      height: 50
-      sliceName: Participants
-      uuid: a8987cf3-097f-4226-964a-347b177b75dc
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-HK2UNI07
-  CHART-LMT6751N:
-    children: []
-    id: CHART-LMT6751N
-    meta:
-      chartId: 392
-      height: 50
-      sliceName: Boys
-      uuid: 4b17a1f0-8dff-40b1-af15-8d96b0b2d0ae
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-HK2UNI07
+    - ROW-N-Z2AJ6MMA
 metadata:
   label_colors:
     Girls: '#FF69B4'
