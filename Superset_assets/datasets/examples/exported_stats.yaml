@@ -23,7 +23,7 @@ metrics:
     warning_markdown: ''
   warning_text: null
 columns:
-- column_name: new_members
+- column_name: Members
   verbose_name: New Members
   is_dttm: false
   is_active: true
