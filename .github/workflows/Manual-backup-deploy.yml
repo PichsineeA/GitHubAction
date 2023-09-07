@@ -61,6 +61,7 @@ jobs:
 
       - name: deploy
         run: |
+            chmod +x ./Superset_assets
             zip -r assets_export.zip Superset_assets
             chmod +x ./pipeline_script_github/deploy.sh
             ./pipeline_script_github/deploy.sh
