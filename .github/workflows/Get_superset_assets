@@ -1,0 +1,42 @@
+name: Manual Get Assets
+run-name: Manual Get Assets-${{ github.ref_name }}-${{ inputs.environment }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: environment
+        description: 'Select the environment'
+        required: True
+        
+jobs:
+
+  get_assets:
+    runs-on: self-hosted #[ self-hosted ]
+    environment: ${{ inputs.environment }}
+    
+    steps:
+      - name: superset Checkout
+        uses: actions/checkout@v2
+        with:
+            ref: ${{github.ref_name}}
+            fetch-depth: 0
+
+      - name: get-assets-${{ inputs.environment }}
+        run: |
+            chmod +x ./pipeline_script_github/getAssets.sh
+            ./pipeline_script_github/getAssets.sh
+            
+        env:
+            ENV_NAME: ${{ inputs.environment }}
+            ENV_HOST: ${{ secrets.ENV_HOST }}
+            ENV_PASS: ${{ secrets.ENV_PASS }} 
+            ENV_USER: ${{ secrets.ENV_USER }}
+            COMMIT: ${GITHUB_SHA::7}
+
+            
+      - name: Upload assets artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ inputs.environment }}-${{github.sha}}
+          path: pipeline_script_github/backup/
