@@ -11,15 +11,12 @@ echo "==========================================================================
 echo ${bearer}
 echo "================================================================================"
 echo ${csrf_token}
-echo "================================================================================"
 
-curl -X 'POST' \
-    ''${ENV_HOST}'/api/v1/assets/import/' \
-    -H 'accept: application/json' \
+curl -X 'GET' \
+    ''${ENV_HOST}'/api/v1/assets/export/' \
+    -H 'accept: */*' \
+    -H 'Accept-Encoding: gzip, deflate, br' \
     -H 'Content-Type: multipart/form-data' \
     -H "X-CSRFToken: $csrf_token" \
     -H "Authorization: Bearer $bearer" \
-    -H 'Origin: '${ENV_HOST}'' \
-    -H "Cookie: $cookie" \
-    -F "bundle=@${PROMOTE_ZIP_FILE}" \
-    -F "overwrite=true"
+    -H "Cookie: $cookie" >pipeline_script_github/backup/${ENV_NAME}_get_assets.zip
