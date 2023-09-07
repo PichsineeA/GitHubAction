@@ -1,4 +1,4 @@
-database_name: database
+database_name: examples
 sqlalchemy_uri: postgresql://superset:XXXXXXXXXX@db:5432/superset
 cache_timeout: null
 expose_in_sqllab: true
@@ -11,7 +11,6 @@ extra:
   metadata_params: {}
   engine_params: {}
   metadata_cache_timeout: {}
-  disable_data_preview: false
   schemas_allowed_for_csv_upload: []
 uuid: a2dc77af-e654-49bb-b321-40f6b559a1ee
 version: 1.0.0
