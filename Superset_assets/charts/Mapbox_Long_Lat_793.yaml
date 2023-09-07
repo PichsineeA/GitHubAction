@@ -1,0 +1,17 @@
+slice_name: Mapbox Long/Lat
+viz_type: mapbox
+params:
+  all_columns:
+  - occupancy
+  all_columns_x: LON
+  all_columns_y: LAT
+  granularity_sqla: day
+  mapbox_style: mapbox://styles/mapbox/light-v9
+  row_limit: 500000
+  since: '2014-01-01'
+  until: now
+  viz_type: mapbox
+cache_timeout: null
+uuid: 4ea2544b-c243-4727-8554-787958677eab
+version: 1.0.0
+dataset_uuid: a1bbf15e-72d6-4b59-ac89-2aa5e883c8a3
