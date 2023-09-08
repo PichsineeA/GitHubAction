@@ -2,75 +2,75 @@ dashboard_title: deck.gl Demo
 description: null
 css: null
 slug: deck
-uuid: 0eeabdd6-bb1b-44ae-b7db-f34ad8181a2d
+uuid: 2eadd9a6-5d99-4a49-9f1a-9203dba2fed7
 position:
   CHART-3afd9d70:
     meta:
-      chartId: 306
+      chartId: 826
       sliceName: Deck.gl Scatterplot
       width: 6
       height: 50
-      uuid: c4bf7662-7be1-41c1-8099-7b46adbe1710
+      uuid: d3597c17-d879-4d9a-88a0-c8f762cd3dec
     type: CHART
     id: CHART-3afd9d70
     children: []
   CHART-2ee7fa5e:
     meta:
-      chartId: 307
+      chartId: 827
       sliceName: Deck.gl Screen grid
       width: 6
       height: 50
-      uuid: cc70f6a6-5339-4788-b2cc-0ab6d7731a6e
+      uuid: e4f7c6d3-2dc6-4fa0-8c7e-9c84f0c8566c
     type: CHART
     id: CHART-2ee7fa5e
     children: []
   CHART-201f7715:
     meta:
-      chartId: 308
+      chartId: 828
       sliceName: Deck.gl Hexagons
       width: 6
       height: 50
-      uuid: a1c32370-9c17-4313-b588-d3aadaf2fea3
+      uuid: 34ca534f-c87e-42f8-8c5e-8104e7ef0dc1
     type: CHART
     id: CHART-201f7715
     children: []
   CHART-d02f6c40:
     meta:
-      chartId: 309
+      chartId: 829
       sliceName: Deck.gl Grid
       width: 6
       height: 50
-      uuid: db0d2935-534f-4dde-8961-5dfa9d62dae7
+      uuid: 5fcdd7c6-37ab-4a14-aa99-5bd3ecceab63
     type: CHART
     id: CHART-d02f6c40
     children: []
   CHART-2673431d:
     meta:
-      chartId: 310
+      chartId: 830
       sliceName: Deck.gl Polygons
       width: 6
       height: 50
-      uuid: d6a3087e-07dd-4d92-980c-488e345d3ff9
+      uuid: 4ccece2c-d065-41c3-beff-032197abfbfa
     type: CHART
     id: CHART-2673431d
     children: []
   CHART-85265a60:
     meta:
-      chartId: 311
+      chartId: 831
       sliceName: Deck.gl Arcs
       width: 6
       height: 50
-      uuid: 547456fa-e33d-4f6c-b658-e5c00b5190d0
+      uuid: 9fd5dd56-5c58-4992-92cd-be86b178a08a
     type: CHART
     id: CHART-85265a60
     children: []
   CHART-2b87513c:
     meta:
-      chartId: 312
+      chartId: 832
       sliceName: Deck.gl Path
       width: 6
       height: 50
-      uuid: e1691cf8-2b26-4581-9831-e7f81141bcb4
+      uuid: a61f3b83-3029-49cb-b237-8d649e9683a5
     type: CHART
     id: CHART-2b87513c
     children: []

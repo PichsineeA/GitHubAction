@@ -2,17 +2,17 @@ dashboard_title: Misc Charts
 description: null
 css: null
 slug: misc_charts
-uuid: 7e21a2fd-9786-4755-841f-81a22b64f64c
+uuid: 12338d58-1dc9-41c7-8442-7084b3822017
 position:
   CHART-BkeVbh8ANQ:
     children: []
     id: CHART-BkeVbh8ANQ
     meta:
-      chartId: 305
+      chartId: 825
       height: 34
       sliceName: Multi Line
       width: 8
-      uuid: 204cba6b-8774-4f4b-b1f0-138e39e81e29
+      uuid: 5698e8ba-99b5-4fb3-8b71-7d1b8f089640
     type: CHART
   CHART-H1HYNzEANX:
     children: []
@@ -27,21 +27,21 @@ position:
     children: []
     id: CHART-HJOYVMV0E7
     meta:
-      chartId: 273
+      chartId: 793
       height: 63
       sliceName: Mapbox Long/Lat
       width: 6
-      uuid: 6ab10cc3-bf3e-4ecd-8c96-066171bf4568
+      uuid: 4ea2544b-c243-4727-8554-787958677eab
     type: CHART
   CHART-S1WYNz4AVX:
     children: []
     id: CHART-S1WYNz4AVX
     meta:
-      chartId: 392
+      chartId: 805
       height: 25
       sliceName: Parallel Coordinates
       width: 4
-      uuid: 8c66c682-b08a-4d0b-acd0-6832f8efa6f9
+      uuid: 384e3ca8-ba19-4994-af1a-c7337c89bb65
     type: CHART
   CHART-r19KVMNCE7:
     children: []
@@ -65,11 +65,11 @@ position:
     children: []
     id: CHART-rkgF4G4A4X
     meta:
-      chartId: 274
+      chartId: 794
       height: 25
       sliceName: Birth in France by department in 2016
       width: 8
-      uuid: cad12fe6-6c52-4af3-8fbd-958cbabc9a5b
+      uuid: bf8c9f64-cb75-496d-9593-1c79a437eeef
     type: CHART
   CHART-rywK4GVR4X:
     children: []
@@ -103,7 +103,6 @@ position:
     - ROW-SytNzNA4X
     - ROW-S1MK4M4A4X
     - ROW-HkFFEzVRVm
-    - ROW-N-I2T8IEFZ
     id: GRID_ID
     type: GRID
   HEADER_ID:
@@ -141,44 +140,4 @@ position:
       background: BACKGROUND_TRANSPARENT
     type: ROW
   DASHBOARD_VERSION_KEY: v2
-  ROW-N-I2T8IEFZ:
-    children:
-    - CHART-9T1W37JB
-    - CHART-9J41MNGR
-    id: ROW-N-I2T8IEFZ
-    meta:
-      '0': ROOT_ID
-      background: BACKGROUND_TRANSPARENT
-    type: ROW
-    parents:
-    - ROOT_ID
-    - GRID_ID
-  CHART-9T1W37JB:
-    children: []
-    id: CHART-9T1W37JB
-    meta:
-      chartId: 323
-      height: 50
-      sliceName: Parallel Coordinates
-      uuid: f5e6634d-9b9d-4cba-ae49-1138d2619374
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-I2T8IEFZ
-  CHART-9J41MNGR:
-    children: []
-    id: CHART-9J41MNGR
-    meta:
-      chartId: 375
-      height: 50
-      sliceName: Multi Line
-      uuid: 2fadcc1f-0416-421d-9f74-72fc7adb6e49
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-I2T8IEFZ
 version: 1.0.0
