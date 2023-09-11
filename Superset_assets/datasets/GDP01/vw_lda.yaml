@@ -1,0 +1,532 @@
+table_name: vw_lda
+main_dttm_col: null
+description: Notifiable Deals data
+default_endpoint: null
+offset: 0
+cache_timeout: 60
+schema: present
+sql: ''
+params: null
+template_params: null
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: 47f9e1f7-837a-05ee-d094-bf9eb1a8be98
+metrics:
+- metric_name: count
+  verbose_name: Number of Deals
+  metric_type: null
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+columns:
+- column_name: CURRENT DAY FLAG
+  verbose_name: Today
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: case when substring(deal_datetime from 1 for 10) = to_char(current_date,
+    'YYYY-MM-DD') then 'Yes' else 'No' end
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: '% of Unit Share'
+  verbose_name: '% of Unit Share'
+  is_dttm: false
+  is_active: null
+  type: null
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: percent_of_unit_share || '%'
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: '% of Fund'
+  verbose_name: '% of Fund'
+  is_dttm: false
+  is_active: null
+  type: null
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: percent_of_fund || '%'
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: VP TIME
+  verbose_name: Valuation Point
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: substring(vp_datetime from 11 for 8)
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Est. Actual Cash
+  verbose_name: Cash Amount
+  is_dttm: false
+  is_active: null
+  type: null
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: to_char(est_actual_cash, 'FM999,999,999,999,990.00')
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Actual Units
+  verbose_name: Actual Units
+  is_dttm: false
+  is_active: null
+  type: null
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: to_char(actual_units, 'FM999,999,999,999,990.0000')
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: commission_perc_total
+  verbose_name: Commission % Total
+  is_dttm: false
+  is_active: null
+  type: DOUBLE PRECISION
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: discount_perc_total
+  verbose_name: Discount % Total
+  is_dttm: false
+  is_active: null
+  type: DOUBLE PRECISION
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: percent_of_unit_share
+  verbose_name: '% of Unit Share'
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: email_sent_datetime
+  verbose_name: Email Sent Date Time
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: adjustment_amount
+  verbose_name: Adjustment Amount
+  is_dttm: false
+  is_active: null
+  type: DOUBLE PRECISION
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: est_actual_cash
+  verbose_name: Cash Amount
+  is_dttm: false
+  is_active: null
+  type: DOUBLE PRECISION
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: actual_units
+  verbose_name: Actual Units
+  is_dttm: false
+  is_active: null
+  type: DOUBLE PRECISION
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: deal_datetime
+  verbose_name: Deal Date Time
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: vp_datetime
+  verbose_name: VP Date Time
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: report_gen_datetime
+  verbose_name: Report Date Time
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: percent_of_fund
+  verbose_name: Percent of Fund
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: agent_code
+  verbose_name: Agent Code
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: agent_name
+  verbose_name: Agent Name
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: new_alert
+  verbose_name: New Alert
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: reason
+  verbose_name: Alert Reason
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: latest_price
+  verbose_name: Transaction Price
+  is_dttm: false
+  is_active: null
+  type: NUMERIC
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: event_id
+  verbose_name: Deal ID
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: fund_id
+  verbose_name: Fund ID
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: mc_id
+  verbose_name: Manco ID
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: product_id
+  verbose_name: Product ID
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: unitholder_id
+  verbose_name: Unitholder ID
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: time_of_deal
+  verbose_name: Deal Time
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: fund_name
+  verbose_name: Fund Name
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: record_sequence_number
+  verbose_name: Sequence Number
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: unitholder_name
+  verbose_name: Unitholder Name
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: sale_person
+  verbose_name: Sale Person
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: price_type
+  verbose_name: Price Type
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: sale_region
+  verbose_name: Sale Region
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: record_type
+  verbose_name: Record Type
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: transaction_type_desc
+  verbose_name: Transaction Type
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: cancelled_flag
+  verbose_name: Cancelled
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: isocode
+  verbose_name: Currency
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: deal_origin
+  verbose_name: Origin
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: mco_name
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(100)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: ein
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: emc_currency
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 980ffeea-a918-7739-250c-7d130b23d6c0

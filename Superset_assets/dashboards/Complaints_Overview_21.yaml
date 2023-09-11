@@ -1,0 +1,510 @@
+dashboard_title: Complaints Overview
+description: null
+css: "/* ---------------------------------------------------- */\n/* Filter controls\
+  \                                      */\n/* ----------------------------------------------------\
+  \ */\n\n/* Controls the visibility of native filters. \n   Comment out if you want\
+  \ native charts visble*/\n.css-1k877g7 {\n  visibility:hidden;\n}\n\n/* ----------------------------------------------------\
+  \ */\n/* Big number charts                                    */\n/* ----------------------------------------------------\
+  \ */\n\n/* Big number charts - SSNC Teal */\n.big_number_total {\n\ttext-align:\
+  \ center;\n\tbackground-color: #00667D;\n\tcolor: white;\n\tborder-radius: 5px;\n\
+  }\n\n/* gutters between rows within tab */\n.dashboard-component-tabs-content\n\
+  \  > div:not(:only-child):not(:last-child):not(.empty-droptarget) {\n  margin-bottom:\
+  \ 16px;\n}"
+slug: complaints-overview-0
+uuid: 4089fb7d-6e1e-9ab9-3fef-292f0d4bf4f6
+position:
+  CHART-3191yNfGxi:
+    children: []
+    id: CHART-3191yNfGxi
+    meta:
+      chartId: 46
+      height: 19
+      sliceName: SI0 - Complaints Resolved
+      sliceNameOverride: Complaints Resolved
+      uuid: d90932f3-7857-f109-ebdf-7eecbb8727ff
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    - TAB-QpRqIIVaX1
+    - ROW-o1iW3v7lwv
+    - COLUMN-CEUtT2oPuT
+    - ROW-6M6icKEm5l
+    type: CHART
+  CHART-5Oz44dKP-E:
+    children: []
+    id: CHART-5Oz44dKP-E
+    meta:
+      chartId: 71
+      height: 39
+      sliceName: SI0 - Complaints Received/Resolved
+      sliceNameOverride: Complaints Received/Resolved
+      uuid: 2c688490-31b9-d378-ba05-96dd71630c1a
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    - TAB-QpRqIIVaX1
+    - ROW-o1iW3v7lwv
+    - COLUMN-ZgNLrbv668
+    type: CHART
+  CHART-8CHFxSFnxl:
+    children: []
+    id: CHART-8CHFxSFnxl
+    meta:
+      chartId: 43
+      height: 50
+      sliceName: SI0 - Outstanding Complaints Filter
+      sliceNameOverride: Outstanding Complaints Filter
+      uuid: e1255886-ee68-8e58-eccb-81ebf7743754
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    - TAB-8NenZ8KJI
+    - ROW-np8BE8nJBX
+    type: CHART
+  CHART-T2rysuvzVQ:
+    children: []
+    id: CHART-T2rysuvzVQ
+    meta:
+      chartId: 47
+      height: 37
+      sliceName: SI0 - Outstanding Complaints by Age
+      sliceNameOverride: Outstanding Complaints by Age
+      uuid: cd69cdca-4a12-5b8b-913e-c6b0c2e84fd3
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    - TAB-QpRqIIVaX1
+    - ROW-TQq-aVl5gV
+    - COLUMN-CAFeJZK6E3
+    type: CHART
+  CHART-Y94DCawZu8:
+    children: []
+    id: CHART-Y94DCawZu8
+    meta:
+      chartId: 41
+      height: 50
+      sliceName: SI0 - Complaints Received Filter
+      sliceNameOverride: Received Complaints Filter
+      uuid: 80105088-f317-af10-fe03-24881e714b77
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    - TAB-FixjsZqyE
+    - ROW-jMhhDSyUIR
+    type: CHART
+  CHART-YJdM_eT6V5:
+    children: []
+    id: CHART-YJdM_eT6V5
+    meta:
+      chartId: 48
+      height: 37
+      sliceName: SI0 - Complaints Resolved in Last Month
+      sliceNameOverride: Complaints Resolved in Last Month
+      uuid: c42b3e89-82b9-d90a-af16-41470eeb805d
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    - TAB-QpRqIIVaX1
+    - ROW-TQq-aVl5gV
+    - COLUMN-AEeOhOKvnV
+    type: CHART
+  CHART-ZmK9t00NX8:
+    children: []
+    id: CHART-ZmK9t00NX8
+    meta:
+      chartId: 44
+      height: 18
+      sliceName: SI0 - Outstanding Complaints
+      sliceNameOverride: Outstanding Complaints
+      uuid: 5679d47c-b12a-7f0e-9249-a65d9e2d2245
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    - TAB-QpRqIIVaX1
+    - ROW-o1iW3v7lwv
+    - COLUMN-CEUtT2oPuT
+    - ROW-tdMkrh9_4f
+    type: CHART
+  CHART-aFmZOocYsz:
+    children: []
+    id: CHART-aFmZOocYsz
+    meta:
+      chartId: 40
+      height: 50
+      sliceName: SI0 - Complaints Received
+      sliceNameOverride: Received Complaints
+      uuid: 40a49d1e-2b5f-0fe4-0d7a-be17e4644c23
+      width: 9
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    - TAB-FixjsZqyE
+    - ROW-jMhhDSyUIR
+    type: CHART
+  CHART-boHYsAOM4Y:
+    children: []
+    id: CHART-boHYsAOM4Y
+    meta:
+      chartId: 38
+      height: 50
+      sliceName: SI0 - Complaints Resolved
+      sliceNameOverride: Resolved Complaints
+      uuid: 8b099b1f-0d88-fb6d-6100-7a912c5f8678
+      width: 9
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    - TAB-tCa_uhNmV
+    - ROW-MQEueBANlg
+    type: CHART
+  CHART-lXnX9jTf9j:
+    children: []
+    id: CHART-lXnX9jTf9j
+    meta:
+      chartId: 45
+      height: 19
+      sliceName: SI0 - Complaints Received
+      sliceNameOverride: Complaints Received
+      uuid: f0f75179-904f-09f3-ca2d-7acd17efd394
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    - TAB-QpRqIIVaX1
+    - ROW-o1iW3v7lwv
+    - COLUMN-CEUtT2oPuT
+    - ROW-6M6icKEm5l
+    type: CHART
+  CHART-rwbX3X3dq8:
+    children: []
+    id: CHART-rwbX3X3dq8
+    meta:
+      chartId: 42
+      height: 50
+      sliceName: SI0 - Outstanding Complaints
+      sliceNameOverride: Outstanding Complaints
+      uuid: 02046147-87a6-3d68-7196-d1ad7d67113c
+      width: 9
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    - TAB-8NenZ8KJI
+    - ROW-np8BE8nJBX
+    type: CHART
+  CHART-xedRbmCKtG:
+    children: []
+    id: CHART-xedRbmCKtG
+    meta:
+      chartId: 39
+      height: 50
+      sliceName: SI0 - Complaints Resolved Filters
+      sliceNameOverride: Resolved Complaints Filters
+      uuid: 1538952a-d7d0-5da5-8e80-c2b0b7cba50e
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    - TAB-tCa_uhNmV
+    - ROW-MQEueBANlg
+    type: CHART
+  COLUMN-AEeOhOKvnV:
+    children:
+    - CHART-YJdM_eT6V5
+    id: COLUMN-AEeOhOKvnV
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    - TAB-QpRqIIVaX1
+    - ROW-TQq-aVl5gV
+    type: COLUMN
+  COLUMN-CAFeJZK6E3:
+    children:
+    - CHART-T2rysuvzVQ
+    id: COLUMN-CAFeJZK6E3
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    - TAB-QpRqIIVaX1
+    - ROW-TQq-aVl5gV
+    type: COLUMN
+  COLUMN-CEUtT2oPuT:
+    children:
+    - ROW-tdMkrh9_4f
+    - ROW-6M6icKEm5l
+    id: COLUMN-CEUtT2oPuT
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    - TAB-QpRqIIVaX1
+    - ROW-o1iW3v7lwv
+    type: COLUMN
+  COLUMN-ZgNLrbv668:
+    children:
+    - CHART-5Oz44dKP-E
+    id: COLUMN-ZgNLrbv668
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 8
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    - TAB-QpRqIIVaX1
+    - ROW-o1iW3v7lwv
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-EMBfq6Hj3k
+    - TABS-b03vUlce2b
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Complaints Overview
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-6M6icKEm5l:
+    children:
+    - CHART-lXnX9jTf9j
+    - CHART-3191yNfGxi
+    id: ROW-6M6icKEm5l
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    - TAB-QpRqIIVaX1
+    - ROW-o1iW3v7lwv
+    - COLUMN-CEUtT2oPuT
+    type: ROW
+  ROW-EMBfq6Hj3k:
+    children: []
+    id: ROW-EMBfq6Hj3k
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-MQEueBANlg:
+    children:
+    - CHART-xedRbmCKtG
+    - CHART-boHYsAOM4Y
+    id: ROW-MQEueBANlg
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    - TAB-tCa_uhNmV
+    type: ROW
+  ROW-TQq-aVl5gV:
+    children:
+    - COLUMN-CAFeJZK6E3
+    - COLUMN-AEeOhOKvnV
+    id: ROW-TQq-aVl5gV
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    - TAB-QpRqIIVaX1
+    type: ROW
+  ROW-jMhhDSyUIR:
+    children:
+    - CHART-Y94DCawZu8
+    - CHART-aFmZOocYsz
+    id: ROW-jMhhDSyUIR
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    - TAB-FixjsZqyE
+    type: ROW
+  ROW-np8BE8nJBX:
+    children:
+    - CHART-8CHFxSFnxl
+    - CHART-rwbX3X3dq8
+    id: ROW-np8BE8nJBX
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    - TAB-8NenZ8KJI
+    type: ROW
+  ROW-o1iW3v7lwv:
+    children:
+    - COLUMN-ZgNLrbv668
+    - COLUMN-CEUtT2oPuT
+    id: ROW-o1iW3v7lwv
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    - TAB-QpRqIIVaX1
+    type: ROW
+  ROW-tdMkrh9_4f:
+    children:
+    - CHART-ZmK9t00NX8
+    id: ROW-tdMkrh9_4f
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    - TAB-QpRqIIVaX1
+    - ROW-o1iW3v7lwv
+    - COLUMN-CEUtT2oPuT
+    type: ROW
+  TAB-8NenZ8KJI:
+    children:
+    - ROW-np8BE8nJBX
+    id: TAB-8NenZ8KJI
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Outstanding Complaints
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    type: TAB
+  TAB-FixjsZqyE:
+    children:
+    - ROW-jMhhDSyUIR
+    id: TAB-FixjsZqyE
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Received Complaints
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    type: TAB
+  TAB-QpRqIIVaX1:
+    children:
+    - ROW-TQq-aVl5gV
+    - ROW-o1iW3v7lwv
+    id: TAB-QpRqIIVaX1
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Complaints Overview
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    type: TAB
+  TAB-tCa_uhNmV:
+    children:
+    - ROW-MQEueBANlg
+    id: TAB-tCa_uhNmV
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Resolved Complaints
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-b03vUlce2b
+    type: TAB
+  TABS-b03vUlce2b:
+    children:
+    - TAB-QpRqIIVaX1
+    - TAB-8NenZ8KJI
+    - TAB-FixjsZqyE
+    - TAB-tCa_uhNmV
+    id: TABS-b03vUlce2b
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: TABS
+metadata:
+  timed_refresh_immune_slices: []
+  expanded_slices: {}
+  refresh_frequency: 0
+  default_filters: '{"39": {"__time_range": "No filter"}, "41": {"__time_range": "No
+    filter"}}'
+  color_scheme: ''
+  label_colors:
+    Number of Complaints: '#0097A9'
+    Complaints Received: '#0097A9'
+    Complaints Resolved: '#00677F'
+  show_native_filters: true
+  chart_configuration: {}
+  filter_scopes:
+    '39':
+      category_group:
+        scope:
+        - ROOT_ID
+        immune: []
+      __time_range:
+        scope:
+        - ROOT_ID
+        immune: []
+    '41':
+      category_group:
+        scope:
+        - ROOT_ID
+        immune: []
+      __time_range:
+        scope:
+        - ROOT_ID
+        immune: []
+    '43':
+      category_group:
+        scope:
+        - ROOT_ID
+        immune: []
+version: 1.0.0

@@ -1,0 +1,82 @@
+slice_name: FMR - UHS - Details
+viz_type: table
+params:
+  adhoc_filters: []
+  align_pn: true
+  all_columns:
+  - client_number
+  - salutation
+  - bua_name
+  - investor_typ_txt
+  - crr_description
+  - investor_age
+  - account_number
+  - act_description
+  - primary_indicator
+  - ivc_long_name
+  - ccy_id
+  - total_units_owned
+  - total_value_owned
+  - percentage_of_share_class
+  color_pn: true
+  datasource: 54__table
+  granularity_sqla: latest_valuation_date
+  groupby:
+  - client_number
+  - salutation
+  - bua_name
+  - bua_type
+  - crr_description
+  - investor_age
+  - account_number
+  - act_description
+  - primary_indicator
+  - ivc_long_name
+  - ccy_id
+  include_search: true
+  metrics:
+  - aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: true
+    isNew: false
+    label: Total Units Owned
+    optionName: metric_odm4s7hu4mi_3d1jdbnzmic
+    sqlExpression: coalesce(to_char(sum(units_unsett_est+units_unsett_act+units_sett),
+      'S'||LEFT(REPEAT('999,',20),-2)||'0.99'),'0')
+  - aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: true
+    isNew: false
+    label: Total Value Owned
+    optionName: metric_kx95otrure8_l7lvejlnrrs
+    sqlExpression: coalesce(to_char(sum((units_unsett_est+units_unsett_act+units_sett)*latest_price_amount),
+      'S'||LEFT(REPEAT('999,',20),-2)||'0.99') , '0')
+  - aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: true
+    isNew: false
+    label: '% of Share Class'
+    optionName: metric_dzhkn065bbu_j9eyhe1c8k
+    sqlExpression: coalesce(to_char(SUM((units_unsett_est+units_unsett_act+units_sett)/CASE
+      ivc_total_units WHEN 0 THEN 1 ELSE ivc_total_units END)*100, 'S'||LEFT(REPEAT('999,',20),-2)||'0.99%')
+      , '0')
+  order_by_cols: null
+  order_desc: true
+  page_length: 10
+  percent_metrics: null
+  query_mode: raw
+  row_limit: '30000'
+  show_cell_bars: true
+  slice_id: 208
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+cache_timeout: null
+uuid: ec89fb0a-0da1-1dba-f8e2-7299cc8b9b86
+version: 1.0.0
+dataset_uuid: 294bb475-bd97-fe6c-dec6-ec4cd42fc6fa

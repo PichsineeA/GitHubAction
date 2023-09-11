@@ -1,0 +1,90 @@
+slice_name: SI0 - Breaches Overview
+viz_type: table
+params:
+  adhoc_filters: []
+  all_columns:
+  - day
+  - notified
+  - closed
+  - voided
+  color_pn: false
+  datasource: 23__table
+  groupby:
+  - day
+  metrics:
+  - aggregate: SUM
+    column:
+      column_name: notified
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 352
+      is_dttm: false
+      optionName: _col_notified
+      python_date_format: null
+      type: INTEGER
+      verbose_name: null
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    isNew: false
+    label: SUM(notified)
+    optionName: metric_2wzp3h8aauh_nswo39bag7f
+    sqlExpression: null
+  - aggregate: SUM
+    column:
+      column_name: closed
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 353
+      is_dttm: false
+      optionName: _col_closed
+      python_date_format: null
+      type: INTEGER
+      verbose_name: null
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    isNew: false
+    label: SUM(closed)
+    optionName: metric_gco3tz7a09_z8i31bpd0x
+    sqlExpression: null
+  - aggregate: SUM
+    column:
+      column_name: voided
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 354
+      is_dttm: false
+      optionName: _col_voided
+      python_date_format: null
+      type: INTEGER
+      verbose_name: null
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    isNew: false
+    label: SUM(voided)
+    optionName: metric_ta7hu8xrj8n_cuw3wstd2n4
+    sqlExpression: null
+  order_by_cols: []
+  order_desc: true
+  percent_metrics: []
+  queryFields:
+    groupby: groupby
+    metrics: metrics
+  query_mode: raw
+  row_limit: 10000
+  show_cell_bars: false
+  slice_id: 63
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: Last week
+  url_params: {}
+  viz_type: table
+cache_timeout: null
+uuid: 22df40cf-9cee-1678-b63d-21d4cdbc3542
+version: 1.0.0
+dataset_uuid: 67bdb494-2427-2189-1c0d-1d308b6f2312

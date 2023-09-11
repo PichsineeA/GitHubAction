@@ -1,0 +1,1377 @@
+table_name: vw_uh_summary
+main_dttm_col: latest_valuation_date
+description: A direct reflection of the vw_uh_summary. The core of the view is based
+  around rhe investment vehicle class with account and unit holder information joined
+  into it.
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: present
+sql: "{% set dsource_mapping =\n  ({\n    \"investor_typ_txt_jinja\":\"(SELECT CASE\
+  \ BUA_TYPE WHEN'C'THEN'Corporate Investor'WHEN'P'THEN'Private Investor'ELSE'Other'END\
+  \ as investor_typ_txt_jinja,ein FROM present.vw_business_associate) AS main\",\n\
+  \    \"investor_age_band_jinja\":\"(SELECT CASE BUA_TYPE WHEN'P'THEN (to_char(floor(date_part('year',age(date_of_birth))/10)*10,'000')||'\
+  \ to '||to_char((DIV(date_part('year',age(date_of_birth))::int,10)*10)+9,'000'))ELSE'N/A'END\
+  \ as investor_age_band_jinja,ein FROM present.vw_business_associate) AS main\",\n\
+  \    \"account_currency\":\"present.vw_account main\",\n    \"bua_name\" :\"present.vw_business_associate\
+  \ main\",\n    \"ccy_id\":\"present.vw_account_holding main\",\n    \"crr_description\"\
+  \ :\"present.vw_business_associate main\",\n    \"cty_description\" :\"present.vw_address\
+  \ main\",\n    \"ivc_long_name\" :\"present.vw_investment_vehicle_class main\"\n\
+  \  })\n%}\n{% set ein_filter %}\n  /*ein is a list of numbers so have to convert\
+  \ to string first to use join */\n  {% if filter_values('ein')|length %}\n    AND\
+  \  ein in ( \n      {{  filter_values('ein')|map('string')|join(',')}} \n    )\n\
+  \  {% endif %}\n{% endset %}\n\n/* Dynamic datasource, dsource_mapping is defined\
+  \ above */\n/* Indirectly catch filters by checking that there are no metrics,\n\
+  \   filters have no metrics*/\n{% if groupby|length == 1 and metrics|length == 0\
+  \ %}\n  /* in future versions of superset you can specify with filter_values that\n\
+  \   you dont want the filter to apply to the outer query, that way we can \n   optimise\
+  \ further by not having to declare the other filterable columns \n   in the select/Group\
+  \ By clause */\n  SELECT {{ 'main.' + groupby[0] }}, main.ein\n  FROM   {{ dsource_mapping[groupby[0]]\
+  \ }}\n  WHERE  {{ 'main.' + groupby[0] }} is not null\n  {{ ein_filter }}\n  GROUP\
+  \ BY {{ 'main.' + groupby[0] }}, main.ein\n{% else %}\n  SELECT *\n  ,CASE BUA_TYPE\
+  \ WHEN'C'THEN'Corporate Investor'WHEN'P'THEN'Private Investor'ELSE'Other'END as\
+  \ investor_typ_txt_jinja\n  ,CASE BUA_TYPE WHEN'P'THEN (to_char(floor(date_part('year',age(date_of_birth))/10)*10,'000')||'\
+  \ to '||to_char((DIV(date_part('year',age(date_of_birth))::int,10)*10)+9,'000'))ELSE'N/A'END\
+  \ as investor_age_band_jinja\n  FROM present.vw_uh_summary\n  WHERE 1=1\n  {{ ein_filter\
+  \ }}\n{% endif %}"
+params: null
+template_params: null
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: 294bb475-bd97-fe6c-dec6-ec4cd42fc6fa
+metrics:
+- metric_name: count
+  verbose_name: Total Rows
+  metric_type: null
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: account_age_band
+  verbose_name: Account Age Band
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: "CASE \n    WHEN Extract(Year from age(start_date))<2 THEN '0 to 1'\n\
+    \    WHEN Extract(Year from age(start_date))<6 THEN '2 to 5'\n    WHEN Extract(Year\
+    \ from age(start_date))<11 THEN '6 to 10'\n    WHEN Extract(Year from age(start_date))>=11\
+    \ THEN '>10'\n    ELSE Extract(Year from age(start_date))::TEXT END"
+  description: puts the account age in a range
+  python_date_format: null
+  extra: null
+- column_name: investor_age_band
+  verbose_name: Investor Age Band
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: "CASE BUA_TYPE\nWHEN 'P' THEN (floor(date_part('year', age(date_of_birth))/10)*10\
+    \ || ' to ' || \n  (DIV(date_part('year', age(date_of_birth))::int,10)*10)+9)::Text\n\
+    ELSE 'N/A' END"
+  description: Puts the investor into an age group
+  python_date_format: null
+  extra: null
+- column_name: asr_start_date
+  verbose_name: null
+  is_dttm: true
+  is_active: null
+  type: DATE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The start data of the association role. an asociation role describes
+    a link between a  unit holder and an account
+  python_date_format: null
+  extra: null
+- column_name: investor_typ_txt
+  verbose_name: Investor Type
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: 'CASE BUA_TYPE
+
+    WHEN ''C'' THEN ''Corporate Investor''
+
+    WHEN ''P'' THEN ''Private Investor''
+
+    ELSE ''Other'' END'
+  description: Convert investor type codes to descriptive text
+  python_date_format: null
+  extra: null
+- column_name: asr_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Association role type id, Association role describe the role of the
+    metadata linking between the client and the account
+  python_date_format: null
+  extra: null
+- column_name: g1_balance
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NUMERIC(20, 4)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Balance of units in the account holding which are deemed to be before
+    the ex-dividend date
+  python_date_format: null
+  extra: null
+- column_name: asr_status
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: CHAR(1)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Association role status ( the status of the link between the unit holder
+    and the account)
+  python_date_format: null
+  extra: null
+- column_name: percentage_of_share_class
+  verbose_name: '% of Share Class'
+  is_dttm: null
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: false
+  expression: coalesce(to_char(((units_unsett_est+units_unsett_act+units_sett)/CASE
+    ivc_total_units WHEN 0 THEN 1 ELSE ivc_total_units END)*100, 'S'||LEFT(REPEAT('999,',20),-2)||'0.99%')
+    , '0')
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: "\u0E34investor_name_unmasked"
+  verbose_name: Investor Name
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: "CASE LOWER(fund_relation_code)\nWHEN '08' \n  THEN registration_information\n\
+    ELSE bua_name END"
+  description: Investor name unmasked for PIMCO
+  python_date_format: null
+  extra: null
+- column_name: shareholder_number
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(16)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: shareholder id (Different from the underlying client, this entity just
+    hold the shares)
+  python_date_format: null
+  extra: null
+- column_name: g2_balance
+  verbose_name: The balance of units not eligible for distribution at the ex-dividend
+    date
+  is_dttm: false
+  is_active: null
+  type: NUMERIC(20, 4)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: asr_end_date
+  verbose_name: null
+  is_dttm: true
+  is_active: null
+  type: DATE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The end date for the link between the unit holder and the account
+  python_date_format: null
+  extra: null
+- column_name: crr_description
+  verbose_name: Investor Risk Rating
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(250)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The text description of an investor's AML risk rating
+  python_date_format: null
+  extra: null
+- column_name: price_type_description
+  verbose_name: Price Type
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(80)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: 'Price type description: Net Asset Value (NAV) or Guaranteed Price'
+  python_date_format: null
+  extra: null
+- column_name: primary_indicator
+  verbose_name: Primary Account Holder
+  is_dttm: false
+  is_active: null
+  type: CHAR(1)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Indicates if he Investor is the primary account holder.
+  python_date_format: null
+  extra: null
+- column_name: organisation_name
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(100)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The name of the investor if the investor is an organisation
+  python_date_format: null
+  extra: null
+- column_name: date_of_death_notified
+  verbose_name: null
+  is_dttm: true
+  is_active: null
+  type: DATE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The date when notification of the investor's death was received
+  python_date_format: null
+  extra: null
+- column_name: latest_valuation_time
+  verbose_name: null
+  is_dttm: true
+  is_active: null
+  type: TIME WITHOUT TIME ZONE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: the investment vehicle class's last valuation time
+  python_date_format: null
+  extra: null
+- column_name: ivc_total_units
+  verbose_name: IVC Total Units
+  is_dttm: false
+  is_active: null
+  type: NUMERIC
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The total units in an investment vehicle class
+  python_date_format: null
+  extra: null
+- column_name: price_type
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: 'Price type ID: AV (Actual value) or GP (Guaranteed price)'
+  python_date_format: null
+  extra: null
+- column_name: statement_hold_yn
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(1)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: This indicates whether or not the unitholder receives account statements
+  python_date_format: null
+  extra: null
+- column_name: correspondence_recipient
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: CHAR(1)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The correspondence recipient for the investor on the specified account
+  python_date_format: null
+  extra: null
+- column_name: investor_age
+  verbose_name: Investor Age
+  is_dttm: false
+  is_active: null
+  type: NUMERIC
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: 'CASE BUA_TYPE
+
+    WHEN ''P'' THEN date_part(''year'', age(date_of_birth))::Text
+
+    ELSE ''N/A'' END'
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: bua_ext_ref
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(20)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Business Association (Unit holder) reference from the source system
+  python_date_format: null
+  extra: null
+- column_name: latest_valuation_date
+  verbose_name: Valuation Date
+  is_dttm: true
+  is_active: null
+  type: DATE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The investment vehicle class's last valuation date
+  python_date_format: null
+  extra: null
+- column_name: latest_valuation_datetime
+  verbose_name: null
+  is_dttm: true
+  is_active: null
+  type: TIMESTAMP WITH TIME ZONE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The IVC's last valuation timestamp
+  python_date_format: null
+  extra: null
+- column_name: account_age
+  verbose_name: Account Age
+  is_dttm: false
+  is_active: null
+  type: INTERVAL
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: age(start_date)
+  description: Number of days since account was opened
+  python_date_format: null
+  extra: null
+- column_name: units_unsett_act
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NUMERIC(20, 4)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Unsettled units in the account holding (Actual)
+  python_date_format: null
+  extra: null
+- column_name: units_unsett_est
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NUMERIC(20, 4)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Unsettled units in the account holding (Estimated)
+  python_date_format: null
+  extra: null
+- column_name: crr_ext_ref
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(5)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Investor Risk rating ID from the source system
+  python_date_format: null
+  extra: null
+- column_name: salutation
+  verbose_name: Preferred Salutation
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The preferred salutation of the investor
+  python_date_format: null
+  extra: null
+- column_name: asr_ext_ref
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: association(linking) role reference from the source system
+  python_date_format: null
+  extra: null
+- column_name: units_sett
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NUMERIC(20, 4)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Settled units for the account holding
+  python_date_format: null
+  extra: null
+- column_name: act_ext_ref
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(20)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Account type reference from the source system
+  python_date_format: null
+  extra: null
+- column_name: ach_ext_ref
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Account holding reference from the source system
+  python_date_format: null
+  extra: null
+- column_name: contact_name
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(80)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The contact name on the registered address
+  python_date_format: null
+  extra: null
+- column_name: bua_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Business Association (Unit holder) ID from GDP
+  python_date_format: null
+  extra: null
+- column_name: total_value_owned
+  verbose_name: Total Value Owned
+  is_dttm: null
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: false
+  expression: coalesce(to_char((units_unsett_est+units_unsett_act+units_sett)*latest_price_amount,
+    'S'||LEFT(REPEAT('999,',20),-2)||'0.99') , '0')
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: total_units_owned
+  verbose_name: Total Units Owned
+  is_dttm: null
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: false
+  expression: 'coalesce(to_char(units_unsett_est+units_unsett_act+units_sett, ''S''||LEFT(REPEAT(''999,'',20),-2)||''0.99''),''0'')  '
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: cty_description
+  verbose_name: Country
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(100)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Long name of the investor's country
+  python_date_format: null
+  extra: null
+- column_name: cty_2_iso
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(2)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: ISO identifier for the Investor's country
+  python_date_format: null
+  extra: null
+- column_name: account_number
+  verbose_name: Account Number
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(20)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Unique identifier for the account
+  python_date_format: null
+  extra: null
+- column_name: share_class_code
+  verbose_name: Share Class Code
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Investment vehicle class code
+  python_date_format: null
+  extra: null
+- column_name: ivc_long_name
+  verbose_name: Share Class
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(80)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Investment Vehicle Class long name
+  python_date_format: null
+  extra: null
+- column_name: acc_ext_ref
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(20)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Account reference from the source system.
+  python_date_format: null
+  extra: null
+- column_name: add_ext_ref
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Address reference from the source system
+  python_date_format: null
+  extra: null
+- column_name: ext_mco_short_name
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Manco short name from source system
+  python_date_format: null
+  extra: null
+- column_name: adt_ext_ref
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(80)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Address type reference from source system
+  python_date_format: null
+  extra: null
+- column_name: investor_age_band_jinja
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: false
+  filterable: true
+  expression: null
+  description: For use in Jinja syntax only
+  python_date_format: null
+  extra: null
+- column_name: investor_typ_txt_jinja
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: false
+  filterable: true
+  expression: null
+  description: For use in jinja syntax only
+  python_date_format: null
+  extra: null
+- column_name: latest_price_amount
+  verbose_name: Price
+  is_dttm: false
+  is_active: null
+  type: NUMERIC(17, 10)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The IVC's last price
+  python_date_format: null
+  extra: null
+- column_name: client_language
+  verbose_name: Investor Language Code
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(1)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Investor's preferred language
+  python_date_format: null
+  extra: null
+- column_name: manco_name
+  verbose_name: ManCo Name
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(100)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Manco name from GDP
+  python_date_format: null
+  extra: null
+- column_name: start_date
+  verbose_name: Account Start Date
+  is_dttm: true
+  is_active: null
+  type: DATE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Account start date
+  python_date_format: null
+  extra: null
+- column_name: ext_mco_name
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(100)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Manco name from source system
+  python_date_format: null
+  extra: null
+- column_name: social_security_number
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(20)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The investors social security number
+  python_date_format: null
+  extra: null
+- column_name: m_crr_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Master Investor risk rating ID
+  python_date_format: null
+  extra: null
+- column_name: tax_eusd_option
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(5)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: European Union Savings Directive option
+  python_date_format: null
+  extra: null
+- column_name: ach_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Account holding ID from GDP
+  python_date_format: null
+  extra: null
+- column_name: adt_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Address type id from GDP
+  python_date_format: null
+  extra: null
+- column_name: crr_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Investor Risk Rating from GDP
+  python_date_format: null
+  extra: null
+- column_name: add_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: GDP reference for the address
+  python_date_format: null
+  extra: null
+- column_name: client_number
+  verbose_name: Investor ID
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(20)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Unit holder's ID
+  python_date_format: null
+  extra: null
+- column_name: date_of_birth
+  verbose_name: D.O.B
+  is_dttm: true
+  is_active: null
+  type: DATE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Investor's date of birth
+  python_date_format: null
+  extra: null
+- column_name: tel_business
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Investor's business Telephone number
+  python_date_format: null
+  extra: null
+- column_name: tel_mobile
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Investor's mobile telephone number
+  python_date_format: null
+  extra: null
+- column_name: tel_home
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Investor's home telephone number
+  python_date_format: null
+  extra: null
+- column_name: act_description
+  verbose_name: Account Type
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(80)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Account type description
+  python_date_format: null
+  extra: null
+- column_name: adt_description
+  verbose_name: Address type
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(80)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: address type description
+  python_date_format: null
+  extra: null
+- column_name: date_of_death
+  verbose_name: D.O.D
+  is_dttm: true
+  is_active: null
+  type: DATE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Investors date of death
+  python_date_format: null
+  extra: null
+- column_name: bua_name
+  verbose_name: Investor Name
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Unit holder name
+  python_date_format: null
+  extra: null
+- column_name: registration_information
+  verbose_name: Investor Name
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Investor name unmasked
+  python_date_format: null
+  extra: null
+- column_name: m_act_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(20)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Master Account type ID
+  python_date_format: null
+  extra: null
+- column_name: mco_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Manco ID from GDP
+  python_date_format: null
+  extra: null
+- column_name: default_timezone
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Data source time zone
+  python_date_format: null
+  extra: null
+- column_name: m_adt_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(80)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Master Address type ID
+  python_date_format: null
+  extra: null
+- column_name: gdr_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(1)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Gender ID from GDP
+  python_date_format: null
+  extra: null
+- column_name: acc_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Account ID from GDP
+  python_date_format: null
+  extra: null
+- column_name: prd_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Account Holding product ID
+  python_date_format: null
+  extra: null
+- column_name: agt_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: an ID from GDP
+  python_date_format: null
+  extra: null
+- column_name: ivc_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Investment vehicle class ID
+  python_date_format: null
+  extra: null
+- column_name: gdr_description
+  verbose_name: Gender
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(20)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The investor's Gender
+  python_date_format: null
+  extra: null
+- column_name: surname
+  verbose_name: Surname
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Investor's last name
+  python_date_format: null
+  extra: null
+- column_name: postcode
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(10)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Investor's Post code
+  python_date_format: null
+  extra: null
+- column_name: tel_fax
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Investor's fax Number
+  python_date_format: null
+  extra: null
+- column_name: email_address
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(80)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Investor's email address
+  python_date_format: null
+  extra: null
+- column_name: bua_type
+  verbose_name: Investor Type
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(1)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Investor Type
+  python_date_format: null
+  extra: null
+- column_name: account_currency
+  verbose_name: Account Currency
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(3)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Account currency
+  python_date_format: null
+  extra: null
+- column_name: status
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(2)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: 'Account status.
+
+    Possible values:'
+  python_date_format: null
+  extra: null
+- column_name: address_line_1
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(80)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Address Line 1
+  python_date_format: null
+  extra: null
+- column_name: address_line_2
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Address Line 2
+  python_date_format: null
+  extra: null
+- column_name: alt_account_ref
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(20)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Alternative account reference
+  python_date_format: null
+  extra: null
+- column_name: address_line_3
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Address Line 3
+  python_date_format: null
+  extra: null
+- column_name: address_line_4
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Address Line 4
+  python_date_format: null
+  extra: null
+- column_name: address_line_5
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Address Line 5
+  python_date_format: null
+  extra: null
+- column_name: shareholder_group
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(8)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Grouping of shareholders
+  python_date_format: null
+  extra: null
+- column_name: asrt_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Association(linking) role type
+  python_date_format: null
+  extra: null
+- column_name: termination_date
+  verbose_name: null
+  is_dttm: true
+  is_active: null
+  type: DATE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Account termination date
+  python_date_format: null
+  extra: null
+- column_name: act_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Account type ID
+  python_date_format: null
+  extra: null
+- column_name: ein
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Environment Instance Number
+  python_date_format: null
+  extra: null
+- column_name: forenames
+  verbose_name: Forenames
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(150)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: investors Forenames
+  python_date_format: null
+  extra: null
+- column_name: ccy_id
+  verbose_name: Investment Currency
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(3)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Currency
+  python_date_format: null
+  extra: null
+- column_name: tax_status_code
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(2)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Tax status.
+  python_date_format: null
+  extra: null
+- column_name: account_sequence
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(20)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Account sequence
+  python_date_format: null
+  extra: null
+- column_name: cty_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(3)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Country ID
+  python_date_format: null
+  extra: null
+- column_name: asrt_description
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(500)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: m_asrt_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: fund_relation_code
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: null
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 980ffeea-a918-7739-250c-7d130b23d6c0

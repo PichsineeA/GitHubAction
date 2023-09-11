@@ -1,0 +1,50 @@
+slice_name: SI5 - Closed Breach Details
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_q60uz2p5tt_dnutvhe44rp
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: original_closed_date >= date_trunc('Week',(current_date - INTERVAL
+      '3 weeks'))::date
+    subject: null
+  all_columns:
+  - days_since_closed_txt
+  - breach_ref
+  - unitholder_id
+  - client_id
+  - original_closed_date
+  - control_refs
+  color_pn: false
+  column_config:
+    original_closed_date:
+      d3TimeFormat: '%Y-%m-%d'
+  conditional_formatting: []
+  datasource: 97__table
+  extra_form_data: {}
+  granularity_sqla: update_datetime
+  groupby: []
+  include_search: true
+  order_by_cols:
+  - '["original_closed_date", true]'
+  order_desc: true
+  page_length: 20
+  percent_metrics: []
+  query_mode: raw
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: false
+  slice_id: 519
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+cache_timeout: null
+uuid: c31f97e5-8fb1-4f42-835a-fc033f11b094
+version: 1.0.0
+dataset_uuid: 9f0a237b-3856-4149-9f7b-70e2e9a25367

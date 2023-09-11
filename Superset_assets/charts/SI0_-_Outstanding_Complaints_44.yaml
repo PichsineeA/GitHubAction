@@ -1,0 +1,20 @@
+slice_name: SI0 - Outstanding Complaints
+viz_type: big_number_total
+params:
+  adhoc_filters: []
+  datasource: 16__table
+  granularity_sqla: received_date
+  header_font_size: 0.4
+  metric: count
+  queryFields:
+    metric: metrics
+  subheader: ''
+  subheader_font_size: 0.15
+  time_range: No filter
+  url_params: {}
+  viz_type: big_number_total
+  y_axis_format: SMART_NUMBER
+cache_timeout: null
+uuid: 5679d47c-b12a-7f0e-9249-a65d9e2d2245
+version: 1.0.0
+dataset_uuid: 53d7ac4c-c765-3cf2-0f5a-bca3a8b3b625
