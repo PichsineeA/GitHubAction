@@ -28,7 +28,7 @@ position:
     type: ROOT
   GRID_ID:
     children:
-    - ROW-N-4O2N18TG
+    - ROW-N-APT13YZC
     id: GRID_ID
     parents:
     - ROOT_ID
@@ -38,14 +38,14 @@ position:
     meta:
       text: Today's Deals [Mock-up]
     type: HEADER
-  ROW-N-4O2N18TG:
+  ROW-N-APT13YZC:
     children:
-    - CHART-6YFJGE9H
-    - CHART-D9D3DG7X
-    - CHART-5DITKWLD
-    - CHART-K2HGAQ9P
-    - CHART-I9R5DCBH
-    id: ROW-N-4O2N18TG
+    - CHART-AH9GMZTA
+    - CHART-GIS7RDH7
+    - CHART-T6Y36H34
+    - CHART-BBH4Z8V9
+    - CHART-JZQ65AU9
+    id: ROW-N-APT13YZC
     meta:
       '0': ROOT_ID
       background: BACKGROUND_TRANSPARENT
@@ -53,37 +53,9 @@ position:
     parents:
     - ROOT_ID
     - GRID_ID
-  CHART-6YFJGE9H:
+  CHART-AH9GMZTA:
     children: []
-    id: CHART-6YFJGE9H
-    meta:
-      chartId: 300
-      height: 50
-      sliceName: SI2 - Fund & Share Class Filter
-      uuid: 8b2129da-6323-4a82-869d-c6dc3f387cbd
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-4O2N18TG
-  CHART-D9D3DG7X:
-    children: []
-    id: CHART-D9D3DG7X
-    meta:
-      chartId: 304
-      height: 50
-      sliceName: SI2 - Today's Deals
-      uuid: 2fd2243c-2c0f-4e5b-ba94-61d77d453362
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-4O2N18TG
-  CHART-5DITKWLD:
-    children: []
-    id: CHART-5DITKWLD
+    id: CHART-AH9GMZTA
     meta:
       chartId: 293
       height: 50
@@ -94,24 +66,10 @@ position:
     parents:
     - ROOT_ID
     - GRID_ID
-    - ROW-N-4O2N18TG
-  CHART-K2HGAQ9P:
+    - ROW-N-APT13YZC
+  CHART-GIS7RDH7:
     children: []
-    id: CHART-K2HGAQ9P
-    meta:
-      chartId: 307
-      height: 50
-      sliceName: SI2 - Trade Origins
-      uuid: 931e6262-af75-4526-96f4-603490bbfbc2
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-4O2N18TG
-  CHART-I9R5DCBH:
-    children: []
-    id: CHART-I9R5DCBH
+    id: CHART-GIS7RDH7
     meta:
       chartId: 339
       height: 50
@@ -122,5 +80,47 @@ position:
     parents:
     - ROOT_ID
     - GRID_ID
-    - ROW-N-4O2N18TG
+    - ROW-N-APT13YZC
+  CHART-T6Y36H34:
+    children: []
+    id: CHART-T6Y36H34
+    meta:
+      chartId: 304
+      height: 50
+      sliceName: SI2 - Today's Deals
+      uuid: 2fd2243c-2c0f-4e5b-ba94-61d77d453362
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-APT13YZC
+  CHART-BBH4Z8V9:
+    children: []
+    id: CHART-BBH4Z8V9
+    meta:
+      chartId: 300
+      height: 50
+      sliceName: SI2 - Fund & Share Class Filter
+      uuid: 8b2129da-6323-4a82-869d-c6dc3f387cbd
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-APT13YZC
+  CHART-JZQ65AU9:
+    children: []
+    id: CHART-JZQ65AU9
+    meta:
+      chartId: 307
+      height: 50
+      sliceName: SI2 - Trade Origins
+      uuid: 931e6262-af75-4526-96f4-603490bbfbc2
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-APT13YZC
 version: 1.0.0

@@ -1,0 +1,43 @@
+slice_name: SI - Complaint Last 4 Weeks
+viz_type: pie
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_hou5y1q7opv_7ye7rmnhi4g
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: Upper(complaint_status) NOT IN ('VOID')
+    subject: null
+  color_scheme: supersetColors
+  datasource: 49__table
+  date_format: smart_date
+  donut: true
+  extra_form_data: {}
+  granularity_sqla: received_date
+  groupby:
+  - resolved_status
+  innerRadius: 50
+  label_line: true
+  label_type: key_value
+  labels_outside: true
+  legendOrientation: top
+  legendType: scroll
+  metric: COUNT
+  number_format: ',d'
+  outerRadius: 65
+  row_limit: 100
+  show_labels: true
+  show_labels_threshold: 5
+  show_legend: false
+  slice_id: 178
+  sort_by_metric: true
+  time_range: 'DATEADD(DATETIME("now"), -4, week) : now'
+  url_params: {}
+  viz_type: pie
+cache_timeout: null
+uuid: 3977c8e5-aff9-447f-92b5-372b4bc68d80
+version: 1.0.0
+dataset_uuid: e5094f0c-5391-2731-3de4-8bfb236135c9
