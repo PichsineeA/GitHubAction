@@ -1,0 +1,126 @@
+dashboard_title: Today's Deals [Mock-up]
+description: null
+css: "/* ---------------------------------------------------- */\n/* Filter controls\
+  \                                      */\n/* ----------------------------------------------------\
+  \ */\n\n/* Controls the visibility of native filters. \n   Comment out if you want\
+  \ native charts visble*/\n.css-1k877g7 {\n  visibility:hidden;\n}\n\n/*Hide all\
+  \ other drop down options, apart from refresh and CSV*/\n.chart-slice + div>div>.ant-dropdown>ul>li:not(:first-child):not(:last-child){\n\
+  \  display:none;\n}\n\n/*----------------------\n  Display CSS button for Slice\
+  \ 304 (Today's Deals)\n-----------------------*/\n#slice_304-controls{\n  display:flex;\n\
+  }\n/*----------------------*/\n"
+slug: null
+uuid: 73d2bf4c-e885-4fd6-86fa-7f09135e3a45
+metadata:
+  timed_refresh_immune_slices: []
+  expanded_slices: {}
+  refresh_frequency: 0
+  default_filters: '{}'
+  color_scheme: ''
+  show_native_filters: true
+  label_colors: {}
+  chart_configuration: {}
+position:
+  DASHBOARD_VERSION_KEY: v2
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  GRID_ID:
+    children:
+    - ROW-N-4O2N18TG
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Today's Deals [Mock-up]
+    type: HEADER
+  ROW-N-4O2N18TG:
+    children:
+    - CHART-6YFJGE9H
+    - CHART-D9D3DG7X
+    - CHART-5DITKWLD
+    - CHART-K2HGAQ9P
+    - CHART-I9R5DCBH
+    id: ROW-N-4O2N18TG
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+    parents:
+    - ROOT_ID
+    - GRID_ID
+  CHART-6YFJGE9H:
+    children: []
+    id: CHART-6YFJGE9H
+    meta:
+      chartId: 300
+      height: 50
+      sliceName: SI2 - Fund & Share Class Filter
+      uuid: 8b2129da-6323-4a82-869d-c6dc3f387cbd
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-4O2N18TG
+  CHART-D9D3DG7X:
+    children: []
+    id: CHART-D9D3DG7X
+    meta:
+      chartId: 304
+      height: 50
+      sliceName: SI2 - Today's Deals
+      uuid: 2fd2243c-2c0f-4e5b-ba94-61d77d453362
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-4O2N18TG
+  CHART-5DITKWLD:
+    children: []
+    id: CHART-5DITKWLD
+    meta:
+      chartId: 293
+      height: 50
+      sliceName: SI2 - EIN Currency Filter
+      uuid: eda2b707-4a81-484e-9140-9837ae914f12
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-4O2N18TG
+  CHART-K2HGAQ9P:
+    children: []
+    id: CHART-K2HGAQ9P
+    meta:
+      chartId: 307
+      height: 50
+      sliceName: SI2 - Trade Origins
+      uuid: 931e6262-af75-4526-96f4-603490bbfbc2
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-4O2N18TG
+  CHART-I9R5DCBH:
+    children: []
+    id: CHART-I9R5DCBH
+    meta:
+      chartId: 339
+      height: 50
+      sliceName: SI2 - Share Class Currency Filter
+      uuid: 9ea23ad5-c301-4a3a-a646-8420a7803938
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-4O2N18TG
+version: 1.0.0

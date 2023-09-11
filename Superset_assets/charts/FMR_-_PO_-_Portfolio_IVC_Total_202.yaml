@@ -1,0 +1,37 @@
+slice_name: FMR - PO - Portfolio IVC Total
+viz_type: big_number_total
+params:
+  adhoc_filters: []
+  datasource: 54__table
+  granularity_sqla: latest_valuation_date
+  header_font_size: 0.4
+  metric:
+    aggregate: COUNT_DISTINCT
+    column:
+      column_name: ivc_id
+      description: Investment vehicle class ID
+      expression: null
+      filterable: true
+      groupby: true
+      id: 845
+      is_dttm: false
+      python_date_format: null
+      type: INTEGER
+      verbose_name: null
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    isNew: false
+    label: IVC count
+    optionName: metric_ste1r3p0sbo_6h0f6yik963
+    sqlExpression: null
+  slice_id: 202
+  subheader: Share Classes
+  subheader_font_size: 0.15
+  time_range: No filter
+  url_params: {}
+  viz_type: big_number_total
+  y_axis_format: SMART_NUMBER
+cache_timeout: null
+uuid: 2eeb1189-5574-625b-4f22-f0339d7a8bda
+version: 1.0.0
+dataset_uuid: 294bb475-bd97-fe6c-dec6-ec4cd42fc6fa
