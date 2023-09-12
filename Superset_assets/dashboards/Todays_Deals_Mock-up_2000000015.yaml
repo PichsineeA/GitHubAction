@@ -28,7 +28,7 @@ position:
     type: ROOT
   GRID_ID:
     children:
-    - ROW-N-APT13YZC
+    - ROW-N-TW5AI4ZR
     id: GRID_ID
     parents:
     - ROOT_ID
@@ -38,14 +38,14 @@ position:
     meta:
       text: Today's Deals [Mock-up]
     type: HEADER
-  ROW-N-APT13YZC:
+  ROW-N-TW5AI4ZR:
     children:
-    - CHART-AH9GMZTA
-    - CHART-GIS7RDH7
-    - CHART-T6Y36H34
-    - CHART-BBH4Z8V9
-    - CHART-JZQ65AU9
-    id: ROW-N-APT13YZC
+    - CHART-X49D3N0K
+    - CHART-JF19D0UQ
+    - CHART-RKEB4HLL
+    - CHART-S2WFDKPP
+    - CHART-P117H847
+    id: ROW-N-TW5AI4ZR
     meta:
       '0': ROOT_ID
       background: BACKGROUND_TRANSPARENT
@@ -53,37 +53,9 @@ position:
     parents:
     - ROOT_ID
     - GRID_ID
-  CHART-AH9GMZTA:
+  CHART-X49D3N0K:
     children: []
-    id: CHART-AH9GMZTA
-    meta:
-      chartId: 293
-      height: 50
-      sliceName: SI2 - EIN Currency Filter
-      uuid: eda2b707-4a81-484e-9140-9837ae914f12
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-APT13YZC
-  CHART-GIS7RDH7:
-    children: []
-    id: CHART-GIS7RDH7
-    meta:
-      chartId: 339
-      height: 50
-      sliceName: SI2 - Share Class Currency Filter
-      uuid: 9ea23ad5-c301-4a3a-a646-8420a7803938
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-APT13YZC
-  CHART-T6Y36H34:
-    children: []
-    id: CHART-T6Y36H34
+    id: CHART-X49D3N0K
     meta:
       chartId: 304
       height: 50
@@ -94,24 +66,24 @@ position:
     parents:
     - ROOT_ID
     - GRID_ID
-    - ROW-N-APT13YZC
-  CHART-BBH4Z8V9:
+    - ROW-N-TW5AI4ZR
+  CHART-JF19D0UQ:
     children: []
-    id: CHART-BBH4Z8V9
+    id: CHART-JF19D0UQ
     meta:
-      chartId: 300
+      chartId: 293
       height: 50
-      sliceName: SI2 - Fund & Share Class Filter
-      uuid: 8b2129da-6323-4a82-869d-c6dc3f387cbd
+      sliceName: SI2 - EIN Currency Filter
+      uuid: eda2b707-4a81-484e-9140-9837ae914f12
       width: 4
     type: CHART
     parents:
     - ROOT_ID
     - GRID_ID
-    - ROW-N-APT13YZC
-  CHART-JZQ65AU9:
+    - ROW-N-TW5AI4ZR
+  CHART-RKEB4HLL:
     children: []
-    id: CHART-JZQ65AU9
+    id: CHART-RKEB4HLL
     meta:
       chartId: 307
       height: 50
@@ -122,5 +94,33 @@ position:
     parents:
     - ROOT_ID
     - GRID_ID
-    - ROW-N-APT13YZC
+    - ROW-N-TW5AI4ZR
+  CHART-S2WFDKPP:
+    children: []
+    id: CHART-S2WFDKPP
+    meta:
+      chartId: 300
+      height: 50
+      sliceName: SI2 - Fund & Share Class Filter
+      uuid: 8b2129da-6323-4a82-869d-c6dc3f387cbd
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-TW5AI4ZR
+  CHART-P117H847:
+    children: []
+    id: CHART-P117H847
+    meta:
+      chartId: 339
+      height: 50
+      sliceName: SI2 - Share Class Currency Filter
+      uuid: 9ea23ad5-c301-4a3a-a646-8420a7803938
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-TW5AI4ZR
 version: 1.0.0

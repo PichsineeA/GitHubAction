@@ -84,6 +84,22 @@ position:
     - COLUMN-MHTMaWJDJp
     - ROW-cUCYK1Tg2a
     type: CHART
+  CHART-egJGJZxEsZ:
+    children: []
+    id: CHART-egJGJZxEsZ
+    meta:
+      chartId: 530
+      height: 50
+      sliceName: SI5 - Referred Work Items
+      uuid: dfc1756e-acfa-444f-ac68-f2bacc1e33b5
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-M1IdUIGgSU
+    - COLUMN-otSkZ7soGT
+    - ROW-bfD3TA1Enb
+    type: CHART
   CHART-mMClKeLssj:
     children: []
     id: CHART-mMClKeLssj
@@ -343,7 +359,8 @@ position:
     - COLUMN-otSkZ7soGT
     type: ROW
   ROW-bfD3TA1Enb:
-    children: []
+    children:
+    - CHART-egJGJZxEsZ
     id: ROW-bfD3TA1Enb
     meta:
       background: BACKGROUND_TRANSPARENT
@@ -584,4 +601,5 @@ metadata:
     - 2000000003
     - 2000000004
     tabsInScope: []
+  shared_label_colors: {}
 version: 1.0.0

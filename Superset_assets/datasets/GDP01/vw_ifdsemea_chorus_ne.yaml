@@ -1,0 +1,548 @@
+table_name: vw_ifdsemea_chorus_ne
+main_dttm_col: last_update_dattim
+description: 'Version 1.0 (24-07-2023) dpp-4185: Create dataset'
+default_endpoint: null
+offset: 0
+cache_timeout: 60
+schema: present
+sql: ''
+params: null
+template_params: null
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: deb426d2-5ea7-42ae-ae97-c99694c2ddff
+metrics:
+- metric_name: age_bus_day_filter
+  verbose_name: Age Business Day Filter
+  metric_type: null
+  expression: "MAX(case\nwhen age_bus_days_band = 'Day 1' then 1 \nwhen age_bus_days_band\
+    \ = 'Day 2' then 2 \nwhen age_bus_days_band = 'Day 3' then 3 \nwhen age_bus_days_band\
+    \ = 'Day 4' then 4 \nwhen age_bus_days_band = 'Day 5' then 5 \nwhen age_bus_days_band\
+    \ = 'Day 6-10' then 6 \nwhen age_bus_days_band = 'Day 11-30' then 7 \nwhen age_bus_days_band\
+    \ = 'Day 31+' then 8 else 0\nend)"
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: processing_stage_filter
+  verbose_name: Processing Stage Filter
+  metric_type: null
+  expression: "MAX(case\nwhen processing_stage = 'Process' then 1 \nwhen processing_stage\
+    \ = 'Vetting' then 2 \nwhen processing_stage = 'Refer' then 3 \nwhen processing_stage\
+    \ = 'Quality' then 4 \nwhen processing_stage = 'System' then 5 \nwhen processing_stage\
+    \ = 'Discard' then 6 \nwhen processing_stage = 'Hold' then 7 \nwhen processing_stage\
+    \ = 'Rescan' then 8 else 99\nend\n)"
+  description: null
+  d3format: null
+  extra: {}
+  warning_text: null
+- metric_name: day_31+
+  verbose_name: Day 31+
+  metric_type: null
+  expression: sum(case age_bus_days_band when 'Day 31+' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: day_11-30
+  verbose_name: Day 11-30
+  metric_type: null
+  expression: sum(case age_bus_days_band when 'Day 11-30' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: day_6-10
+  verbose_name: Day 6-10
+  metric_type: null
+  expression: sum(case age_bus_days_band when 'Day 6-10' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: day_1
+  verbose_name: Day 1
+  metric_type: null
+  expression: sum(case age_bus_days_band when 'Day 1' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: day_2
+  verbose_name: Day 2
+  metric_type: null
+  expression: sum(case age_bus_days_band when 'Day 2' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: day_3
+  verbose_name: Day 3
+  metric_type: null
+  expression: sum(case age_bus_days_band when 'Day 3' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: day_4
+  verbose_name: Day 4
+  metric_type: null
+  expression: sum(case age_bus_days_band when 'Day 4' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: day_5
+  verbose_name: Day 5
+  metric_type: null
+  expression: sum(case age_bus_days_band when 'Day 5' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: discard
+  verbose_name: Discard
+  metric_type: null
+  expression: sum(case when upper(processing_stage) = 'DISCARD' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: rescan
+  verbose_name: Rescan
+  metric_type: null
+  expression: sum(case when upper(processing_stage) = 'RESCAN' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: personal
+  verbose_name: Personal
+  metric_type: null
+  expression: sum(case when upper(processing_stage) = 'PERSONAL' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: quality
+  verbose_name: Quality
+  metric_type: null
+  expression: sum(case when upper(processing_stage) = 'QUALITY' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: process
+  verbose_name: Process
+  metric_type: null
+  expression: sum(case when upper(processing_stage) = 'PROCESS' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: hold
+  verbose_name: Hold
+  metric_type: null
+  expression: sum(case when upper(processing_stage) = 'HOLD' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: refer
+  verbose_name: Refer
+  metric_type: null
+  expression: sum(case when upper(processing_stage) = 'REFER' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: vetting
+  verbose_name: Vetting
+  metric_type: null
+  expression: sum(case when upper(processing_stage) = 'VETTING' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: system
+  verbose_name: System
+  metric_type: null
+  expression: sum(case when upper(processing_stage) = 'SYSTEM' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: suspended
+  verbose_name: Suspended
+  metric_type: null
+  expression: sum(case when upper(suspend_flag) = 'YES' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: count
+  verbose_name: Number of Work Items
+  metric_type: null
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: total
+  verbose_name: Total
+  metric_type: null
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+columns:
+- column_name: last_update_dattim
+  verbose_name: Last Updated
+  is_dttm: true
+  is_active: null
+  type: TIMESTAMP WITHOUT TIME ZONE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: awd_crdattim
+  verbose_name: Work Item Create Date Time
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: age_bus_days
+  verbose_name: Age in Business Days
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: age_bus_days_band
+  verbose_name: Age in Business Days
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: outstanding_manual_deals
+  verbose_name: Outstanding Manual Deals
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: mco_name
+  verbose_name: Manco Name
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(100)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: unitcd
+  verbose_name: Business Area
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: agent_id
+  verbose_name: Agent ID
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: uh_id
+  verbose_name: Unitholder ID
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: manual_deal_flag
+  verbose_name: Manual Deal
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: last_update_dattim_txt
+  verbose_name: Last Updated
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: organization_name
+  verbose_name: Organization Name
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: organization_tier
+  verbose_name: Organization Tier
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: wrktype
+  verbose_name: Work Type
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: suspend_flag
+  verbose_name: Suspended?
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: complexity
+  verbose_name: Complexity
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: owner_department
+  verbose_name: Department
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: ein
+  verbose_name: EIN
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: queuecd
+  verbose_name: Queue
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: recordcd
+  verbose_name: Record
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: processing_stage
+  verbose_name: Stage
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: statcd
+  verbose_name: Status
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: owner_team
+  verbose_name: Team
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: urgent
+  verbose_name: Urgent
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: crnode
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+version: 1.0.0
+database_uuid: 980ffeea-a918-7739-250c-7d130b23d6c0
