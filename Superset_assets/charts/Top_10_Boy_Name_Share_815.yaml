@@ -1,0 +1,37 @@
+slice_name: Top 10 Boy Name Share
+viz_type: area
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: boy
+    expressionType: SIMPLE
+    operator: ==
+    subject: gender
+  compare_lag: '10'
+  compare_suffix: o10Y
+  comparison_type: values
+  granularity_sqla: ds
+  groupby:
+  - name
+  limit: 10
+  markup_type: markdown
+  metrics:
+  - aggregate: SUM
+    column:
+      column_name: num
+      type: BIGINT
+    expressionType: SIMPLE
+    label: Births
+    optionName: metric_11
+  row_limit: 50000
+  since: 100 years ago
+  stacked_style: expand
+  time_grain_sqla: P1D
+  time_range: No filter
+  until: now
+  viz_type: area
+  x_axis_forma: smart_date
+cache_timeout: null
+uuid: f7a77e81-62e9-4c8d-8ba3-800eaa74c6cd
+version: 1.0.0
+dataset_uuid: 6c27ef42-7425-406c-b19c-c3b043b19a99
