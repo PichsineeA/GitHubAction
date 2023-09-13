@@ -28,7 +28,7 @@ sql: "{% set dsource_mapping =\n  ({\n    \"ivh_description\":\"present.vw_inves
   \ >= {{ \"'\" + from_dttm + \"'\" }}\n    AND transaction_date <= {{ \"'\" + to_dttm\
   \ + \"'\" }}\n  {% endif %} \n  {{ ein_filter }}\n{% endif %}"
 params: null
-template_params: ''
+template_params: null
 filter_select_enabled: false
 fetch_values_predicate: null
 extra: null
