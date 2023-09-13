@@ -1,4 +1,4 @@
-dashboard_title: Use For Pipeline Test
+dashboard_title: Service Insights [copy]
 description: null
 css: "/* ---------------------------------------------------- */\n/* Big number charts\
   \                                    */\n/* ----------------------------------------------------\
@@ -26,6 +26,22 @@ position:
     - ROW-jURHhEemxn
     - COLUMN-HTvL0KjoVl
     type: CHART
+  CHART-7muG1z9Tm9:
+    children: []
+    id: CHART-7muG1z9Tm9
+    meta:
+      chartId: 532
+      height: 50
+      sliceName: SI5 - Breaches Overview
+      sliceNameOverride: Breaches Overview
+      uuid: f0e04b2c-f758-4e72-957b-19e19e312262
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ilIrK04aCW
+    - COLUMN-rQUZYUbF9j
+    type: CHART
   CHART-9sb99xDP5k:
     children: []
     id: CHART-9sb99xDP5k
@@ -41,6 +57,20 @@ position:
     - GRID_ID
     - ROW-ilIrK04aCW
     - COLUMN-YbP2AXQN8K
+    type: CHART
+  CHART-HRGTrDP1xq:
+    children: []
+    id: CHART-HRGTrDP1xq
+    meta:
+      chartId: 516
+      height: 20
+      sliceName: SI5 - EIN Currency Filter
+      uuid: 8095ee41-3243-44be-9dda-ae55c4d59a5c
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-DRVso9s5Te
     type: CHART
   CHART-LI7oEAC85f:
     children: []
@@ -179,7 +209,8 @@ position:
     - ROW-jURHhEemxn
     type: COLUMN
   COLUMN-rQUZYUbF9j:
-    children: []
+    children:
+    - CHART-7muG1z9Tm9
     id: COLUMN-rQUZYUbF9j
     meta:
       background: BACKGROUND_TRANSPARENT
@@ -192,6 +223,7 @@ position:
   DASHBOARD_VERSION_KEY: v2
   GRID_ID:
     children:
+    - ROW-DRVso9s5Te
     - ROW-yfdZiqsLso
     - ROW-jURHhEemxn
     - ROW-ilIrK04aCW
@@ -202,13 +234,23 @@ position:
   HEADER_ID:
     id: HEADER_ID
     meta:
-      text: Use For Pipeline Test
+      text: Service Insights
     type: HEADER
   ROOT_ID:
     children:
     - GRID_ID
     id: ROOT_ID
     type: ROOT
+  ROW-DRVso9s5Te:
+    children:
+    - CHART-HRGTrDP1xq
+    id: ROW-DRVso9s5Te
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
   ROW-ilIrK04aCW:
     children:
     - COLUMN-rQUZYUbF9j
@@ -251,6 +293,20 @@ metadata:
   label_colors: {}
   timed_refresh_immune_slices: []
   default_filters: '{}'
+  filter_scopes:
+    '516':
+      bpo_identifier:
+        scope:
+        - ROOT_ID
+        immune: []
+      ein:
+        scope:
+        - ROOT_ID
+        immune: []
+      emc_currency:
+        scope:
+        - ROOT_ID
+        immune: []
   chart_configuration: {}
   shared_label_colors: {}
 version: 1.0.0
