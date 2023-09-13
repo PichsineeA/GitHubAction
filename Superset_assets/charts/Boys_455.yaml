@@ -1,0 +1,28 @@
+slice_name: Boys
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: boy
+    expressionType: SIMPLE
+    operator: ==
+    subject: gender
+  compare_lag: '10'
+  compare_suffix: o10Y
+  granularity_sqla: ds
+  groupby:
+  - name
+  limit: '25'
+  markup_type: markdown
+  metrics:
+  - sum__num
+  row_limit: 50
+  since: 100 years ago
+  time_range: No filter
+  timeseries_limit_metric: sum__num
+  until: now
+  viz_type: table
+cache_timeout: null
+uuid: 1426a75b-bc53-460a-8eb4-4e3ee9fc90f3
+version: 1.0.0
+dataset_uuid: 2f14b67b-aebd-47af-970c-83258a649d99

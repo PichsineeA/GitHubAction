@@ -1,0 +1,19 @@
+slice_name: Participants
+viz_type: big_number
+params:
+  compare_lag: '5'
+  compare_suffix: over 5Y
+  granularity_sqla: ds
+  groupby: []
+  limit: '25'
+  markup_type: markdown
+  metric: sum__num
+  row_limit: 50000
+  since: 100 years ago
+  time_range: No filter
+  until: now
+  viz_type: big_number
+cache_timeout: null
+uuid: 5694e8a2-2ad5-4322-a4ae-9462093af890
+version: 1.0.0
+dataset_uuid: 6c27ef42-7425-406c-b19c-c3b043b19a99

@@ -1,0 +1,24 @@
+slice_name: Pivot Table v2
+viz_type: pivot_table_v2
+params:
+  compare_lag: '10'
+  compare_suffix: o10Y
+  granularity_sqla: ds
+  groupby: []
+  groupbyColumns:
+  - state
+  groupbyRows:
+  - name
+  limit: '25'
+  markup_type: markdown
+  metrics:
+  - sum__num
+  row_limit: 50000
+  since: 100 years ago
+  time_range: No filter
+  until: now
+  viz_type: pivot_table_v2
+cache_timeout: null
+uuid: d8fc883b-c9a5-4e26-88af-11fd5628e155
+version: 1.0.0
+dataset_uuid: 2f14b67b-aebd-47af-970c-83258a649d99

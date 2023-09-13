@@ -1,0 +1,42 @@
+slice_name: Genders by State
+viz_type: dist_bar
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator:
+    - other
+    expressionType: SIMPLE
+    filterOptionName: 2745eae5
+    operator: NOT IN
+    subject: state
+  compare_lag: '10'
+  compare_suffix: o10Y
+  granularity_sqla: ds
+  groupby:
+  - state
+  limit: '25'
+  markup_type: markdown
+  metrics:
+  - aggregate: SUM
+    column:
+      column_name: num_boys
+      type: BIGINT(20)
+    expressionType: SIMPLE
+    label: Boys
+    optionName: metric_11
+  - aggregate: SUM
+    column:
+      column_name: num_girls
+      type: BIGINT(20)
+    expressionType: SIMPLE
+    label: Girls
+    optionName: metric_12
+  row_limit: 50000
+  since: 100 years ago
+  time_range: No filter
+  until: now
+  viz_type: dist_bar
+cache_timeout: null
+uuid: 190fcc37-bee9-4ed2-af6e-a1bf4f9e9ab3
+version: 1.0.0
+dataset_uuid: 6c27ef42-7425-406c-b19c-c3b043b19a99
