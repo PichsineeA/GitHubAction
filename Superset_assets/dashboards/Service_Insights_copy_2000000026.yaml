@@ -1,4 +1,4 @@
-dashboard_title: Service Insights
+dashboard_title: Service Insights [copy]
 description: null
 css: "/* ---------------------------------------------------- */\n/* Big number charts\
   \                                    */\n/* ----------------------------------------------------\
@@ -7,8 +7,8 @@ css: "/* ---------------------------------------------------- */\n/* Big number 
   }\n/*Hide all other drop down options, apart from refresh and CSV*/\n.chart-slice\
   \ + div>div>.ant-dropdown>ul>li:not(:first-child):not(:last-child){\n  display:none;\n\
   }"
-slug: service-insights-5-bmi
-uuid: 7693e1a7-c17e-49d1-b0ed-96d11036aef9
+slug: null
+uuid: 9a5391e4-2f20-42cc-bc00-a482db4af338
 position:
   CHART--SBp_pThaz:
     children: []
@@ -308,4 +308,5 @@ metadata:
         - ROOT_ID
         immune: []
   chart_configuration: {}
+  shared_label_colors: {}
 version: 1.0.0
