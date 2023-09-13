@@ -1,0 +1,27 @@
+slice_name: Parallel Coordinates
+viz_type: para
+params:
+  compare_lag: '10'
+  compare_suffix: o10Y
+  country_fieldtype: cca3
+  entity: country_code
+  granularity_sqla: year
+  groupby: []
+  limit: 100
+  markup_type: markdown
+  metrics:
+  - sum__SP_POP_TOTL
+  - sum__SP_RUR_TOTL_ZS
+  - sum__SH_DYN_AIDS
+  row_limit: 50000
+  secondary_metric: sum__SP_POP_TOTL
+  series: country_name
+  show_bubbles: true
+  since: '2011-01-01'
+  time_range: '2014-01-01 : 2014-01-02'
+  until: '2012-01-01'
+  viz_type: para
+cache_timeout: null
+uuid: fecd110a-8113-4c96-af7d-a7f7b95e0e7f
+version: 1.0.0
+dataset_uuid: 1d2a104d-5d12-4666-874f-c991ec5c9130
