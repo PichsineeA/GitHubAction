@@ -3,7 +3,7 @@ description: null
 css: "/* ---------------------------------------------------- */\n/* Big number charts\
   \                                    */\n/* ----------------------------------------------------\
   \ */\n\n/* Big number charts - SSNC Teal */\n.big_number_total {\n\ttext-align:\
-  \ center;\n\tbackground-color: #00667D;\n\tcolor: white;\n\tborder-radius: 5px;\n\
+  \ center;\n\tbackground-color: #fcba03;\n\tcolor: white;\n\tborder-radius: 5px;\n\
   }\n/*Hide all other drop down options, apart from refresh and CSV*/\n.chart-slice\
   \ + div>div>.ant-dropdown>ul>li:not(:first-child):not(:last-child){\n  display:none;\n\
   }"
