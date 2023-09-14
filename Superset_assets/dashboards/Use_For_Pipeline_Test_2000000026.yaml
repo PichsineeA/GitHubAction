@@ -40,7 +40,7 @@ position:
     - ROOT_ID
     - GRID_ID
     - ROW-ilIrK04aCW
-    - COLUMN-YbP2AXQN8K
+    - COLUMN-rQUZYUbF9j
     type: CHART
   CHART-LI7oEAC85f:
     children: []
@@ -155,8 +155,7 @@ position:
     - ROW-yfdZiqsLso
     type: COLUMN
   COLUMN-YbP2AXQN8K:
-    children:
-    - CHART-9sb99xDP5k
+    children: []
     id: COLUMN-YbP2AXQN8K
     meta:
       background: BACKGROUND_TRANSPARENT
@@ -179,7 +178,8 @@ position:
     - ROW-jURHhEemxn
     type: COLUMN
   COLUMN-rQUZYUbF9j:
-    children: []
+    children:
+    - CHART-9sb99xDP5k
     id: COLUMN-rQUZYUbF9j
     meta:
       background: BACKGROUND_TRANSPARENT
