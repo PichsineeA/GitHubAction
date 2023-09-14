@@ -26,6 +26,21 @@ position:
     - ROW-jURHhEemxn
     - COLUMN-HTvL0KjoVl
     type: CHART
+  CHART-8ctD7F_7a6:
+    children: []
+    id: CHART-8ctD7F_7a6
+    meta:
+      chartId: 158
+      height: 50
+      sliceName: SI - Oldest Items by Work Type
+      uuid: d7dad5f5-9a3a-17d5-ade5-45c07ba02e37
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ilIrK04aCW
+    - COLUMN-YbP2AXQN8K
+    type: CHART
   CHART-9sb99xDP5k:
     children: []
     id: CHART-9sb99xDP5k
@@ -155,7 +170,8 @@ position:
     - ROW-yfdZiqsLso
     type: COLUMN
   COLUMN-YbP2AXQN8K:
-    children: []
+    children:
+    - CHART-8ctD7F_7a6
     id: COLUMN-YbP2AXQN8K
     meta:
       background: BACKGROUND_TRANSPARENT
