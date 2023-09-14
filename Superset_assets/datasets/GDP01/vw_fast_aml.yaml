@@ -1,0 +1,338 @@
+table_name: vw_fast_aml
+main_dttm_col: null
+description: 'Version 1.1 (06-12-2022) Edit calculation column:  Stock Transfer/Repurchase
+
+  Version 1.2 (06-12-2022) Edit calculation column:  Money In/Out
+
+  Version 1.3 (14-12-2022) Edit calculation column:  Money In/Out
+
+  Version 1.4 (05-01-2023) Add new column:deal_exceeding_threshold_flag
+
+  '
+default_endpoint: null
+offset: 0
+cache_timeout: 60
+schema: present
+sql: ''
+params: null
+template_params: null
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: 1f183292-9794-4769-b7a7-a08acfeb402a
+metrics:
+- metric_name: '% of Cancelled Deals'
+  verbose_name: Percent of Cancelled Deals
+  metric_type: null
+  expression: case when count(distinct deal_id) = 0 then 0 else count(distinct deal_id)
+    filter (where cancelled = 'Y')::float/count(distinct deal_id)::float end
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: null
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+columns:
+- column_name: Deal Cancelled
+  verbose_name: Deal Cancelled
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: "case when Upper(cancelled) = 'Y'   then  'Yes'  \nwhen Upper(cancelled)\
+    \ = 'N'   then  'No' end "
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Money In/Out
+  verbose_name: Money In/Out
+  is_dttm: null
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: "case\nwhen \ttransaction_type_code in ('01','07','11','26','38') then\
+    \ 'Money In'\nwhen  transaction_type_code in ('02','08','18','27','39','46') \
+    \  then  'Money Out'\nend"
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Stock Transfer/Repurchase
+  verbose_name: Stock Transfer/Repurchase
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: "case\nwhen \ttransaction_type_code in ('07','26','08','27','39') then\
+    \ 'Stock Transfer'\nwhen  transaction_type_code in ('02','46')   then  'Repurchase'\n\
+    else 'Other'end"
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: deal_date
+  verbose_name: Deal Date
+  is_dttm: true
+  is_active: null
+  type: TIMESTAMP WITHOUT TIME ZONE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: anti_money_laundering_status
+  verbose_name: Anti Money Laundering Status
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(40)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: deal_exceeding_threshold_flag
+  verbose_name: Deal Exceeding Threshold Flag
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: sale_or_repurchase
+  verbose_name: Sale or Repurchase
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(80)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: cash_gross_amount
+  verbose_name: Cash Gross Amount
+  is_dttm: false
+  is_active: null
+  type: NUMERIC
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: transaction_type_code
+  verbose_name: Transaction Type Code
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: mco_name
+  verbose_name: Manco Name
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(100)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: client_name
+  verbose_name: Client Name
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(240)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: deal_id
+  verbose_name: Deal ID
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(20)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: ctractkey
+  verbose_name: Contract key
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(40)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: unitholder_id
+  verbose_name: Unitholder ID
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(40)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: client_category
+  verbose_name: Client Category
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(80)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: transaction_type
+  verbose_name: Transaction Type
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(80)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: emc_currency
+  verbose_name: EMC Currency
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(3)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: client_type
+  verbose_name: Client Type
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: uniqueid
+  verbose_name: Unique ID
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: risk_rating
+  verbose_name: Risk Rating
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: cancelled
+  verbose_name: Cancelled
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(20)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: currency
+  verbose_name: Currency
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(3)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: country
+  verbose_name: Country
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: ein
+  verbose_name: EIN
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 980ffeea-a918-7739-250c-7d130b23d6c0

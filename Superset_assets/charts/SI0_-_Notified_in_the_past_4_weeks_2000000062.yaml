@@ -1,0 +1,31 @@
+slice_name: SI0 - Notified in the past 4 weeks
+viz_type: pie
+params:
+  adhoc_filters: []
+  color_scheme: supersetColors
+  datasource: 19__table
+  donut: true
+  granularity_sqla: manco_notified_date
+  groupby:
+  - breach_type
+  innerRadius: 50
+  label_line: true
+  label_type: key
+  labels_outside: true
+  legendMargin: ''
+  legendOrientation: bottom
+  legendType: scroll
+  metric: count
+  number_format: SMART_NUMBER
+  outerRadius: 65
+  row_limit: 100
+  show_labels: false
+  show_legend: true
+  slice_id: 53
+  time_range: No filter
+  url_params: {}
+  viz_type: pie
+cache_timeout: null
+uuid: c9792ab0-011b-45bb-839d-db4646751c4f
+version: 1.0.0
+dataset_uuid: 2c547240-669b-1566-c497-e9841401ead7

@@ -1,5 +1,5 @@
-database_name: GDP01_test
-sqlalchemy_uri: postgresql://app_superset:XXXXXXXXXX@gdp-01.dev.data.ifdsfs.com:5432/gdp01
+database_name: POC GDP01
+sqlalchemy_uri: postgresql://gdp_user_superset:XXXXXXXXXX@gdp-01.dev.data.ifdsfs.com:5432/gdp01
 cache_timeout: null
 expose_in_sqllab: true
 allow_run_async: false
@@ -11,5 +11,5 @@ extra:
   engine_params: {}
   metadata_cache_timeout: {}
   schemas_allowed_for_csv_upload: []
-uuid: 686f1ca9-b67a-c0b6-3c1c-81dd5ce0bb5e
+uuid: dfa90640-7082-45be-94a8-201e808f9d0b
 version: 1.0.0

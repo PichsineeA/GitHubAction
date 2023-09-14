@@ -1,0 +1,148 @@
+slice_name: SI - Today's Notifiable Deals
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_ko9nuvmsorp_hkai8i6qmj7
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: RTRIM(transaction_type_desc) <> 'Stock Transfer In'
+    subject: null
+  - clause: WHERE
+    comparator: 'Yes'
+    expressionType: SIMPLE
+    filterOptionName: filter_9tkdt29rmo8_63906ad099x
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: CURRENT DAY FLAG
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_5dqjmg7zfy_rj1fc1rjenj
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: cancelled_flag <> 'Y'
+    subject: null
+  all_columns:
+  - fund_name
+  - unitholder_id
+  - event_id
+  - time_of_deal
+  - deal_origin
+  - transaction_type_desc
+  - price_type
+  - latest_price
+  - VP TIME
+  - '% of Fund'
+  - Actual Units
+  - Est. Actual Cash
+  - cancelled_flag
+  color_pn: false
+  column_config:
+    '% of Fund':
+      horizontalAlign: right
+    Actual Units:
+      horizontalAlign: right
+    Cash Amount:
+      d3NumberFormat: ',.2f'
+      d3SmallNumberFormat: ',.2f'
+    VP TIME:
+      horizontalAlign: center
+    latest_price:
+      d3NumberFormat: ',.4f'
+      d3SmallNumberFormat: ',.4f'
+      showCellBars: false
+  conditional_formatting: []
+  datasource: 51__table
+  extra_form_data: {}
+  granularity_sqla: null
+  groupby:
+  - fund_name
+  - unitholder_id
+  - event_id
+  - time_of_deal
+  - deal_origin
+  - transaction_type_desc
+  - price_type
+  - latest_price
+  - VP TIME
+  - '% of Fund'
+  - Actual Units
+  include_search: false
+  include_time: false
+  metrics:
+  - aggregate: SUM
+    column:
+      certification_details: null
+      certified_by: null
+      column_name: est_actual_cash
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 769
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: DOUBLE PRECISION
+      type_generic: 0
+      verbose_name: Cash Amount
+      warning_markdown: null
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    isNew: false
+    label: Cash Amount
+    optionName: metric_d2jim1zmerh_laaggomzywg
+    sqlExpression: null
+  order_by_cols:
+  - '["time_of_deal", false]'
+  order_desc: true
+  page_length: 20
+  percent_metrics: []
+  query_mode: aggregate
+  row_limit: 10000
+  server_page_length: 20
+  server_pagination: false
+  show_cell_bars: false
+  show_totals: true
+  slice_id: 159
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  timeseries_limit_metric:
+    aggregate: MAX
+    column:
+      certification_details: null
+      certified_by: null
+      column_name: event_id
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 753
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: TEXT
+      type_generic: 1
+      verbose_name: Deal ID
+      warning_markdown: null
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    isNew: false
+    label: MAX(Deal ID)
+    optionName: metric_rii12rh4wc_dls6uxa5wr8
+    sqlExpression: null
+  url_params: {}
+  viz_type: table
+cache_timeout: null
+uuid: 63afdef1-9975-2129-2b07-3f01872f660d
+version: 1.0.0
+dataset_uuid: 47f9e1f7-837a-05ee-d094-bf9eb1a8be98

@@ -1,0 +1,969 @@
+table_name: vw_valuation_summary
+main_dttm_col: valuation_date
+description: present.vw_valuation_summary with a column added to track the previous
+  total per share class
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: present
+sql: "{% set dsource_mapping =\n  ({\n    \"valuation_date_txt_jinja\":\"(SELECT to_char(Valuation_date,\
+  \ 'YYYY-mm-DD') as valuation_date_txt_jinja, ein FROM present.vw_valuation_point)\
+  \ AS main\",\n    \"vp_cutoff_with_timezone_jinja\":\"(SELECT vp_cut_off_period||'\
+  \ '||ivc_timezone as vp_cutoff_with_timezone_jinja,ein FROM present.vw_investment_vehicle_class)\
+  \ AS main\",\n\t  \"ivh_description\" :\"present.vw_investment_vehicle_class main\"\
+  ,\n\t  \"ivc_long_name\" :\"present.vw_investment_vehicle_class main\",\n\t  \"\
+  ccy_id\":\"present.vw_investment_vehicle_class main\"\n  })\n%}\n{% set ein_filter\
+  \ %}\n  /*ein is a list of numbers so have to convert to string first to use join\
+  \ */\n  {% if filter_values('ein')|length %}\n    AND  ein in ( \n      {{  filter_values('ein')|map('string')|join(',')}}\
+  \ \n    )\n  {% endif %}\n{% endset %}\n/* Dynamic datasource, dsource_mapping is\
+  \ defined above */\n/* Indirectly catch filters by checking that there are no metrics,\n\
+  \   filters have no metrics*/\n{% if groupby|length == 1 and metrics|length == 0\
+  \ %}\n  /* in future versions of superset you can specify with filter_values that\n\
+  \   you dont want the filter to apply to the outer query, that way we can \n   optimise\
+  \ further by not having to declare the other filterable columns \n   in the select/Group\
+  \ By clause */\n  SELECT {{ 'main.' + groupby[0] }}, main.ein\n  FROM   {{ dsource_mapping[groupby[0]]\
+  \ }}\n  WHERE  {{ 'main.' + groupby[0] }} is not null\n  {{ ein_filter }}\n  GROUP\
+  \ BY {{ 'main.' + groupby[0] }}, main.ein\n/* catch the trend chart */\n{% elif\
+  \ groupby|length == 1 and metrics|length != 0 %}\n  SELECT *\n  FROM present.vw_valuation_summary\n\
+  \  /*Limit to 25 Funds if no filters hve been selected*/\n  {% if filter_values('ivh_description')|length\
+  \ == 0 %}\n    INNER JOIN\n      (select ivh_id, sum(total_value) \n      from present.vw_valuation_point\
+  \ vlp\n      inner join (select ivh_id, ivc_id from present.vw_investment_vehicle_class)\
+  \ vivc on vivc.ivc_id = vlp.ivc_id \n      {% if from_dttm is none %}\n        WHERE\
+  \ valuation_date is Null\n      {% else %}\n        WHERE valuation_date >= {{ \"\
+  '\" + from_dttm + \"'\" }}\n        AND valuation_date <= {{ \"'\" + to_dttm + \"\
+  '\" }}\n      {% endif %} \n      {{ ein_filter }}\n      group by vivc.ivh_id \n\
+  \      limit 25\n      ) as limiter on limiter.ivh_id = vw_valuation_summary.ivh_id\n\
+  \    WHERE 1 = 1\n  {% else %}\n    WHERE ivh_description in({{ \"'\" + filter_values('ivh_description')|join(\"\
+  ','\") + \"'\" }})\n  {% endif %}   \n  /* Reduce dataset with date range, can also\
+  \ apply to filters if you choose to\n  have a separate date range filter rather\
+  \ than an embedded filter, \n  but it doesnt look good */\n  {% if from_dttm is\
+  \ none %}\n    AND valuation_date is Null\n  {% else %}\n    AND valuation_date\
+  \ >= {{ \"'\" + from_dttm + \"'\" }}\n    AND valuation_date <= {{ \"'\" + to_dttm\
+  \ + \"'\" }}\n  {% endif %} \n  {{ ein_filter }}\n{% else %}\n  SELECT *\n\t,lag(total_value,1,0.0)\
+  \ OVER prior_ivc AS prior_total\n\t,Valuation_date AS valuation_date_txt_jinja\n\
+  \t,vp_cut_off_period||' '||ivc_timezone AS vp_cutoff_with_timezone_jinja\n  FROM\
+  \ present.vw_valuation_summary\n  WHERE 1=1\n  /* Reduce dataset with date range,\
+  \ can also apply to filters if you choose to\n  have a separate date range filter\
+  \ rather than an embedded filter, \n  but it doesnt look good */\n  {% if filter_values('valuation_date_txt_jinja')|length\
+  \ == 0 %}\n    AND valuation_date is Null\n  {% elif filter_values('valuation_date_txt_jinja')[0]\
+  \ is string %}\n    /* 7 day window for movement comparison*/\n    AND valuation_date\
+  \ <= date {{ \"'\" + filter_values('valuation_date_txt_jinja')[0] + \"'\" }}\n \
+  \   AND valuation_date >= date {{ \"'\" + filter_values('valuation_date_txt_jinja')[0]\
+  \ + \"'\" }} - 7\n  {% endif %} \n  {{ ein_filter }}\n  /* window for the lag function\
+  \ - prior IVC*/\n  WINDOW prior_ivc AS (PARTITION BY ivc_id  ORDER BY valuation_date)\n\
+  {% endif %}"
+params: null
+template_params: null
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: 684545bb-cddf-d2d0-9669-f67301bffd4e
+metrics:
+- metric_name: MaxValDateJinja
+  verbose_name: Max Valuation Date - Sort
+  metric_type: null
+  expression: max(valuation_date_txt_jinja)
+  description: the Maximum Valuation Date to be used for sorting the jinja valuation
+    date text field
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: count
+  verbose_name: Total Rows
+  metric_type: null
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: adaptive_total_value
+  verbose_name: Total Value
+  is_dttm: null
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: "--Adaptive formatting with CSS styling to add linear gradient\n--gradient\
+    \ is based on maximum per valuation date\n'<div style=\"background:linear-gradient(to\
+    \ right,rgba(0,0,0,0.2)'|| \nCASE\n  WHEN total_value > (10^12)-1 \n    THEN round((total_value/MAX(total_value)\
+    \ OVER (partition BY valuation_date))*100)||'%,rgba(0,0,0,0)0%);\" title=\"'||total_value||'\"\
+    >'||ccy_id||' '||round(total_value/(10^12)::BIGINT,1)||'T'\n  WHEN total_value\
+    \ > (10^9)-1 \n    THEN round((total_value/MAX(total_value) OVER (partition BY\
+    \ valuation_date))*100)||'%,rgba(0,0,0,0)0%);\" title=\"'||total_value||'\">'||ccy_id||'\
+    \ '||round(total_value/(10^9)::INT,1)||'B'\n  WHEN total_value > (10^6)-1 \n \
+    \   THEN round((total_value/MAX(total_value) OVER (partition BY valuation_date))*100)||'%,rgba(0,0,0,0)0%);\"\
+    \ title=\"'||total_value||'\">'||ccy_id||' '||round(total_value/(10^6)::INT,1)||'M'\n\
+    \  WHEN total_value > (10^3)-1 \n    THEN round((total_value/MAX(total_value)\
+    \ OVER (partition BY valuation_date))*100)||'%,rgba(0,0,0,0)0%);\" title=\"'||total_value||'\"\
+    >'||ccy_id||' '||round(total_value/(10^3)::INT,1)||'K'\n  ELSE \n\tround((total_value/MAX(total_value)\
+    \ OVER (partition BY valuation_date))*100)||'%,rgba(0,0,0,0)0%);\" title=\"'||total_value||'\"\
+    >'||ccy_id||' '||round(total_value,2)::TEXT END ||'</div>'"
+  description: HTML and CSS applied to total value to give finer control over format
+    and display
+  python_date_format: null
+  extra: null
+- column_name: adaptive_price
+  verbose_name: Price
+  is_dttm: null
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: "--Adaptive formatting with CSS styling to add linear gradient\n--gradient\
+    \ is based on maximum per valuation date\n'<div style=\"background:linear-gradient(to\
+    \ right,rgba(0,0,0,0.2)'|| \nCASE\n  WHEN price_amount > (10^12)-1 \n    THEN\
+    \ round((price_amount/MAX(price_amount) OVER (partition BY valuation_date))*100)||'%,rgba(0,0,0,0)0%);\"\
+    \ title=\"'||price_amount||'\">'||ccy_id||' '||round(price_amount/(10^12)::BIGINT,1)||'T'\n\
+    \  WHEN price_amount > (10^9)-1 \n    THEN round((price_amount/MAX(price_amount)\
+    \ OVER (partition BY valuation_date))*100)||'%,rgba(0,0,0,0)0%);\" title=\"'||price_amount||'\"\
+    >'||ccy_id||' '||round(price_amount/(10^9)::INT,1)||'B'\n  WHEN price_amount >\
+    \ (10^6)-1 \n    THEN round((price_amount/MAX(price_amount) OVER (partition BY\
+    \ valuation_date))*100)||'%,rgba(0,0,0,0)0%);\" title=\"'||price_amount||'\">'||ccy_id||'\
+    \ '||round(price_amount/(10^6)::INT,1)||'M'\n  WHEN price_amount > (10^3)-1 \n\
+    \    THEN round((price_amount/MAX(price_amount) OVER (partition BY valuation_date))*100)||'%,rgba(0,0,0,0)0%);\"\
+    \ title=\"'||price_amount||'\">'||ccy_id||' '||round(price_amount/(10^3)::INT,1)||'K'\n\
+    \  ELSE \n\tround((price_amount/MAX(price_amount) OVER (partition BY valuation_date))*100)||'%,rgba(0,0,0,0)0%);\"\
+    \ title=\"'||price_amount||'\">'||ccy_id||' '||round(price_amount,2)::TEXT END\
+    \ ||'</div>'"
+  description: HTML and CSS applied to price to give finer control over format and
+    display
+  python_date_format: null
+  extra: null
+- column_name: adaptive_total_units
+  verbose_name: Units
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: "--Adaptive formatting with CSS styling to add linear gradient\n--gradient\
+    \ is based on maximum per valuation date\n'<div style=\"background:linear-gradient(to\
+    \ right,rgba(0,0,0,0.2)'|| \nCASE\n  WHEN total_units > (10^12)-1 \n    THEN round((total_units/MAX(total_units)\
+    \ OVER (partition BY valuation_date))*100)||'%,rgba(0,0,0,0)0%);\" title=\"'||total_units||'\"\
+    >'||round(total_units/(10^12)::BIGINT,1)||'T'\n  WHEN total_units > (10^9)-1 \n\
+    \    THEN round((total_units/MAX(total_units) OVER (partition BY valuation_date))*100)||'%,rgba(0,0,0,0)0%);\"\
+    \ title=\"'||total_units||'\">'||round(total_units/(10^9)::INT,1)||'B'\n  WHEN\
+    \ total_units > (10^6)-1 \n    THEN round((total_units/MAX(total_units) OVER (partition\
+    \ BY valuation_date))*100)||'%,rgba(0,0,0,0)0%);\" title=\"'||total_units||'\"\
+    >'||round(total_units/(10^6)::INT,1)||'M'\n  WHEN total_units > (10^3)-1 \n  \
+    \  THEN round((total_units/MAX(total_units) OVER (partition BY valuation_date))*100)||'%,rgba(0,0,0,0)0%);\"\
+    \ title=\"'||total_units||'\">'||round(total_units/(10^3)::INT,1)||'K'\n  ELSE\
+    \ \n\tround((total_units/MAX(total_units) OVER (partition BY valuation_date))*100)||'%,rgba(0,0,0,0)0%);\"\
+    \ title=\"'||total_units||'\">'||round(total_units,2)::TEXT END ||'</div>'"
+  description: HTML and CSS applied to total units to give finer control over format
+    and display
+  python_date_format: null
+  extra: null
+- column_name: adaptive_total_value_no_shading
+  verbose_name: Total Value
+  is_dttm: null
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: "--Adaptive formatting with adding unit of ccy\nCASE\n  WHEN total_value\
+    \ > (10^12)-1 \n    THEN ccy_id||' '||round(total_value/(10^12)::BIGINT,1)||'T'\n\
+    \  WHEN total_value > (10^9)-1 \n    THEN ccy_id||' '||round(total_value/(10^9)::INT,1)||'B'\n\
+    \  WHEN total_value > (10^6)-1 \n    THEN ccy_id||' '||round(total_value/(10^6)::INT,1)||'M'\n\
+    \  WHEN total_value > (10^3)-1 \n    THEN ccy_id||' '||round(total_value/(10^3)::INT,1)||'K'\n\
+    \  WHEN coalesce( MAX(total_value) OVER (partition BY valuation_date), 0) = 0\n\
+    \    THEN 0::TEXT\n  ELSE \n\tccy_id||' '||round(total_value,2)::TEXT END"
+  description: HTML applied to total value to give finer control over format and display
+    (no linear gradient shading)
+  python_date_format: null
+  extra: null
+- column_name: net_movement
+  verbose_name: Net Movement
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: "'<div'|| CASE\n  WHEN prior_total = 0\n    THEN ' class=\"first_move\"\
+    >Prior price 0'\n  WHEN total_value - prior_total < 0\n    THEN ' class=\"down_move\"\
+    >'||round((total_value - prior_total)*100/prior_total,2)::text||'% &#129055;'\n\
+    \  WHEN total_value - prior_total > 0\n    THEN ' class=\"up_move\">+'||round(\
+    \ (total_value - prior_total)*100/prior_total,2)::text||'% &#129053;'\n  ELSE\
+    \ ' class=\"no_move\">No movement' END ||'</div>'"
+  description: HTML enriched output from the calculation of the percentage total value
+    movement as compared to the price at the prior valuation
+  python_date_format: null
+  extra: null
+- column_name: vp_cutoff_with_timezone_jinja
+  verbose_name: VP cutoff period
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: vp_cutoff_with_timezone_jinja
+  description: Special field only to be used with jinja templates, it is the dictionary
+    entry for the dynamic datasource used in the date filter
+  python_date_format: null
+  extra: null
+- column_name: valuation_date_txt_jinja
+  verbose_name: Valuation Date
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: valuation_date_txt_jinja
+  description: Special field only to be used with jinja templates, it is the dictionary
+    entry for the dynamic datasource used in the date filter
+  python_date_format: null
+  extra: null
+- column_name: vp_cutoff_with_timezone
+  verbose_name: VP Cutoff Period
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: vp_cut_off_period || ' ' || vlp_timezone
+  description: Concatenation of vp cutoff period and vp timezone
+  python_date_format: null
+  extra: null
+- column_name: ivc_status
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(1)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Status of the investment vehicle class, can be A for active or I for
+    inactive
+  python_date_format: null
+  extra: null
+- column_name: xd_date
+  verbose_name: null
+  is_dttm: true
+  is_active: null
+  type: DATE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: ex-dividend date - The date after which adding more units wont count
+    towards distributions
+  python_date_format: null
+  extra: null
+- column_name: wkn_number
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(20)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Wertpapierkennnummer, (WKN, WPKN, WPK or simply Wert), is a German
+    securities identification code
+  python_date_format: null
+  extra: null
+- column_name: valoren_number
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(10)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: A valoren number is an identification number assigned to financial
+    instruments in Switzerland
+  python_date_format: null
+  extra: null
+- column_name: denomination
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(20)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Unable to confirm the use of this field without reviewing a broader
+    dataset
+  python_date_format: null
+  extra: null
+- column_name: valuation_prct_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Valuation Price Type ID ( Default price type for the investment vehicle
+    price)
+  python_date_format: null
+  extra: null
+- column_name: valuation_date_txt
+  verbose_name: Valuation Date
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: to_char(Valuation_date, 'YYYY-mm-DD')
+  description: Valuation date as a string, useful for displaying in filters.
+  python_date_format: null
+  extra: null
+- column_name: net_movement_size
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NUMERIC
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: abs(CASE WHEN prior_total = 0 THEN 0 ELSE (total_value - prior_total)/prior_total
+    END)
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: vp_cut_off_period
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(8)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The cut off point for the next (forward) valuation of the units
+  python_date_format: null
+  extra: null
+- column_name: prior_total
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NUMERIC(20, 3)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The total for the previous valuation date for this share class
+  python_date_format: null
+  extra: null
+- column_name: single_priced
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(1)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Y/N field denoting whether a Fund is Dual priced or Single priced
+  python_date_format: null
+  extra: null
+- column_name: price_status
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(1)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Status of the Fund price, P means Priced, U means Unpriced
+  python_date_format: null
+  extra: null
+- column_name: sponsor_name_1
+  verbose_name: Sponsor Name
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(40)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The name of the corporate entity underwriting the asset
+  python_date_format: null
+  extra: null
+- column_name: prct_description
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(80)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: 'Price type description: Net Asset Value (NAV) or Guaranteed Price'
+  python_date_format: null
+  extra: null
+- column_name: prct_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: 'Price type ID: AV (Actual value) or GP (Guaranteed price)'
+  python_date_format: null
+  extra: null
+- column_name: sponsor_name_2
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(40)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The alternative name of the corporate entity underwriting the asset
+  python_date_format: null
+  extra: null
+- column_name: prct_ext_ref
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: lookup key for the underlying Price Type data from system
+  python_date_format: null
+  extra: null
+- column_name: ivc_ext_ref
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: lookup key for the underlying Share class data from system
+  python_date_format: null
+  extra: null
+- column_name: vlp_ext_ref
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: lookup key for the underlying valuation point data from system
+  python_date_format: null
+  extra: null
+- column_name: ivh_ext_ref
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: lookup key for the underlying Fund data from system
+  python_date_format: null
+  extra: null
+- column_name: prc_ext_ref
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: lookup key for the underlying Price data from system
+  python_date_format: null
+  extra: null
+- column_name: sponsor_code
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(6)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The code for the corporate entity underwriting the asset
+  python_date_format: null
+  extra: null
+- column_name: termination_date
+  verbose_name: null
+  is_dttm: true
+  is_active: null
+  type: DATE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Date when the share class will become inactive*
+  python_date_format: null
+  extra: null
+- column_name: ivc_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Primary key for the Investment vehicle class table
+  python_date_format: null
+  extra: null
+- column_name: formatted_prior_total_value
+  verbose_name: Prior Total Value
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: coalesce(to_char(prior_total, 'S'||LEFT(REPEAT('999,', 20), -2)||'0.99'),
+    '0')
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: fund_code
+  verbose_name: Fund Code
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The reference code for the fund
+  python_date_format: null
+  extra: null
+- column_name: total_units
+  verbose_name: Units
+  is_dttm: false
+  is_active: null
+  type: NUMERIC
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The total units of the share class
+  python_date_format: null
+  extra: null
+- column_name: ext_mco_short_name
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Manco short name from the source system
+  python_date_format: null
+  extra: null
+- column_name: ivh_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Primary key for the FUND (Investment vehicle)
+  python_date_format: null
+  extra: null
+- column_name: valuation_datetime
+  verbose_name: null
+  is_dttm: true
+  is_active: null
+  type: TIMESTAMP WITH TIME ZONE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The valuation date time
+  python_date_format: null
+  extra: null
+- column_name: formatted_total_value
+  verbose_name: Total value
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: coalesce(to_char(total_value, 'S'||LEFT(REPEAT('999,', 20), -2)||'0.99'),
+    '0')
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: total_value
+  verbose_name: Total Value
+  is_dttm: false
+  is_active: null
+  type: NUMERIC(20, 3)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Total units x Price
+  python_date_format: null
+  extra: null
+- column_name: ivc_long_name
+  verbose_name: Share Class Name
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(80)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Share class long name
+  python_date_format: null
+  extra: null
+- column_name: manco_name
+  verbose_name: The manco name is the GDP
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(100)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: ext_mco_name
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(100)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Manco name from the source system
+  python_date_format: null
+  extra: null
+- column_name: mco_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The manco ID in the GDP
+  python_date_format: null
+  extra: null
+- column_name: default_timezone
+  verbose_name: null
+  is_dttm: null
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The timezone of the data source
+  python_date_format: null
+  extra: null
+- column_name: start_date
+  verbose_name: null
+  is_dttm: true
+  is_active: null
+  type: DATE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Date the share class becomes active*
+  python_date_format: null
+  extra: null
+- column_name: valuation_time
+  verbose_name: null
+  is_dttm: true
+  is_active: null
+  type: TIME WITHOUT TIME ZONE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The valuation time
+  python_date_format: null
+  extra: null
+- column_name: formatted_price
+  verbose_name: Price
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: coalesce(to_char(price_amount, 'S'||LEFT(REPEAT('999,', 20), -2)||'0.99'),
+    '0')
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: formatted_units
+  verbose_name: Units
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: coalesce(to_char(total_value/price_amount, LEFT(REPEAT('999,', 20),
+    -2)||'0'), '0')
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: ivh_description
+  verbose_name: Fund Name
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(250)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The investment vehicle name
+  python_date_format: null
+  extra: null
+- column_name: isin_code
+  verbose_name: ISIN code
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(20)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: International Securities Identification Number
+  python_date_format: null
+  extra: null
+- column_name: valuation_date
+  verbose_name: Valuation Date
+  is_dttm: true
+  is_active: null
+  type: DATE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The valuation date
+  python_date_format: null
+  extra: null
+- column_name: units_unsett_act
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NUMERIC(20, 4)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Actual unsettled units
+  python_date_format: null
+  extra: null
+- column_name: units_unsett_est
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NUMERIC(20, 4)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Estimated unsettled units
+  python_date_format: null
+  extra: null
+- column_name: ivc_short_name
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Share Class short name
+  python_date_format: null
+  extra: null
+- column_name: vlp_timezone
+  verbose_name: null
+  is_dttm: null
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Valuation point time zone
+  python_date_format: null
+  extra: null
+- column_name: class_description
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(12)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Investment Vehicle Class description
+  python_date_format: null
+  extra: null
+- column_name: category
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(6)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: The fund investment objective
+  python_date_format: null
+  extra: null
+- column_name: vlp_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Valuation point unique identifier
+  python_date_format: null
+  extra: null
+- column_name: units_sett
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NUMERIC(20, 4)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Settled units
+  python_date_format: null
+  extra: null
+- column_name: share_class_code
+  verbose_name: Share Class Code
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: ivc_timezone
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Share Class timezone
+  python_date_format: null
+  extra: null
+- column_name: ein
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Environment instance Number
+  python_date_format: null
+  extra: null
+- column_name: price_amount
+  verbose_name: Price
+  is_dttm: false
+  is_active: null
+  type: NUMERIC(17, 10)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: sedol_ref
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(20)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: SEDOL identifier
+  python_date_format: null
+  extra: null
+- column_name: prc_id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: Price ID
+  python_date_format: null
+  extra: null
+- column_name: ccy_id
+  verbose_name: Currency
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(3)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: cusip_number
+  verbose_name: CUSIP
+  is_dttm: false
+  is_active: null
+  type: NUMERIC
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 980ffeea-a918-7739-250c-7d130b23d6c0

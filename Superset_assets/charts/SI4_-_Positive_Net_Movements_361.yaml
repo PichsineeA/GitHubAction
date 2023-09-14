@@ -1,0 +1,52 @@
+slice_name: SI4 - Positive Net Movements
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: '0'
+    expressionType: SIMPLE
+    filterOptionName: filter_3bwqersyzap_ddvw6j168yb
+    isExtra: false
+    isNew: false
+    operator: '>'
+    operatorId: GREATER_THAN
+    sqlExpression: null
+    subject: Positive Net Movements
+  all_columns:
+  - fund_name
+  - Positive Net Movements
+  - Positive Net Movements %
+  color_pn: false
+  column_config:
+    Positive Net Movements:
+      alignPositiveNegative: false
+      d3NumberFormat: ',.2f'
+      d3SmallNumberFormat: ',.2f'
+    Positive Net Movements %:
+      d3NumberFormat: .2%
+      d3SmallNumberFormat: .2%
+  conditional_formatting: []
+  datasource: 87__table
+  extra_form_data: {}
+  granularity_sqla: null
+  groupby: []
+  include_search: true
+  order_by_cols:
+  - '["Positive Net Movements", false]'
+  order_desc: true
+  page_length: 10
+  percent_metrics: []
+  query_mode: raw
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: false
+  slice_id: 361
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+cache_timeout: null
+uuid: a9c434b3-ccad-47dc-a845-2abe0e20d308
+version: 1.0.0
+dataset_uuid: 22a4c3aa-d02c-4d98-9493-d90c79f5d3ac

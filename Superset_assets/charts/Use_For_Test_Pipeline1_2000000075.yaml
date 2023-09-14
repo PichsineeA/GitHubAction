@@ -1,0 +1,19 @@
+slice_name: Use For Test Pipeline1
+viz_type: big_number_total
+params:
+  adhoc_filters: []
+  datasource: 24__table
+  extra_form_data: {}
+  header_font_size: 0.4
+  metric: Largest Positive Movement Value
+  slice_id: 2000000075
+  subheader_font_size: 0.15
+  time_format: smart_date
+  time_grain_sqla: P1D
+  time_range: Last week
+  viz_type: big_number_total
+  y_axis_format: .3s
+cache_timeout: null
+uuid: 1b0c1d74-819f-4f71-90c0-b3af3bbec4ac
+version: 1.0.0
+dataset_uuid: 20e76911-9eef-cdc5-25b3-223b1a47ac35

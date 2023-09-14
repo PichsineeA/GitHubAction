@@ -1,0 +1,76 @@
+slice_name: SI2 - Today's Deals
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: N
+    expressionType: SIMPLE
+    filterOptionName: filter_op8nlkmstye_jiqcjkrtix8
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: Cancelled
+  - clause: WHERE
+    comparator: 'Yes'
+    expressionType: SIMPLE
+    filterOptionName: filter_gs2m9dlwmz_3ei1z692a8a
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: CURRENT DAY FLAG
+  all_columns:
+  - deal_id
+  - unitholder_id
+  - fund_code
+  - isin_code
+  - share_class_name
+  - transaction_type
+  - PRICE STATUS TXT
+  - execution_price
+  - Unit Amount
+  - Cash Gross Amount
+  color_pn: false
+  column_config:
+    Cash Gross Amount:
+      d3NumberFormat: ',.2f'
+      d3SmallNumberFormat: ',.2f'
+      showCellBars: false
+    Unit Amount:
+      d3NumberFormat: ',.4f'
+      d3SmallNumberFormat: ',.4f'
+      showCellBars: false
+    execution_price:
+      d3NumberFormat: ',.4f'
+      d3SmallNumberFormat: ',.4f'
+      showCellBars: false
+  conditional_formatting: []
+  datasource: 76__table
+  extra_form_data: {}
+  granularity_sqla: deal_date
+  groupby: []
+  include_search: true
+  metrics:
+  - count
+  order_by_cols:
+  - '["deal_id", false]'
+  order_desc: true
+  page_length: 10
+  percent_metrics: []
+  query_mode: raw
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: false
+  slice_id: 304
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+cache_timeout: null
+uuid: 2fd2243c-2c0f-4e5b-ba94-61d77d453362
+version: 1.0.0
+dataset_uuid: ebf32c00-65fc-4211-98df-7bbfec2a9c69
