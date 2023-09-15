@@ -1,0 +1,114 @@
+slice_name: "SI4 - Today\u2019s STP Dealing"
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: 'Yes'
+    expressionType: SIMPLE
+    filterOptionName: filter_97j0oox2gg_gnxqizc7tbk
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: Current Day Flag (Deal Date)
+  - clause: WHERE
+    comparator: N
+    expressionType: SIMPLE
+    filterOptionName: filter_p0tbw1gtube_f2d8m23eahg
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: cancelled
+  all_columns: []
+  color_pn: true
+  column_config:
+    Average:
+      d3NumberFormat: ',.2f'
+      d3SmallNumberFormat: ',.2f'
+      showCellBars: false
+    Total:
+      d3NumberFormat: ',.2f'
+      d3SmallNumberFormat: ',.2f'
+      showCellBars: false
+  conditional_formatting: []
+  datasource: 88__table
+  extra_form_data: {}
+  granularity_sqla: deal_date
+  groupby:
+  - Deal Origin for STP
+  metrics:
+  - aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: true
+    isNew: false
+    label: Average
+    optionName: metric_yhye5p0mlk_ws9xt0ok2aa
+    sqlExpression: sum(cash_gross_amount)/COUNT (DISTINCT deal_id)
+  - aggregate: SUM
+    column:
+      certification_details: null
+      certified_by: null
+      column_name: cash_gross_amount
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 2821
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: DOUBLE PRECISION
+      type_generic: 0
+      verbose_name: Cash Amount
+      warning_markdown: null
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    isNew: false
+    label: Total
+    optionName: metric_hv1eideamwv_lkn2dxnxjw
+    sqlExpression: null
+  order_by_cols: []
+  order_desc: false
+  percent_metrics: []
+  query_mode: aggregate
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: false
+  slice_id: 412
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  timeseries_limit_metric:
+    aggregate: MIN
+    column:
+      certification_details: null
+      certified_by: null
+      column_name: Deal Origin for STP
+      description: null
+      expression: case when trade_origin = 'CTN'  then 'CTN' else  'Other' end
+      filterable: true
+      groupby: true
+      id: null
+      is_certified: false
+      is_dttm: null
+      python_date_format: null
+      type: null
+      type_generic: null
+      verbose_name: null
+      warning_markdown: null
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    isNew: false
+    label: MIN(Deal Origin for STP)
+    optionName: metric_r1hppuy9o5r_7053qmy2n3w
+    sqlExpression: null
+  url_params: {}
+  viz_type: table
+cache_timeout: null
+uuid: 8ff7d95a-7132-4c3c-986d-380f645a481c
+version: 1.0.0
+dataset_uuid: 81bf2829-3db1-4e8d-a82f-c0aea2afff8a

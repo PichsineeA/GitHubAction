@@ -1,0 +1,44 @@
+slice_name: SI - Outstanding Work by Team
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: END
+    expressionType: SIMPLE
+    filterOptionName: filter_vmd41uth2rb_kotoseqfp9
+    isExtra: false
+    isNew: false
+    operator: '!='
+    sqlExpression: null
+    subject: queuecd
+  all_columns:
+  - owner_department
+  - owner_team
+  color_pn: false
+  conditional_formatting: []
+  datasource: 50__table
+  extra_form_data: {}
+  granularity_sqla: last_update_dattim
+  groupby:
+  - owner_department
+  - owner_team
+  metrics:
+  - count
+  order_by_cols: []
+  order_desc: true
+  page_length: 0
+  percent_metrics: []
+  query_mode: aggregate
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: false
+  slice_id: 224
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+cache_timeout: null
+uuid: 20562c37-4732-ef2d-3f1b-e91eb7b01bab
+version: 1.0.0
+dataset_uuid: 40f6d689-5a50-6435-4ddd-353a5940ae24

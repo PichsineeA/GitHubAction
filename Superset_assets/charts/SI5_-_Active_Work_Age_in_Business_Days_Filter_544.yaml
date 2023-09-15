@@ -1,0 +1,36 @@
+slice_name: SI5 - Active Work Age in Business Days Filter
+viz_type: filter_box
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_11i081a61s5_fj9n80dshiv
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: UPPER(processing_stage) <> 'END'
+    subject: null
+  datasource: 96__table
+  date_filter: false
+  extra_form_data: {}
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: age_bus_days_band
+    key: uG-f5918r
+    label: AGE IN BUSINESS DAYS
+    metric: age_bus_day_filter
+    multiple: true
+    searchAllOptions: false
+  granularity_sqla: last_update_dattim
+  instant_filtering: true
+  slice_id: 544
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+cache_timeout: null
+uuid: 22d54a1a-3d9a-43ae-b721-4d8574e374bd
+version: 1.0.0
+dataset_uuid: 2c52393b-92f3-4a51-9ff7-3d0349ae0245

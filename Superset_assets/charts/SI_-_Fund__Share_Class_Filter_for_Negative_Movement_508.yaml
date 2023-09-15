@@ -1,0 +1,35 @@
+slice_name: SI - Fund & Share Class Filter for Negative Movement
+viz_type: filter_box
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: '0'
+    expressionType: SIMPLE
+    filterOptionName: filter_rcsvqh4h1uc_n9o9m5fs1ti
+    isExtra: false
+    isNew: false
+    operator: <
+    operatorId: LESS_THAN
+    sqlExpression: null
+    subject: fund_movement_value
+  datasource: 58__table
+  date_filter: false
+  extra_form_data: {}
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: fund_name
+    key: n_Uvvdo8I
+    label: Fund
+    multiple: true
+    searchAllOptions: false
+  instant_filtering: true
+  slice_id: 508
+  time_grain_sqla: P1D
+  time_range: Last week
+  url_params: {}
+  viz_type: filter_box
+cache_timeout: null
+uuid: 3f3016f6-bb53-4762-9bb7-b99a12cdcf1f
+version: 1.0.0
+dataset_uuid: c28fef52-923b-a734-0b83-4cec471c48cc

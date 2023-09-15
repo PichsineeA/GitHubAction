@@ -1,0 +1,113 @@
+slice_name: FMR - FFS - Detail
+viz_type: table
+params:
+  adhoc_filters: []
+  align_pn: true
+  all_columns: []
+  color_pn: true
+  datasource: 59__table
+  granularity_sqla: transaction_date
+  groupby:
+  - fund_code
+  - ivh_description
+  - ccy_id_fund
+  include_search: true
+  metrics:
+  - aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: true
+    isNew: false
+    label: Number of Accounts
+    optionName: metric_h1fkbgp5n15_mmdyszy1ubc
+    sqlExpression: coalesce(to_char(COUNT(acc_id), LEFT(REPEAT('999,',20),-2)||'0')
+      ,'0')
+  - aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: true
+    isNew: false
+    label: Number of Applications
+    optionName: metric_jzjrnjkltrb_3glvdut3tls
+    sqlExpression: coalesce(to_char(COUNT(ach_id) filter (WHERE sale_rep_ind = 'S'),
+      LEFT(REPEAT('999,',20),-2)||'0') ,'0')
+  - aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: true
+    isNew: false
+    label: Application Inflow - Units
+    optionName: metric_jz9zenxkvk9_7mfn9vp7mxt
+    sqlExpression: coalesce(to_char(sum(total_unit_amount_movement) filter (WHERE
+      sale_rep_ind = 'S'), 'S'||LEFT(REPEAT('999,',20),-2)||'0.99') ,'0')
+  - aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: true
+    isNew: false
+    label: Application Inflow - Cash
+    optionName: metric_4hr9kr47jf9_ig3o9qdw9jg
+    sqlExpression: coalesce(to_char(SUM(cash_gross_amount) filter (WHERE sale_rep_ind
+      = 'S'), 'S'||LEFT(REPEAT('999,',20),-2)||'0.99') ,'0')
+  - aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: true
+    isNew: false
+    label: Number of Redemptions
+    optionName: metric_0wco0dn2o00q_0nxrhpwuvta
+    sqlExpression: coalesce(to_char(COUNT(ach_id) filter (WHERE sale_rep_ind = 'R'),
+      LEFT(REPEAT('999,',20),-2)||'0') ,'0')
+  - aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: true
+    isNew: false
+    label: Redemption Outflow - Units
+    optionName: metric_9eb4ysjkxms_ek4wkkeke5e
+    sqlExpression: coalesce(to_char(sum(total_unit_amount_movement) filter (WHERE
+      sale_rep_ind = 'R'), 'S'||LEFT(REPEAT('999,',20),-2)||'0.99'),'0')
+  - aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: true
+    isNew: false
+    label: Redemption Outflow - Cash
+    optionName: metric_zildiyzow1h_dmwsdi4wwu
+    sqlExpression: coalesce(to_char(SUM(cash_gross_amount) filter (WHERE sale_rep_ind
+      = 'R'), 'S'||LEFT(REPEAT('999,',20),-2)||'0.99') ,'0')
+  - aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: true
+    isNew: false
+    label: Net Flow - Units
+    optionName: metric_dffvetitmx5_2sc3wd9dptq
+    sqlExpression: coalesce(to_char(SUM(total_unit_amount_movement), 'S'||LEFT(REPEAT('999,',20),-2)||'0.99')
+      ,'0')
+  - aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: true
+    isNew: false
+    label: Net Flow - Cash
+    optionName: metric_zvtxui2mc3_f1izo5glpl4
+    sqlExpression: coalesce(to_char(SUM(cash_gross_amount), 'S'||LEFT(REPEAT('999,',20),-2)||'0.99')
+      ,'0')
+  order_by_cols: []
+  order_desc: true
+  page_length: 10
+  percent_metrics: []
+  query_mode: aggregate
+  row_limit: '30000'
+  show_cell_bars: false
+  slice_id: 274
+  table_timestamp_format: '%.2f'
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+cache_timeout: null
+uuid: 9b3a6da3-2687-83a4-dc3d-1d740d153c09
+version: 1.0.0
+dataset_uuid: 7120d902-3388-b051-9a3f-c4eab9125168

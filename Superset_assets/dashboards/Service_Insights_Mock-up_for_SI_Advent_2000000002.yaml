@@ -1,0 +1,239 @@
+dashboard_title: Service Insights [Mock-up for SI Advent]
+description: null
+css: "/* ---------------------------------------------------- */\n/* Big number charts\
+  \                                    */\n/* ----------------------------------------------------\
+  \ */\n\n/* Big number charts - SSNC Teal */\n.big_number_total {\n\ttext-align:\
+  \ center;\n\tbackground-color: #00667D;\n\tcolor: white;\n\tborder-radius: 5px;\n\
+  }\n/*Hide all other drop down options, apart from refresh and CSV*/\n\n.chart-slice\
+  \ + div>div>.ant-dropdown>ul>li:not(:first-child):not(:last-child){\n  display:none;\n\
+  }"
+slug: null
+uuid: 8c4cc8e1-c7b7-4cf1-be8a-bc62bd3300b1
+position:
+  CHART-54b3y7kiN4:
+    children: []
+    id: CHART-54b3y7kiN4
+    meta:
+      chartId: 516
+      height: 11
+      sliceName: SI5 - EIN Currency Filter
+      uuid: 8095ee41-3243-44be-9dda-ae55c4d59a5c
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-UHJIW4842K
+    type: CHART
+  CHART-RHK25U0vFq:
+    children: []
+    id: CHART-RHK25U0vFq
+    meta:
+      chartId: 532
+      height: 39
+      sliceName: SI5 - Breaches Overview
+      uuid: f0e04b2c-f758-4e72-957b-19e19e312262
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ty8rtH2f17
+    type: CHART
+  CHART-UfeDFpO8xz:
+    children: []
+    id: CHART-UfeDFpO8xz
+    meta:
+      chartId: 530
+      height: 18
+      sliceName: SI5 - Referred Work Items
+      uuid: dfc1756e-acfa-444f-ac68-f2bacc1e33b5
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-xRnILs4fEF
+    type: CHART
+  CHART-Xtqq3dTq8B:
+    children: []
+    id: CHART-Xtqq3dTq8B
+    meta:
+      chartId: 533
+      height: 18
+      sliceName: SI5 - Outstanding Breaches
+      uuid: c5cc9a15-fa0f-4d2b-a03b-e6a3132271aa
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-xRnILs4fEF
+    type: CHART
+  CHART-plSPrALttH:
+    children: []
+    id: CHART-plSPrALttH
+    meta:
+      chartId: 155
+      height: 45
+      sliceName: SI - Manual Deals
+      uuid: d893dd36-ef39-e1d8-12d8-03d5eea937fc
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-o4mqlLDph7
+    - COLUMN-RQwyxvBr13
+    type: CHART
+  CHART-qg3M3_0Rlv:
+    children: []
+    id: CHART-qg3M3_0Rlv
+    meta:
+      chartId: 531
+      height: 18
+      sliceName: SI5 - Total Work Items
+      uuid: f915cd53-ec0c-435b-846a-a0c298c0ddd1
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-xRnILs4fEF
+    type: CHART
+  CHART-rYk8W-4vwj:
+    children: []
+    id: CHART-rYk8W-4vwj
+    meta:
+      chartId: 529
+      height: 39
+      sliceName: SI5 - Outstanding Work by Team
+      uuid: 70cc7e89-75b9-4f7c-94e4-8ebf60c2ffe9
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ty8rtH2f17
+    type: CHART
+  CHART-vnSJpKqaxq:
+    children: []
+    id: CHART-vnSJpKqaxq
+    meta:
+      chartId: 528
+      height: 45
+      sliceName: SI5 - Service Areas
+      uuid: e9a4c89b-be68-4314-ac63-0d098683bc66
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-o4mqlLDph7
+    - COLUMN-DOHv653NmG
+    type: CHART
+  COLUMN-DOHv653NmG:
+    children:
+    - CHART-vnSJpKqaxq
+    id: COLUMN-DOHv653NmG
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-o4mqlLDph7
+    type: COLUMN
+  COLUMN-RQwyxvBr13:
+    children:
+    - CHART-plSPrALttH
+    id: COLUMN-RQwyxvBr13
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-o4mqlLDph7
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-UHJIW4842K
+    - ROW-o4mqlLDph7
+    - ROW-xRnILs4fEF
+    - ROW-ty8rtH2f17
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Service Insights [Mock-up for SI Advent]
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-UHJIW4842K:
+    children:
+    - CHART-54b3y7kiN4
+    id: ROW-UHJIW4842K
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-o4mqlLDph7:
+    children:
+    - COLUMN-DOHv653NmG
+    - COLUMN-RQwyxvBr13
+    id: ROW-o4mqlLDph7
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-ty8rtH2f17:
+    children:
+    - CHART-RHK25U0vFq
+    - CHART-rYk8W-4vwj
+    id: ROW-ty8rtH2f17
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-xRnILs4fEF:
+    children:
+    - CHART-Xtqq3dTq8B
+    - CHART-UfeDFpO8xz
+    - CHART-qg3M3_0Rlv
+    id: ROW-xRnILs4fEF
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  show_native_filters: true
+  color_scheme: ''
+  refresh_frequency: 0
+  expanded_slices: {}
+  label_colors: {}
+  timed_refresh_immune_slices: []
+  default_filters: '{}'
+  chart_configuration: {}
+  filter_scopes:
+    '516':
+      bpo_identifier:
+        scope:
+        - ROOT_ID
+        immune: []
+      ein:
+        scope:
+        - ROOT_ID
+        immune: []
+      emc_currency:
+        scope:
+        - ROOT_ID
+        immune: []
+version: 1.0.0
