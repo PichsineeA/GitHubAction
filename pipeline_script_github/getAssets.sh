@@ -20,10 +20,11 @@ curl -X 'GET' \
     -H "X-CSRFToken: $csrf_token" \
     -H "Authorization: Bearer $bearer" \
     -H "Cookie: $cookie" >pipeline_script_github/backup/${ENV_NAME}_get_assets.zip
-    
-# unzip file
 
-#for f in *.zip; do unzip "pipeline_script_github/backup/${ENV_NAME}_get_assets.zip" -d tmp && mv tmp/* "Superset_assets"; done
+#remove old version assets
+rm -r Superset_assets
+
+# unzip file
 unzip "pipeline_script_github/backup/${ENV_NAME}_get_assets.zip"
 find . -depth -type d -name 'assets_export*' -execdir mv {} Superset_assets \;
 
