@@ -1,0 +1,17 @@
+slice_name: SI2 - Today's Net Movement
+viz_type: big_number_total
+params:
+  adhoc_filters: []
+  datasource: 68__table
+  header_font_size: 0.4
+  metric: Movement Value Total
+  slice_id: 285
+  subheader_font_size: 0.15
+  time_range: Last week
+  url_params: {}
+  viz_type: big_number_total
+  y_axis_format: SMART_NUMBER
+cache_timeout: null
+uuid: 9f4fb033-a210-422e-92f9-935e9a85f74f
+version: 1.0.0
+dataset_uuid: 7d4a695f-2ab8-44e6-9b87-4dd909ab175d

@@ -1,0 +1,59 @@
+slice_name: SI5 - Complaint Received Details
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_xgwircr6wt_ehalwb879pr
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: upper(complaint_status) NOT IN ('VOID')
+    subject: null
+  - clause: WHERE
+    comparator: null
+    expressionType: SIMPLE
+    filterOptionName: filter_a5810cl5qcf_vntb1juc7yd
+    isExtra: false
+    isNew: false
+    operator: IS NOT NULL
+    operatorId: IS_NOT_NULL
+    sqlExpression: null
+    subject: received_date
+  all_columns:
+  - incident_ref
+  - client_ref
+  - client_name
+  - complaint_ref
+  - incident_category_group
+  - received_date
+  color_pn: false
+  column_config:
+    received_date:
+      d3TimeFormat: '%Y-%m-%d'
+  conditional_formatting: []
+  datasource: 98__table
+  extra_form_data: {}
+  granularity_sqla: received_date
+  groupby: []
+  include_search: true
+  order_by_cols:
+  - '["received_date", true]'
+  order_desc: true
+  page_length: 20
+  percent_metrics: []
+  query_mode: raw
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: false
+  slice_id: 558
+  table_timestamp_format: smart_date
+  time_grain_sqla: null
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+cache_timeout: null
+uuid: c1e0d16a-0bf4-4a24-8bd8-84943df97ab6
+version: 1.0.0
+dataset_uuid: bdc5b0a1-522c-4e73-9560-249150a7e262

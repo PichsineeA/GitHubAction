@@ -1,0 +1,34 @@
+slice_name: Mockup for SI UK - Clients with a failed AML Status
+viz_type: table
+params:
+  adhoc_filters: []
+  all_columns:
+  - unitholder_id
+  - client_name
+  - client_category
+  - sale_or_repurchase
+  - client_type
+  color_pn: true
+  conditional_formatting: []
+  datasource: 95__table
+  extra_form_data: {}
+  granularity_sqla: deal_date
+  groupby:
+  - deal_date
+  order_by_cols: []
+  order_desc: true
+  percent_metrics: []
+  query_mode: raw
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: true
+  slice_id: 2000000023
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+cache_timeout: null
+uuid: b29b80cb-7515-4775-8b89-59ad5538245a
+version: 1.0.0
+dataset_uuid: 1f183292-9794-4769-b7a7-a08acfeb402a

@@ -1,0 +1,99 @@
+slice_name: SI4 - Notifiable Deals
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: N
+    expressionType: SIMPLE
+    filterOptionName: filter_xr3wk8fehyk_uoh13iz2mc
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: cancelled
+  - clause: WHERE
+    comparator: Y
+    expressionType: SIMPLE
+    filterOptionName: filter_8cd9pr5poqd_b8nq27wblol
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: notifiable_deal_flag
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_1joe6qwciwv_d5iap7vo3ie
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: transaction_type !~~ 'Transfer%' and transaction_type <> 'Reinvestment'
+    subject: null
+  - clause: WHERE
+    comparator: 'Yes'
+    expressionType: SIMPLE
+    filterOptionName: filter_g2od3419hzj_f313ktvibua
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: Current Day Flag (Deal Date)
+  all_columns:
+  - transaction_type
+  - cash_gross_amount
+  color_pn: false
+  column_config:
+    cash_gross_amount:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+  conditional_formatting: []
+  datasource: 88__table
+  extra_form_data: {}
+  granularity_sqla: deal_date
+  groupby:
+  - transaction_type
+  metrics:
+  - aggregate: SUM
+    column:
+      certification_details: null
+      certified_by: null
+      column_name: cash_gross_amount
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 2821
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: DOUBLE PRECISION
+      type_generic: 0
+      verbose_name: Cash Amount
+      warning_markdown: null
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    isNew: false
+    label: Cash Amount
+    optionName: metric_lfl38dzcb9m_o7es7gwldtc
+    sqlExpression: null
+  order_by_cols: []
+  order_desc: true
+  percent_metrics: []
+  query_mode: raw
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: false
+  slice_id: 379
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+cache_timeout: null
+uuid: ab681275-d8d6-464e-91b0-5ee17bcbf862
+version: 1.0.0
+dataset_uuid: 81bf2829-3db1-4e8d-a82f-c0aea2afff8a
