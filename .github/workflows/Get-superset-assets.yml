@@ -8,13 +8,13 @@ on:
         type: environment
         description: 'Select the environment'
         required: True
-
-jobs: 
+        
+jobs:
 
   get_assets:
     runs-on: self-hosted #[ self-hosted ]
     environment: ${{ inputs.environment }}
-
+    
     steps:
       - name: superset Checkout
         uses: actions/checkout@v2
@@ -26,13 +26,14 @@ jobs:
         run: |
             chmod +x ./pipeline_script_github/getAssets.sh
             ./pipeline_script_github/getAssets.sh
-
+            
         env:
             ENV_NAME: ${{ inputs.environment }}
             ENV_HOST: ${{ secrets.ENV_HOST }}
             ENV_PASS: ${{ secrets.ENV_PASS }} 
             ENV_USER: ${{ secrets.ENV_USER }}
             COMMIT: ${GITHUB_SHA::7}
+
             
       - name: Upload assets artifact
         uses: actions/upload-artifact@v3
