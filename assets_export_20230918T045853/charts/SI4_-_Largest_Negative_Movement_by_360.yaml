@@ -1,0 +1,20 @@
+slice_name: SI4 - Largest Negative Movement by %
+viz_type: big_number_total
+params:
+  adhoc_filters: []
+  datasource: 87__table
+  extra_form_data: {}
+  granularity_sqla: null
+  header_font_size: 0.4
+  metric: Largest Negative Movement Percent
+  slice_id: 360
+  subheader_font_size: 0.15
+  time_format: '%d-%m-%Y %H:%M:%S'
+  time_range: No filter
+  url_params: {}
+  viz_type: big_number_total
+  y_axis_format: .2%
+cache_timeout: null
+uuid: ae71c16f-88db-4855-8ef7-c8de85b8193c
+version: 1.0.0
+dataset_uuid: 22a4c3aa-d02c-4d98-9493-d90c79f5d3ac

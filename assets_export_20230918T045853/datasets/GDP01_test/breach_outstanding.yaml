@@ -1,0 +1,207 @@
+table_name: breach_outstanding
+main_dttm_col: identified_date
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: sid_testing
+sql: ''
+params: null
+template_params: null
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: e86bd959-0878-588a-29d9-31157bd1370b
+metrics:
+- metric_name: count
+  verbose_name: Breaches Outstannding
+  metric_type: null
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: Demo_age
+  verbose_name: Days Old
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: CASE WHEN (date '2020-10-14' - identified_date) < 11 THEN to_char(date
+    '2020-10-14'- identified_date,'00') || ' day(s)' Else '>10 day(s)' END
+  description: just to be used for the demo
+  python_date_format: null
+  extra: null
+- column_name: Part_Outstanding
+  verbose_name: Part Outstanding
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: CASE WHEN manco_notified_date is null THEN 'Part 1' ELSE 'Part 2' END
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Age
+  verbose_name: Days Old
+  is_dttm: false
+  is_active: null
+  type: NUMERIC
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: current_date - identified_date
+  description: The number of days since the breach was created
+  python_date_format: null
+  extra: null
+- column_name: breach_control_ref
+  verbose_name: Breach Control Reference
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: control_ref_1
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: client_id
+  verbose_name: Client ID
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(10)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: client_name
+  verbose_name: Client Name
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(60)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: breach_ref
+  verbose_name: Breach Reference
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(13)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: identified_date
+  verbose_name: Identified Date
+  is_dttm: true
+  is_active: null
+  type: DATE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: control_ref_1
+  verbose_name: ''
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(150)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: control_ref_2
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(150)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: control_ref_3
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(150)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: control_ref_4
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(150)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: breach_type
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: component_type
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(2)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: manco_notified_date
+  verbose_name: null
+  is_dttm: true
+  is_active: null
+  type: DATE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 686f1ca9-b67a-c0b6-3c1c-81dd5ce0bb5e
