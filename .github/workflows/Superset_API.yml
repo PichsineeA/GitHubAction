@@ -9,8 +9,6 @@ jobs:
         
       - name: API-step
         run: 
-           #bash ./SIT_API.sh
-           #bash ./DEV_API.sh
            bash ./POC_Script/export_local.sh
            
       - name: Commit export
