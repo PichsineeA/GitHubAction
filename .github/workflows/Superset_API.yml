@@ -11,7 +11,7 @@ jobs:
         run: 
            #bash ./SIT_API.sh
            #bash ./DEV_API.sh
-           bash export_local.sh
+           bash ./POC_Script/export_local.sh
            
       - name: Commit export
         run: |
