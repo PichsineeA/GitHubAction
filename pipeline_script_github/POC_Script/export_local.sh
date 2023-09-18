@@ -13,7 +13,7 @@ echo "==========================================================================
 echo ${csrf_token}
 
 curl -X 'GET' \
-    '${ENV_HOST}/api/v1/assets/export/' \
+    'http://localhost:8088/api/v1/assets/export/' \
     -H 'accept: */*' \
     -H 'Accept-Encoding: gzip, deflate, br' \
     -H 'Content-Type: multipart/form-data' \
@@ -21,4 +21,4 @@ curl -X 'GET' \
     -H "Authorization: Bearer $bearer" \
     -H "Cookie: $cookie" >local_backup_assets.zip
 #unzip
-# unzip export.zip
+unzip export.zip
