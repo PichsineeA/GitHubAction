@@ -20,3 +20,6 @@ curl -X 'GET' \
     -H "X-CSRFToken: $csrf_token" \
     -H "Authorization: Bearer $bearer" \
     -H "Cookie: $cookie" >pipeline_script_github/backup/${ENV_NAME}_get_assets.zip
+    
+# unzip file
+unzip pipeline_script_github/backup/${ENV_NAME}_get_assets.zip
