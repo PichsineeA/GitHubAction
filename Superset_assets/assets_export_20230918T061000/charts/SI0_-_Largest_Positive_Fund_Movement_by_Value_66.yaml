@@ -1,0 +1,17 @@
+slice_name: SI0 - Largest Positive Fund Movement by Value
+viz_type: big_number_total
+params:
+  adhoc_filters: []
+  datasource: 24__table
+  header_font_size: 0.4
+  metric: Largest Positive Movement Value
+  slice_id: 66
+  subheader_font_size: 0.15
+  time_range: Last week
+  url_params: {}
+  viz_type: big_number_total
+  y_axis_format: .3s
+cache_timeout: null
+uuid: 67dfa829-2def-85cd-60f0-2f449736dd6a
+version: 1.0.0
+dataset_uuid: 20e76911-9eef-cdc5-25b3-223b1a47ac35

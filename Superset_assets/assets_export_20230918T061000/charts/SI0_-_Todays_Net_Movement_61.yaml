@@ -1,0 +1,36 @@
+slice_name: SI0 - Today's Net Movement
+viz_type: big_number_total
+params:
+  adhoc_filters: []
+  datasource: 22__table
+  header_font_size: 0.4
+  metric:
+    aggregate: SUM
+    column:
+      column_name: net_movement
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 350
+      is_dttm: false
+      optionName: _col_net_movement
+      python_date_format: null
+      type: BIGINT
+      verbose_name: null
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    isNew: false
+    label: SUM(net_movement)
+    optionName: metric_fhswr0ufel_7b58ye0wg63
+    sqlExpression: null
+  slice_id: 61
+  subheader_font_size: 0.15
+  time_range: Last week
+  url_params: {}
+  viz_type: big_number_total
+  y_axis_format: SMART_NUMBER
+cache_timeout: null
+uuid: 614cbfab-8bfd-116c-e6a2-6e93b4cfc636
+version: 1.0.0
+dataset_uuid: 3e94bcc8-a638-d77c-5141-f6089ec157c4

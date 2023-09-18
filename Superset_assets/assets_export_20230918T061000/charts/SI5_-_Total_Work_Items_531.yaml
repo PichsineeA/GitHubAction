@@ -1,0 +1,29 @@
+slice_name: SI5 - Total Work Items
+viz_type: big_number_total
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_3rdyckp2dhg_jub0dg6y3hk
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: upper(queuecd) <> 'END'
+    subject: null
+  datasource: 96__table
+  extra_form_data: {}
+  granularity_sqla: last_update_dattim
+  header_font_size: 0.4
+  metric: count
+  slice_id: 531
+  subheader_font_size: 0.15
+  time_format: '%d-%m-%Y %H:%M:%S'
+  time_range: No filter
+  url_params: {}
+  viz_type: big_number_total
+  y_axis_format: ',d'
+cache_timeout: null
+uuid: f915cd53-ec0c-435b-846a-a0c298c0ddd1
+version: 1.0.0
+dataset_uuid: 2c52393b-92f3-4a51-9ff7-3d0349ae0245

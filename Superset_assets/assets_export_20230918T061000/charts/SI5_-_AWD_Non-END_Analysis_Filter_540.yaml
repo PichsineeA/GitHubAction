@@ -1,0 +1,35 @@
+slice_name: SI5 - AWD Non-END Analysis Filter
+viz_type: filter_box
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_5wqgujfjtq_k5o8kyr635s
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: UPPER(processing_stage) <> 'END'
+    subject: null
+  datasource: 96__table
+  date_filter: false
+  extra_form_data: {}
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: owner_department
+    key: 3frGGMAuM
+    label: DEPARTMENT
+    multiple: true
+    searchAllOptions: false
+  granularity_sqla: last_update_dattim
+  instant_filtering: true
+  slice_id: 540
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+cache_timeout: null
+uuid: 53571484-8397-4add-8289-1830be86627f
+version: 1.0.0
+dataset_uuid: 2c52393b-92f3-4a51-9ff7-3d0349ae0245

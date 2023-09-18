@@ -1,0 +1,43 @@
+slice_name: SI - Service Areas
+viz_type: pie
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: END
+    expressionType: SIMPLE
+    filterOptionName: filter_wu56acqiry_iujuzvnlpk
+    isExtra: false
+    isNew: false
+    operator: '!='
+    sqlExpression: null
+    subject: queuecd
+  color_scheme: supersetColors
+  datasource: 50__table
+  date_format: smart_date
+  donut: true
+  extra_form_data: {}
+  granularity_sqla: last_update_dattim
+  groupby:
+  - processing_stage
+  innerRadius: 50
+  label_line: true
+  label_type: key_value
+  labels_outside: true
+  legendOrientation: top
+  legendType: scroll
+  metric: count
+  number_format: SMART_NUMBER
+  outerRadius: 65
+  row_limit: 100
+  show_labels: true
+  show_labels_threshold: 5
+  show_legend: true
+  slice_id: 151
+  sort_by_metric: true
+  time_range: No filter
+  url_params: {}
+  viz_type: pie
+cache_timeout: null
+uuid: e8881515-7a9c-9570-91fc-9122bb74a920
+version: 1.0.0
+dataset_uuid: 40f6d689-5a50-6435-4ddd-353a5940ae24
