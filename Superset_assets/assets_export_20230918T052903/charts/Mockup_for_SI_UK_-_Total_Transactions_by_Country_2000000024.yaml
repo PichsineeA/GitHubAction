@@ -1,0 +1,34 @@
+slice_name: Mockup for SI UK - Total Transactions by Country
+viz_type: pie
+params:
+  adhoc_filters: []
+  color_scheme: supersetColors
+  datasource: 93__table
+  date_format: smart_date
+  donut: true
+  extra_form_data: {}
+  granularity_sqla: eff_date
+  groupby:
+  - country
+  innerRadius: 50
+  label_line: true
+  label_type: key
+  labels_outside: true
+  legendOrientation: top
+  legendType: scroll
+  metric: count
+  number_format: ',d'
+  outerRadius: 65
+  row_limit: 100
+  show_labels: true
+  show_labels_threshold: 5
+  show_legend: false
+  slice_id: 2000000024
+  sort_by_metric: true
+  time_range: No filter
+  url_params: {}
+  viz_type: pie
+cache_timeout: null
+uuid: 9df03552-4b50-4b3e-b64c-5331242eac58
+version: 1.0.0
+dataset_uuid: 74fa6896-5e25-4630-b057-9f43589743fa
