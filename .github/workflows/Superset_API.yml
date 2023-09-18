@@ -9,8 +9,8 @@ jobs:
         
       - name: API-step
         run: 
-           ls
-           cd POC_Script
+           bash ls
+           bash cd POC_Script
            bash ./export_local.sh
            
       - name: Commit export
