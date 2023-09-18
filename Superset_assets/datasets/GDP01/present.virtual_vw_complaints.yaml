@@ -1,0 +1,101 @@
+table_name: present.virtual_vw_complaints
+main_dttm_col: null
+description: Version 1.0 (23-08-2021) CDIG007 Confidential
+default_endpoint: null
+offset: 0
+cache_timeout: 60
+schema: present
+sql: "select  \ncomplaint_ref,\nein,\ndate_trunc('week', received_date)::date as week_commencing,\n\
+  'Received' as status\nfrom present.vw_complaints vc \nwhere received_date  is not\
+  \ null\nunion \nselect complaint_ref,\nein,\ndate_trunc('week', resolute_letter_date)::date\
+  \ as week_commencing,\n'Resolved' as status\nfrom present.vw_complaints vc\nwhere\
+  \  resolute_letter_date is not null"
+params: null
+template_params: null
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: 751d293c-9ee2-4071-bc71-672ac6f3f8e3
+metrics:
+- metric_name: total_received
+  verbose_name: Total Received
+  metric_type: null
+  expression: sum(case when status = 'Received' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: total_resolved
+  verbose_name: Total Resolved
+  metric_type: null
+  expression: sum(case when status = 'Resolved' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: count
+  verbose_name: null
+  metric_type: null
+  expression: count(*)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+columns:
+- column_name: week_commencing
+  verbose_name: Week Commencing
+  is_dttm: false
+  is_active: null
+  type: DATETIME
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: complaint_ref
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: status
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: ein
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+version: 1.0.0
+database_uuid: 980ffeea-a918-7739-250c-7d130b23d6c0

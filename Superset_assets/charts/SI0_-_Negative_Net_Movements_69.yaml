@@ -1,0 +1,44 @@
+slice_name: SI0 - Negative Net Movements
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: '0'
+    expressionType: SIMPLE
+    filterOptionName: filter_xt703v6w72h_3zu8qjmsj59
+    isExtra: false
+    isNew: false
+    operator: <
+    sqlExpression: null
+    subject: net_movement
+  all_columns:
+  - investment_vehicle
+  - net_movement
+  - Net Movement Percent
+  color_pn: true
+  datasource: 24__table
+  groupby: []
+  include_search: true
+  metrics:
+  - count
+  order_by_cols:
+  - '["Net Movement Percent", true]'
+  order_desc: true
+  page_length: 10
+  percent_metrics: []
+  queryFields:
+    groupby: groupby
+    metrics: metrics
+  query_mode: raw
+  row_limit: 10000
+  show_cell_bars: true
+  slice_id: 69
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: Last week
+  url_params: {}
+  viz_type: table
+cache_timeout: null
+uuid: 1818f4e6-82fa-e8d4-719d-0e25904a3b6f
+version: 1.0.0
+dataset_uuid: 20e76911-9eef-cdc5-25b3-223b1a47ac35

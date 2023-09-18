@@ -1,0 +1,195 @@
+dashboard_title: '[Draft]Service Insight-GSPX'
+description: null
+css: ''
+slug: null
+uuid: 770a878a-94a1-4eb0-8141-164d4a8bb5da
+position:
+  CHART-IKLhILGFR5:
+    children: []
+    id: CHART-IKLhILGFR5
+    meta:
+      chartId: 153
+      height: 45
+      sliceName: SI - Referred Work Items
+      uuid: 977a16a7-d432-b7cf-02e9-95cc3ce51105
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ZTpO837Qdm
+    - COLUMN-63rsq4hZiZ
+    type: CHART
+  CHART-QL-r6gpbZN:
+    children: []
+    id: CHART-QL-r6gpbZN
+    meta:
+      chartId: 154
+      height: 45
+      sliceName: SI - Total Work Items
+      uuid: df45eaae-428d-9458-c9c8-1f2273cdd345
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ZTpO837Qdm
+    - COLUMN-uevJpkdxaU
+    type: CHART
+  CHART-QtmdE7HDqM:
+    children: []
+    id: CHART-QtmdE7HDqM
+    meta:
+      chartId: 151
+      height: 41
+      sliceName: SI - Service Areas
+      sliceNameOverride: Active Work by Stage
+      uuid: e8881515-7a9c-9570-91fc-9122bb74a920
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-cK73HpHN_S
+    - COLUMN-DAca4Kv_i5
+    type: CHART
+  CHART-Qum1ipPcVt:
+    children: []
+    id: CHART-Qum1ipPcVt
+    meta:
+      chartId: 155
+      height: 45
+      sliceName: SI - Manual Deals
+      uuid: d893dd36-ef39-e1d8-12d8-03d5eea937fc
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ZTpO837Qdm
+    - COLUMN-EOgox2XZ8G
+    type: CHART
+  CHART-_JDPYqQEpP:
+    children: []
+    id: CHART-_JDPYqQEpP
+    meta:
+      chartId: 224
+      height: 41
+      sliceName: SI - Outstanding Work by Team
+      sliceNameOverride: Active Work by Team
+      uuid: 20562c37-4732-ef2d-3f1b-e91eb7b01bab
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-cK73HpHN_S
+    - COLUMN-AH-VzJSP1R
+    type: CHART
+  COLUMN-63rsq4hZiZ:
+    children:
+    - CHART-IKLhILGFR5
+    id: COLUMN-63rsq4hZiZ
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ZTpO837Qdm
+    type: COLUMN
+  COLUMN-AH-VzJSP1R:
+    children:
+    - CHART-_JDPYqQEpP
+    id: COLUMN-AH-VzJSP1R
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-cK73HpHN_S
+    type: COLUMN
+  COLUMN-DAca4Kv_i5:
+    children:
+    - CHART-QtmdE7HDqM
+    id: COLUMN-DAca4Kv_i5
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-cK73HpHN_S
+    type: COLUMN
+  COLUMN-EOgox2XZ8G:
+    children:
+    - CHART-Qum1ipPcVt
+    id: COLUMN-EOgox2XZ8G
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ZTpO837Qdm
+    type: COLUMN
+  COLUMN-uevJpkdxaU:
+    children:
+    - CHART-QL-r6gpbZN
+    id: COLUMN-uevJpkdxaU
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ZTpO837Qdm
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-cK73HpHN_S
+    - ROW-ZTpO837Qdm
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: '[Draft]Service Insight-GSPX'
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-ZTpO837Qdm:
+    children:
+    - COLUMN-63rsq4hZiZ
+    - COLUMN-uevJpkdxaU
+    - COLUMN-EOgox2XZ8G
+    id: ROW-ZTpO837Qdm
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-cK73HpHN_S:
+    children:
+    - COLUMN-DAca4Kv_i5
+    - COLUMN-AH-VzJSP1R
+    id: ROW-cK73HpHN_S
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  show_native_filters: true
+  color_scheme: ''
+  refresh_frequency: 0
+  expanded_slices: {}
+  label_colors: {}
+  timed_refresh_immune_slices: []
+  default_filters: '{}'
+  chart_configuration: {}
+version: 1.0.0
