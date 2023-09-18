@@ -24,5 +24,5 @@ curl -X 'GET' \
 # unzip file
 mkdir tmp
 for f in *.zip; do unzip "pipeline_script_github/backup/${ENV_NAME}_get_assets.zip" -d tmp && mv tmp/* "Superset_assets"; done
-rmdir tmp
+#rmdir tmp
 #unzip pipeline_script_github/backup/${ENV_NAME}_get_assets.zip >Superset_assets
