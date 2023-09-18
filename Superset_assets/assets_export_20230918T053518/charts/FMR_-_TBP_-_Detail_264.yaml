@@ -1,0 +1,79 @@
+slice_name: FMR - TBP - Detail
+viz_type: table
+params:
+  adhoc_filters: []
+  align_pn: true
+  all_columns:
+  - transaction_number
+  - transaction_date
+  - txnt_description
+  - ccy_id_fund
+  - fund_code
+  - ivh_description
+  - account_number
+  - act_description
+  - bua_name
+  - formatted_total_unit_amount_movement
+  - formatted_unit_price
+  - formatted_cash_gross_amount
+  color_pn: true
+  datasource: 65__table
+  granularity_sqla: transaction_date
+  groupby:
+  - transaction_number
+  - transaction_date
+  - txnt_description
+  - ccy_id_fund
+  - fund_code
+  - ivh_description
+  - account_number
+  - act_description
+  - bua_name
+  include_search: true
+  metrics:
+  - aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: true
+    isNew: false
+    label: Total Unit Amount Movement
+    optionName: metric_pc41rimw1f_benic1fic8
+    sqlExpression: coalesce(to_char(SUM(total_unit_amount_movement), 'S'||LEFT(REPEAT('999,',20),-2)||'0.99')
+      ,'0')
+  - aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: true
+    isNew: false
+    label: Unit Price
+    optionName: metric_3z9qhzayk0j_platgqhobzr
+    sqlExpression: coalesce(to_char(SUM(coalesce(price_special_override,price_amount)),
+      'S'||LEFT(REPEAT('999,',20),-2)||'0.99') , '0')
+  - aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: true
+    isNew: false
+    label: Gross Cash Amount
+    optionName: metric_rra8d7u68eg_itfit8erjee
+    sqlExpression: coalesce(to_char(SUM(cash_gross_amount), 'S'||LEFT(REPEAT('999,',20),-2)||'0.99')
+      , '0')
+  order_by_cols: []
+  order_desc: true
+  page_length: 10
+  percent_metrics: []
+  query_mode: raw
+  row_limit: '30000'
+  show_cell_bars: true
+  slice_id: 264
+  table_filter: false
+  table_timestamp_format: '%d-%b-%Y'
+  time_grain_sqla: P1D
+  time_range: No filter
+  timeseries_limit_metric: null
+  url_params: {}
+  viz_type: table
+cache_timeout: null
+uuid: 9f8113dd-3632-68b3-4df3-a700af9430ab
+version: 1.0.0
+dataset_uuid: bdb1ed65-0c21-16ad-4353-4d2b654936d5

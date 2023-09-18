@@ -1,0 +1,65 @@
+slice_name: FMR - PO - Map
+viz_type: world_map
+params:
+  adhoc_filters: []
+  color_picker:
+    a: 1
+    b: 135
+    g: 122
+    r: 0
+  country_fieldtype: cca2
+  datasource: 54__table
+  entity: cty_2_iso
+  granularity_sqla: latest_valuation_date
+  linear_color_scheme: schemeBlues
+  max_bubble_size: '50'
+  metric:
+    aggregate: COUNT_DISTINCT
+    column:
+      column_name: client_number
+      description: Unit holder's ID
+      expression: null
+      filterable: true
+      groupby: true
+      id: 895
+      is_dttm: false
+      optionName: _col_client_number
+      python_date_format: null
+      type: VARCHAR(20)
+      verbose_name: Investor ID
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    isNew: false
+    label: Investors
+    optionName: metric_oxxnta24nfm_xibmrsj272
+    sqlExpression: null
+  row_limit: null
+  secondary_metric:
+    aggregate: COUNT_DISTINCT
+    column:
+      column_name: client_number
+      description: Unit holder's ID
+      expression: null
+      filterable: true
+      groupby: true
+      id: 895
+      is_dttm: false
+      optionName: _col_client_number
+      python_date_format: null
+      type: VARCHAR(20)
+      verbose_name: Investor ID
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    isNew: false
+    label: Investors
+    optionName: metric_sc3p8x86mye_3lr08nehhhw
+    sqlExpression: null
+  show_bubbles: true
+  slice_id: 192
+  time_range: No filter
+  url_params: {}
+  viz_type: world_map
+cache_timeout: null
+uuid: 1ebcfc17-c363-0d2e-aba2-705f1e8eca86
+version: 1.0.0
+dataset_uuid: 294bb475-bd97-fe6c-dec6-ec4cd42fc6fa

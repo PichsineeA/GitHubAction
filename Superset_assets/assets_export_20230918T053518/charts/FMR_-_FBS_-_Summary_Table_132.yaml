@@ -1,0 +1,81 @@
+slice_name: FMR - FBS - Summary Table
+viz_type: table
+params:
+  adhoc_filters: []
+  align_pn: false
+  all_columns:
+  - fund_code
+  - ivc_long_name
+  - isin_code
+  - cusip_number
+  - ccy_id
+  - formatted_units
+  - formatted_price
+  - formatted_total_value
+  - formatted_prior_total_value
+  color_pn: true
+  datasource: 45__table
+  granularity_sqla: valuation_date
+  groupby:
+  - fund_code
+  - ivc_long_name
+  - isin_code
+  - cusip_number
+  - ccy_id
+  include_search: true
+  metrics:
+  - aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: true
+    isNew: false
+    label: Units
+    optionName: metric_slhnr4in8mb_4564nuxv34k
+    sqlExpression: coalesce(to_char(SUM(total_value/price_amount), LEFT(REPEAT('999,',20),-2)||'0')
+      , '0')
+  - aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: true
+    isNew: false
+    label: Price
+    optionName: metric_9rnlqnmosk4_xyi3pda1s0r
+    sqlExpression: coalesce(to_char(SUM(price_amount), 'S'||LEFT(REPEAT('999,',20),-2)||'0.99')
+      , '0')
+  - aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: true
+    isNew: false
+    label: Total value
+    optionName: metric_mfaxw5dz7ye_rdymqrroy8m
+    sqlExpression: coalesce(to_char(SUM(total_value), 'S'||LEFT(REPEAT('999,',20),-2)||'0.99')
+      , '0')
+  - aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: true
+    isNew: false
+    label: Prior Total Value
+    optionName: metric_gajuvwa40oa_tjjg9covir
+    sqlExpression: coalesce(to_char(SUM(prior_total), 'S'||LEFT(REPEAT('999,',20),-2)||'0.99')
+      , '0')
+  order_by_cols: []
+  order_desc: false
+  page_length: 20
+  percent_metrics: []
+  query_mode: raw
+  row_limit: '30000'
+  show_cell_bars: true
+  slice_id: 132
+  table_filter: false
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  timeseries_limit_metric: []
+  url_params: {}
+  viz_type: table
+cache_timeout: null
+uuid: 11b8b90b-7d0b-fdcf-cc84-0667ba6dc798
+version: 1.0.0
+dataset_uuid: 684545bb-cddf-d2d0-9669-f67301bffd4e

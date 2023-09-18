@@ -1,0 +1,61 @@
+slice_name: SI4 - Redemption & Stock Transfer After Sale
+viz_type: bar
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_jq82bqel3tm_tbpt8gx2pyj
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: 'transaction_type = ''Transfer In'' or  transaction_type = ''Transfer
+      Out'' or transaction_type = ''Redemption'' '
+    subject: null
+  - clause: WHERE
+    comparator: N
+    expressionType: SIMPLE
+    filterOptionName: filter_exfmvu2vo5_nhgtrwk5bmh
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: cancelled
+  annotation_layers: []
+  bottom_margin: auto
+  color_scheme: supersetColors
+  comparison_type: values
+  datasource: 93__table
+  extra_form_data: {}
+  granularity_sqla: eff_date
+  groupby:
+  - Stock Transfer/Redemption
+  left_margin: auto
+  line_interpolation: linear
+  metrics:
+  - count distinct deal
+  order_desc: false
+  rich_tooltip: true
+  rolling_type: None
+  row_limit: 10000
+  show_bar_value: false
+  show_brush: auto
+  show_legend: true
+  slice_id: 421
+  time_grain_sqla: P1W
+  time_range: 'DATEADD(DATETIME("now"), -2, month) : now'
+  url_params: {}
+  viz_type: bar
+  x_axis_format: '%d/%m/%Y'
+  x_axis_label: ''
+  x_ticks_layout: "45\xB0"
+  y_axis_bounds:
+  - null
+  - null
+  y_axis_format: ',d'
+  y_axis_label: ''
+cache_timeout: null
+uuid: 4e24f842-d102-4092-bbfc-77586bdbe301
+version: 1.0.0
+dataset_uuid: 74fa6896-5e25-4630-b057-9f43589743fa

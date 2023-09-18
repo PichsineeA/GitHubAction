@@ -1,0 +1,561 @@
+dashboard_title: Active Work Analysis
+description: null
+css: "/* ---------------------------------------------------- */\n/* Filter controls\
+  \                                      */\n/* ----------------------------------------------------\
+  \ */\n\n/* Controls the visibility of native filters. \n   Comment out if you want\
+  \ native charts visble*/\n.css-1k877g7 {\n  visibility:hidden;\n}\n\n/*----------------------\n\
+  \  Display CSS button for 4 charts\n  -Active Work Analysis View\n  -Active Work\
+  \ Items\n  -Analysis view\n  -list view\n-----------------------*/\n#slice_162-controls{\n\
+  \  display:flex;\n}\n#slice_150-controls{\n  display:flex;\n}\n#slice_156-controls{\n\
+  \  display:flex;\n}\n#slice_158-controls{\n  display:flex;\n}\n/*----------------------*/\n\
+  \n/* ------------------------- */\n/*  Chart Headers            */\n/* -------------------------\
+  \ */\n\n/* Hide all other drop down options, apart from refresh and CSV */\n.chart-slice\
+  \ + div>div>.ant-dropdown>ul>li:not(:first-child):not(:last-child) {\n  display:none;\n\
+  }\n\n#TABS-Wf8uXOYeKs-panel-TAB-xl-cVuSGY > div > div:nth-child(3) > div > div >\
+  \ div > div > div > div.chart-slice > div.chart-header{\n    display:flex;\n}\n\
+  /*Hide Filter chart Title*/\n#GRID_ID-panel-GRID_ID > div > div > div:nth-child(2)\
+  \ > div > div > div:nth-child(1) > div > div > div > div > div > div > div > div\
+  \ > div > div > div > div > div > div > div.chart-header > div.header-title\n{\n\
+  \  display:none;\n}\n\n/* Header contant tab*/\n.dashboard--editing .dashboard-component-tabs-content\
+  \ .dragdroppable-row {\n    padding-top: 0px;\n    padding-bottom: 0px;\n}\n\n/*\
+  \ Header tab*/ \n.dashboard-component-tabs .dashboard-component-header {\n    padding-top:\
+  \ 0px;\n    padding-bottom: 0px;\n}\n\n/*Chart padding*/\n.dashboard-component-chart-holder.fade-out\
+  \ {\n    padding-top: 0px;\n    padding-bottom: 0px;\n}\n\n/* reduce gab  in the\
+  \ bottom between row of filter box*/\n#TABS-Wf8uXOYeKs-panel-TAB-xl-cVuSGY[tabindex=\"\
+  0\"]>.dashboard-component-tabs-content>.dragdroppable-row:nth-child(1){\n  height:70px;\n\
+  }\n\n/*Chart Title*/\n#TABS-Wf8uXOYeKs-panel-TAB-xl-cVuSGY[tabindex=\"0\"]>.dashboard-component-tabs-content>.dragdroppable-row:nth-child(2){\n\
+  \  height:90px;\n}\n\n#GRID_ID-panel-GRID_ID > div > div > div:nth-child(2) > div\
+  \ > div > div:nth-child(1) > div > div > div > div:nth-child(1) > div > div > div\
+  \ > div > div > div > div.chart-header\n{\n  display:none;\n}\n#GRID_ID-panel-GRID_ID\
+  \ > div > div > div:nth-child(2) > div > div > div:nth-child(1) > div > div > div\
+  \ > div:nth-child(2) > div > div > div > div > div > div > div.chart-header\n{\n\
+  \  display:none;\n}\n#GRID_ID-panel-GRID_ID > div > div > div:nth-child(2) > div\
+  \ > div > div:nth-child(1) > div > div > div > div:nth-child(3) > div > div > div\
+  \ > div.chart-header\n{\n  display:none;\n}\n#GRID_ID-panel-GRID_ID > div > div\
+  \ > div:nth-child(2) > div > div > div:nth-child(1) > div > div > div > div:nth-child(4)\
+  \ > div > div > div > div > div > div > div.chart-header\n{\n  display:none;\n}\n\
+  #GRID_ID-panel-GRID_ID > div > div > div:nth-child(2) > div > div > div:nth-child(1)\
+  \ > div > div > div > div:nth-child(5) > div > div > div > div > div > div > div.chart-header\n\
+  {\n  display:none;\n}\n#GRID_ID-panel-GRID_ID > div > div > div:nth-child(2) > div\
+  \ > div > div:nth-child(1) > div > div > div > div:nth-child(6) > div > div > div\
+  \ > div > div > div > div.chart-header\n{\n  display:none;\n}\n#GRID_ID-panel-GRID_ID\
+  \ > div > div > div:nth-child(2) > div > div > div:nth-child(1) > div > div > div\
+  \ > div:nth-child(7) > div > div > div > div > div > div > div.chart-header\n{\n\
+  \  display:none;\n}"
+slug: active-work-summary-1
+uuid: 16668c8b-c4d2-f0e8-da0a-3f8ab848af86
+position:
+  CHART--4YmcXyiwR:
+    children: []
+    id: CHART--4YmcXyiwR
+    meta:
+      chartId: 163
+      height: 15
+      sliceName: SI - AWD Non-END Analysis Filter
+      uuid: 1341775e-82a5-fbe3-ff7b-60fbabbaa745
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-dRYqb5EW7N
+    - ROW-FzqFntglJt
+    type: CHART
+  CHART-7IxodVhB_1:
+    children: []
+    id: CHART-7IxodVhB_1
+    meta:
+      chartId: 164
+      height: 23
+      sliceName: SI - UK Filter
+      uuid: 2c2a64a5-07eb-6f55-6fb5-6becf9abfa43
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-bfmwajZcRv
+    type: CHART
+  CHART-95mBpgK9I6:
+    children: []
+    id: CHART-95mBpgK9I6
+    meta:
+      chartId: 316
+      height: 15
+      sliceName: SI - Active Work Work Type Filter
+      uuid: 7a876266-3730-452c-a638-be39e7cf8c06
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-dRYqb5EW7N
+    type: CHART
+  CHART-AVfXXUA8l6:
+    children: []
+    id: CHART-AVfXXUA8l6
+    meta:
+      chartId: 158
+      height: 57
+      sliceName: SI - Oldest Items by Work Type
+      sliceNameOverride: Oldest Work Items by Work Type
+      uuid: d7dad5f5-9a3a-17d5-ade5-45c07ba02e37
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-eQEulavEXz
+    - TABS-j5-sYHqsgy
+    - TAB-V1RZ-IAGiS
+    - ROW-qvcibvA4P
+    - COLUMN-3Sy7_PJTSw
+    type: CHART
+  CHART-AzCLunEKPJ:
+    children: []
+    id: CHART-AzCLunEKPJ
+    meta:
+      chartId: 283
+      height: 57
+      sliceName: SI - Active Work by Work Type - Top 10
+      sliceNameOverride: Active Work by Work Type - Top 10
+      uuid: 15ec2b25-fca8-424a-8604-4c1db30f7397
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-eQEulavEXz
+    - TABS-j5-sYHqsgy
+    - TAB-V1RZ-IAGiS
+    - ROW-qvcibvA4P
+    - COLUMN-LGQ2jYs6Bz
+    type: CHART
+  CHART-O_CbuExUyd:
+    children: []
+    id: CHART-O_CbuExUyd
+    meta:
+      chartId: 162
+      height: 95
+      sliceName: SI - AWD Non-END Analysis View
+      sliceNameOverride: Active Work Analysis View
+      uuid: f9ad357c-c087-b534-5ac7-ac07acd4eec2
+      width: 9
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-eQEulavEXz
+    - TABS-j5-sYHqsgy
+    - TAB-H7nIXGYra
+    - ROW-K9_DANwUP
+    type: CHART
+  CHART-QxPDsAGgr6:
+    children: []
+    id: CHART-QxPDsAGgr6
+    meta:
+      chartId: 156
+      height: 36
+      sliceName: SI - Outstanding Items by Department
+      sliceNameOverride: Active Work by Department
+      uuid: 49a9dabf-b54a-2c07-bd40-20a855286e26
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-eQEulavEXz
+    - TABS-j5-sYHqsgy
+    - TAB-V1RZ-IAGiS
+    - ROW-qvcibvA4P
+    - COLUMN-LGQ2jYs6Bz
+    type: CHART
+  CHART-ZgWatWNLoS:
+    children: []
+    id: CHART-ZgWatWNLoS
+    meta:
+      chartId: 318
+      height: 15
+      sliceName: SI - Active Work Age in Business Days Filter
+      uuid: 5416fa87-c90c-4db3-8367-fbcbbc40b5d6
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-dRYqb5EW7N
+    - ROW-c3f-QB4wiS
+    type: CHART
+  CHART-dfGQx-9Kz8:
+    children: []
+    id: CHART-dfGQx-9Kz8
+    meta:
+      chartId: 151
+      height: 36
+      sliceName: SI - Service Areas
+      sliceNameOverride: Active Work by Stage
+      uuid: e8881515-7a9c-9570-91fc-9122bb74a920
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-eQEulavEXz
+    - TABS-j5-sYHqsgy
+    - TAB-V1RZ-IAGiS
+    - ROW-qvcibvA4P
+    - COLUMN-3Sy7_PJTSw
+    type: CHART
+  CHART-i8bos7ykez:
+    children: []
+    id: CHART-i8bos7ykez
+    meta:
+      chartId: 319
+      height: 16
+      sliceName: SI - Active Work Suspended Filter
+      uuid: 75ef7d9a-9cd7-43ae-82e0-ffc010cfc50a
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-dRYqb5EW7N
+    - ROW-ILoq9X_ErP
+    type: CHART
+  CHART-kR4U-mbvuJ:
+    children: []
+    id: CHART-kR4U-mbvuJ
+    meta:
+      chartId: 315
+      height: 15
+      sliceName: SI - Active Work Team Filter
+      uuid: 14339d8e-2a67-4123-9d04-b05896ba9bc2
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-dRYqb5EW7N
+    - ROW-Jwq5whsVld
+    type: CHART
+  CHART-mOBTlqWVqh:
+    children: []
+    id: CHART-mOBTlqWVqh
+    meta:
+      chartId: 317
+      height: 15
+      sliceName: SI - Active Work Processing Stage Filter
+      uuid: 6f609570-f852-4b5f-b0e8-aebcb7cce4a8
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-dRYqb5EW7N
+    - ROW-_cUjoTWJ4a
+    type: CHART
+  CHART-sT1V4YmJjF:
+    children: []
+    id: CHART-sT1V4YmJjF
+    meta:
+      chartId: 150
+      height: 95
+      sliceName: SI - Non-END Work Items
+      sliceNameOverride: Active Work List View
+      uuid: 08f4fea2-d9a1-26e0-2b60-3c3ddb549c81
+      width: 9
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-eQEulavEXz
+    - TABS-j5-sYHqsgy
+    - TAB-utQD7LvRv
+    - ROW-5uU30TNQ9
+    type: CHART
+  COLUMN-3Sy7_PJTSw:
+    children:
+    - CHART-dfGQx-9Kz8
+    - CHART-AVfXXUA8l6
+    id: COLUMN-3Sy7_PJTSw
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-eQEulavEXz
+    - TABS-j5-sYHqsgy
+    - TAB-V1RZ-IAGiS
+    - ROW-qvcibvA4P
+    type: COLUMN
+  COLUMN-LGQ2jYs6Bz:
+    children:
+    - CHART-QxPDsAGgr6
+    - CHART-AzCLunEKPJ
+    id: COLUMN-LGQ2jYs6Bz
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 5
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-eQEulavEXz
+    - TABS-j5-sYHqsgy
+    - TAB-V1RZ-IAGiS
+    - ROW-qvcibvA4P
+    type: COLUMN
+  COLUMN-dRYqb5EW7N:
+    children:
+    - ROW-FzqFntglJt
+    - ROW-Jwq5whsVld
+    - CHART-95mBpgK9I6
+    - ROW-_cUjoTWJ4a
+    - ROW-c3f-QB4wiS
+    - ROW-ILoq9X_ErP
+    id: COLUMN-dRYqb5EW7N
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    type: COLUMN
+  COLUMN-eQEulavEXz:
+    children:
+    - TABS-j5-sYHqsgy
+    id: COLUMN-eQEulavEXz
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 9
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-bfmwajZcRv
+    - ROW-X71N2mOvc3
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Active Work Analysis
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-5uU30TNQ9:
+    children:
+    - CHART-sT1V4YmJjF
+    id: ROW-5uU30TNQ9
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-eQEulavEXz
+    - TABS-j5-sYHqsgy
+    - TAB-utQD7LvRv
+    type: ROW
+  ROW-FzqFntglJt:
+    children:
+    - CHART--4YmcXyiwR
+    id: ROW-FzqFntglJt
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-dRYqb5EW7N
+    type: ROW
+  ROW-ILoq9X_ErP:
+    children:
+    - CHART-i8bos7ykez
+    id: ROW-ILoq9X_ErP
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-dRYqb5EW7N
+    type: ROW
+  ROW-Jwq5whsVld:
+    children:
+    - CHART-kR4U-mbvuJ
+    id: ROW-Jwq5whsVld
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-dRYqb5EW7N
+    type: ROW
+  ROW-K9_DANwUP:
+    children:
+    - CHART-O_CbuExUyd
+    id: ROW-K9_DANwUP
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-eQEulavEXz
+    - TABS-j5-sYHqsgy
+    - TAB-H7nIXGYra
+    type: ROW
+  ROW-X71N2mOvc3:
+    children:
+    - COLUMN-dRYqb5EW7N
+    - COLUMN-eQEulavEXz
+    id: ROW-X71N2mOvc3
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-_cUjoTWJ4a:
+    children:
+    - CHART-mOBTlqWVqh
+    id: ROW-_cUjoTWJ4a
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-dRYqb5EW7N
+    type: ROW
+  ROW-bfmwajZcRv:
+    children:
+    - CHART-7IxodVhB_1
+    id: ROW-bfmwajZcRv
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-c3f-QB4wiS:
+    children:
+    - CHART-ZgWatWNLoS
+    id: ROW-c3f-QB4wiS
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-dRYqb5EW7N
+    type: ROW
+  ROW-qvcibvA4P:
+    children:
+    - COLUMN-LGQ2jYs6Bz
+    - COLUMN-3Sy7_PJTSw
+    id: ROW-qvcibvA4P
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-eQEulavEXz
+    - TABS-j5-sYHqsgy
+    - TAB-V1RZ-IAGiS
+    type: ROW
+  TAB-H7nIXGYra:
+    children:
+    - ROW-K9_DANwUP
+    id: TAB-H7nIXGYra
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Analysis View
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-eQEulavEXz
+    - TABS-j5-sYHqsgy
+    type: TAB
+  TAB-V1RZ-IAGiS:
+    children:
+    - ROW-qvcibvA4P
+    id: TAB-V1RZ-IAGiS
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Summary View
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-eQEulavEXz
+    - TABS-j5-sYHqsgy
+    type: TAB
+  TAB-utQD7LvRv:
+    children:
+    - ROW-5uU30TNQ9
+    id: TAB-utQD7LvRv
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: List View
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-eQEulavEXz
+    - TABS-j5-sYHqsgy
+    type: TAB
+  TABS-j5-sYHqsgy:
+    children:
+    - TAB-V1RZ-IAGiS
+    - TAB-H7nIXGYra
+    - TAB-utQD7LvRv
+    id: TABS-j5-sYHqsgy
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-X71N2mOvc3
+    - COLUMN-eQEulavEXz
+    type: TABS
+metadata:
+  timed_refresh_immune_slices: []
+  expanded_slices: {}
+  refresh_frequency: 0
+  default_filters: '{}'
+  color_scheme: ''
+  label_colors:
+    Unmapped: '#00A5B8'
+    Process: '#00667D'
+    Vetting: '#6C54A3'
+    Quality: '#E43E51'
+    System: '#E8D9B4'
+    Rescan: '#EAEC88'
+    Refer: '#9ECF7C'
+    Discard: '#A2DADD'
+    Personal: '#FCB53B'
+    Hold: '#66C9D4'
+    Not Resolved: '#00A5B8'
+    Resolved: '#00667D'
+    Number of Work Items: '#00667D'
+  show_native_filters: true
+  chart_configuration: {}
+version: 1.0.0

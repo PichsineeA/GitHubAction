@@ -1,0 +1,25 @@
+slice_name: SI2 - Share Class Currency Filter
+viz_type: filter_box
+params:
+  adhoc_filters: []
+  datasource: 76__table
+  date_filter: false
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: emc_currency
+    key: IkpzSKV9p
+    label: Share Class Currency
+    multiple: true
+    searchAllOptions: false
+  granularity_sqla: deal_date
+  instant_filtering: true
+  slice_id: 339
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+cache_timeout: null
+uuid: 9ea23ad5-c301-4a3a-a646-8420a7803938
+version: 1.0.0
+dataset_uuid: ebf32c00-65fc-4211-98df-7bbfec2a9c69

@@ -1,0 +1,25 @@
+slice_name: SI6 - Active Work Urgent Filter
+viz_type: filter_box
+params:
+  adhoc_filters: []
+  datasource: 2000000005__table
+  date_filter: false
+  extra_form_data: {}
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: urgent
+    key: fMDr4vbgK
+    label: URGENT
+    multiple: true
+    searchAllOptions: false
+  granularity_sqla: last_update_dattim
+  instant_filtering: true
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+cache_timeout: null
+uuid: a2b16fc4-d83a-4282-9db7-93664a4207cf
+version: 1.0.0
+dataset_uuid: deb426d2-5ea7-42ae-ae97-c99694c2ddff
