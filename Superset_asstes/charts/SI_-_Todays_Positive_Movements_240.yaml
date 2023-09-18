@@ -1,0 +1,65 @@
+slice_name: SI - Today's Positive Movements
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: '0'
+    expressionType: SIMPLE
+    filterOptionName: filter_ypbj5euym2_4p83zkfm0n4
+    isExtra: false
+    isNew: false
+    operator: '>'
+    operatorId: GREATER_THAN
+    sqlExpression: null
+    subject: fund_movement_value
+  all_columns:
+  - fund_code
+  - share_class_name
+  - isin_code
+  - PRICE STATUS TXT
+  - last_price_amount
+  - NAV
+  - Today's Movement
+  - Today's Movement %
+  color_pn: true
+  column_config:
+    NAV:
+      d3NumberFormat: ',.2f'
+      d3SmallNumberFormat: ',.2f'
+      horizontalAlign: right
+    Today's Movement:
+      d3NumberFormat: ',.2f'
+      d3SmallNumberFormat: ',.2f'
+    Today's Movement %:
+      d3NumberFormat: ',.2%'
+      d3SmallNumberFormat: ',.2%'
+      showCellBars: false
+    last_price_amount:
+      d3NumberFormat: ',.4f'
+      d3SmallNumberFormat: ',.4f'
+  conditional_formatting: []
+  datasource: 58__table
+  extra_form_data: {}
+  granularity_sqla: null
+  groupby: []
+  metrics:
+  - count
+  order_by_cols:
+  - '["Today''s Movement", false]'
+  order_desc: true
+  page_length: 20
+  percent_metrics: []
+  query_mode: raw
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: false
+  slice_id: 240
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: Last week
+  url_params: {}
+  viz_type: table
+cache_timeout: null
+uuid: e471a598-f4e2-821a-a813-4a98b6c04b9a
+version: 1.0.0
+dataset_uuid: c28fef52-923b-a734-0b83-4cec471c48cc

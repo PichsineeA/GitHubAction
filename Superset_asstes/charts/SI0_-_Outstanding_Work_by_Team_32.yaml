@@ -1,0 +1,43 @@
+slice_name: SI0 - Outstanding Work by Team
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_ng6tj7pfkmr_97a3qraszf4
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: unitcd like 'METRO%'
+    subject: null
+  align_pn: false
+  all_columns: []
+  color_pn: true
+  datasource: 7__table
+  extra_form_data: {}
+  granularity_sqla: crdate
+  groupby:
+  - owner_department
+  - owner_team
+  metrics:
+  - count
+  order_by_cols: []
+  order_desc: true
+  page_length: 0
+  percent_metrics: null
+  query_mode: aggregate
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: false
+  slice_id: 32
+  table_timestamp_format: smart_date
+  time_grain_sqla: null
+  time_range: No filter
+  timeseries_limit_metric: count
+  url_params: {}
+  viz_type: table
+cache_timeout: null
+uuid: fed1f4b5-9e96-e07d-3f77-18ba4aaa8a3b
+version: 1.0.0
+dataset_uuid: fa1cab1e-d9ee-f116-392a-98ac627773a0

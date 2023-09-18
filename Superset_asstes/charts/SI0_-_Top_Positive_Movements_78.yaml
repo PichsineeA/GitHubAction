@@ -1,0 +1,41 @@
+slice_name: SI0 - Top Positive Movements
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: '0'
+    expressionType: SIMPLE
+    filterOptionName: filter_aazmnkpqbts_ydctm34vlb
+    isExtra: false
+    isNew: false
+    operator: '>'
+    operatorId: GREATER_THAN
+    sqlExpression: null
+    subject: net_movement
+  all_columns:
+  - investment_vehicle
+  - Net Movement Percent
+  color_pn: true
+  conditional_formatting: []
+  datasource: 29__table
+  extra_form_data: {}
+  groupby: []
+  metrics: []
+  order_by_cols:
+  - '["Net Movement Percent", false]'
+  order_desc: false
+  percent_metrics: []
+  query_mode: raw
+  row_limit: 10
+  server_page_length: 10
+  show_cell_bars: true
+  slice_id: 78
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: Last week
+  url_params: {}
+  viz_type: table
+cache_timeout: null
+uuid: b9f92b16-f3fb-3d4b-74fe-71439433d28b
+version: 1.0.0
+dataset_uuid: b7a6fe58-57ec-ae45-849e-d27bf2cd4961

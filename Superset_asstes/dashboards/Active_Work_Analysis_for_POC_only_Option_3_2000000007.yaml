@@ -1,0 +1,196 @@
+dashboard_title: Active Work Analysis [for POC only Option 3]
+description: null
+css: "/* Controls the visibility of native filters. \n   Comment out if you want native\
+  \ charts visble*/\n.css-1k877g7 {\n  visibility:hidden;\n}\n\n/*----------------------\n\
+  \  Display CSS button for 4 charts\n  -Active Work by Department\n  -Oldest Work\
+  \ Item by Work Type\n-----------------------*/\n#slice_546-controls{\n  display:flex;\n\
+  }\n\n#slice_550-controls{\n  display:flex;\n}\n\n/*----------------------*/\n\n\
+  /* ------------------------- */\n/*  Chart Headers            */\n/* -------------------------\
+  \ */\n\n/* Hide all other drop down options, apart from refresh and CSV */\n/* .chart-slice\
+  \ + div>div>.ant-dropdown>ul>li:not(:first-child):not(:last-child) {\n  display:none;\n\
+  }\n\n#TABS-Wf8uXOYeKs-panel-TAB-xl-cVuSGY > div > div:nth-child(3) > div > div >\
+  \ div > div > div > div.chart-slice > div.chart-header{\n    display:flex;\n}\n\n\
+  /*Hide Filter chart Title*/\n#GRID_ID-panel-GRID_ID > div > div > div:nth-child(2)\
+  \ > div > div > div:nth-child(1) > div > div > div > div:nth-child(1) > div > div\
+  \ > div > div > div > div.chart-slice > div.chart-header{\n  display:none;\n}\n\n\
+  #GRID_ID-panel-GRID_ID > div > div > div:nth-child(2) > div > div > div:nth-child(1)\
+  \ > div > div > div > div:nth-child(2) > div > div > div > div > div > div > div.chart-header\n\
+  {\n  display:none;\n}\n\n#GRID_ID-panel-GRID_ID > div > div > div:nth-child(2) >\
+  \ div > div > div:nth-child(1) > div > div > div > div:nth-child(3) > div > div\
+  \ > div > div > div > div > div.chart-header\n{\n  display:none;\n}\n\n#GRID_ID-panel-GRID_ID\
+  \ > div > div > div:nth-child(2) > div > div > div:nth-child(1) > div > div > div\
+  \ > div:nth-child(4) > div > div > div > div.chart-header\n{\n  display:none;\n\
+  }\n\n#GRID_ID-panel-GRID_ID > div > div > div:nth-child(2) > div > div > div:nth-child(1)\
+  \ > div > div > div > div:nth-child(5) > div > div > div > div > div > div > div.chart-header\n\
+  {\n  display:none;\n}\n\n#GRID_ID-panel-GRID_ID > div > div > div:nth-child(2) >\
+  \ div > div > div:nth-child(1) > div > div > div > div:nth-child(6) > div > div\
+  \ > div > div > div > div > div.chart-header\n{\n  display:none;\n}\n\n/* Header\
+  \ contant tab*/\n.dashboard--editing .dashboard-component-tabs-content .dragdroppable-row\
+  \ {\n    padding-top: 0px;\n    padding-bottom: 0px;\n}\n\n/* Header tab*/ \n.dashboard-component-tabs\
+  \ .dashboard-component-header {\n    padding-top: 0px;\n    padding-bottom: 0px;\n\
+  }\n\n/*Chart padding*/\n.dashboard-component-chart-holder.fade-out {\n    padding-top:\
+  \ 0px;\n    padding-bottom: 0px;\n}\n\n/* reduce gab  in the bottom between row\
+  \ of filter box*/\n#TABS-Wf8uXOYeKs-panel-TAB-xl-cVuSGY[tabindex=\"0\"]>.dashboard-component-tabs-content>.dragdroppable-row:nth-child(1){\n\
+  \  height:70px;\n}\n\n\n"
+slug: null
+uuid: 56e57441-e4e2-466a-a7ac-bbb271200922
+position:
+  CHART-48vuuzF0qC:
+    children: []
+    id: CHART-48vuuzF0qC
+    meta:
+      chartId: 2000000003
+      height: 15
+      sliceName: POC - Parent Entity Filter
+      uuid: 1f1edd25-2695-4402-8ba8-18a5979ab344
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-HCjrrzyuQX
+    - COLUMN-QfaIE4fBQw
+    type: CHART
+  CHART-MG93egChUS:
+    children: []
+    id: CHART-MG93egChUS
+    meta:
+      chartId: 2000000004
+      height: 17
+      sliceName: POC -Client Filter
+      uuid: 5e34e4f1-57f0-4b45-9e0a-64af32818d72
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-HCjrrzyuQX
+    - COLUMN-QfaIE4fBQw
+    type: CHART
+  CHART-ai6Im04j-Z:
+    children: []
+    id: CHART-ai6Im04j-Z
+    meta:
+      chartId: 2000000002
+      height: 50
+      sliceName: POC - AWD Table
+      uuid: 04de72f9-42b7-45ee-a852-fe48f6497286
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-HCjrrzyuQX
+    - COLUMN-iho1KAyHn-
+    type: CHART
+  CHART-tGno4y52fO:
+    children: []
+    id: CHART-tGno4y52fO
+    meta:
+      chartId: 516
+      height: 15
+      sliceName: SI5 - EIN Currency Filter
+      uuid: 8095ee41-3243-44be-9dda-ae55c4d59a5c
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-pOfp_66wO1
+    type: CHART
+  COLUMN-QfaIE4fBQw:
+    children:
+    - CHART-48vuuzF0qC
+    - CHART-MG93egChUS
+    id: COLUMN-QfaIE4fBQw
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-HCjrrzyuQX
+    type: COLUMN
+  COLUMN-iho1KAyHn-:
+    children:
+    - CHART-ai6Im04j-Z
+    id: COLUMN-iho1KAyHn-
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 8
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-HCjrrzyuQX
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-pOfp_66wO1
+    - ROW-HCjrrzyuQX
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Active Work Analysis [for POC only Option 3]
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-HCjrrzyuQX:
+    children:
+    - COLUMN-QfaIE4fBQw
+    - COLUMN-iho1KAyHn-
+    id: ROW-HCjrrzyuQX
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-pOfp_66wO1:
+    children:
+    - CHART-tGno4y52fO
+    id: ROW-pOfp_66wO1
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  show_native_filters: true
+  color_scheme: ''
+  refresh_frequency: 0
+  expanded_slices: {}
+  label_colors: {}
+  timed_refresh_immune_slices: []
+  default_filters: '{"2000000003": {"Parent Entity": ["SAP Strategic and Priority
+    Tier"]}}'
+  chart_configuration: {}
+  filter_scopes:
+    '516':
+      bpo_identifier:
+        scope:
+        - ROOT_ID
+        immune: []
+      ein:
+        scope:
+        - ROOT_ID
+        immune: []
+      emc_currency:
+        scope:
+        - ROOT_ID
+        immune: []
+    '2000000003':
+      Parent Entity:
+        scope:
+        - ROOT_ID
+        immune: []
+    '2000000004':
+      Client:
+        scope:
+        - ROOT_ID
+        immune: []
+version: 1.0.0
