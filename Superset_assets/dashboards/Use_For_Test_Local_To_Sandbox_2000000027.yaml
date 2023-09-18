@@ -1,4 +1,4 @@
-dashboard_title: Use for test 1
+dashboard_title: Use For Test Local To Sandbox
 description: null
 css: "/* ---------------------------------------------------- */\n/* Filter controls\
   \                                      */\n/* ----------------------------------------------------\
@@ -27,6 +27,20 @@ position:
     - ROW-0nW_HbbEfQ
     - COLUMN-5U5PYT1RfU
     - ROW-FdC8JSbciC
+    type: CHART
+  CHART-QzFr2nZarn:
+    children: []
+    id: CHART-QzFr2nZarn
+    meta:
+      chartId: 54
+      height: 50
+      sliceName: SI0 - Closed and voided history in the past 4 weeks
+      uuid: c475c68b-0981-83b3-566e-8bc44e92879d
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-DMv1kUK3yB
     type: CHART
   CHART-VYqVZTNQBV:
     children: []
@@ -60,14 +74,13 @@ position:
     - GRID_ID
     - ROW-0nW_HbbEfQ
     - COLUMN-Je7JqENEjd
-    - ROW-d2kZz1nQ9X
     type: CHART
   CHART-h0z3s6QhJS:
     children: []
     id: CHART-h0z3s6QhJS
     meta:
       chartId: 2000000054
-      height: 41
+      height: 72
       sliceName: SI - Complaint Last 4 Weeks
       sliceNameOverride: Complaints Last 4 Weeks
       uuid: 3977c8e5-aff9-447f-92b5-372b4bc68d80
@@ -147,23 +160,6 @@ position:
     - COLUMN-5U5PYT1RfU
     - ROW-DJ2sorQl4S
     type: CHART
-  CHART-yR4ztORK8y:
-    children: []
-    id: CHART-yR4ztORK8y
-    meta:
-      chartId: 2000000056
-      height: 29
-      sliceName: SI - Complaints by Category
-      sliceNameOverride: Complaints by Category
-      uuid: 1977c09e-ab37-4cbe-b72d-c0f476dfc43c
-      width: 4
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-0nW_HbbEfQ
-    - COLUMN-LzV7nzF3DY
-    - ROW-wNBTxnTgLa
-    type: CHART
   COLUMN-5U5PYT1RfU:
     children:
     - ROW-FdC8JSbciC
@@ -179,8 +175,8 @@ position:
     type: COLUMN
   COLUMN-Je7JqENEjd:
     children:
-    - ROW-d2kZz1nQ9X
     - CHART-nCvXTyZGi6
+    - CHART-X1P0-AmqHl
     id: COLUMN-Je7JqENEjd
     meta:
       background: BACKGROUND_TRANSPARENT
@@ -194,7 +190,6 @@ position:
     children:
     - ROW--Zz-DfMkmZ
     - ROW-gqCeLusft9
-    - ROW-wNBTxnTgLa
     id: COLUMN-LzV7nzF3DY
     meta:
       background: BACKGROUND_TRANSPARENT
@@ -222,6 +217,8 @@ position:
   GRID_ID:
     children:
     - ROW-0nW_HbbEfQ
+    - ROW-DMv1kUK3yB
+    - ROW-cgNbLz4STX
     id: GRID_ID
     parents:
     - ROOT_ID
@@ -229,7 +226,7 @@ position:
   HEADER_ID:
     id: HEADER_ID
     meta:
-      text: Use for pipeline test 1
+      text: Use For Test Local To Sandbox
     type: HEADER
   ROOT_ID:
     children:
@@ -273,6 +270,16 @@ position:
     - ROW-0nW_HbbEfQ
     - COLUMN-5U5PYT1RfU
     type: ROW
+  ROW-DMv1kUK3yB:
+    children:
+    - CHART-QzFr2nZarn
+    id: ROW-DMv1kUK3yB
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
   ROW-FdC8JSbciC:
     children:
     - CHART-VYqVZTNQBV
@@ -286,34 +293,19 @@ position:
     - ROW-0nW_HbbEfQ
     - COLUMN-5U5PYT1RfU
     type: ROW
-  ROW-d2kZz1nQ9X:
-    children:
-    - CHART-X1P0-AmqHl
-    id: ROW-d2kZz1nQ9X
+  ROW-cgNbLz4STX:
+    children: []
+    id: ROW-cgNbLz4STX
     meta:
       background: BACKGROUND_TRANSPARENT
     parents:
     - ROOT_ID
     - GRID_ID
-    - ROW-0nW_HbbEfQ
-    - COLUMN-Je7JqENEjd
     type: ROW
   ROW-gqCeLusft9:
     children:
     - CHART-h0z3s6QhJS
     id: ROW-gqCeLusft9
-    meta:
-      background: BACKGROUND_TRANSPARENT
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-0nW_HbbEfQ
-    - COLUMN-LzV7nzF3DY
-    type: ROW
-  ROW-wNBTxnTgLa:
-    children:
-    - CHART-yR4ztORK8y
-    id: ROW-wNBTxnTgLa
     meta:
       background: BACKGROUND_TRANSPARENT
     parents:
@@ -343,5 +335,18 @@ metadata:
     Resolved: '#00667D'
   show_native_filters: true
   chart_configuration: {}
-  shared_label_colors: {}
+  shared_label_colors:
+    Process: '#1f86c9'
+    Refer: '#47457c'
+    Discard: '#5ac19e'
+    Unmapped: '#00A5B8'
+    Vetting: '#6C54A3'
+    Quality: '#E43E51'
+    System: '#E8D9B4'
+    Personal: '#FCB53B'
+    Rescan: '#EAEC88'
+    Resolved: '#00667D'
+    Not Resolved: '#00A5B8'
+    Closed: '#1FA8C9'
+    Voided: '#454E7C'
 version: 1.0.0

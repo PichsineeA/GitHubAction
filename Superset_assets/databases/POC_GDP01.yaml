@@ -1,10 +1,10 @@
-database_name: POC GDP01 new
+database_name: POC GDP01
 sqlalchemy_uri: postgresql://gdp_user_superset:XXXXXXXXXX@gdp-01.dev.data.ifdsfs.com:5432/gdp01
 cache_timeout: null
 expose_in_sqllab: true
 allow_run_async: false
-allow_ctas: true
-allow_cvas: true
+allow_ctas: false
+allow_cvas: false
 allow_csv_upload: false
 extra:
   allows_virtual_table_explore: true
