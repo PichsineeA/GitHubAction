@@ -147,23 +147,6 @@ position:
     - COLUMN-5U5PYT1RfU
     - ROW-DJ2sorQl4S
     type: CHART
-  CHART-yR4ztORK8y:
-    children: []
-    id: CHART-yR4ztORK8y
-    meta:
-      chartId: 441
-      height: 29
-      sliceName: SI - Complaints by Category
-      sliceNameOverride: Complaints by Category
-      uuid: 1977c09e-ab37-4cbe-b72d-c0f476dfc43c
-      width: 4
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-0nW_HbbEfQ
-    - COLUMN-LzV7nzF3DY
-    - ROW-wNBTxnTgLa
-    type: CHART
   COLUMN-5U5PYT1RfU:
     children:
     - ROW-FdC8JSbciC
@@ -194,7 +177,6 @@ position:
     children:
     - ROW--Zz-DfMkmZ
     - ROW-gqCeLusft9
-    - ROW-wNBTxnTgLa
     id: COLUMN-LzV7nzF3DY
     meta:
       background: BACKGROUND_TRANSPARENT
@@ -302,18 +284,6 @@ position:
     children:
     - CHART-h0z3s6QhJS
     id: ROW-gqCeLusft9
-    meta:
-      background: BACKGROUND_TRANSPARENT
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-0nW_HbbEfQ
-    - COLUMN-LzV7nzF3DY
-    type: ROW
-  ROW-wNBTxnTgLa:
-    children:
-    - CHART-yR4ztORK8y
-    id: ROW-wNBTxnTgLa
     meta:
       background: BACKGROUND_TRANSPARENT
     parents:
