@@ -60,7 +60,6 @@ position:
     - GRID_ID
     - ROW-0nW_HbbEfQ
     - COLUMN-Je7JqENEjd
-    - ROW-d2kZz1nQ9X
     type: CHART
   CHART-h0z3s6QhJS:
     children: []
@@ -162,8 +161,8 @@ position:
     type: COLUMN
   COLUMN-Je7JqENEjd:
     children:
-    - ROW-d2kZz1nQ9X
     - CHART-nCvXTyZGi6
+    - CHART-X1P0-AmqHl
     id: COLUMN-Je7JqENEjd
     meta:
       background: BACKGROUND_TRANSPARENT
@@ -267,18 +266,6 @@ position:
     - GRID_ID
     - ROW-0nW_HbbEfQ
     - COLUMN-5U5PYT1RfU
-    type: ROW
-  ROW-d2kZz1nQ9X:
-    children:
-    - CHART-X1P0-AmqHl
-    id: ROW-d2kZz1nQ9X
-    meta:
-      background: BACKGROUND_TRANSPARENT
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-0nW_HbbEfQ
-    - COLUMN-Je7JqENEjd
     type: ROW
   ROW-gqCeLusft9:
     children:
