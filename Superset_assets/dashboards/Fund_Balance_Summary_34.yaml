@@ -1,0 +1,746 @@
+dashboard_title: Fund Balance Summary
+description: null
+css: "/* ---------------------------------------------------- */\n/* General formatting\
+  \ Shared between all superset data products\n   is contained in the Client Portal\n\
+  \   CSS template which only takes effect in an iframe--\n   to test append the contents\
+  \ of that css template to this\n/* ----------------------------------------------------\
+  \ */\n\n/*-----------------------------------------------------\n   Chart Headers\n\
+  ------------------------------------------------------*/\n\n\n/* SSNC header component\
+  \ */\n.dragdroppable-row div>.dashboard-component-header>.editable-title{\n\tpadding:\
+  \ 3px;\n\tbackground-color: white;\n\tcolor: #00677D;\n}\n\n/*Specifically target\
+  \ headers that come with the chart\n this is to match the small; font size of the\
+  \ chart header component*/\n.dashboard-component .chart-header{\n  font-size:12px;\n\
+  }\n\n/* change chart container background colour to white to hide chart title \n\
+  \  This exists in the CP css template but i have left it here because of difficulty\
+  \ \n  rendering the page if the big number chart object becomes smaller than the\
+  \ \n  header text that isnt meant be visible\n*/\n.background--white .dashboard-component>.chart-slice>.chart-header>.header-title{\n\
+  \  display: none;\n}\n\n/*Hide all other drop down options, apart from refresh and\
+  \ CSV*/\n.chart-slice + div>div>.ant-dropdown>ul>li:not(:first-child):not(:last-child){\n\
+  \  display:none;\n}\n\n/* ---------------------------------------------------- */\n\
+  /* Filter controls                                      */\n/* ----------------------------------------------------\
+  \ */\n\n/*prevents time range filters from taking too much space*/\n.row{\n  margin-right:10px;\n\
+  }\n/*Controls the visibility of native filters. \n  Comment out if you want native\
+  \ charts visble*/\n.css-1k877g7{\n  visibility:hidden;\n}\n\n/*-----------------------------------------------------\n\
+  \   Big number chart\n------------------------------------------------------*/\n\
+  \n/* big number charts - SSNC Teal */\n.big_number_total {\n  text-align: center;\n\
+  \  background-color: #00677F;\n  color: white;\n  border-radius: 5px;\n}\n\n.big_number_total>.superset-legacy-chart-big-number{\n\
+  \  height:70px !important;\n}\n.big_number_total .header-line{\n  font-size:20px\
+  \ !important;\n  height:23px !important;\n}\n.big_number_total .subheader-line{\n\
+  \  font-size:12px !important;\n  height:16px !important;  \n}\n\n\n\n/*-----------------------------------------------------\n\
+  \   Bullet chart\n------------------------------------------------------*/\n/* Make\
+  \ the start of the x axis of the bullet chart visible */\n/* ignore warnings, CSS\
+  \ doesnt recognise the SVG elements but they work */\n.nv-bulletChart>g>g[transform=\"\
+  translate(0,0)\"]>text{\n  text-anchor: start;\n}\n\n/* ----------------------------------------------------\
+  \ */\n/* Table formatting                                     */\n/* ----------------------------------------------------\
+  \ */\n\n/*Custom Cell bars*/\ntd{\n  height: 1px;  /*allows internal div to push\
+  \ against the table cell*/\n}\n/*----------------------------------------------------\
+  \ \n###Custom Dashboard formatting###\n----------------------------------------------------\
+  \ */\n\n/* HTML table with conditional formatting*/\ntd>div{\n  height: calc(100%\
+  \ + 10px); /*Fill the table cell accounting for 5px parent padding*/\n  margin:-5px;\
+  \ /* push back on 5px parent padding*/\n  padding: 5px; /*internal padding to match\
+  \ rest of table padding*/\n  display: table;/*needed in firefox for all other aspects\
+  \ to work*/\n  width: calc(100% + 10px);/*needed in firefox for all other aspects\
+  \ to work*/\n}\n/*Format upward movement*/\n.up_move{\n  background-color:#A4D65E;\n\
+  }\n\n/*Format downward movement*/\n.down_move{\n  color:white;\n  background-color:#BD374A;\n\
+  }\n\n/*Format no movement*/\n.no_move{\n  color:white;\n  background-color:gray;\n\
+  }\n\n/*Format first movement*/\n.first_move{\n  color:white;\n  background-color:#0077C8;\n\
+  }\n\n\n/*----------------------\n  Row limit alert\n-----------------------*/\n\
+  /*Hide the ability to display ALL rows*/\n.limit-red{\n  background-color:red;\n\
+  \  white-space: pre;\n  color: white;\n}\n.limit-green{\n  background-color:green;\n\
+  \  white-space: pre;\n  color: white;\n}\n/*-----------------------*/\n\n\n/*----------------------\n\
+  \  PAGINATION and limit controls for tables\n-----------------------*/\n/*WARN USER\
+  \ when query limits are hit*/\ninput[placeholder=\"30000 records...\"],\ninput[placeholder=\"\
+  30000 records...\"]::placeholder\n{\n  background-color:red;\n  color:white;\n}\n\
+  /*-----------------------*/\n\n\n/*----------------------\n  Display CSS button\
+  \ for Slice 132 (fmr-fbs-detail)\n-----------------------*/\n#slice_132-controls{\n\
+  \  display:flex;\n}\n/*----------------------*/\n\n/*Specific to FBS only */\n.dashboard-markdown\
+  \ div{\n  padding-top: 0;\n  padding-bottom:0;\n}\n.dashboard-component-divider{\n\
+  \  padding: 0;\n}"
+slug: fund-balance-summary
+uuid: dc7262d9-a3bd-8d06-6db2-5694e121de0b
+position:
+  CHART-09s5-Ujo8Z:
+    children: []
+    id: CHART-09s5-Ujo8Z
+    meta:
+      chartId: 522
+      height: 13
+      sliceName: FMR - FBS - Total IVC
+      uuid: bd42c261-18bf-3452-193f-c872fd65785b
+      width: 2
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-D06KfsVoqQ
+    - COLUMN-wtbgGEvwft
+    - ROW-RTvEuTgPKR
+    - COLUMN-difgmLNCYH
+    type: CHART
+  CHART-Aefrw2rC0_:
+    children: []
+    id: CHART-Aefrw2rC0_
+    meta:
+      chartId: 322
+      height: 13
+      sliceName: FMR - FBS - Total Prior Value
+      uuid: 1eb139dc-29da-5149-c27b-d5d3f8554ba5
+      width: 1
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-D06KfsVoqQ
+    - COLUMN-wtbgGEvwft
+    - ROW-RTvEuTgPKR
+    - COLUMN-ZhyKomucRU
+    type: CHART
+  CHART-DoPuUmVuUU:
+    children: []
+    id: CHART-DoPuUmVuUU
+    meta:
+      chartId: 331
+      height: 13
+      sliceName: FMR - FBS - Total Value
+      uuid: 43fda5c2-0aea-b699-9006-777b7b25e43d
+      width: 1
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-D06KfsVoqQ
+    - COLUMN-wtbgGEvwft
+    - ROW-RTvEuTgPKR
+    - COLUMN-LK-CD-hJ_i
+    type: CHART
+  CHART-EgPDm7-_sX:
+    children: []
+    id: CHART-EgPDm7-_sX
+    meta:
+      chartId: 261
+      height: 86
+      sliceName: FMR - FBS - Summary Table
+      sliceNameOverride: Details
+      uuid: 11b8b90b-7d0b-fdcf-cc84-0667ba6dc798
+      width: 4
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-xa68UPJt_
+    - ROW-V_XEJJtVMC
+    - COLUMN-baPAMUdU50
+    type: CHART
+  CHART-FNgKR6SaS_:
+    children: []
+    id: CHART-FNgKR6SaS_
+    meta:
+      chartId: 516
+      height: 22
+      sliceName: "FMR - FBS \u2013 Date Filters"
+      uuid: 266ee7b9-1556-e2d1-5734-27269d63f31a
+      width: 2
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-D06KfsVoqQ
+    - COLUMN-Ij5WL3nabs
+    - ROW-mm6WUaUOhn
+    type: CHART
+  CHART-LbJ5zIRn8J:
+    children: []
+    id: CHART-LbJ5zIRn8J
+    meta:
+      chartId: 555
+      height: 13
+      sliceName: FMR - FBS - Total Funds
+      uuid: e866b6a9-c09d-b9b2-7391-c3d6d65b1f6c
+      width: 1
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-D06KfsVoqQ
+    - COLUMN-wtbgGEvwft
+    - ROW-RTvEuTgPKR
+    - COLUMN-hjYk0D_Qr0
+    type: CHART
+  CHART-OVxjzw0qrR:
+    children: []
+    id: CHART-OVxjzw0qrR
+    meta:
+      chartId: 235
+      height: 37
+      sliceName: FMR - FBS - Other Filters
+      uuid: d1097d7e-be2d-b8f1-6d6a-f5dfab11cbc4
+      width: 2
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-D06KfsVoqQ
+    - COLUMN-Ij5WL3nabs
+    type: CHART
+  CHART-XyVsUIi2Ef:
+    children: []
+    id: CHART-XyVsUIi2Ef
+    meta:
+      chartId: 477
+      height: 67
+      sliceName: FMR - FBS - Top Ten Movements
+      sliceNameOverride: Largest Movements
+      uuid: 6af0ecaa-bf2a-2a3a-cf95-a245cec938e6
+      width: 2
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-D06KfsVoqQ
+    - COLUMN-wtbgGEvwft
+    - ROW-1cUzVhfAza
+    - COLUMN-e1J5KdcqBw
+    type: CHART
+  CHART-gqlop4Ckd-:
+    children: []
+    id: CHART-gqlop4Ckd-
+    meta:
+      chartId: 410
+      height: 17
+      sliceName: FMR - FBS - MaxRows
+      uuid: d62e6e2f-0ed3-458b-9484-4ce8fccf4b00
+      width: 12
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-xa68UPJt_
+    - ROW-oD04Ar7TVV
+    type: CHART
+  CHART-ilkIiyF8VP:
+    children: []
+    id: CHART-ilkIiyF8VP
+    meta:
+      chartId: 446
+      height: 82
+      sliceName: FMR - FBS - Value trend
+      uuid: d0baa42a-ffd1-4c3f-c37f-54e6bb86f503
+      width: 4
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-D06KfsVoqQ
+    - COLUMN-KU2j7kpsdj
+    type: CHART
+  CHART-q_1tSYfiU9:
+    children: []
+    id: CHART-q_1tSYfiU9
+    meta:
+      chartId: 283
+      height: 21
+      sliceName: FMR - CP Filter
+      uuid: 88d4ce2e-696d-48cf-9e52-8fe81e19e1d1
+      width: 2
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-gilk1_DOd
+    - COLUMN-lUWybzggTb
+    type: CHART
+  CHART-sRPIAaojkJ:
+    children: []
+    id: CHART-sRPIAaojkJ
+    meta:
+      chartId: 398
+      height: 67
+      sliceName: FMR - FBS - Top Ten IVC
+      sliceNameOverride: Highest Value Share Classes
+      uuid: 5c0ccb64-e8f8-144c-74c4-5b177ccc8528
+      width: 2
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-D06KfsVoqQ
+    - COLUMN-wtbgGEvwft
+    - ROW-1cUzVhfAza
+    - COLUMN-0o9QEMF8qa
+    type: CHART
+  COLUMN-0o9QEMF8qa:
+    children:
+    - CHART-sRPIAaojkJ
+    id: COLUMN-0o9QEMF8qa
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 2
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-D06KfsVoqQ
+    - COLUMN-wtbgGEvwft
+    - ROW-1cUzVhfAza
+    type: COLUMN
+  COLUMN-G3WS-VPqmV:
+    children:
+    - HEADER-neDd-YlagE
+    id: COLUMN-G3WS-VPqmV
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 4
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-IaEKqUqmd3
+    type: COLUMN
+  COLUMN-IcG48G6g0j:
+    children:
+    - HEADER-Rc7SDx6Tcf
+    id: COLUMN-IcG48G6g0j
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 2
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-IaEKqUqmd3
+    type: COLUMN
+  COLUMN-Ij5WL3nabs:
+    children:
+    - ROW-mm6WUaUOhn
+    - DIVIDER-tcnsn78GzB
+    - MARKDOWN-_ad05nZCcv
+    - CHART-OVxjzw0qrR
+    id: COLUMN-Ij5WL3nabs
+    meta:
+      background: BACKGROUND_WHITE
+      width: 2
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-D06KfsVoqQ
+    type: COLUMN
+  COLUMN-KU2j7kpsdj:
+    children:
+    - CHART-ilkIiyF8VP
+    id: COLUMN-KU2j7kpsdj
+    meta:
+      background: BACKGROUND_WHITE
+      width: 6
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-D06KfsVoqQ
+    type: COLUMN
+  COLUMN-LK-CD-hJ_i:
+    children:
+    - CHART-DoPuUmVuUU
+    id: COLUMN-LK-CD-hJ_i
+    meta:
+      background: BACKGROUND_WHITE
+      width: 1
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-D06KfsVoqQ
+    - COLUMN-wtbgGEvwft
+    - ROW-RTvEuTgPKR
+    type: COLUMN
+  COLUMN-ZhyKomucRU:
+    children:
+    - CHART-Aefrw2rC0_
+    id: COLUMN-ZhyKomucRU
+    meta:
+      background: BACKGROUND_WHITE
+      width: 1
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-D06KfsVoqQ
+    - COLUMN-wtbgGEvwft
+    - ROW-RTvEuTgPKR
+    type: COLUMN
+  COLUMN-baPAMUdU50:
+    children:
+    - CHART-EgPDm7-_sX
+    id: COLUMN-baPAMUdU50
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 12
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-xa68UPJt_
+    - ROW-V_XEJJtVMC
+    type: COLUMN
+  COLUMN-difgmLNCYH:
+    children:
+    - CHART-09s5-Ujo8Z
+    id: COLUMN-difgmLNCYH
+    meta:
+      background: BACKGROUND_WHITE
+      width: 1
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-D06KfsVoqQ
+    - COLUMN-wtbgGEvwft
+    - ROW-RTvEuTgPKR
+    type: COLUMN
+  COLUMN-e1J5KdcqBw:
+    children:
+    - CHART-XyVsUIi2Ef
+    id: COLUMN-e1J5KdcqBw
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 2
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-D06KfsVoqQ
+    - COLUMN-wtbgGEvwft
+    - ROW-1cUzVhfAza
+    type: COLUMN
+  COLUMN-hjYk0D_Qr0:
+    children:
+    - CHART-LbJ5zIRn8J
+    id: COLUMN-hjYk0D_Qr0
+    meta:
+      background: BACKGROUND_WHITE
+      width: 1
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-D06KfsVoqQ
+    - COLUMN-wtbgGEvwft
+    - ROW-RTvEuTgPKR
+    type: COLUMN
+  COLUMN-lUWybzggTb:
+    children:
+    - CHART-q_1tSYfiU9
+    id: COLUMN-lUWybzggTb
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 12
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-gilk1_DOd
+    type: COLUMN
+  COLUMN-uCTwMFjR4E:
+    children:
+    - HEADER-NkePkWM7iy
+    id: COLUMN-uCTwMFjR4E
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-IaEKqUqmd3
+    type: COLUMN
+  COLUMN-wtbgGEvwft:
+    children:
+    - ROW-RTvEuTgPKR
+    - ROW-1cUzVhfAza
+    id: COLUMN-wtbgGEvwft
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 4
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-D06KfsVoqQ
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  DIVIDER-tcnsn78GzB:
+    children: []
+    id: DIVIDER-tcnsn78GzB
+    meta: {}
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-D06KfsVoqQ
+    - COLUMN-Ij5WL3nabs
+    type: DIVIDER
+  GRID_ID:
+    children: []
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER-NkePkWM7iy:
+    children: []
+    id: HEADER-NkePkWM7iy
+    meta:
+      background: BACKGROUND_WHITE
+      headerSize: SMALL_HEADER
+      text: Portfolio Value History
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-IaEKqUqmd3
+    - COLUMN-uCTwMFjR4E
+    type: HEADER
+  HEADER-Rc7SDx6Tcf:
+    children: []
+    id: HEADER-Rc7SDx6Tcf
+    meta:
+      background: BACKGROUND_WHITE
+      headerSize: SMALL_HEADER
+      text: Filters
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-IaEKqUqmd3
+    - COLUMN-IcG48G6g0j
+    type: HEADER
+  HEADER-neDd-YlagE:
+    children: []
+    id: HEADER-neDd-YlagE
+    meta:
+      background: BACKGROUND_WHITE
+      headerSize: SMALL_HEADER
+      text: Portfolio at Valuation Date
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-IaEKqUqmd3
+    - COLUMN-G3WS-VPqmV
+    type: HEADER
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Fund Balance Summary
+    type: HEADER
+  MARKDOWN-_ad05nZCcv:
+    children: []
+    id: MARKDOWN-_ad05nZCcv
+    meta:
+      code: "###### Begin by selecting a **Valuation Date** then use the other filters\
+        \ to _refine_ the metrics. \n\n---\n\n <sub> The filters on this dashboard\
+        \ affect the data tab.</sub>"
+      height: 17
+      width: 2
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-D06KfsVoqQ
+    - COLUMN-Ij5WL3nabs
+    type: MARKDOWN
+  ROOT_ID:
+    children:
+    - TABS-5ChcPrtmhq
+    id: ROOT_ID
+    type: ROOT
+  ROW-1cUzVhfAza:
+    children:
+    - COLUMN-e1J5KdcqBw
+    - COLUMN-0o9QEMF8qa
+    id: ROW-1cUzVhfAza
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-D06KfsVoqQ
+    - COLUMN-wtbgGEvwft
+    type: ROW
+  ROW-D06KfsVoqQ:
+    children:
+    - COLUMN-Ij5WL3nabs
+    - COLUMN-wtbgGEvwft
+    - COLUMN-KU2j7kpsdj
+    id: ROW-D06KfsVoqQ
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    type: ROW
+  ROW-IaEKqUqmd3:
+    children:
+    - COLUMN-IcG48G6g0j
+    - COLUMN-G3WS-VPqmV
+    - COLUMN-uCTwMFjR4E
+    id: ROW-IaEKqUqmd3
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    type: ROW
+  ROW-RTvEuTgPKR:
+    children:
+    - COLUMN-hjYk0D_Qr0
+    - COLUMN-difgmLNCYH
+    - COLUMN-LK-CD-hJ_i
+    - COLUMN-ZhyKomucRU
+    id: ROW-RTvEuTgPKR
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-D06KfsVoqQ
+    - COLUMN-wtbgGEvwft
+    type: ROW
+  ROW-V_XEJJtVMC:
+    children:
+    - COLUMN-baPAMUdU50
+    id: ROW-V_XEJJtVMC
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-xa68UPJt_
+    type: ROW
+  ROW-gilk1_DOd:
+    children:
+    - COLUMN-lUWybzggTb
+    id: ROW-gilk1_DOd
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    type: ROW
+  ROW-mm6WUaUOhn:
+    children:
+    - CHART-FNgKR6SaS_
+    id: ROW-mm6WUaUOhn
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-IVhxagppTH
+    - ROW-D06KfsVoqQ
+    - COLUMN-Ij5WL3nabs
+    type: ROW
+  ROW-oD04Ar7TVV:
+    children:
+    - CHART-gqlop4Ckd-
+    id: ROW-oD04Ar7TVV
+    meta:
+      background: BACKGROUND_WHITE
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-xa68UPJt_
+    type: ROW
+  ROW-xhVkf0OQLs:
+    children: []
+    id: ROW-xhVkf0OQLs
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    - TAB-xa68UPJt_
+    type: ROW
+  TAB-IVhxagppTH:
+    children:
+    - ROW-gilk1_DOd
+    - ROW-IaEKqUqmd3
+    - ROW-D06KfsVoqQ
+    id: TAB-IVhxagppTH
+    meta:
+      text: Dashboard
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    type: TAB
+  TAB-xa68UPJt_:
+    children:
+    - ROW-xhVkf0OQLs
+    - ROW-oD04Ar7TVV
+    - ROW-V_XEJJtVMC
+    id: TAB-xa68UPJt_
+    meta:
+      text: Data
+    parents:
+    - ROOT_ID
+    - TABS-5ChcPrtmhq
+    type: TAB
+  TABS-5ChcPrtmhq:
+    children:
+    - TAB-IVhxagppTH
+    - TAB-xa68UPJt_
+    id: TABS-5ChcPrtmhq
+    meta: {}
+    parents:
+    - ROOT_ID
+    type: TABS
+metadata:
+  timed_refresh_immune_slices: []
+  expanded_slices: {}
+  refresh_frequency: 0
+  default_filters: '{"516": {"valuation_date_txt_jinja": "", "vp_cutoff_with_timezone_jinja":
+    ""}, "235": {"ccy_id": ""}, "283": {"ein": null}}'
+  color_scheme: null
+  filter_scopes:
+    '516':
+      valuation_date_txt_jinja:
+        scope:
+        - ROOT_ID
+        immune:
+        - 283
+        - 235
+        - 446
+      vp_cutoff_with_timezone_jinja:
+        scope:
+        - ROOT_ID
+        immune:
+        - 283
+        - 235
+        - 446
+    '235':
+      ivh_description:
+        scope:
+        - ROOT_ID
+        immune:
+        - 283
+        - 516
+      ivc_long_name:
+        scope:
+        - ROOT_ID
+        immune:
+        - 283
+        - 516
+      ccy_id:
+        scope:
+        - ROOT_ID
+        immune:
+        - 283
+        - 516
+    '283':
+      ein:
+        scope:
+        - ROOT_ID
+        immune: []
+  filter_configuration: []
+version: 1.0.0

@@ -19,7 +19,8 @@ metrics:
   expression: sum(last_fund_value)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 - metric_name: Today's Movement
   verbose_name: Today's Movement
@@ -27,7 +28,8 @@ metrics:
   expression: sum(net_movement)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 - metric_name: Movement
   verbose_name: Movement
@@ -35,7 +37,8 @@ metrics:
   expression: sum(net_movement / last_fund_value::float)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 - metric_name: Net Asset Value
   verbose_name: NAV
@@ -43,7 +46,8 @@ metrics:
   expression: sum(net_movement)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 - metric_name: count
   verbose_name: COUNT(*)
@@ -51,7 +55,8 @@ metrics:
   expression: COUNT(*)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 columns:
 - column_name: Net Movement Percent

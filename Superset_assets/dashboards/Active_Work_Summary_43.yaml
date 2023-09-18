@@ -1,0 +1,363 @@
+dashboard_title: Active Work Summary
+description: null
+css: "/* ---------------------------------------------------- */\n/* Filter controls\
+  \                                      */\n/* ----------------------------------------------------\
+  \ */\n\n/* Controls the visibility of native filters. \n   Comment out if you want\
+  \ native charts visble*/\n.css-1k877g7 {\n  visibility:hidden;\n}\n\n/* ----------------------------------------------------\
+  \ */\n/* Big number charts                                    */\n/* ----------------------------------------------------\
+  \ */\n\n/* Big number charts - SSNC Teal */\n.big_number_total {\n\ttext-align:\
+  \ center;\n\tbackground-color: #00667D;\n\tcolor: white;\n\tborder-radius: 5px;\n\
+  }\n\n\n"
+slug: active-work-summary-0
+uuid: 68793b6a-65e5-4f96-8bc8-f27bead710e9
+position:
+  CHART--L1Rt9LYky:
+    children: []
+    id: CHART--L1Rt9LYky
+    meta:
+      chartId: 250
+      height: 76
+      sliceName: SI0 - Outstanding Work Items
+      sliceNameOverride: Active Work Items
+      uuid: e64ed552-dd36-402f-aa04-3672e0af814e
+      width: 10
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-3UrJTcLdrZ
+    - COLUMN-DegZEKMn27
+    - TABS-m3555rMOrb
+    - TAB-55_1Na0cd
+    - ROW-mnNfWxQrN4
+    type: CHART
+  CHART-25rzP435AC:
+    children: []
+    id: CHART-25rzP435AC
+    meta:
+      chartId: 311
+      height: 39
+      sliceName: SI0 - Oldest Items by Work Type
+      sliceNameOverride: Oldest Work Item by Work Type
+      uuid: 71337947-f2cd-4732-ae2e-4f4f475fa17d
+      width: 5
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-3UrJTcLdrZ
+    - COLUMN-DegZEKMn27
+    - TABS-m3555rMOrb
+    - TAB-CJR9cXVXnu
+    - ROW-efw7XGD5o
+    type: CHART
+  CHART-8zdILrkOHz:
+    children: []
+    id: CHART-8zdILrkOHz
+    meta:
+      chartId: 430
+      height: 35
+      sliceName: SI0 - Outstanding Items by Department
+      sliceNameOverride: Active Work by Department
+      uuid: d23d1588-41c1-47a3-a808-4813f753c10c
+      width: 5
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-3UrJTcLdrZ
+    - COLUMN-DegZEKMn27
+    - TABS-m3555rMOrb
+    - TAB-CJR9cXVXnu
+    - ROW-Y7CCRGuqAk
+    type: CHART
+  CHART-Hid1K7tFc7:
+    children: []
+    id: CHART-Hid1K7tFc7
+    meta:
+      chartId: 275
+      height: 81
+      sliceName: SI0 - Work Item Filters
+      sliceNameOverride: Work Item Filters
+      uuid: b50029d2-e650-4fa4-a2bd-184a051662f2
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-3UrJTcLdrZ
+    - COLUMN-2Ld5Mq87Fx
+    type: CHART
+  CHART-Wqka5_DmT2:
+    children: []
+    id: CHART-Wqka5_DmT2
+    meta:
+      chartId: 544
+      height: 35
+      sliceName: SI0 - Outstanding Items by Stage
+      sliceNameOverride: Active Work by Stage
+      uuid: 204a2fd4-19d9-465a-b196-d387465f65da
+      width: 5
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-3UrJTcLdrZ
+    - COLUMN-DegZEKMn27
+    - TABS-m3555rMOrb
+    - TAB-CJR9cXVXnu
+    - ROW-Y7CCRGuqAk
+    type: CHART
+  CHART-XCqxYSUZn7:
+    children: []
+    id: CHART-XCqxYSUZn7
+    meta:
+      chartId: 219
+      height: 39
+      sliceName: SI0 - Outstanding Items by Work Type
+      sliceNameOverride: Active Work by Work Type - Top 10
+      uuid: 71aaebea-7724-4b5a-b5fb-fa11f7aa29f4
+      width: 5
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-3UrJTcLdrZ
+    - COLUMN-DegZEKMn27
+    - TABS-m3555rMOrb
+    - TAB-CJR9cXVXnu
+    - ROW-efw7XGD5o
+    type: CHART
+  CHART-k1sawmrZ3y:
+    children: []
+    id: CHART-k1sawmrZ3y
+    meta:
+      chartId: 282
+      height: 76
+      sliceName: SI0 - Outstanding Work Summary
+      sliceNameOverride: Active Work Summary
+      uuid: 066da865-4803-4e57-8430-5a89323422f8
+      width: 10
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-3UrJTcLdrZ
+    - COLUMN-DegZEKMn27
+    - TABS-m3555rMOrb
+    - TAB-AFYGUKMyY
+    - ROW-QjrHZPm0yZ
+    type: CHART
+  COLUMN-2Ld5Mq87Fx:
+    children:
+    - CHART-Hid1K7tFc7
+    id: COLUMN-2Ld5Mq87Fx
+    meta:
+      background: BACKGROUND_WHITE
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-3UrJTcLdrZ
+    type: COLUMN
+  COLUMN-DegZEKMn27:
+    children:
+    - TABS-m3555rMOrb
+    id: COLUMN-DegZEKMn27
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 10
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-3UrJTcLdrZ
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-DMi9GA0C1v
+    - ROW-3UrJTcLdrZ
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Active Work Summary
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-3UrJTcLdrZ:
+    children:
+    - COLUMN-2Ld5Mq87Fx
+    - COLUMN-DegZEKMn27
+    id: ROW-3UrJTcLdrZ
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-DMi9GA0C1v:
+    children: []
+    id: ROW-DMi9GA0C1v
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-QjrHZPm0yZ:
+    children:
+    - CHART-k1sawmrZ3y
+    id: ROW-QjrHZPm0yZ
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-3UrJTcLdrZ
+    - COLUMN-DegZEKMn27
+    - TABS-m3555rMOrb
+    - TAB-AFYGUKMyY
+    type: ROW
+  ROW-Y7CCRGuqAk:
+    children:
+    - CHART-8zdILrkOHz
+    - CHART-Wqka5_DmT2
+    id: ROW-Y7CCRGuqAk
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-3UrJTcLdrZ
+    - COLUMN-DegZEKMn27
+    - TABS-m3555rMOrb
+    - TAB-CJR9cXVXnu
+    type: ROW
+  ROW-efw7XGD5o:
+    children:
+    - CHART-XCqxYSUZn7
+    - CHART-25rzP435AC
+    id: ROW-efw7XGD5o
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-3UrJTcLdrZ
+    - COLUMN-DegZEKMn27
+    - TABS-m3555rMOrb
+    - TAB-CJR9cXVXnu
+    type: ROW
+  ROW-mnNfWxQrN4:
+    children:
+    - CHART--L1Rt9LYky
+    id: ROW-mnNfWxQrN4
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-3UrJTcLdrZ
+    - COLUMN-DegZEKMn27
+    - TABS-m3555rMOrb
+    - TAB-55_1Na0cd
+    type: ROW
+  TAB-55_1Na0cd:
+    children:
+    - ROW-mnNfWxQrN4
+    id: TAB-55_1Na0cd
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: List View
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-3UrJTcLdrZ
+    - COLUMN-DegZEKMn27
+    - TABS-m3555rMOrb
+    type: TAB
+  TAB-AFYGUKMyY:
+    children:
+    - ROW-QjrHZPm0yZ
+    id: TAB-AFYGUKMyY
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Analysis View
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-3UrJTcLdrZ
+    - COLUMN-DegZEKMn27
+    - TABS-m3555rMOrb
+    type: TAB
+  TAB-CJR9cXVXnu:
+    children:
+    - ROW-Y7CCRGuqAk
+    - ROW-efw7XGD5o
+    id: TAB-CJR9cXVXnu
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Summary View
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-3UrJTcLdrZ
+    - COLUMN-DegZEKMn27
+    - TABS-m3555rMOrb
+    type: TAB
+  TABS-m3555rMOrb:
+    children:
+    - TAB-CJR9cXVXnu
+    - TAB-AFYGUKMyY
+    - TAB-55_1Na0cd
+    id: TABS-m3555rMOrb
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-3UrJTcLdrZ
+    - COLUMN-DegZEKMn27
+    type: TABS
+metadata:
+  show_native_filters: true
+  color_scheme: ''
+  refresh_frequency: 0
+  expanded_slices: {}
+  label_colors: {}
+  timed_refresh_immune_slices: []
+  default_filters: '{}'
+  chart_configuration: {}
+  filter_scopes:
+    '275':
+      owner_department:
+        scope:
+        - ROOT_ID
+        immune: []
+      owner_team:
+        scope:
+        - ROOT_ID
+        immune: []
+      wrktype:
+        scope:
+        - ROOT_ID
+        immune: []
+      processing_stage:
+        scope:
+        - ROOT_ID
+        immune: []
+      age_bus_days_band:
+        scope:
+        - ROOT_ID
+        immune: []
+      suspend_flag:
+        scope:
+        - ROOT_ID
+        immune: []
+      manual_deal_flag:
+        scope:
+        - ROOT_ID
+        immune: []
+version: 1.0.0

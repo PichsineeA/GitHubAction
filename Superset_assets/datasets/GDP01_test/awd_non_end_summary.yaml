@@ -20,7 +20,8 @@ metrics:
   description: A count of the number of work items currently at the Vetting processing
     stage
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 - metric_name: Day 31+
   verbose_name: Day 31+
@@ -28,7 +29,8 @@ metrics:
   expression: sum(case age_bus_days_band when 'Day 30+' then 1 else 0 end)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 - metric_name: Day 11-30
   verbose_name: Day 11-30
@@ -36,7 +38,8 @@ metrics:
   expression: sum(case age_bus_days_band when 'Day 11-30' then 1 else 0 end)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 - metric_name: Day 6-10
   verbose_name: Day 6-10
@@ -44,7 +47,8 @@ metrics:
   expression: sum(case age_bus_days_band when 'Day 6-10' then 1 else 0 end)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 - metric_name: Day 1
   verbose_name: Day 1
@@ -52,7 +56,8 @@ metrics:
   expression: sum(case age_bus_days_band when 'Day 1' then 1 else 0 end)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 - metric_name: Day 2
   verbose_name: Day 2
@@ -60,7 +65,8 @@ metrics:
   expression: sum(case age_bus_days_band when 'Day 2' then 1 else 0 end)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 - metric_name: Day 3
   verbose_name: Day 3
@@ -68,7 +74,8 @@ metrics:
   expression: sum(case age_bus_days_band when 'Day 3' then 1 else 0 end)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 - metric_name: Day 4
   verbose_name: Day 4
@@ -76,7 +83,8 @@ metrics:
   expression: sum(case age_bus_days_band when 'Day 4' then 1 else 0 end)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 - metric_name: Day 5
   verbose_name: Day 5
@@ -84,7 +92,8 @@ metrics:
   expression: sum(case age_bus_days_band when 'Day 5' then 1 else 0 end)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 - metric_name: Total Suspended
   verbose_name: Suspended
@@ -92,7 +101,8 @@ metrics:
   expression: sum(case suspend_flag when 'Yes' then 1 else 0 end)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 - metric_name: Discard
   verbose_name: Discard
@@ -100,7 +110,8 @@ metrics:
   expression: sum(case processing_stage when 'Discard' then 1 else 0 end)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 - metric_name: Hold
   verbose_name: Hold
@@ -108,7 +119,8 @@ metrics:
   expression: sum(case processing_stage when 'Hold' then 1 else 0 end)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 - metric_name: Personal
   verbose_name: Personal
@@ -116,7 +128,8 @@ metrics:
   expression: sum(case processing_stage when 'Personal' then 1 else 0 end)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 - metric_name: Process
   verbose_name: Process
@@ -124,7 +137,8 @@ metrics:
   expression: sum(case processing_stage when 'Process' then 1 else 0 end)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 - metric_name: Quality
   verbose_name: Quality
@@ -132,7 +146,8 @@ metrics:
   expression: sum(case processing_stage when 'Quality' then 1 else 0 end)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 - metric_name: Rescan
   verbose_name: Rescan
@@ -140,7 +155,8 @@ metrics:
   expression: sum(case processing_stage when 'Rescan' then 1 else 0 end)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 - metric_name: Refer
   verbose_name: Refer
@@ -148,7 +164,8 @@ metrics:
   expression: sum(case processing_stage when 'Refer' then 1 else 0 end)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 - metric_name: System
   verbose_name: System
@@ -156,7 +173,8 @@ metrics:
   expression: sum(case processing_stage when 'System' then 1 else 0 end)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 - metric_name: Oldest item in Business Days
   verbose_name: Age in Business Days
@@ -164,7 +182,8 @@ metrics:
   expression: max(age_bus_days)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 - metric_name: count
   verbose_name: Number of Work Items
@@ -172,7 +191,8 @@ metrics:
   expression: COUNT(*)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 - metric_name: Number of Work Items
   verbose_name: Total
@@ -180,7 +200,8 @@ metrics:
   expression: count(*)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 columns:
 - column_name: crdattim

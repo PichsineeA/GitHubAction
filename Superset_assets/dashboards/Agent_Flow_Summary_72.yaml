@@ -1,0 +1,263 @@
+dashboard_title: Agent Flow Summary
+description: null
+css: "/* ---------------------------------------------------- */\n/* General formatting\
+  \ Shared between all superset data products\n   is contained in the Client Portal\n\
+  \   CSS template which only takes effect in an iframe--\n   to test append the contents\
+  \ of that css template to this\n/* ----------------------------------------------------\
+  \ */\n\n/*-----------------------------------------------------\n   Chart Headers\n\
+  ------------------------------------------------------*/\n\n\n/* SSNC header component\
+  \ */\n.dragdroppable-row div>.dashboard-component-header>.editable-title{\n\tpadding:\
+  \ 3px;\n\tbackground-color: white;\n\tcolor: #00677D;\n}\n\n/*Specifically target\
+  \ headers that come with the chart\n this is to match the small font size of the\
+  \ chart header component*/\n.dashboard-component .chart-header{\n  font-size:12px;\n\
+  }\n\n/* change chart container background colour to white to hide chart title \n\
+  \  This exists in the CP css template but i have left it here because of difficulty\
+  \ \n  rendering the page if the big number chart object becomes smaller than the\
+  \ \n  header text that isnt meant be visible\n*/\n.background--white .dashboard-component>.chart-slice>.chart-header>.header-title{\n\
+  \  display: none;\n}\n\n/*Hide all other drop down options, apart from refresh and\
+  \ CSV*/\n.chart-slice + div>div>.ant-dropdown>ul>li:not(:first-child):not(:last-child){\n\
+  \  display:none;\n}\n\n/* ---------------------------------------------------- */\n\
+  /* Filter controls                                      */\n/* ----------------------------------------------------\
+  \ */\n\n/*prevents time range filters from taking too much space*/\n.row{\n  margin-right:10px;\n\
+  }\n/*Controls the visibility of native filters. \n  Comment out if you want native\
+  \ charts visble*/\n.css-1k877g7{\n  visibility:hidden;\n}\n\n/*-----------------------------------------------------\n\
+  \   Big number chart\n------------------------------------------------------*/\n\
+  \n/* big number charts - SSNC Teal */\n.big_number_total {\n  text-align: center;\n\
+  \  background-color: #00677F;\n  color: white;\n  border-radius: 5px;\n}\n\n.big_number_total>.superset-legacy-chart-big-number{\n\
+  \  height:70px !important;\n}\n.big_number_total .header-line{\n  font-size:20px\
+  \ !important;\n  height:23px !important;\n}\n.big_number_total .subheader-line{\n\
+  \  font-size:12px !important;\n  height:16px !important;  \n}\n\n\n\n/*-----------------------------------------------------\n\
+  \   Bullet chart\n------------------------------------------------------*/\n/* Make\
+  \ the start of the x axis of the bullet chart visible */\n/* ignore warnings, CSS\
+  \ doesnt recognise the SVG elements but they work */\n.nv-bulletChart>g>g[transform=\"\
+  translate(0,0)\"]>text{\n  text-anchor: start;\n}\n\n/* ----------------------------------------------------\
+  \ */\n/* Table formatting                                     */\n/* ----------------------------------------------------\
+  \ */\n\n/*Custom Cell bars*/\ntd{\n  height: 1px;  /*allows internal div to push\
+  \ against the table cell*/\n}\n/*----------------------------------------------------\
+  \ \n###Custom Dashboard formatting###\n----------------------------------------------------\
+  \ */\n\n/* HTML table with conditional formatting*/\ntd>div{\n  height: calc(100%\
+  \ + 10px); /*Fill the table cell accounting for 5px parent padding*/\n  margin:-5px;\
+  \ /* push back on 5px parent padding*/\n  padding: 5px; /*internal padding to match\
+  \ rest of table padding*/\n  display: table;/*needed in firefox for all other aspects\
+  \ to work*/\n  width: calc(100% + 10px);/*needed in firefox for all other aspects\
+  \ to work*/\n}\n/*Format upward movement*/\n.up_move{\n  background-color:#A4D65E;\n\
+  }\n\n/*Format downward movement*/\n.down_move{\n  color:white;\n  background-color:#BD374A;\n\
+  }\n\n/*Format no movement*/\n.no_move{\n  color:white;\n  background-color:gray;\n\
+  }\n\n/*Format first movement*/\n.first_move{\n  color:white;\n  background-color:#0077C8;\n\
+  }\n\n\n/*----------------------\n  Row limit alert\n-----------------------*/\n\
+  /*Hide the ability to display ALL rows*/\n.limit-red{\n  background-color:red;\n\
+  \  white-space: pre;\n  color: white;\n}\n.limit-green{\n  background-color:green;\n\
+  \  white-space: pre;\n  color: white;\n}\n/*-----------------------*/\n\n\n/*----------------------\n\
+  \  PAGINATION and limit controls for tables\n-----------------------*/\n/*WARN USER\
+  \ when query limits are hit*/\ninput[placeholder=\"30000 records...\"],\ninput[placeholder=\"\
+  30000 records...\"]::placeholder\n{\n  background-color:red;\n  color:white;\n}\n\
+  /*-----------------------*/\n\n\n/*----------------------\n  Display CSS button\
+  \ for Slice 268 (fmr-afs-detail)\n-----------------------*/\n#slice_268-controls{\n\
+  \  display:flex;\n}\n/*----------------------*/"
+slug: agent-flow-summary
+uuid: a091ccd0-b606-b36f-01e2-465b7fb656ad
+position:
+  CHART-2BWAI0jgA8:
+    children: []
+    id: CHART-2BWAI0jgA8
+    meta:
+      chartId: 445
+      height: 82
+      sliceName: FMR - AFS - Detail
+      sliceNameOverride: Agent Transactions
+      uuid: 6b3fedcd-b714-52b6-ad5a-0dec1ecf09fb
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ihDDZlQ7B0
+    - COLUMN-5XC_zMFB9s
+    type: CHART
+  CHART-TolNXn1uNU:
+    children: []
+    id: CHART-TolNXn1uNU
+    meta:
+      chartId: 283
+      height: 16
+      sliceName: FMR - CP Filter
+      uuid: 88d4ce2e-696d-48cf-9e52-8fe81e19e1d1
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-GPvP4Wxna
+    type: CHART
+  CHART-VlkDbpTMan:
+    children: []
+    id: CHART-VlkDbpTMan
+    meta:
+      chartId: 365
+      height: 51
+      sliceName: FMR - AFS - Filter
+      uuid: 37baa98e-b8e2-dd91-a6bf-ccb54c7f399b
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ihDDZlQ7B0
+    - COLUMN-7DHcsIXVPY
+    type: CHART
+  CHART-v9n8EQGLUe:
+    children: []
+    id: CHART-v9n8EQGLUe
+    meta:
+      chartId: 281
+      height: 16
+      sliceName: FMR - AFS - MaxRows
+      uuid: 1e3f8388-cd28-4c79-aa81-1b1c66bd01a3
+      width: 10
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ihDDZlQ7B0
+    - COLUMN-5XC_zMFB9s
+    - ROW-1W4mjUc4jM
+    type: CHART
+  COLUMN-5XC_zMFB9s:
+    children:
+    - ROW-1W4mjUc4jM
+    - CHART-2BWAI0jgA8
+    id: COLUMN-5XC_zMFB9s
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 10
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ihDDZlQ7B0
+    type: COLUMN
+  COLUMN-7DHcsIXVPY:
+    children:
+    - CHART-VlkDbpTMan
+    - DIVIDER-M5ojVoJh4F
+    - MARKDOWN-7M9GfdlcXa
+    id: COLUMN-7DHcsIXVPY
+    meta:
+      background: BACKGROUND_WHITE
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ihDDZlQ7B0
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  DIVIDER-M5ojVoJh4F:
+    children: []
+    id: DIVIDER-M5ojVoJh4F
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ihDDZlQ7B0
+    - COLUMN-7DHcsIXVPY
+    type: DIVIDER
+  GRID_ID:
+    children:
+    - ROW-GPvP4Wxna
+    - ROW-ihDDZlQ7B0
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Agent Flow Summary
+    type: HEADER
+  MARKDOWN-7M9GfdlcXa:
+    children: []
+    id: MARKDOWN-7M9GfdlcXa
+    meta:
+      code: Begin by selecting a **Transaction period**(Time Range) then use the additional
+        filters to _refine_ your data.
+      height: 43
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ihDDZlQ7B0
+    - COLUMN-7DHcsIXVPY
+    type: MARKDOWN
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-1W4mjUc4jM:
+    children:
+    - CHART-v9n8EQGLUe
+    id: ROW-1W4mjUc4jM
+    meta:
+      background: BACKGROUND_WHITE
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ihDDZlQ7B0
+    - COLUMN-5XC_zMFB9s
+    type: ROW
+  ROW-GPvP4Wxna:
+    children:
+    - CHART-TolNXn1uNU
+    id: ROW-GPvP4Wxna
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-ihDDZlQ7B0:
+    children:
+    - COLUMN-7DHcsIXVPY
+    - COLUMN-5XC_zMFB9s
+    id: ROW-ihDDZlQ7B0
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  timed_refresh_immune_slices: []
+  filter_scopes:
+    '283':
+      ein:
+        scope:
+        - ROOT_ID
+        immune: []
+    '365':
+      agent_name:
+        scope:
+        - ROOT_ID
+        immune:
+        - 283
+      txnt_description:
+        scope:
+        - ROOT_ID
+        immune:
+        - 283
+      ivh_description:
+        scope:
+        - ROOT_ID
+        immune:
+        - 283
+      ccy_id_fund:
+        scope:
+        - ROOT_ID
+        immune:
+        - 283
+      __time_range:
+        scope:
+        - ROOT_ID
+        immune:
+        - 283
+  expanded_slices: {}
+  refresh_frequency: 0
+  default_filters: '{"365": {"agent_name": null, "__time_range": "No filter"}}'
+  color_scheme: null
+version: 1.0.0

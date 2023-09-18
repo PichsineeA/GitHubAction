@@ -1,0 +1,121 @@
+dashboard_title: Manco Mapping
+description: null
+css: ''
+slug: manco-mapping
+uuid: 14092ef6-5905-5b34-74ba-051c8621fc7b
+position:
+  CHART-siFKkNvbeW:
+    children: []
+    id: CHART-siFKkNvbeW
+    meta:
+      chartId: 460
+      height: 90
+      sliceName: SUP - Manco Mapping
+      sliceNameOverride: Manco Mapping
+      uuid: 5f471f87-bc49-5db0-e809-973dc80e4677
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-vJBfMXsxD
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-vJBfMXsxD
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Manco Mapping
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-vJBfMXsxD:
+    children:
+    - CHART-siFKkNvbeW
+    id: ROW-vJBfMXsxD
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  color_scheme: null
+  default_filters: '{}'
+  expanded_slices: {}
+  native_filter_configuration:
+  - allowsMultipleValues: true
+    cascadeParentIds: []
+    id: NATIVE_FILTER-X_EZEN3JI
+    inverseSelection: false
+    isInstant: true
+    isRequired: false
+    name: Business Process Outsourcing
+    scope:
+      excluded: []
+      rootPath:
+      - ROOT_ID
+    targets:
+    - column:
+        name: bpo
+      datasetUuid: 9a8d10d9-ddab-ce94-c003-5f6f275d928f
+    type: NATIVE_FILTER
+  - allowsMultipleValues: true
+    cascadeParentIds: []
+    id: NATIVE_FILTER-_0muiVtIq
+    inverseSelection: false
+    isInstant: true
+    isRequired: false
+    name: System
+    scope:
+      excluded: []
+      rootPath:
+      - ROOT_ID
+    targets:
+    - column:
+        name: instance_type
+      datasetUuid: 9a8d10d9-ddab-ce94-c003-5f6f275d928f
+    type: NATIVE_FILTER
+  - allowsMultipleValues: true
+    cascadeParentIds: []
+    id: NATIVE_FILTER-RGrV9wCLt
+    inverseSelection: false
+    isInstant: true
+    isRequired: false
+    name: Management Company
+    scope:
+      excluded: []
+      rootPath:
+      - ROOT_ID
+    targets:
+    - column:
+        name: manco_name
+      datasetUuid: 9a8d10d9-ddab-ce94-c003-5f6f275d928f
+    type: NATIVE_FILTER
+  - allowsMultipleValues: true
+    cascadeParentIds: []
+    id: NATIVE_FILTER-bxskuUbTd
+    inverseSelection: false
+    isInstant: true
+    isRequired: false
+    name: System Currency
+    scope:
+      excluded: []
+      rootPath:
+      - ROOT_ID
+    targets:
+    - column:
+        name: currency
+      datasetUuid: 9a8d10d9-ddab-ce94-c003-5f6f275d928f
+    type: NATIVE_FILTER
+  refresh_frequency: 0
+  timed_refresh_immune_slices: []
+version: 1.0.0

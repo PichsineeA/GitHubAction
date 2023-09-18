@@ -1,0 +1,102 @@
+dashboard_title: Active Referred Work
+description: null
+css: "/*----------------------\n  Display CSS button\nActive Referred Work Items:\
+  \ slice_515-controls\n-----------------------*/\n#slice_515-controls {\ndisplay:\
+  \ flex;\n}\n\n/*Hide all other drop down options, apart from refresh and CSV*/\n\
+  .chart-slice + div>div>.ant-dropdown>ul>li:not(:first-child):not(:last-child){\n\
+  \  display:none;\n}"
+slug: active-referred-5
+uuid: a79df640-f752-4150-b7bd-25bc7b37a69b
+position:
+  CHART-DfKvZkgAjy:
+    children: []
+    id: CHART-DfKvZkgAjy
+    meta:
+      chartId: 243
+      height: 88
+      sliceName: SI5 - Non-END Referred Work Items
+      sliceNameOverride: Active Referred Work Items
+      uuid: f6806b1f-d348-4cdc-8f4e-91c9c9d74f04
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-oaEMDffTxg
+    type: CHART
+  CHART-KZX6g0ytKM:
+    children: []
+    id: CHART-KZX6g0ytKM
+    meta:
+      chartId: 290
+      height: 24
+      sliceName: SI5 - EIN Currency Filter
+      uuid: 8095ee41-3243-44be-9dda-ae55c4d59a5c
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-j0artzpOnJ
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-j0artzpOnJ
+    - ROW-oaEMDffTxg
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Active Referred Work
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-j0artzpOnJ:
+    children:
+    - CHART-KZX6g0ytKM
+    id: ROW-j0artzpOnJ
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-oaEMDffTxg:
+    children:
+    - CHART-DfKvZkgAjy
+    id: ROW-oaEMDffTxg
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  show_native_filters: true
+  color_scheme: ''
+  refresh_frequency: 0
+  expanded_slices: {}
+  label_colors: {}
+  timed_refresh_immune_slices: []
+  default_filters: '{}'
+  chart_configuration: {}
+  filter_scopes:
+    '290':
+      bpo_identifier:
+        scope:
+        - ROOT_ID
+        immune: []
+      ein:
+        scope:
+        - ROOT_ID
+        immune: []
+      emc_currency:
+        scope:
+        - ROOT_ID
+        immune: []
+version: 1.0.0

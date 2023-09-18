@@ -1,0 +1,601 @@
+dashboard_title: Active Work Analysis
+description: null
+css: "/* Controls the visibility of native filters. \n   Comment out if you want native\
+  \ charts visble*/\n.css-1k877g7 {\n  visibility:hidden;\n}\n/*----------------------\n\
+  \  Display CSS button\nActive Work by Department:slice_546-controls\nOldest Work\
+  \ Items by Work Type:slice_550-controls\nActive Work Analysis View:slice_560-controls\n\
+  Active Work List View:slice_561-controls\n-----------------------*/\n#slice_546-controls\
+  \ {\ndisplay: flex;\n}\n#slice_550-controls {\ndisplay: flex;\n}\n#slice_560-controls\
+  \ {\ndisplay: flex;\n}\n#slice_561-controls {\ndisplay: flex;\n}\n/*Hide all other\
+  \ drop down options, apart from refresh and CSV*/\n.chart-slice + div>div>.ant-dropdown>ul>li:not(:first-child):not(:last-child){\n\
+  \  display:none;\n}\n\n/*----------------------*/\n\n/* -------------------------\
+  \ */\n/*  Chart Headers            */\n/* ------------------------- */\n\n\n#TABS-Wf8uXOYeKs-panel-TAB-xl-cVuSGY\
+  \ > div > div:nth-child(3) > div > div > div > div > div > div.chart-slice > div.chart-header{\n\
+  \    display:flex;\n}\n\n/*Hide Filter chart Title*/\n#GRID_ID-panel-GRID_ID > div\
+  \ > div > div:nth-child(2) > div > div > div:nth-child(1) > div > div > div > div:nth-child(1)\
+  \ > div > div > div > div > div > div.chart-slice > div.chart-header{\n  display:none;\n\
+  }\n\n#GRID_ID-panel-GRID_ID > div > div > div:nth-child(2) > div > div > div:nth-child(1)\
+  \ > div > div > div > div:nth-child(2) > div > div > div > div > div > div > div.chart-header\n\
+  {\n  display:none;\n}\n\n#GRID_ID-panel-GRID_ID > div > div > div:nth-child(2) >\
+  \ div > div > div:nth-child(1) > div > div > div > div:nth-child(3) > div > div\
+  \ > div > div > div > div > div.chart-header\n{\n  display:none;\n}\n\n#GRID_ID-panel-GRID_ID\
+  \ > div > div > div:nth-child(2) > div > div > div:nth-child(1) > div > div > div\
+  \ > div:nth-child(4) > div > div > div > div.chart-header\n{\n  display:none;\n\
+  }\n\n#GRID_ID-panel-GRID_ID > div > div > div:nth-child(2) > div > div > div:nth-child(1)\
+  \ > div > div > div > div:nth-child(5) > div > div > div > div > div > div > div.chart-header\n\
+  {\n  display:none;\n}\n\n#GRID_ID-panel-GRID_ID > div > div > div:nth-child(2) >\
+  \ div > div > div:nth-child(1) > div > div > div > div:nth-child(6) > div > div\
+  \ > div > div > div > div > div.chart-header\n{\n  display:none;\n}\n\n/* Header\
+  \ contant tab*/\n.dashboard--editing .dashboard-component-tabs-content .dragdroppable-row\
+  \ {\n    padding-top: 0px;\n    padding-bottom: 0px;\n}\n\n/* Header tab*/ \n.dashboard-component-tabs\
+  \ .dashboard-component-header {\n    padding-top: 0px;\n    padding-bottom: 0px;\n\
+  }\n\n/*Chart padding*/\n.dashboard-component-chart-holder.fade-out {\n    padding-top:\
+  \ 0px;\n    padding-bottom: 0px;\n}\n\n/* reduce gab  in the bottom between row\
+  \ of filter box*/\n#TABS-Wf8uXOYeKs-panel-TAB-xl-cVuSGY[tabindex=\"0\"]>.dashboard-component-tabs-content>.dragdroppable-row:nth-child(1){\n\
+  \  height:70px;\n}\n\n\n"
+slug: active-work-summary-5
+uuid: 14f6141e-2d09-42c9-a4d4-21ec18d1ef3e
+position:
+  CHART-5wIYlv4lCj:
+    children: []
+    id: CHART-5wIYlv4lCj
+    meta:
+      chartId: 480
+      height: 56
+      sliceName: SI5 - Oldest Items by Work Type
+      sliceNameOverride: Oldest Work Items by Work Type
+      uuid: 16a3ba91-5152-45a9-bfcd-3479eaa37b40
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-2N2stvsoJn
+    - TABS-agUT4uK4zc
+    - TAB-1YVJv8zv3H
+    - ROW-omJ1QQT1nf
+    - COLUMN-Wf1zs5vjGX
+    - ROW-FW6etuMg8d
+    type: CHART
+  CHART-6jteEMJJzD:
+    children: []
+    id: CHART-6jteEMJJzD
+    meta:
+      chartId: 512
+      height: 15
+      sliceName: SI5 - Active Work Age in Business Days Filter
+      uuid: 22d54a1a-3d9a-43ae-b721-4d8574e374bd
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-vtQXIT6sWX
+    - ROW-QIHVGbA_JA
+    type: CHART
+  CHART-7EfTGaiaHg:
+    children: []
+    id: CHART-7EfTGaiaHg
+    meta:
+      chartId: 369
+      height: 36
+      sliceName: SI5 - Outstanding Items by Department
+      sliceNameOverride: Active Work by Department
+      uuid: d6f6967c-ad76-441c-aef5-bdbb0e1388a1
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-2N2stvsoJn
+    - TABS-agUT4uK4zc
+    - TAB-1YVJv8zv3H
+    - ROW-omJ1QQT1nf
+    - COLUMN-1Qe5h80Mkh
+    type: CHART
+  CHART-ECs0x_O_-6:
+    children: []
+    id: CHART-ECs0x_O_-6
+    meta:
+      chartId: 260
+      height: 15
+      sliceName: SI5 - Active Work Suspended Filter
+      uuid: 2e37db89-a717-4138-917c-9986e0823472
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-vtQXIT6sWX
+    - ROW-OGWr6tHTCm
+    type: CHART
+  CHART-FrRI2FWVWL:
+    children: []
+    id: CHART-FrRI2FWVWL
+    meta:
+      chartId: 238
+      height: 15
+      sliceName: SI5 - Active Work Processing Stage Filter
+      uuid: b8badfc0-d118-4726-8924-264b43339831
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-vtQXIT6sWX
+    type: CHART
+  CHART-Nl5mRQj1mm:
+    children: []
+    id: CHART-Nl5mRQj1mm
+    meta:
+      chartId: 298
+      height: 94
+      sliceName: SI5 - AWD Non-END Analysis View
+      sliceNameOverride: Active Work Analysis View
+      uuid: fd0451b9-d1e7-4b71-b0c0-1737ea47ac66
+      width: 9
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-2N2stvsoJn
+    - TABS-agUT4uK4zc
+    - TAB-Q19Olj8DI
+    - ROW-0O3vWcLnkc
+    type: CHART
+  CHART-ZkHbt9emHa:
+    children: []
+    id: CHART-ZkHbt9emHa
+    meta:
+      chartId: 399
+      height: 15
+      sliceName: SI5 - AWD Non-END Analysis Filter
+      uuid: 53571484-8397-4add-8289-1830be86627f
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-vtQXIT6sWX
+    - ROW-DnRxBdq2sY
+    type: CHART
+  CHART-ai0AjVF0ym:
+    children: []
+    id: CHART-ai0AjVF0ym
+    meta:
+      chartId: 358
+      height: 56
+      sliceName: SI5 - Active Work by Work Type - Top 10
+      sliceNameOverride: Active Work by Work Type - Top 10
+      uuid: cc789d10-1b1c-4f4f-a438-f59747cd28d2
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-2N2stvsoJn
+    - TABS-agUT4uK4zc
+    - TAB-1YVJv8zv3H
+    - ROW-omJ1QQT1nf
+    - COLUMN-1Qe5h80Mkh
+    type: CHART
+  CHART-gkc9AIiJ_4:
+    children: []
+    id: CHART-gkc9AIiJ_4
+    meta:
+      chartId: 290
+      height: 23
+      sliceName: SI5 - EIN Currency Filter
+      uuid: 8095ee41-3243-44be-9dda-ae55c4d59a5c
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zn3ioVBAjb
+    type: CHART
+  CHART-hpVRfMjCh-:
+    children: []
+    id: CHART-hpVRfMjCh-
+    meta:
+      chartId: 530
+      height: 36
+      sliceName: SI5 - Active Work by Stage
+      sliceNameOverride: Active Work by Stage
+      uuid: 3ccb1aa2-2aca-4e7c-9a7c-550150741b81
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-2N2stvsoJn
+    - TABS-agUT4uK4zc
+    - TAB-1YVJv8zv3H
+    - ROW-omJ1QQT1nf
+    - COLUMN-Wf1zs5vjGX
+    type: CHART
+  CHART-lXsBDG_xuB:
+    children: []
+    id: CHART-lXsBDG_xuB
+    meta:
+      chartId: 278
+      height: 94
+      sliceName: SI5 - Non-END Work Items
+      sliceNameOverride: Active Work List View
+      uuid: 36abc570-35fe-4148-bce8-a54740467f15
+      width: 9
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-2N2stvsoJn
+    - TABS-agUT4uK4zc
+    - TAB-b0AJE1RTW
+    - ROW-QoNFE5WIm
+    type: CHART
+  CHART-lzPs7o2K2y:
+    children: []
+    id: CHART-lzPs7o2K2y
+    meta:
+      chartId: 435
+      height: 15
+      sliceName: SI5 - Active Work Work Type Filter
+      uuid: fbb24e38-1464-44ca-85c9-134b175f1449
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-vtQXIT6sWX
+    - ROW-nX-AelOwxJ
+    type: CHART
+  CHART-mpkMzmDle1:
+    children: []
+    id: CHART-mpkMzmDle1
+    meta:
+      chartId: 359
+      height: 15
+      sliceName: SI5 - Active Work Team Filter
+      uuid: b60a77a2-445c-4728-b5c6-7ae90db25d0e
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-vtQXIT6sWX
+    - ROW-ATZ0gv90tR
+    type: CHART
+  COLUMN-1Qe5h80Mkh:
+    children:
+    - CHART-7EfTGaiaHg
+    - CHART-ai0AjVF0ym
+    id: COLUMN-1Qe5h80Mkh
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 5
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-2N2stvsoJn
+    - TABS-agUT4uK4zc
+    - TAB-1YVJv8zv3H
+    - ROW-omJ1QQT1nf
+    type: COLUMN
+  COLUMN-2N2stvsoJn:
+    children:
+    - TABS-agUT4uK4zc
+    id: COLUMN-2N2stvsoJn
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 9
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    type: COLUMN
+  COLUMN-Wf1zs5vjGX:
+    children:
+    - CHART-hpVRfMjCh-
+    - ROW-FW6etuMg8d
+    id: COLUMN-Wf1zs5vjGX
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-2N2stvsoJn
+    - TABS-agUT4uK4zc
+    - TAB-1YVJv8zv3H
+    - ROW-omJ1QQT1nf
+    type: COLUMN
+  COLUMN-vtQXIT6sWX:
+    children:
+    - ROW-DnRxBdq2sY
+    - ROW-ATZ0gv90tR
+    - ROW-nX-AelOwxJ
+    - CHART-FrRI2FWVWL
+    - ROW-QIHVGbA_JA
+    - ROW-OGWr6tHTCm
+    id: COLUMN-vtQXIT6sWX
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-zn3ioVBAjb
+    - ROW-r-4FnsBVkG
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Active Work Analysis
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-0O3vWcLnkc:
+    children:
+    - CHART-Nl5mRQj1mm
+    id: ROW-0O3vWcLnkc
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-2N2stvsoJn
+    - TABS-agUT4uK4zc
+    - TAB-Q19Olj8DI
+    type: ROW
+  ROW-ATZ0gv90tR:
+    children:
+    - CHART-mpkMzmDle1
+    id: ROW-ATZ0gv90tR
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-vtQXIT6sWX
+    type: ROW
+  ROW-DnRxBdq2sY:
+    children:
+    - CHART-ZkHbt9emHa
+    id: ROW-DnRxBdq2sY
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-vtQXIT6sWX
+    type: ROW
+  ROW-FW6etuMg8d:
+    children:
+    - CHART-5wIYlv4lCj
+    id: ROW-FW6etuMg8d
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-2N2stvsoJn
+    - TABS-agUT4uK4zc
+    - TAB-1YVJv8zv3H
+    - ROW-omJ1QQT1nf
+    - COLUMN-Wf1zs5vjGX
+    type: ROW
+  ROW-OGWr6tHTCm:
+    children:
+    - CHART-ECs0x_O_-6
+    id: ROW-OGWr6tHTCm
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-vtQXIT6sWX
+    type: ROW
+  ROW-QIHVGbA_JA:
+    children:
+    - CHART-6jteEMJJzD
+    id: ROW-QIHVGbA_JA
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-vtQXIT6sWX
+    type: ROW
+  ROW-QoNFE5WIm:
+    children:
+    - CHART-lXsBDG_xuB
+    id: ROW-QoNFE5WIm
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-2N2stvsoJn
+    - TABS-agUT4uK4zc
+    - TAB-b0AJE1RTW
+    type: ROW
+  ROW-nX-AelOwxJ:
+    children:
+    - CHART-lzPs7o2K2y
+    id: ROW-nX-AelOwxJ
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-vtQXIT6sWX
+    type: ROW
+  ROW-omJ1QQT1nf:
+    children:
+    - COLUMN-1Qe5h80Mkh
+    - COLUMN-Wf1zs5vjGX
+    id: ROW-omJ1QQT1nf
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-2N2stvsoJn
+    - TABS-agUT4uK4zc
+    - TAB-1YVJv8zv3H
+    type: ROW
+  ROW-r-4FnsBVkG:
+    children:
+    - COLUMN-vtQXIT6sWX
+    - COLUMN-2N2stvsoJn
+    id: ROW-r-4FnsBVkG
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-zn3ioVBAjb:
+    children:
+    - CHART-gkc9AIiJ_4
+    id: ROW-zn3ioVBAjb
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  TAB-1YVJv8zv3H:
+    children:
+    - ROW-omJ1QQT1nf
+    id: TAB-1YVJv8zv3H
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Summary View
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-2N2stvsoJn
+    - TABS-agUT4uK4zc
+    type: TAB
+  TAB-Q19Olj8DI:
+    children:
+    - ROW-0O3vWcLnkc
+    id: TAB-Q19Olj8DI
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Analysis View
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-2N2stvsoJn
+    - TABS-agUT4uK4zc
+    type: TAB
+  TAB-b0AJE1RTW:
+    children:
+    - ROW-QoNFE5WIm
+    id: TAB-b0AJE1RTW
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: List View
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-2N2stvsoJn
+    - TABS-agUT4uK4zc
+    type: TAB
+  TABS-agUT4uK4zc:
+    children:
+    - TAB-1YVJv8zv3H
+    - TAB-Q19Olj8DI
+    - TAB-b0AJE1RTW
+    id: TABS-agUT4uK4zc
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-r-4FnsBVkG
+    - COLUMN-2N2stvsoJn
+    type: TABS
+metadata:
+  show_native_filters: true
+  color_scheme: ''
+  refresh_frequency: 0
+  expanded_slices: {}
+  label_colors: {}
+  timed_refresh_immune_slices: []
+  default_filters: '{}'
+  chart_configuration: {}
+  filter_scopes:
+    '290':
+      bpo_identifier:
+        scope:
+        - ROOT_ID
+        immune: []
+      ein:
+        scope:
+        - ROOT_ID
+        immune: []
+      emc_currency:
+        scope:
+        - ROOT_ID
+        immune: []
+    '399':
+      owner_department:
+        scope:
+        - ROOT_ID
+        immune: []
+    '359':
+      owner_team:
+        scope:
+        - ROOT_ID
+        immune: []
+    '435':
+      wrktype:
+        scope:
+        - ROOT_ID
+        immune: []
+    '238':
+      processing_stage:
+        scope:
+        - ROOT_ID
+        immune: []
+    '512':
+      age_bus_days_band:
+        scope:
+        - ROOT_ID
+        immune:
+        - 480
+    '260':
+      suspend_flag:
+        scope:
+        - ROOT_ID
+        immune: []
+version: 1.0.0

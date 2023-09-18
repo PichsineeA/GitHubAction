@@ -1,0 +1,452 @@
+dashboard_title: Service Insights
+description: null
+css: "/* ---------------------------------------------------- */\n/* Big number charts\
+  \                                    */\n/* ----------------------------------------------------\
+  \ */\n\n/* Big number charts - SSNC Teal */\n.big_number_total {\n\ttext-align:\
+  \ center;\n\tbackground-color: #00667D;\n\tcolor: white;\n\tborder-radius: 5px;\n\
+  }\n/*Hide all other drop down options, apart from refresh and CSV*/\n\n.chart-slice\
+  \ + div>div>.ant-dropdown>ul>li:not(:first-child):not(:last-child){\n  display:none;\n\
+  }"
+slug: service-insights-5
+uuid: 876b229e-5c7c-4562-b73f-a1258b5bdb0b
+position:
+  CHART-9B4BrvOi9p:
+    children: []
+    id: CHART-9B4BrvOi9p
+    meta:
+      chartId: 383
+      height: 27
+      sliceName: SI5 - Complaints by Category
+      sliceNameOverride: Complaints by Category
+      uuid: 5cfb91f7-5607-4387-b660-7e72b777cbff
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zP-Zvl18J9
+    - COLUMN-8LgB_mXQQv
+    - ROW-mwNhdGOcRa
+    - COLUMN-DXdSSHonXb
+    type: CHART
+  CHART-9IlELv80-o:
+    children: []
+    id: CHART-9IlELv80-o
+    meta:
+      chartId: 371
+      height: 35
+      sliceName: SI5 - Outstanding Work by Team
+      sliceNameOverride: Active Work by Team
+      uuid: 70cc7e89-75b9-4f7c-94e4-8ebf60c2ffe9
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zP-Zvl18J9
+    - COLUMN-ef1JGLIo1W
+    - ROW-mxwMx_oLgj
+    - COLUMN-9vyfX5PCDn
+    type: CHART
+  CHART-9fs77hmNkF:
+    children: []
+    id: CHART-9fs77hmNkF
+    meta:
+      chartId: 345
+      height: 17
+      sliceName: SI5 - Outstanding Breaches
+      sliceNameOverride: Outstanding Breaches
+      uuid: c5cc9a15-fa0f-4d2b-a03b-e6a3132271aa
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zP-Zvl18J9
+    - COLUMN-8LgB_mXQQv
+    - ROW-Bm0WYnSU1s
+    - COLUMN-pAzVvtz_fT
+    type: CHART
+  CHART-DVJ1QYLz7B:
+    children: []
+    id: CHART-DVJ1QYLz7B
+    meta:
+      chartId: 274
+      height: 35
+      sliceName: SI5 - Breaches Overview
+      sliceNameOverride: Breaches Overview
+      uuid: f0e04b2c-f758-4e72-957b-19e19e312262
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zP-Zvl18J9
+    - COLUMN-8LgB_mXQQv
+    - ROW-NkzScdai1m
+    - COLUMN-ExRHOK-v6y
+    type: CHART
+  CHART-Nkuzn-eBIk:
+    children: []
+    id: CHART-Nkuzn-eBIk
+    meta:
+      chartId: 374
+      height: 43
+      sliceName: SI5 - Service Areas
+      sliceNameOverride: Service Areas
+      uuid: e9a4c89b-be68-4314-ac63-0d098683bc66
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zP-Zvl18J9
+    - COLUMN-ef1JGLIo1W
+    - ROW-SX92SoT1TE
+    type: CHART
+  CHART-TAETgroTaM:
+    children: []
+    id: CHART-TAETgroTaM
+    meta:
+      chartId: 447
+      height: 16
+      sliceName: SI5 - Outstanding Complaints
+      sliceNameOverride: Outstanding Complaints
+      uuid: 6404a683-d1c4-478e-a067-5545fb769fa3
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zP-Zvl18J9
+    - COLUMN-8LgB_mXQQv
+    - ROW-Bm0WYnSU1s
+    - COLUMN-pAzVvtz_fT
+    type: CHART
+  CHART-UistXNNJNH:
+    children: []
+    id: CHART-UistXNNJNH
+    meta:
+      chartId: 290
+      height: 17
+      sliceName: SI5 - EIN Currency Filter
+      uuid: 8095ee41-3243-44be-9dda-ae55c4d59a5c
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-oaSrzX6jao
+    type: CHART
+  CHART-h_QTuBylUx:
+    children: []
+    id: CHART-h_QTuBylUx
+    meta:
+      chartId: 257
+      height: 19
+      sliceName: SI5 - Total Work Items
+      sliceNameOverride: Total Work Items
+      uuid: f915cd53-ec0c-435b-846a-a0c298c0ddd1
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zP-Zvl18J9
+    - COLUMN-ef1JGLIo1W
+    - ROW-HV88444_d8
+    - COLUMN-6O1lLcXUq8
+    type: CHART
+  CHART-tO1jjRlF8N:
+    children: []
+    id: CHART-tO1jjRlF8N
+    meta:
+      chartId: 426
+      height: 35
+      sliceName: SI5 - Complaints Last 4 Weeks
+      sliceNameOverride: Complaints Last 4 Weeks
+      uuid: 0e834171-eb23-4dbb-a08f-5a73c24752fd
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zP-Zvl18J9
+    - COLUMN-8LgB_mXQQv
+    - ROW-Bm0WYnSU1s
+    - COLUMN-cUaefnwr3O
+    type: CHART
+  CHART-y9w7hlzGwI:
+    children: []
+    id: CHART-y9w7hlzGwI
+    meta:
+      chartId: 414
+      height: 19
+      sliceName: SI5 - Referred Work Items
+      sliceNameOverride: Referred Work Items
+      uuid: dfc1756e-acfa-444f-ac68-f2bacc1e33b5
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zP-Zvl18J9
+    - COLUMN-ef1JGLIo1W
+    - ROW-HV88444_d8
+    - COLUMN-cF9p4drOLK
+    type: CHART
+  COLUMN-6O1lLcXUq8:
+    children:
+    - CHART-h_QTuBylUx
+    id: COLUMN-6O1lLcXUq8
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zP-Zvl18J9
+    - COLUMN-ef1JGLIo1W
+    - ROW-HV88444_d8
+    type: COLUMN
+  COLUMN-8LgB_mXQQv:
+    children:
+    - ROW-NkzScdai1m
+    - ROW-Bm0WYnSU1s
+    - ROW-mwNhdGOcRa
+    id: COLUMN-8LgB_mXQQv
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zP-Zvl18J9
+    type: COLUMN
+  COLUMN-9vyfX5PCDn:
+    children:
+    - CHART-9IlELv80-o
+    id: COLUMN-9vyfX5PCDn
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zP-Zvl18J9
+    - COLUMN-ef1JGLIo1W
+    - ROW-mxwMx_oLgj
+    type: COLUMN
+  COLUMN-DXdSSHonXb:
+    children:
+    - CHART-9B4BrvOi9p
+    id: COLUMN-DXdSSHonXb
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zP-Zvl18J9
+    - COLUMN-8LgB_mXQQv
+    - ROW-mwNhdGOcRa
+    type: COLUMN
+  COLUMN-ExRHOK-v6y:
+    children:
+    - CHART-DVJ1QYLz7B
+    id: COLUMN-ExRHOK-v6y
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zP-Zvl18J9
+    - COLUMN-8LgB_mXQQv
+    - ROW-NkzScdai1m
+    type: COLUMN
+  COLUMN-cF9p4drOLK:
+    children:
+    - CHART-y9w7hlzGwI
+    id: COLUMN-cF9p4drOLK
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zP-Zvl18J9
+    - COLUMN-ef1JGLIo1W
+    - ROW-HV88444_d8
+    type: COLUMN
+  COLUMN-cUaefnwr3O:
+    children:
+    - CHART-tO1jjRlF8N
+    id: COLUMN-cUaefnwr3O
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zP-Zvl18J9
+    - COLUMN-8LgB_mXQQv
+    - ROW-Bm0WYnSU1s
+    type: COLUMN
+  COLUMN-ef1JGLIo1W:
+    children:
+    - ROW-SX92SoT1TE
+    - ROW-mxwMx_oLgj
+    - ROW-HV88444_d8
+    id: COLUMN-ef1JGLIo1W
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zP-Zvl18J9
+    type: COLUMN
+  COLUMN-pAzVvtz_fT:
+    children:
+    - CHART-9fs77hmNkF
+    - CHART-TAETgroTaM
+    id: COLUMN-pAzVvtz_fT
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zP-Zvl18J9
+    - COLUMN-8LgB_mXQQv
+    - ROW-Bm0WYnSU1s
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-oaSrzX6jao
+    - ROW-zP-Zvl18J9
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Service Insights
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-Bm0WYnSU1s:
+    children:
+    - COLUMN-cUaefnwr3O
+    - COLUMN-pAzVvtz_fT
+    id: ROW-Bm0WYnSU1s
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zP-Zvl18J9
+    - COLUMN-8LgB_mXQQv
+    type: ROW
+  ROW-HV88444_d8:
+    children:
+    - COLUMN-cF9p4drOLK
+    - COLUMN-6O1lLcXUq8
+    id: ROW-HV88444_d8
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zP-Zvl18J9
+    - COLUMN-ef1JGLIo1W
+    type: ROW
+  ROW-NkzScdai1m:
+    children:
+    - COLUMN-ExRHOK-v6y
+    id: ROW-NkzScdai1m
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zP-Zvl18J9
+    - COLUMN-8LgB_mXQQv
+    type: ROW
+  ROW-SX92SoT1TE:
+    children:
+    - CHART-Nkuzn-eBIk
+    id: ROW-SX92SoT1TE
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zP-Zvl18J9
+    - COLUMN-ef1JGLIo1W
+    type: ROW
+  ROW-mwNhdGOcRa:
+    children:
+    - COLUMN-DXdSSHonXb
+    id: ROW-mwNhdGOcRa
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zP-Zvl18J9
+    - COLUMN-8LgB_mXQQv
+    type: ROW
+  ROW-mxwMx_oLgj:
+    children:
+    - COLUMN-9vyfX5PCDn
+    id: ROW-mxwMx_oLgj
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zP-Zvl18J9
+    - COLUMN-ef1JGLIo1W
+    type: ROW
+  ROW-oaSrzX6jao:
+    children:
+    - CHART-UistXNNJNH
+    id: ROW-oaSrzX6jao
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-zP-Zvl18J9:
+    children:
+    - COLUMN-ef1JGLIo1W
+    - COLUMN-8LgB_mXQQv
+    id: ROW-zP-Zvl18J9
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  show_native_filters: true
+  color_scheme: ''
+  refresh_frequency: 0
+  expanded_slices: {}
+  label_colors: {}
+  timed_refresh_immune_slices: []
+  default_filters: '{}'
+  filter_scopes:
+    '290':
+      bpo_identifier:
+        scope:
+        - ROOT_ID
+        immune: []
+      ein:
+        scope:
+        - ROOT_ID
+        immune: []
+      emc_currency:
+        scope:
+        - ROOT_ID
+        immune: []
+  chart_configuration: {}
+version: 1.0.0

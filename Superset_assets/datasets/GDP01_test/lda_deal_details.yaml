@@ -19,7 +19,8 @@ metrics:
   expression: COUNT(*)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 - metric_name: Number of Complaints
   verbose_name: null
@@ -27,7 +28,8 @@ metrics:
   expression: sum(number_of_complaints)
   description: null
   d3format: null
-  extra: '{"warning_markdown": ""}'
+  extra:
+    warning_markdown: ''
   warning_text: null
 columns:
 - column_name: cancelled_flag

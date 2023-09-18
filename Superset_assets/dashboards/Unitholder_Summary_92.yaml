@@ -1,0 +1,658 @@
+dashboard_title: Unitholder Summary
+description: null
+css: "/* ---------------------------------------------------- */\n/* General formatting\
+  \ Shared between all superset data products\n   is contained in the Client Portal\n\
+  \   CSS template which only takes effect in an iframe--\n   to test append the contents\
+  \ of that css template to this\n/* ----------------------------------------------------\
+  \ */\n\n/*-----------------------------------------------------\n   Chart Headers\n\
+  ------------------------------------------------------*/\n\n\n/* SSNC header component\
+  \ */\n.dragdroppable-row div>.dashboard-component-header>.editable-title{\n\tpadding:\
+  \ 3px;\n\tbackground-color: white;\n\tcolor: #00677D;\n}\n\n/*Specifically target\
+  \ headers that come with the chart\n this is to match the small; font size of the\
+  \ chart header component*/\n.dashboard-component .chart-header{\n  font-size:12px;\n\
+  }\n\n/* change chart container background colour to white to hide chart title \n\
+  \  This exists in the CP css template but i have left it here because of difficulty\
+  \ \n  rendering the page if the big number chart object becomes smaller than the\
+  \ \n  header text that isnt meant be visible\n*/\n.background--white .dashboard-component>.chart-slice>.chart-header>.header-title{\n\
+  \  display: none;\n}\n\n/*Hide all other drop down options, apart from refresh and\
+  \ CSV*/\n.chart-slice + div>div>.ant-dropdown>ul>li:not(:first-child):not(:last-child){\n\
+  \  display:none;\n}\n\n/* ---------------------------------------------------- */\n\
+  /* Filter controls                                      */\n/* ----------------------------------------------------\
+  \ */\n\n/*prevents time range filters from taking too much space*/\n.row{\n  margin-right:10px;\n\
+  }\n/*Controls the visibility of native filters. \n  Comment out if you want native\
+  \ charts visble*/\n.css-1k877g7{\n  visibility:hidden;\n}\n\n/*-----------------------------------------------------\n\
+  \   Big number chart\n------------------------------------------------------*/\n\
+  \n/* big number charts - SSNC Teal */\n.big_number_total {\n  text-align: center;\n\
+  \  background-color: #00677F;\n  color: white;\n  border-radius: 5px;\n}\n\n.big_number_total>.superset-legacy-chart-big-number{\n\
+  \  height:70px !important;\n}\n.big_number_total .header-line{\n  font-size:20px\
+  \ !important;\n  height:23px !important;\n}\n.big_number_total .subheader-line{\n\
+  \  font-size:12px !important;\n  height:16px !important;  \n}\n\n\n\n/*-----------------------------------------------------\n\
+  \   Bullet chart\n------------------------------------------------------*/\n/* Make\
+  \ the start of the x axis of the bullet chart visible */\n/* ignore warnings, CSS\
+  \ doesnt recognise the SVG elements but they work */\n.nv-bulletChart>g>g[transform=\"\
+  translate(0,0)\"]>text{\n  text-anchor: start;\n}\n\n/* ----------------------------------------------------\
+  \ */\n/* Table formatting                                     */\n/* ----------------------------------------------------\
+  \ */\n\n/*Custom Cell bars*/\ntd{\n  height: 1px;  /*allows internal div to push\
+  \ against the table cell*/\n}\n/*----------------------------------------------------\
+  \ \n###Custom Dashboard formatting###\n----------------------------------------------------\
+  \ */\n\n/* HTML table with conditional formatting*/\ntd>div{\n  height: calc(100%\
+  \ + 10px); /*Fill the table cell accounting for 5px parent padding*/\n  margin:-5px;\
+  \ /* push back on 5px parent padding*/\n  padding: 5px; /*internal padding to match\
+  \ rest of table padding*/\n  display: table;/*needed in firefox for all other aspects\
+  \ to work*/\n  width: calc(100% + 10px);/*needed in firefox for all other aspects\
+  \ to work*/\n}\n/*Format upward movement*/\n.up_move{\n  background-color:#A4D65E;\n\
+  }\n\n/*Format downward movement*/\n.down_move{\n  color:white;\n  background-color:#BD374A;\n\
+  }\n\n/*Format no movement*/\n.no_move{\n  color:white;\n  background-color:gray;\n\
+  }\n\n/*Format first movement*/\n.first_move{\n  color:white;\n  background-color:#0077C8;\n\
+  }\n\n\n/*----------------------\n  Row limit alert\n-----------------------*/\n\
+  /*Hide the ability to display ALL rows*/\n.limit-red{\n  background-color:red;\n\
+  \  white-space: pre;\n  color: white;\n}\n.limit-green{\n  background-color:green;\n\
+  \  white-space: pre;\n  color: white;\n}\n/*-----------------------*/\n\n\n/*----------------------\n\
+  \  PAGINATION and limit controls for tables\n-----------------------*/\n/*WARN USER\
+  \ when query limits are hit*/\ninput[placeholder=\"30000 records...\"],\ninput[placeholder=\"\
+  30000 records...\"]::placeholder\n{\n  background-color:red;\n  color:white;\n}\n\
+  /*-----------------------*/\n\n\n/*----------------------\n  Display CSS button\
+  \ for Slice 208 (FMR-UHS-Details)\n-----------------------*/\n#slice_208-controls{\n\
+  \  display:flex;\n}\n/*----------------------*/"
+slug: unit-holder-summary
+uuid: 183d4d2e-78c7-60dc-0906-056cdf639c0a
+position:
+  CHART-40z07gHsfW:
+    children: []
+    id: CHART-40z07gHsfW
+    meta:
+      chartId: 263
+      height: 28
+      sliceName: FMR - UHS - Total by Currency
+      sliceNameOverride: Total Investments per Currency
+      uuid: 29b77a64-24f0-c18e-2f08-62c7c3f63f8d
+      width: 2
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-UL2cEt1v4K
+    - ROW-MTmT3Yl_KN
+    - COLUMN-sjHh2ocWzL
+    - ROW-t_LvzmJJeq
+    - COLUMN-Xcb4HMCnpe
+    type: CHART
+  CHART-CaiwaN9Son:
+    children: []
+    id: CHART-CaiwaN9Son
+    meta:
+      chartId: 294
+      height: 19
+      sliceName: FMR - UHS - Investor Summary
+      sliceNameOverride: Investor Summary
+      uuid: b83fa251-d642-a314-c47d-a7e99b26be7d
+      width: 4
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-UL2cEt1v4K
+    - ROW-MTmT3Yl_KN
+    - COLUMN-sjHh2ocWzL
+    - ROW-kxGK6xweQB
+    - COLUMN-OU_Mec8C9f
+    type: CHART
+  CHART-F_INuFyftB:
+    children: []
+    id: CHART-F_INuFyftB
+    meta:
+      chartId: 328
+      height: 16
+      sliceName: FMR - UHS - MaxRows
+      uuid: 5bc5d787-afd1-4b67-a1d4-35fa0cf44865
+      width: 10
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-_L0n26ceu
+    - ROW-6YfKUv2MlD
+    - COLUMN-dx1t31GPrD
+    - ROW-X2VaphLAoy
+    type: CHART
+  CHART-HzID3aTz7H:
+    children: []
+    id: CHART-HzID3aTz7H
+    meta:
+      chartId: 222
+      height: 13
+      sliceName: FMR - UHS - IVC Count
+      uuid: 78ea54f4-4a56-f510-9c7f-261885b2745a
+      width: 2
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-UL2cEt1v4K
+    - ROW-MTmT3Yl_KN
+    - COLUMN-sjHh2ocWzL
+    - ROW-t_LvzmJJeq
+    - COLUMN-Gxt6zlIGCI
+    type: CHART
+  CHART-co4r3Wi05G:
+    children: []
+    id: CHART-co4r3Wi05G
+    meta:
+      chartId: 234
+      height: 72
+      sliceName: FMR - UHS - Details
+      sliceNameOverride: Detailed Data
+      uuid: ec89fb0a-0da1-1dba-f8e2-7299cc8b9b86
+      width: 4
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-_L0n26ceu
+    - ROW-6YfKUv2MlD
+    - COLUMN-dx1t31GPrD
+    type: CHART
+  CHART-dA3z_Nx6zH:
+    children: []
+    id: CHART-dA3z_Nx6zH
+    meta:
+      chartId: 548
+      height: 13
+      sliceName: FMR - UHS - Number of accounts opened
+      uuid: cb4a523d-3581-1cb8-0f60-5c70ed30da4a
+      width: 1
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-UL2cEt1v4K
+    - ROW-MTmT3Yl_KN
+    - COLUMN-sjHh2ocWzL
+    - ROW-t_LvzmJJeq
+    - COLUMN-Gxt6zlIGCI
+    type: CHART
+  CHART-g_TOuh0K8H:
+    children: []
+    id: CHART-g_TOuh0K8H
+    meta:
+      chartId: 283
+      height: 20
+      sliceName: FMR - CP Filter
+      uuid: 88d4ce2e-696d-48cf-9e52-8fe81e19e1d1
+      width: 2
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-UL2cEt1v4K
+    - ROW-ECZtE2lV5V
+    - COLUMN-Dwf-jIHtCZ
+    type: CHART
+  CHART-iLbtFzdNK3:
+    children: []
+    id: CHART-iLbtFzdNK3
+    meta:
+      chartId: 231
+      height: 43
+      sliceName: FMR - UHS - Account Breakdown
+      sliceNameOverride: Account Breakdown
+      uuid: 3105a0dd-b2bd-21cb-e420-935d56807df4
+      width: 4
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-UL2cEt1v4K
+    - ROW-MTmT3Yl_KN
+    - COLUMN-sjHh2ocWzL
+    - ROW-RBnJ8EZy38
+    - COLUMN-33muuAniGW
+    type: CHART
+  CHART-nYFn0yEwqr:
+    children: []
+    id: CHART-nYFn0yEwqr
+    meta:
+      chartId: 543
+      height: 94
+      sliceName: FMR - UHS - IVC Split Value
+      sliceNameOverride: Investment Split over Share Classes
+      uuid: 689af06b-94ef-fe4e-98e4-c074dede75f9
+      width: 1
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-UL2cEt1v4K
+    - ROW-MTmT3Yl_KN
+    - COLUMN-6ULWdMSJDU
+    type: CHART
+  CHART-xssFsUdWCa:
+    children: []
+    id: CHART-xssFsUdWCa
+    meta:
+      chartId: 474
+      height: 90
+      sliceName: FMR - UHS - Detail Filters
+      uuid: e359f909-34a2-49bd-99f1-bca08a4b6f00
+      width: 2
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-_L0n26ceu
+    - ROW-6YfKUv2MlD
+    - COLUMN-eWCLNX7WGM
+    type: CHART
+  CHART-xwKHO53--4:
+    children: []
+    id: CHART-xwKHO53--4
+    meta:
+      chartId: 547
+      height: 14
+      sliceName: FMR - UHS - Summary Filters
+      sliceNameOverride: Filters
+      uuid: 935917a3-4a01-952b-1238-d86199be4d09
+      width: 2
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-UL2cEt1v4K
+    - ROW-MTmT3Yl_KN
+    - COLUMN-8be42Ufsl1
+    type: CHART
+  COLUMN-33muuAniGW:
+    children:
+    - CHART-iLbtFzdNK3
+    id: COLUMN-33muuAniGW
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 5
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-UL2cEt1v4K
+    - ROW-MTmT3Yl_KN
+    - COLUMN-sjHh2ocWzL
+    - ROW-RBnJ8EZy38
+    type: COLUMN
+  COLUMN-6ULWdMSJDU:
+    children:
+    - CHART-nYFn0yEwqr
+    id: COLUMN-6ULWdMSJDU
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 5
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-UL2cEt1v4K
+    - ROW-MTmT3Yl_KN
+    type: COLUMN
+  COLUMN-8be42Ufsl1:
+    children:
+    - CHART-xwKHO53--4
+    - DIVIDER-3bcfCOSFsA
+    - MARKDOWN-B82_u8hbC8
+    id: COLUMN-8be42Ufsl1
+    meta:
+      background: BACKGROUND_WHITE
+      width: 2
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-UL2cEt1v4K
+    - ROW-MTmT3Yl_KN
+    type: COLUMN
+  COLUMN-Dwf-jIHtCZ:
+    children:
+    - CHART-g_TOuh0K8H
+    id: COLUMN-Dwf-jIHtCZ
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 12
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-UL2cEt1v4K
+    - ROW-ECZtE2lV5V
+    type: COLUMN
+  COLUMN-Gxt6zlIGCI:
+    children:
+    - CHART-HzID3aTz7H
+    - CHART-dA3z_Nx6zH
+    id: COLUMN-Gxt6zlIGCI
+    meta:
+      background: BACKGROUND_WHITE
+      width: 1
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-UL2cEt1v4K
+    - ROW-MTmT3Yl_KN
+    - COLUMN-sjHh2ocWzL
+    - ROW-t_LvzmJJeq
+    type: COLUMN
+  COLUMN-OU_Mec8C9f:
+    children:
+    - CHART-CaiwaN9Son
+    id: COLUMN-OU_Mec8C9f
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 5
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-UL2cEt1v4K
+    - ROW-MTmT3Yl_KN
+    - COLUMN-sjHh2ocWzL
+    - ROW-kxGK6xweQB
+    type: COLUMN
+  COLUMN-Xcb4HMCnpe:
+    children:
+    - CHART-40z07gHsfW
+    id: COLUMN-Xcb4HMCnpe
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 4
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-UL2cEt1v4K
+    - ROW-MTmT3Yl_KN
+    - COLUMN-sjHh2ocWzL
+    - ROW-t_LvzmJJeq
+    type: COLUMN
+  COLUMN-dx1t31GPrD:
+    children:
+    - ROW-X2VaphLAoy
+    - CHART-co4r3Wi05G
+    id: COLUMN-dx1t31GPrD
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 10
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-_L0n26ceu
+    - ROW-6YfKUv2MlD
+    type: COLUMN
+  COLUMN-eWCLNX7WGM:
+    children:
+    - CHART-xssFsUdWCa
+    id: COLUMN-eWCLNX7WGM
+    meta:
+      background: BACKGROUND_WHITE
+      width: 2
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-_L0n26ceu
+    - ROW-6YfKUv2MlD
+    type: COLUMN
+  COLUMN-sjHh2ocWzL:
+    children:
+    - ROW-kxGK6xweQB
+    - ROW-t_LvzmJJeq
+    - ROW-RBnJ8EZy38
+    id: COLUMN-sjHh2ocWzL
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 5
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-UL2cEt1v4K
+    - ROW-MTmT3Yl_KN
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  DIVIDER-3bcfCOSFsA:
+    children: []
+    id: DIVIDER-3bcfCOSFsA
+    meta: {}
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-UL2cEt1v4K
+    - ROW-MTmT3Yl_KN
+    - COLUMN-8be42Ufsl1
+    type: DIVIDER
+  GRID_ID:
+    children: []
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Unitholder Summary
+    type: HEADER
+  MARKDOWN-B82_u8hbC8:
+    children: []
+    id: MARKDOWN-B82_u8hbC8
+    meta:
+      code: 'Select an **Investor''s name** to begin.
+
+
+        If you need information about _multiple_ investors, the _Detailed Investor
+        Data_ tab can help.
+
+
+        If you need a _high level_ view covering all investors you manage, take a
+        look at the _Portfolio Overview_ dashboard.'
+      height: 74
+      width: 2
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-UL2cEt1v4K
+    - ROW-MTmT3Yl_KN
+    - COLUMN-8be42Ufsl1
+    type: MARKDOWN
+  ROOT_ID:
+    children:
+    - TABS-FL7IFUZyl1
+    id: ROOT_ID
+    type: ROOT
+  ROW-6YfKUv2MlD:
+    children:
+    - COLUMN-eWCLNX7WGM
+    - COLUMN-dx1t31GPrD
+    id: ROW-6YfKUv2MlD
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-_L0n26ceu
+    type: ROW
+  ROW-ECZtE2lV5V:
+    children:
+    - COLUMN-Dwf-jIHtCZ
+    id: ROW-ECZtE2lV5V
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-UL2cEt1v4K
+    type: ROW
+  ROW-MTmT3Yl_KN:
+    children:
+    - COLUMN-8be42Ufsl1
+    - COLUMN-sjHh2ocWzL
+    - COLUMN-6ULWdMSJDU
+    id: ROW-MTmT3Yl_KN
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-UL2cEt1v4K
+    type: ROW
+  ROW-RBnJ8EZy38:
+    children:
+    - COLUMN-33muuAniGW
+    id: ROW-RBnJ8EZy38
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-UL2cEt1v4K
+    - ROW-MTmT3Yl_KN
+    - COLUMN-sjHh2ocWzL
+    type: ROW
+  ROW-RC4vhxn4lz:
+    children: []
+    id: ROW-RC4vhxn4lz
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-_L0n26ceu
+    type: ROW
+  ROW-X2VaphLAoy:
+    children:
+    - CHART-F_INuFyftB
+    id: ROW-X2VaphLAoy
+    meta:
+      background: BACKGROUND_WHITE
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-_L0n26ceu
+    - ROW-6YfKUv2MlD
+    - COLUMN-dx1t31GPrD
+    type: ROW
+  ROW-kxGK6xweQB:
+    children:
+    - COLUMN-OU_Mec8C9f
+    id: ROW-kxGK6xweQB
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-UL2cEt1v4K
+    - ROW-MTmT3Yl_KN
+    - COLUMN-sjHh2ocWzL
+    type: ROW
+  ROW-t_LvzmJJeq:
+    children:
+    - COLUMN-Gxt6zlIGCI
+    - COLUMN-Xcb4HMCnpe
+    id: ROW-t_LvzmJJeq
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    - TAB-UL2cEt1v4K
+    - ROW-MTmT3Yl_KN
+    - COLUMN-sjHh2ocWzL
+    type: ROW
+  TAB-UL2cEt1v4K:
+    children:
+    - ROW-ECZtE2lV5V
+    - ROW-MTmT3Yl_KN
+    id: TAB-UL2cEt1v4K
+    meta:
+      text: Investor Summary
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    type: TAB
+  TAB-_L0n26ceu:
+    children:
+    - ROW-RC4vhxn4lz
+    - ROW-6YfKUv2MlD
+    id: TAB-_L0n26ceu
+    meta:
+      text: Detailed Investor Data
+    parents:
+    - ROOT_ID
+    - TABS-FL7IFUZyl1
+    type: TAB
+  TABS-FL7IFUZyl1:
+    children:
+    - TAB-UL2cEt1v4K
+    - TAB-_L0n26ceu
+    id: TABS-FL7IFUZyl1
+    meta: {}
+    parents:
+    - ROOT_ID
+    type: TABS
+metadata:
+  timed_refresh_immune_slices: []
+  filter_scopes:
+    '283':
+      ein:
+        scope:
+        - ROOT_ID
+        immune: []
+    '547':
+      bua_name:
+        scope:
+        - TAB-UL2cEt1v4K
+        immune:
+        - 283
+    '474':
+      investor_typ_txt:
+        scope:
+        - TAB-_L0n26ceu
+        immune: []
+      investor_age_band:
+        scope:
+        - TAB-_L0n26ceu
+        immune: []
+      cty_description:
+        scope:
+        - TAB-_L0n26ceu
+        immune: []
+      crr_description:
+        scope:
+        - TAB-_L0n26ceu
+        immune: []
+      ccy_id:
+        scope:
+        - TAB-_L0n26ceu
+        immune: []
+      account_currency:
+        scope:
+        - TAB-_L0n26ceu
+        immune: []
+      ivc_long_name:
+        scope:
+        - TAB-_L0n26ceu
+        immune: []
+  expanded_slices: {}
+  refresh_frequency: 0
+  default_filters: '{"547": {"bua_name": "Select an Investor"}}'
+  color_scheme: supersetColors
+  label_colors:
+    100 to 109: '#1FA8C9'
+    Corporate: '#454E7C'
+    Individual: '#5AC189'
+    Joint: '#FF7F44'
+    Trust: '#666666'
+    CORPORATE: '#1FA8C9'
+    TRUST: '#454E7C'
+    Low Risk: '#1FA8C9'
+    No Risk: '#454E7C'
+    Medium Risk: '#5AC189'
+    High Risk: '#FF7F44'
+    ECDD (Enhanced Customer Due Diligence): '#666666'
+    PEP (Politically Exposed Person): '#E04355'
+    <NULL>: '#FCC700'
+    Corporate Investor: '#A868B7'
+    Private Investor: '#3CCCCB'
+    Other: '#A38F79'
+    INDIVIDUAL: '#8FD3E4'
+    JOINT: '#A1A6BD'
+    50 to 59: '#ACE1C4'
+    60 to 69: '#FEC0A1'
+    70 to 79: '#B2B2B2'
+    40 to 49: '#EFA1AA'
+    80 to 89: '#FDE380'
+    120 to 129: '#D3B3DA'
+    30 to 39: '#9EE5E5'
+    20 to 29: '#D1C6BC'
+    90 to 99: '#1FA8C9'
+    10 to 19: '#454E7C'
+    0 to 9: '#5AC189'
+    110 to 119: '#FF7F44'
+    EUR: '#1FA8C9'
+    USD: '#454E7C'
+version: 1.0.0
