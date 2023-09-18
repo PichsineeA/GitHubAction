@@ -1,0 +1,66 @@
+slice_name: FMR - UHS - Detail Filters
+viz_type: filter_box
+params:
+  adhoc_filters: []
+  datasource: 54__table
+  date_filter: false
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: investor_typ_txt_jinja
+    key: 5ZFxormgl
+    label: Investor Type
+    multiple: true
+    searchAllOptions: false
+  - asc: true
+    clearable: true
+    column: investor_age_band_jinja
+    key: lUfTf9NbD
+    label: Investor Age Band
+    multiple: true
+    searchAllOptions: false
+  - asc: true
+    clearable: true
+    column: cty_description
+    key: wXTwIamLI
+    label: Investor Country
+    multiple: true
+    searchAllOptions: false
+  - asc: true
+    clearable: true
+    column: crr_description
+    key: cuHbt-0Q7
+    label: Investor Risk Rating
+    multiple: true
+    searchAllOptions: false
+  - asc: true
+    clearable: true
+    column: ccy_id
+    key: 2JTWHRrzz
+    label: Investment Currency
+    multiple: true
+    searchAllOptions: false
+  - asc: true
+    clearable: true
+    column: account_currency
+    key: MvNX7QLEt
+    label: Account Currency
+    multiple: true
+    searchAllOptions: false
+  - asc: true
+    clearable: true
+    column: ivc_long_name
+    key: YozH34iV4
+    label: Share Class
+    multiple: true
+    searchAllOptions: true
+  granularity_sqla: latest_valuation_date
+  slice_id: 215
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+cache_timeout: null
+uuid: e359f909-34a2-49bd-99f1-bca08a4b6f00
+version: 1.0.0
+dataset_uuid: 294bb475-bd97-fe6c-dec6-ec4cd42fc6fa

@@ -1,0 +1,26 @@
+slice_name: SI - Share Class Filter for Today's Deals
+viz_type: filter_box
+params:
+  adhoc_filters: []
+  datasource: 57__table
+  date_filter: false
+  extra_form_data: {}
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: share_class_name
+    key: GjEyx5776
+    label: Share Class
+    multiple: true
+    searchAllOptions: false
+  granularity_sqla: deal_date
+  instant_filtering: true
+  slice_id: 2000000021
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+cache_timeout: null
+uuid: 25bd3398-0cbb-49b4-841a-83b75e525f34
+version: 1.0.0
+dataset_uuid: 425aaa80-69f3-bb87-0d4c-9b280593557b

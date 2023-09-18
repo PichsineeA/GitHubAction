@@ -1,0 +1,26 @@
+slice_name: SI6 - Active Work Department Filter
+viz_type: filter_box
+params:
+  adhoc_filters: []
+  datasource: 2000000005__table
+  date_filter: false
+  extra_form_data: {}
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: owner_department
+    key: K85vvNs1A
+    label: DEPARTMENT
+    multiple: true
+    searchAllOptions: false
+  granularity_sqla: last_update_dattim
+  instant_filtering: true
+  slice_id: 2000000035
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+cache_timeout: null
+uuid: e8f7cd37-2f65-4e6e-8cd1-9a761727c997
+version: 1.0.0
+dataset_uuid: deb426d2-5ea7-42ae-ae97-c99694c2ddff

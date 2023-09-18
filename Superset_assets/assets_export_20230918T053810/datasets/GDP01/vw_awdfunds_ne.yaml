@@ -1,0 +1,538 @@
+table_name: vw_awdfunds_ne
+main_dttm_col: last_update_dattim
+description: AWDFUNDS Non-END data
+default_endpoint: null
+offset: 0
+cache_timeout: 60
+schema: present
+sql: ''
+params: null
+template_params: null
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: 40f6d689-5a50-6435-4ddd-353a5940ae24
+metrics:
+- metric_name: Age Business day filter
+  verbose_name: ''
+  metric_type: null
+  expression: "MAX(case\nwhen age_bus_days_band = 'Day 1' then 1 \nwhen age_bus_days_band\
+    \ = 'Day 2' then 2 \nwhen age_bus_days_band = 'Day 3' then 3 \nwhen age_bus_days_band\
+    \ = 'Day 4' then 4 \nwhen age_bus_days_band = 'Day 5' then 5 \nwhen age_bus_days_band\
+    \ = 'Day 6-10' then 6 \nwhen age_bus_days_band = 'Day 11-30' then 7 \nwhen age_bus_days_band\
+    \ = 'Day 31+' then 8 else 0\nend)"
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Processing stage filter
+  verbose_name: ''
+  metric_type: null
+  expression: "MAX(case\nwhen processing_stage = 'Process' then 1 \nwhen processing_stage\
+    \ = 'Vetting' then 2 \nwhen processing_stage = 'Refer' then 3 \nwhen processing_stage\
+    \ = 'Quality' then 4 \nwhen processing_stage = 'System' then 5 \nwhen processing_stage\
+    \ = 'Discard' then 6 \nwhen processing_stage = 'Hold' then 7 \nwhen processing_stage\
+    \ = 'Rescan' then 8 else 99\nend\n)"
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Day 31+
+  verbose_name: Day 31+
+  metric_type: null
+  expression: sum(case age_bus_days_band when 'Day 31+' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Day 11-30
+  verbose_name: Day 11-30
+  metric_type: null
+  expression: sum(case age_bus_days_band when 'Day 11-30' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Day 6-10
+  verbose_name: Day 6-10
+  metric_type: null
+  expression: sum(case age_bus_days_band when 'Day 6-10' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Day 1
+  verbose_name: Day 1
+  metric_type: null
+  expression: sum(case age_bus_days_band when 'Day 1' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Day 2
+  verbose_name: Day 2
+  metric_type: null
+  expression: sum(case age_bus_days_band when 'Day 2' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Day 3
+  verbose_name: Day 3
+  metric_type: null
+  expression: sum(case age_bus_days_band when 'Day 3' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Day 4
+  verbose_name: Day 4
+  metric_type: null
+  expression: sum(case age_bus_days_band when 'Day 4' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Day 5
+  verbose_name: Day 5
+  metric_type: null
+  expression: sum(case age_bus_days_band when 'Day 5' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Discard
+  verbose_name: Discard
+  metric_type: null
+  expression: sum(case when processing_stage = 'Discard' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Hold
+  verbose_name: Hold
+  metric_type: null
+  expression: sum(case when processing_stage = 'Hold' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Personal
+  verbose_name: Personal
+  metric_type: null
+  expression: sum(case when processing_stage = 'Personal' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Process
+  verbose_name: Process
+  metric_type: null
+  expression: sum(case when processing_stage = 'Process' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Quality
+  verbose_name: Quality
+  metric_type: null
+  expression: sum(case when processing_stage = 'Quality' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Rescan
+  verbose_name: Rescan
+  metric_type: null
+  expression: sum(case when processing_stage = 'Rescan' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Refer
+  verbose_name: Refer
+  metric_type: null
+  expression: sum(case when processing_stage = 'Refer' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: System
+  verbose_name: System
+  metric_type: null
+  expression: sum(case when processing_stage = 'System' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Vetting
+  verbose_name: Vetting
+  metric_type: null
+  expression: sum(case when processing_stage = 'Vetting' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Total Suspended
+  verbose_name: Suspended
+  metric_type: null
+  expression: sum(case suspend_flag when 'Yes' then 1 else 0 end)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Oldest Item
+  verbose_name: Age in Business Days
+  metric_type: null
+  expression: MAX(age_bus_days)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Number of Work Items
+  verbose_name: Total
+  metric_type: null
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: count
+  verbose_name: Number of Work Items
+  metric_type: null
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+columns:
+- column_name: days_old_bus_days
+  verbose_name: Age in Business Days
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: "case when current_date::DATE - TO_DATE(awd_crdattim, 'YYYY-MM-DD')\
+    \ - (select count(*)\n\t\t\t\t\t\t\t\t\t\t\t\t\tfrom generate_series(current_date-365,current_date,'1\
+    \ day'::interval) dd \n\t\t\t\t\t\t\t\t\t\t\t\t\twhere extract(DOW from dd) in\
+    \ (6,0) and dd::DATE between TO_DATE(awd_crdattim, 'YYYY-MM-DD') and current_date::DATE)\
+    \ = 0 then 'Day 1'::text\t\t\t\t\t\t\t\t\t\t\t\t\t\n\twhen current_date::DATE\
+    \ - TO_DATE(awd_crdattim, 'YYYY-MM-DD') - (select count(*)\n\t\t\t\t\t\t\t\t\t\
+    \t\t\t\tfrom generate_series(current_date-365,current_date,'1 day'::interval)\
+    \ dd \n\t\t\t\t\t\t\t\t\t\t\t\t\twhere extract(DOW from dd) in (6,0) and dd::DATE\
+    \ between TO_DATE(awd_crdattim, 'YYYY-MM-DD') and current_date::DATE) = 1 then\
+    \ 'Day 2'::text\t\n\twhen current_date::DATE - TO_DATE(awd_crdattim, 'YYYY-MM-DD')\
+    \ - (select count(*)\n\t\t\t\t\t\t\t\t\t\t\t\t\tfrom generate_series(current_date-365,current_date,'1\
+    \ day'::interval) dd \n\t\t\t\t\t\t\t\t\t\t\t\t\twhere extract(DOW from dd) in\
+    \ (6,0) and dd::DATE between TO_DATE(awd_crdattim, 'YYYY-MM-DD') and current_date::DATE)\
+    \ = 2 then 'Day 3'::text\t\n\twhen current_date::DATE - TO_DATE(awd_crdattim,\
+    \ 'YYYY-MM-DD') - (select count(*)\n\t\t\t\t\t\t\t\t\t\t\t\t\tfrom generate_series(current_date-365,current_date,'1\
+    \ day'::interval) dd \n\t\t\t\t\t\t\t\t\t\t\t\t\twhere extract(DOW from dd) in\
+    \ (6,0) and dd::DATE between TO_DATE(awd_crdattim, 'YYYY-MM-DD') and current_date::DATE)\
+    \ = 3 then 'Day 4'::text\t\t\n\twhen current_date::DATE - TO_DATE(awd_crdattim,\
+    \ 'YYYY-MM-DD') - (select count(*)\n\t\t\t\t\t\t\t\t\t\t\t\t\tfrom generate_series(current_date-365,current_date,'1\
+    \ day'::interval) dd \n\t\t\t\t\t\t\t\t\t\t\t\t\twhere extract(DOW from dd) in\
+    \ (6,0) and dd::DATE between TO_DATE(awd_crdattim, 'YYYY-MM-DD') and current_date::DATE)\
+    \ = 4 then 'Day 5'::text\t\t\t\n\twhen current_date::DATE - TO_DATE(awd_crdattim,\
+    \ 'YYYY-MM-DD') - (select count(*)\n\t\t\t\t\t\t\t\t\t\t\t\t\tfrom generate_series(current_date-365,current_date,'1\
+    \ day'::interval) dd \n\t\t\t\t\t\t\t\t\t\t\t\t\twhere extract(DOW from dd) in\
+    \ (6,0) and dd::DATE between TO_DATE(awd_crdattim, 'YYYY-MM-DD') and current_date::DATE)\
+    \ <= 9 then 'Day 6-10'::text\t\t\n\twhen current_date::DATE - TO_DATE(awd_crdattim,\
+    \ 'YYYY-MM-DD') - (select count(*)\n\t\t\t\t\t\t\t\t\t\t\t\t\tfrom generate_series(current_date-365,current_date,'1\
+    \ day'::interval) dd \n\t\t\t\t\t\t\t\t\t\t\t\t\twhere extract(DOW from dd) in\
+    \ (6,0) and dd::DATE between TO_DATE(awd_crdattim, 'YYYY-MM-DD') and current_date::DATE)\
+    \ <= 29 then 'Day 11-30'::text\t\t\t\t\t\t\t\t\t\t\t\t\t\n\telse 'Day 30+' \n\t\
+    end"
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: CURRENCY
+  verbose_name: Currency
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: "case \nwhen trim(unitcd) like '%GBP' or trim(unitcd) in ('AB', 'ABIT',\
+    \ 'ARTEMIS', 'BAM', 'BGS', 'CHARITIES', 'DEUTSCHE', 'FCIT', 'HENIT', 'IFDSMGRS',\
+    \ 'IFML', 'INVESCO', 'JINV', 'JPMAM', 'JUP', 'LMASON', 'LVAM', 'MAG', 'MCU', 'MLU',\
+    \ 'MOR', 'MORLEY', 'MSAM', 'MWP', 'NSI', 'NUJV', 'NWGART', 'OCTOPUS', 'OMNIS',\
+    \ 'PRUDENTIAL', 'PUTM', 'QFM', 'RAB', 'RLUTM', 'RSA', 'SCH', 'SJP', 'SOLUS', 'SPMLIFE',\
+    \ 'SVM', 'TUM', 'UBS', 'VMONEY', 'WESLEYAN', 'WITAN') then 'GBP'\nwhen trim(unitcd)\
+    \ like '%EUR' or trim(unitcd) like '%EURO' or trim(unitcd) = 'DCH' then 'EUR'\n\
+    when trim(unitcd) like '%USD' or trim(unitcd) = 'MAGDOLLAR' then 'USD'\nwhen trim(unitcd)\
+    \ like '%SGD' then 'SGD'\nwhen trim(unitcd) like '%CHF' then 'CHF'\nwhen trim(unitcd)\
+    \ like '%YEN' then 'YEN'\nwhen trim(unitcd) in ('AWDDEV', 'AWDUTIL', 'BROKER',\
+    \ 'D2CCTAM', 'FINANCE', 'HEN', 'HMRC', 'INDEXWORK', 'ISDBROKER', 'SAMPCOMM', 'SAMPLEBA',\
+    \ 'SAMPLETEST', 'VANILLA') then 'NA'\nelse 'GBP' end"
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: last_update_dattim
+  verbose_name: Last Updated
+  is_dttm: true
+  is_active: null
+  type: TIMESTAMP WITHOUT TIME ZONE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: awd_crdattim
+  verbose_name: Work Item Create Date Time
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: age_bus_days
+  verbose_name: Age in Business Days
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: age_bus_days_band
+  verbose_name: Age in Business Days
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: unitcd
+  verbose_name: Business Area
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: agent_id
+  verbose_name: Agent ID
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: uh_id
+  verbose_name: Unitholder ID
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: manual_deal_flag
+  verbose_name: Manual Deal
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: last_update_dattim_txt
+  verbose_name: Last Updated
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: wrktype
+  verbose_name: Work Type
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: suspend_flag
+  verbose_name: Suspended?
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: owner_department
+  verbose_name: Department
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: queuecd
+  verbose_name: Queue
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: processing_stage
+  verbose_name: Stage
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: statcd
+  verbose_name: Status
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: owner_team
+  verbose_name: Team
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: mco_name
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(100)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: ein
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: recordcd
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: crnode
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 980ffeea-a918-7739-250c-7d130b23d6c0

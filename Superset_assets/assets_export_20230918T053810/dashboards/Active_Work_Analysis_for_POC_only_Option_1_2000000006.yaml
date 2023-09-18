@@ -1,0 +1,162 @@
+dashboard_title: Active Work Analysis [for POC only Option 1]
+description: null
+css: "/* Controls the visibility of native filters. \n   Comment out if you want native\
+  \ charts visble*/\n.css-1k877g7 {\n  visibility:hidden;\n}\n\n/*----------------------\n\
+  \  Display CSS button for 4 charts\n  -Active Work by Department\n  -Oldest Work\
+  \ Item by Work Type\n-----------------------*/\n#slice_546-controls{\n  display:flex;\n\
+  }\n\n#slice_550-controls{\n  display:flex;\n}\n\n/*----------------------*/\n\n\
+  /* ------------------------- */\n/*  Chart Headers            */\n/* -------------------------\
+  \ */\n\n/* Hide all other drop down options, apart from refresh and CSV */\n/* .chart-slice\
+  \ + div>div>.ant-dropdown>ul>li:not(:first-child):not(:last-child) {\n  display:none;\n\
+  }\n\n#TABS-Wf8uXOYeKs-panel-TAB-xl-cVuSGY > div > div:nth-child(3) > div > div >\
+  \ div > div > div > div.chart-slice > div.chart-header{\n    display:flex;\n}\n\n\
+  /*Hide Filter chart Title*/\n#GRID_ID-panel-GRID_ID > div > div > div:nth-child(2)\
+  \ > div > div > div:nth-child(1) > div > div > div > div:nth-child(1) > div > div\
+  \ > div > div > div > div.chart-slice > div.chart-header{\n  display:none;\n}\n\n\
+  #GRID_ID-panel-GRID_ID > div > div > div:nth-child(2) > div > div > div:nth-child(1)\
+  \ > div > div > div > div:nth-child(2) > div > div > div > div > div > div > div.chart-header\n\
+  {\n  display:none;\n}\n\n#GRID_ID-panel-GRID_ID > div > div > div:nth-child(2) >\
+  \ div > div > div:nth-child(1) > div > div > div > div:nth-child(3) > div > div\
+  \ > div > div > div > div > div.chart-header\n{\n  display:none;\n}\n\n#GRID_ID-panel-GRID_ID\
+  \ > div > div > div:nth-child(2) > div > div > div:nth-child(1) > div > div > div\
+  \ > div:nth-child(4) > div > div > div > div.chart-header\n{\n  display:none;\n\
+  }\n\n#GRID_ID-panel-GRID_ID > div > div > div:nth-child(2) > div > div > div:nth-child(1)\
+  \ > div > div > div > div:nth-child(5) > div > div > div > div > div > div > div.chart-header\n\
+  {\n  display:none;\n}\n\n#GRID_ID-panel-GRID_ID > div > div > div:nth-child(2) >\
+  \ div > div > div:nth-child(1) > div > div > div > div:nth-child(6) > div > div\
+  \ > div > div > div > div > div.chart-header\n{\n  display:none;\n}\n\n/* Header\
+  \ contant tab*/\n.dashboard--editing .dashboard-component-tabs-content .dragdroppable-row\
+  \ {\n    padding-top: 0px;\n    padding-bottom: 0px;\n}\n\n/* Header tab*/ \n.dashboard-component-tabs\
+  \ .dashboard-component-header {\n    padding-top: 0px;\n    padding-bottom: 0px;\n\
+  }\n\n/*Chart padding*/\n.dashboard-component-chart-holder.fade-out {\n    padding-top:\
+  \ 0px;\n    padding-bottom: 0px;\n}\n\n/* reduce gab  in the bottom between row\
+  \ of filter box*/\n#TABS-Wf8uXOYeKs-panel-TAB-xl-cVuSGY[tabindex=\"0\"]>.dashboard-component-tabs-content>.dragdroppable-row:nth-child(1){\n\
+  \  height:70px;\n}\n\n\n"
+slug: null
+uuid: 98b6be5e-1f04-40d5-8076-c666658022be
+position:
+  CHART-54NMk4M3x7:
+    children: []
+    id: CHART-54NMk4M3x7
+    meta:
+      chartId: 2000000003
+      height: 16
+      sliceName: POC - Parent Entity Filter
+      uuid: 1f1edd25-2695-4402-8ba8-18a5979ab344
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-Blkk-Jv3Za
+    - COLUMN-FXYXPaHb9N
+    type: CHART
+  CHART-XWqRUh3CGV:
+    children: []
+    id: CHART-XWqRUh3CGV
+    meta:
+      chartId: 2000000002
+      height: 129
+      sliceName: POC - AWD Table
+      uuid: 04de72f9-42b7-45ee-a852-fe48f6497286
+      width: 8
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-Blkk-Jv3Za
+    type: CHART
+  CHART-aM66kCW4Xr:
+    children: []
+    id: CHART-aM66kCW4Xr
+    meta:
+      chartId: 516
+      height: 15
+      sliceName: SI5 - EIN Currency Filter
+      uuid: 8095ee41-3243-44be-9dda-ae55c4d59a5c
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-l0Gaw3sUY3
+    type: CHART
+  COLUMN-FXYXPaHb9N:
+    children:
+    - CHART-54NMk4M3x7
+    id: COLUMN-FXYXPaHb9N
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-Blkk-Jv3Za
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-l0Gaw3sUY3
+    - ROW-Blkk-Jv3Za
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Active Work Analysis [for POC only Option 1]
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-Blkk-Jv3Za:
+    children:
+    - COLUMN-FXYXPaHb9N
+    - CHART-XWqRUh3CGV
+    id: ROW-Blkk-Jv3Za
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-l0Gaw3sUY3:
+    children:
+    - CHART-aM66kCW4Xr
+    id: ROW-l0Gaw3sUY3
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  show_native_filters: true
+  color_scheme: ''
+  refresh_frequency: 0
+  expanded_slices: {}
+  label_colors: {}
+  timed_refresh_immune_slices: []
+  default_filters: '{"2000000003": {"Parent Entity": ["SAP Strategic and Priority
+    Tier"]}}'
+  chart_configuration: {}
+  filter_scopes:
+    '516':
+      bpo_identifier:
+        scope:
+        - ROOT_ID
+        immune: []
+      ein:
+        scope:
+        - ROOT_ID
+        immune: []
+      emc_currency:
+        scope:
+        - ROOT_ID
+        immune: []
+    '2000000003':
+      Parent Entity:
+        scope:
+        - ROOT_ID
+        immune: []
+version: 1.0.0
