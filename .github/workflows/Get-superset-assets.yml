@@ -43,6 +43,7 @@ jobs:
 
       - name: Commit export
         run: |
+          git rm -r Superset_asstes
           git add -A
           git commit -am "GitHubAction"
           git push
