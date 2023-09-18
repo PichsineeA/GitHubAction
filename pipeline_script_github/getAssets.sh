@@ -25,5 +25,5 @@ curl -X 'GET' \
 
 #for f in *.zip; do unzip "pipeline_script_github/backup/${ENV_NAME}_get_assets.zip" -d tmp && mv tmp/* "Superset_assets"; done
 unzip "pipeline_script_github/backup/${ENV_NAME}_get_assets.zip"
-find . -depth -type d -name 'assets_export*' -execdir mv {} Superset_assetss \;
+find . -depth -type d -name 'assets_export*' -execdir mv {} Superset_assets \;
 
