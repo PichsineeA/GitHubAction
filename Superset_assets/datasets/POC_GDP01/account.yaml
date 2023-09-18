@@ -3,9 +3,9 @@ main_dttm_col: start_date
 description: null
 default_endpoint: null
 offset: 0
-cache_timeout: null
+cache_timeout: 60
 schema: cdm
-sql: null
+sql: ''
 params: null
 template_params: null
 filter_select_enabled: false
@@ -19,7 +19,8 @@ metrics:
   expression: COUNT(*)
   description: null
   d3format: null
-  extra: null
+  extra:
+    warning_markdown: ''
   warning_text: null
 columns:
 - column_name: alt_account_ref
@@ -33,7 +34,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: acc_ext_ref
   verbose_name: null
   is_dttm: false
@@ -45,7 +46,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: account_number
   verbose_name: null
   is_dttm: false
@@ -57,7 +58,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: registration_information
   verbose_name: null
   is_dttm: false
@@ -69,7 +70,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: shareholder_number
   verbose_name: null
   is_dttm: false
@@ -81,7 +82,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: statement_hold_yn
   verbose_name: null
   is_dttm: false
@@ -93,7 +94,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: tax_status_code
   verbose_name: null
   is_dttm: false
@@ -105,7 +106,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: status
   verbose_name: null
   is_dttm: false
@@ -117,7 +118,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: account_currency
   verbose_name: null
   is_dttm: false
@@ -129,7 +130,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: settlement_currency
   verbose_name: null
   is_dttm: false
@@ -141,7 +142,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: fund_relation_code
   verbose_name: null
   is_dttm: false
@@ -153,7 +154,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: shareholder_group
   verbose_name: null
   is_dttm: false
@@ -165,7 +166,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: termination_date
   verbose_name: null
   is_dttm: true
@@ -177,7 +178,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: start_date
   verbose_name: null
   is_dttm: true
@@ -189,7 +190,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: acc_id
   verbose_name: null
   is_dttm: false
@@ -201,7 +202,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: act_id
   verbose_name: null
   is_dttm: false
@@ -213,7 +214,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: prx_id
   verbose_name: null
   is_dttm: false
@@ -225,7 +226,7 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 - column_name: ein
   verbose_name: null
   is_dttm: false
@@ -237,6 +238,6 @@ columns:
   expression: null
   description: null
   python_date_format: null
-  extra: null
+  extra: {}
 version: 1.0.0
 database_uuid: dfa90640-7082-45be-94a8-201e808f9d0b
