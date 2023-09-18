@@ -5,9 +5,9 @@ css: "/* ---------------------------------------------------- */\n/* Filter cont
   \ */\n\n/* Controls the visibility of native filters. \n   Comment out if you want\
   \ native charts visble*/\n.css-1k877g7 {\n  visibility:hidden;\n}\n\n/* ----------------------------------------------------\
   \ */\n/* Big number charts                                    */\n/* ----------------------------------------------------\
-  \ */\n\n/* Big number charts - SSNC Teal */\n/*.big_number_total {*/\n/*\ttext-align:\
-  \ center;*/\n/*\tbackground-color: #00667D;*/\n/*\tcolor: white;*/\n/*\tborder-radius:\
-  \ 5px;*/\n/*}*/"
+  \ */\n\n \n\n/* Big number charts - SSNC Teal */\n.big_number_total {\n    text-align:\
+  \ center;\n    background-color: #00667D;\n    color: white;\n    border-radius:\
+  \ 5px;\n}"
 slug: null
 uuid: 55fd0c59-bd83-44ef-8e5f-3c356dc083dd
 position:
