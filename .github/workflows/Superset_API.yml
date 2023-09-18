@@ -3,7 +3,7 @@ name: Superset API
 on: workflow_dispatch
 jobs:
   my-job:
-    runs-on: ubuntu-latest
+    runs-on: [ self-hosted ]
     steps:
       - uses: actions/checkout@v2
         
