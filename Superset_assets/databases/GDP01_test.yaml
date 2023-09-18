@@ -1,5 +1,5 @@
 database_name: GDP01_test
-sqlalchemy_uri: postgresql://app_superset:gdp01@gdp-01.dev.data.ifdsfs.com:5432/gdp01
+sqlalchemy_uri: postgresql://app_superset:XXXXXXXXXX@gdp-01.dev.data.ifdsfs.com:5432/gdp01
 cache_timeout: null
 expose_in_sqllab: true
 allow_run_async: false
