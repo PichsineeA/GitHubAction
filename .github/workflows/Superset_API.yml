@@ -3,20 +3,19 @@ name: Superset API
 on: workflow_dispatch
 jobs:
   my-job:
-    runs-on: [ self-hosted ]
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         
       - name: API-step
         run: 
-           bash ls
-           bash cd POC_Script
-           bash ./export_local.sh
+           #bash ./SIT_API.sh
+           bash ./DEV_API.sh
            
       - name: Commit export
         run: |
-          # git config --global user.name 'PichsineeA'
-          # git config --global user.email 'happypich.mk@gmail.com'
+          git config --global user.name 'PichsineeA'
+          git config --global user.email 'happypich.mk@gmail.com'
           git add -A
           git commit -am "GitHubAction"
           git push
