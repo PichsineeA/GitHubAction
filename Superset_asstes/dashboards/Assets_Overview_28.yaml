@@ -1,0 +1,661 @@
+dashboard_title: Assets Overview
+description: null
+css: "/* ---------------------------------------------------- */\n/* Filter controls\
+  \                                      */\n/* ----------------------------------------------------\
+  \ */\n\n/* Controls the visibility of native filters. \n   Comment out if you want\
+  \ native charts visble*/\n.css-1k877g7 {\n  visibility:hidden;\n}\n\n/*----------------------\n\
+  \  Display CSS button for 2 charts\n  -Positive Net Movements\n  -Negative Net Movements\n\
+  -----------------------*/\n#slice_237-controls{\n  display:flex;\n}\n#slice_238-controls{\n\
+  \  display:flex;\n}\n#slice_342-controls{\n  display:flex;\n}\n#slice_242-controls{\n\
+  \  display:flex;\n}\n#slice_240-controls{\n  display:flex;\n}\n#slice_241-controls{\n\
+  \  display:flex;\n}\n/*----------------------*/\n\n/*Hide all other drop down options,\
+  \ apart from refresh and CSV*/\n.chart-slice + div>div>.ant-dropdown>ul>li:not(:first-child):not(:last-child){\n\
+  \  display:none;\n}\n\n\n/* ----------------------------------------------------\
+  \ */\n/* Big number charts                                    */\n/* ----------------------------------------------------\
+  \ */\n\n/* Big number charts - SSNC Teal */\n.big_number_total {\n\ttext-align:\
+  \ center;\n\tbackground-color: #00667D;\n\tcolor: white;\n\tborder-radius: 5px;\n\
+  }\n\n/* ---------------------------------------------------- */\n/* Tables with\
+  \ multiple bars displayed                  */\n/* Adds a white gap between two table\
+  \ columns with bar  */\n/* ----------------------------------------------------\
+  \ */\n\n/* no border around table */\ntable {\n\tborder-collapse: collapse;\n}\n\
+  \n/* white border right of each cell */\ntable td {\n\tborder-right: 3px solid white\n\
+  }\n\n/* no border at bottom */\ntable tr:last-child td {\n\tborder-bottom: 0;\n\
+  }\n\n/* no border first column */\ntable tr td:first-child,\ntable tr th:first-child\
+  \ {\n\tborder-left: 0;\n\tborder-right: 0;\n}\n\n/* no border last column */\ntable\
+  \ tr td:last-child,\ntable tr th:last-child {\n\tborder-right: 0;\n}\n/*Hide title\
+  \ filter name Positive*/\n#TABS-gCXdsoyQy8-panel-TAB-iIgYQIgog > div > div > div\
+  \ > div > div:nth-child(1) > div > div > div > div:nth-child(1) > div > div > div\
+  \ > div > div > div > div.chart-header > div.header-title\n{\ndisplay:none;\n}\n\
+  #TABS-gCXdsoyQy8-panel-TAB-iIgYQIgog > div > div > div > div > div:nth-child(1)\
+  \ > div > div > div > div:nth-child(2) > div > div > div > div > div > div > div.chart-header\
+  \ > div.header-title\n{\ndisplay:none;\n}\n/*Hide title filter name Negative*/\n\
+  #TABS-gCXdsoyQy8-panel-TAB-SoglKU3CK > div > div > div > div > div:nth-child(1)\
+  \ > div > div > div > div:nth-child(1) > div > div > div > div > div > div > div.chart-header\
+  \ > div.header-title\n{\ndisplay:none;\n}\n#TABS-gCXdsoyQy8-panel-TAB-SoglKU3CK\
+  \ > div > div > div > div > div:nth-child(1) > div > div > div > div:nth-child(2)\
+  \ > div > div > div > div > div > div > div.chart-header > div.header-title\n{\n\
+  display:none;\n}\n "
+slug: assets-overview-1
+uuid: 7ac9d970-917e-05e1-dc88-d65101d8fad0
+position:
+  CHART--EDPtXy11_:
+    children: []
+    id: CHART--EDPtXy11_
+    meta:
+      chartId: 241
+      height: 58
+      sliceName: SI - Today's Positive Net Movements
+      sliceNameOverride: Today's Positive Net Movements
+      uuid: d05b7809-1ca8-3a3f-d36b-5354f5ae8f48
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-iIgYQIgog
+    - ROW-KUGEA8EdXI
+    - COLUMN-CHHmMLgF5p
+    - ROW-6V1GcGzZjA
+    type: CHART
+  CHART-5bnHkpJNfG:
+    children: []
+    id: CHART-5bnHkpJNfG
+    meta:
+      chartId: 240
+      height: 94
+      sliceName: SI - Today's Positive Movements
+      sliceNameOverride: Today's Positive Movements
+      uuid: e471a598-f4e2-821a-a813-4a98b6c04b9a
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-iIgYQIgog
+    - ROW-KUGEA8EdXI
+    - COLUMN-YsV0UJ1Bej
+    type: CHART
+  CHART-7nKUCH6g_o:
+    children: []
+    id: CHART-7nKUCH6g_o
+    meta:
+      chartId: 164
+      height: 23
+      sliceName: SI - UK Filter
+      uuid: 2c2a64a5-07eb-6f55-6fb5-6becf9abfa43
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-sZLosn0DQk
+    type: CHART
+  CHART-Dy47o_s5i1:
+    children: []
+    id: CHART-Dy47o_s5i1
+    meta:
+      chartId: 238
+      height: 70
+      sliceName: SI - Negative Net Movements
+      sliceNameOverride: Negative Net Movements
+      uuid: 32bdff72-60b9-ddb5-37d9-09770db54a25
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-QGOu2BUqon
+    - ROW-bOt9XEZ6uo
+    - COLUMN-DP9DgKGEx1
+    type: CHART
+  CHART-E1Qb5ux3AC:
+    children: []
+    id: CHART-E1Qb5ux3AC
+    meta:
+      chartId: 235
+      height: 15
+      sliceName: SI - Largest Positive Fund Movement by %
+      sliceNameOverride: Largest Positive Fund Movement by %
+      uuid: bb8fdac5-0c21-35a4-d45d-618bc33e8208
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-QGOu2BUqon
+    - ROW-5qQbHg84JR
+    type: CHART
+  CHART-GH7WKq_OtI:
+    children: []
+    id: CHART-GH7WKq_OtI
+    meta:
+      chartId: 237
+      height: 70
+      sliceName: SI - Positive Net Movements
+      sliceNameOverride: Positive Net Movements
+      uuid: 9b4e134f-6109-0aea-cda6-97a13e03e992
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-QGOu2BUqon
+    - ROW-bOt9XEZ6uo
+    - COLUMN-sfd9nc_D_T
+    type: CHART
+  CHART-KxCtDITRzu:
+    children: []
+    id: CHART-KxCtDITRzu
+    meta:
+      chartId: 342
+      height: 94
+      sliceName: SI - Today's Negative Movements
+      sliceNameOverride: Today's Negative Movements
+      uuid: 07c956ff-bcc6-4620-be9f-167a06c1d9be
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-SoglKU3CK
+    - ROW-SQZGwFCp7x
+    - COLUMN-xZt99Ib5Pc
+    type: CHART
+  CHART-PuBq9evMS3:
+    children: []
+    id: CHART-PuBq9evMS3
+    meta:
+      chartId: 242
+      height: 58
+      sliceName: SI - Today's Negative Net Movements
+      sliceNameOverride: Today's Negative Net Movements
+      uuid: 876d6815-2c61-f055-1e50-377e66f89e2d
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-SoglKU3CK
+    - ROW-SQZGwFCp7x
+    - COLUMN-xhDpuvXeKW
+    - ROW-GkCxoGhhsO
+    type: CHART
+  CHART-S8RcV-W_29:
+    children: []
+    id: CHART-S8RcV-W_29
+    meta:
+      chartId: 233
+      height: 15
+      sliceName: SI - Largest Negative Fund Movement by Value
+      sliceNameOverride: Largest Negative Fund Movement by Value
+      uuid: 9dc1c25e-fad0-f9e3-8e59-da7ec072b45a
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-QGOu2BUqon
+    - ROW-5qQbHg84JR
+    type: CHART
+  CHART-UO_-Xi5RPu:
+    children: []
+    id: CHART-UO_-Xi5RPu
+    meta:
+      chartId: 513
+      height: 14
+      sliceName: SI - Share Class Filter for Positive Movement
+      uuid: f376016d-e9dc-45a1-9731-3d86f451bfc9
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-iIgYQIgog
+    - ROW-KUGEA8EdXI
+    - COLUMN-CHHmMLgF5p
+    - ROW-oDDbNiXbta
+    type: CHART
+  CHART-WCckKyjuCs:
+    children: []
+    id: CHART-WCckKyjuCs
+    meta:
+      chartId: 507
+      height: 14
+      sliceName: SI - Fund & Share Class Filter for Positive Movement
+      uuid: 447d4f45-af4a-4edc-8692-0a454d4a9a61
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-iIgYQIgog
+    - ROW-KUGEA8EdXI
+    - COLUMN-CHHmMLgF5p
+    - ROW-PqVxlU4pDA
+    type: CHART
+  CHART-ZR6l-MamwV:
+    children: []
+    id: CHART-ZR6l-MamwV
+    meta:
+      chartId: 508
+      height: 14
+      sliceName: SI - Fund & Share Class Filter for Negative Movement
+      uuid: 3f3016f6-bb53-4762-9bb7-b99a12cdcf1f
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-SoglKU3CK
+    - ROW-SQZGwFCp7x
+    - COLUMN-xhDpuvXeKW
+    - ROW-9jiRKNSH-X
+    type: CHART
+  CHART-bOAAy2UTz_:
+    children: []
+    id: CHART-bOAAy2UTz_
+    meta:
+      chartId: 234
+      height: 15
+      sliceName: SI - Largest Negative Fund Movement by %
+      sliceNameOverride: Largest Negative Fund Movement by %
+      uuid: 11b6b19e-70d8-e13e-91e6-40392d5d4440
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-QGOu2BUqon
+    - ROW-5qQbHg84JR
+    type: CHART
+  CHART-g9HB6WTLHW:
+    children: []
+    id: CHART-g9HB6WTLHW
+    meta:
+      chartId: 236
+      height: 15
+      sliceName: SI - Largest Positive Fund Movement by Value
+      sliceNameOverride: Largest Positive Fund Movement by Value
+      uuid: 7d7596fe-c59e-f708-3c54-3c42a19d9b0c
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-QGOu2BUqon
+    - ROW-5qQbHg84JR
+    type: CHART
+  CHART-gU2pzDEDbb:
+    children: []
+    id: CHART-gU2pzDEDbb
+    meta:
+      chartId: 514
+      height: 14
+      sliceName: SI - Share Class Filter for Negative Movement
+      sliceNameOverride: Share Class Filter for Negative Movement
+      uuid: 6238f28c-c96e-4f04-82de-3bf68e7b54cf
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-SoglKU3CK
+    - ROW-SQZGwFCp7x
+    - COLUMN-xhDpuvXeKW
+    - ROW-lJbSmEHkBn
+    type: CHART
+  COLUMN-CHHmMLgF5p:
+    children:
+    - ROW-PqVxlU4pDA
+    - ROW-oDDbNiXbta
+    - ROW-6V1GcGzZjA
+    id: COLUMN-CHHmMLgF5p
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-iIgYQIgog
+    - ROW-KUGEA8EdXI
+    type: COLUMN
+  COLUMN-DP9DgKGEx1:
+    children:
+    - CHART-Dy47o_s5i1
+    id: COLUMN-DP9DgKGEx1
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-QGOu2BUqon
+    - ROW-bOt9XEZ6uo
+    type: COLUMN
+  COLUMN-YsV0UJ1Bej:
+    children:
+    - CHART-5bnHkpJNfG
+    id: COLUMN-YsV0UJ1Bej
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 8
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-iIgYQIgog
+    - ROW-KUGEA8EdXI
+    type: COLUMN
+  COLUMN-sfd9nc_D_T:
+    children:
+    - CHART-GH7WKq_OtI
+    id: COLUMN-sfd9nc_D_T
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-QGOu2BUqon
+    - ROW-bOt9XEZ6uo
+    type: COLUMN
+  COLUMN-xZt99Ib5Pc:
+    children:
+    - CHART-KxCtDITRzu
+    id: COLUMN-xZt99Ib5Pc
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 8
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-SoglKU3CK
+    - ROW-SQZGwFCp7x
+    type: COLUMN
+  COLUMN-xhDpuvXeKW:
+    children:
+    - ROW-9jiRKNSH-X
+    - ROW-lJbSmEHkBn
+    - ROW-GkCxoGhhsO
+    id: COLUMN-xhDpuvXeKW
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-SoglKU3CK
+    - ROW-SQZGwFCp7x
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-sZLosn0DQk
+    - TABS-gCXdsoyQy8
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Assets Overview
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-5qQbHg84JR:
+    children:
+    - CHART-g9HB6WTLHW
+    - CHART-E1Qb5ux3AC
+    - CHART-S8RcV-W_29
+    - CHART-bOAAy2UTz_
+    id: ROW-5qQbHg84JR
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-QGOu2BUqon
+    type: ROW
+  ROW-6V1GcGzZjA:
+    children:
+    - CHART--EDPtXy11_
+    id: ROW-6V1GcGzZjA
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-iIgYQIgog
+    - ROW-KUGEA8EdXI
+    - COLUMN-CHHmMLgF5p
+    type: ROW
+  ROW-9jiRKNSH-X:
+    children:
+    - CHART-ZR6l-MamwV
+    id: ROW-9jiRKNSH-X
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-SoglKU3CK
+    - ROW-SQZGwFCp7x
+    - COLUMN-xhDpuvXeKW
+    type: ROW
+  ROW-GkCxoGhhsO:
+    children:
+    - CHART-PuBq9evMS3
+    id: ROW-GkCxoGhhsO
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-SoglKU3CK
+    - ROW-SQZGwFCp7x
+    - COLUMN-xhDpuvXeKW
+    type: ROW
+  ROW-KUGEA8EdXI:
+    children:
+    - COLUMN-CHHmMLgF5p
+    - COLUMN-YsV0UJ1Bej
+    id: ROW-KUGEA8EdXI
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-iIgYQIgog
+    type: ROW
+  ROW-PqVxlU4pDA:
+    children:
+    - CHART-WCckKyjuCs
+    id: ROW-PqVxlU4pDA
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-iIgYQIgog
+    - ROW-KUGEA8EdXI
+    - COLUMN-CHHmMLgF5p
+    type: ROW
+  ROW-SQZGwFCp7x:
+    children:
+    - COLUMN-xhDpuvXeKW
+    - COLUMN-xZt99Ib5Pc
+    id: ROW-SQZGwFCp7x
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-SoglKU3CK
+    type: ROW
+  ROW-bOt9XEZ6uo:
+    children:
+    - COLUMN-sfd9nc_D_T
+    - COLUMN-DP9DgKGEx1
+    id: ROW-bOt9XEZ6uo
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-QGOu2BUqon
+    type: ROW
+  ROW-lJbSmEHkBn:
+    children:
+    - CHART-gU2pzDEDbb
+    id: ROW-lJbSmEHkBn
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-SoglKU3CK
+    - ROW-SQZGwFCp7x
+    - COLUMN-xhDpuvXeKW
+    type: ROW
+  ROW-oDDbNiXbta:
+    children:
+    - CHART-UO_-Xi5RPu
+    id: ROW-oDDbNiXbta
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    - TAB-iIgYQIgog
+    - ROW-KUGEA8EdXI
+    - COLUMN-CHHmMLgF5p
+    type: ROW
+  ROW-sZLosn0DQk:
+    children:
+    - CHART-7nKUCH6g_o
+    id: ROW-sZLosn0DQk
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  TAB-QGOu2BUqon:
+    children:
+    - ROW-5qQbHg84JR
+    - ROW-bOt9XEZ6uo
+    id: TAB-QGOu2BUqon
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Asset Overview
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    type: TAB
+  TAB-SoglKU3CK:
+    children:
+    - ROW-SQZGwFCp7x
+    id: TAB-SoglKU3CK
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Negative Movements
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    type: TAB
+  TAB-iIgYQIgog:
+    children:
+    - ROW-KUGEA8EdXI
+    id: TAB-iIgYQIgog
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Positive Movements
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-gCXdsoyQy8
+    type: TAB
+  TABS-gCXdsoyQy8:
+    children:
+    - TAB-QGOu2BUqon
+    - TAB-iIgYQIgog
+    - TAB-SoglKU3CK
+    id: TABS-gCXdsoyQy8
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: TABS
+metadata:
+  timed_refresh_immune_slices: []
+  expanded_slices: {}
+  refresh_frequency: 0
+  default_filters: '{}'
+  color_scheme: ''
+  filter_scopes:
+    '164':
+      bpo_identifier:
+        scope:
+        - TAB-QGOu2BUqon
+        - TAB-iIgYQIgog
+        - TAB-SoglKU3CK
+        immune: []
+      ein:
+        scope:
+        - TAB-QGOu2BUqon
+        - TAB-iIgYQIgog
+        - TAB-SoglKU3CK
+        immune: []
+      emc_currency:
+        scope:
+        - TAB-QGOu2BUqon
+        - TAB-iIgYQIgog
+        - TAB-SoglKU3CK
+        immune: []
+    '507':
+      fund_name:
+        scope:
+        - TAB-iIgYQIgog
+        immune: []
+    '508':
+      fund_name:
+        scope:
+        - TAB-SoglKU3CK
+        immune: []
+    '513':
+      share_class_name:
+        scope:
+        - TAB-iIgYQIgog
+        immune: []
+    '514':
+      share_class_name:
+        scope:
+        - TAB-SoglKU3CK
+        immune: []
+  show_native_filters: true
+  label_colors: {}
+  chart_configuration: {}
+version: 1.0.0

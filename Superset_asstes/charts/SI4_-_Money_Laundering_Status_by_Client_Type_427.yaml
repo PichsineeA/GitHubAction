@@ -1,0 +1,66 @@
+slice_name: SI4 - Money Laundering Status by Client Type
+viz_type: dist_bar
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: N
+    expressionType: SIMPLE
+    filterOptionName: filter_su9dzzjdzxb_s2xks34k16p
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: cancelled
+  bottom_margin: auto
+  color_scheme: supersetColors
+  columns:
+  - anti_money_laundering_status
+  datasource: 93__table
+  extra_form_data: {}
+  granularity_sqla: eff_date
+  groupby:
+  - client_type
+  metrics:
+  - aggregate: COUNT_DISTINCT
+    column:
+      certification_details: null
+      certified_by: null
+      column_name: unitholder_id
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 3126
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: VARCHAR(40)
+      type_generic: 1
+      verbose_name: null
+      warning_markdown: null
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    isNew: false
+    label: Number of Clients
+    optionName: metric_9i9gbc9xvmv_lza1xjbzz9r
+    sqlExpression: null
+  order_desc: true
+  reduce_x_ticks: false
+  row_limit: 10
+  show_bar_value: false
+  show_legend: true
+  slice_id: 427
+  time_range: 'DATEADD(DATETIME("now"), -2, month) : now'
+  url_params: {}
+  viz_type: dist_bar
+  x_ticks_layout: flat
+  y_axis_bounds:
+  - null
+  - null
+  y_axis_format: SMART_NUMBER
+  y_axis_label: Number of Clients
+cache_timeout: null
+uuid: bd0ae1dc-0e57-4f1d-9ec6-99bddffb40b4
+version: 1.0.0
+dataset_uuid: 74fa6896-5e25-4630-b057-9f43589743fa

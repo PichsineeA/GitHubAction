@@ -1,0 +1,65 @@
+slice_name: FMR - FBS - Value trend
+viz_type: line
+params:
+  adhoc_filters: []
+  annotation_layers: []
+  bottom_margin: auto
+  color_scheme: supersetColors
+  comparison_type: null
+  datasource: 45__table
+  granularity_sqla: valuation_date
+  groupby:
+  - ivh_description
+  label_colors: {}
+  left_margin: auto
+  line_interpolation: monotone
+  metrics:
+  - aggregate: SUM
+    column:
+      column_name: total_value
+      description: Total units x Price
+      expression: null
+      filterable: true
+      groupby: true
+      id: 623
+      is_dttm: false
+      optionName: _col_total_value
+      python_date_format: null
+      type: NUMERIC(20, 3)
+      verbose_name: Total Value
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    isNew: false
+    label: Total Value
+    optionName: metric_jxpg8j19i8_k2wqo4yksw9
+    sqlExpression: null
+  order_desc: true
+  resample_method: mean
+  resample_rule: 7D
+  rich_tooltip: true
+  rolling_type: null
+  row_limit: 50000
+  show_brush: auto
+  show_legend: false
+  show_markers: false
+  slice_id: 133
+  time_compare: null
+  time_grain_sqla: P1D
+  time_range: 'Last 3 years : Today'
+  url_params: {}
+  viz_type: line
+  x_axis_format: '%b %Y'
+  x_axis_label: Valuation Date
+  x_axis_showminmax: true
+  x_ticks_layout: auto
+  y_axis_bounds:
+  - null
+  - null
+  y_axis_format: SMART_NUMBER
+  y_axis_label: Total Fund Value
+  y_axis_showminmax: false
+  y_log_scale: true
+cache_timeout: null
+uuid: d0baa42a-ffd1-4c3f-c37f-54e6bb86f503
+version: 1.0.0
+dataset_uuid: 684545bb-cddf-d2d0-9669-f67301bffd4e

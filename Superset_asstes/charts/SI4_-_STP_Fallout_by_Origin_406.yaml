@@ -1,0 +1,97 @@
+slice_name: SI4 - STP Fallout by Origin
+viz_type: pie
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: Failed trades
+    expressionType: SIMPLE
+    filterOptionName: filter_l4ceh55qj1j_735vygfus8x
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: Status trades
+  - clause: WHERE
+    comparator: 'Yes'
+    expressionType: SIMPLE
+    filterOptionName: filter_je1qf4nii8_1fxedzaes9ei
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: Current Day Flag (Deal Date)
+  - clause: WHERE
+    comparator: CTN
+    expressionType: SIMPLE
+    filterOptionName: filter_rxsfh3xjegm_cgzqq83psab
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: Deal Origin for STP
+  - clause: WHERE
+    comparator: N
+    expressionType: SIMPLE
+    filterOptionName: filter_tf4z1ru4k6_zh9ucf5w68
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: cancelled
+  color_scheme: supersetColors
+  datasource: 88__table
+  date_format: smart_date
+  donut: true
+  extra_form_data: {}
+  granularity_sqla: deal_date
+  groupby:
+  - Deal Origin for STP
+  innerRadius: 50
+  label_line: true
+  label_type: key_value
+  labels_outside: true
+  legendOrientation: bottom
+  legendType: scroll
+  metric:
+    aggregate: COUNT_DISTINCT
+    column:
+      certification_details: null
+      certified_by: null
+      column_name: deal_id
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 2811
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: VARCHAR(30)
+      type_generic: 1
+      verbose_name: Deal ID
+      warning_markdown: null
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    isNew: false
+    label: COUNT_DISTINCT(Deal ID)
+    optionName: metric_tik0u9glb4b_gp8qhp8a0uv
+    sqlExpression: null
+  number_format: SMART_NUMBER
+  outerRadius: 65
+  row_limit: 100
+  show_labels: false
+  show_labels_threshold: ''
+  show_legend: true
+  slice_id: 406
+  sort_by_metric: true
+  time_range: No filter
+  url_params: {}
+  viz_type: pie
+cache_timeout: null
+uuid: 91ea8d55-251b-4bbc-a5ea-7134b66364c5
+version: 1.0.0
+dataset_uuid: 81bf2829-3db1-4e8d-a82f-c0aea2afff8a
