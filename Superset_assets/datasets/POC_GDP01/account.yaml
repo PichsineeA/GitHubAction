@@ -23,6 +23,18 @@ metrics:
     warning_markdown: ''
   warning_text: null
 columns:
+- column_name: new
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: null
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: <enter SQL expression here>
+  description: null
+  python_date_format: null
+  extra: {}
 - column_name: alt_account_ref
   verbose_name: null
   is_dttm: false
