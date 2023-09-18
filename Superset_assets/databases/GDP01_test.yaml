@@ -1,5 +1,5 @@
-database_name: examples
-sqlalchemy_uri: postgresql://superset:superset@db:5432/superset
+database_name: GDP01_test
+sqlalchemy_uri: postgresql://app_superset:XXXXXXXXXX@gdp-01.dev.data.ifdsfs.com:5432/gdp01
 cache_timeout: null
 expose_in_sqllab: true
 allow_run_async: false
@@ -11,5 +11,5 @@ extra:
   engine_params: {}
   metadata_cache_timeout: {}
   schemas_allowed_for_csv_upload: []
-uuid: a2dc77af-e654-49bb-b321-40f6b559a1ee
+uuid: 686f1ca9-b67a-c0b6-3c1c-81dd5ce0bb5e
 version: 1.0.0
