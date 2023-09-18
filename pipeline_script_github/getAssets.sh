@@ -22,4 +22,7 @@ curl -X 'GET' \
     -H "Cookie: $cookie" >pipeline_script_github/backup/${ENV_NAME}_get_assets.zip
     
 # unzip file
-unzip pipeline_script_github/backup/${ENV_NAME}_get_assets.zip >Superset_assets
+mkdir tmp
+for f in *.zip; do unzip "pipeline_script_github/backup/${ENV_NAME}_get_assets.zip" -d tmp && mv tmp/* "Superset_assets"; done
+rmdir tmp
+#unzip pipeline_script_github/backup/${ENV_NAME}_get_assets.zip >Superset_assets
