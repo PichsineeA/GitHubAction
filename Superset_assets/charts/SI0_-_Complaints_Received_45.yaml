@@ -1,0 +1,21 @@
+slice_name: SI0 - Complaints Received
+viz_type: big_number_total
+params:
+  adhoc_filters: []
+  datasource: 15__table
+  extra_form_data: {}
+  granularity_sqla: received_date
+  header_font_size: 0.4
+  metric: count
+  slice_id: 45
+  subheader: in the last month
+  subheader_font_size: 0.15
+  time_format: '%d-%m-%Y %H:%M:%S'
+  time_range: '2020-10-01 : 2020-10-31'
+  url_params: {}
+  viz_type: big_number_total
+  y_axis_format: SMART_NUMBER
+cache_timeout: null
+uuid: f0f75179-904f-09f3-ca2d-7acd17efd394
+version: 1.0.0
+dataset_uuid: 15464cf9-c639-d9cb-4f5f-eaa791a90ea0

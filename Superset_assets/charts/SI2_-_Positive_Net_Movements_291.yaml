@@ -1,0 +1,59 @@
+slice_name: SI2 - Positive Net Movements
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: '0'
+    expressionType: SIMPLE
+    filterOptionName: filter_nq829njh78b_z5zwetp1u
+    isExtra: false
+    isNew: false
+    operator: '>'
+    operatorId: GREATER_THAN
+    sqlExpression: null
+    subject: fund_movement_value
+  all_columns:
+  - share_class_name
+  - fund_code
+  - isin_code
+  - Today's Movement
+  - Today's Movement %
+  color_pn: false
+  column_config:
+    Today's Movement:
+      d3NumberFormat: ',.2f'
+      d3SmallNumberFormat: ',.2f'
+      showCellBars: false
+    Today's Movement %:
+      d3NumberFormat: .2%
+      d3SmallNumberFormat: .2%
+      showCellBars: false
+  conditional_formatting: []
+  datasource: 68__table
+  extra_form_data: {}
+  granularity_sqla: null
+  groupby:
+  - share_class_name
+  include_search: true
+  metrics:
+  - Movement Value Total
+  - Movement % Total
+  order_by_cols:
+  - '["Today''s Movement", false]'
+  order_desc: true
+  page_length: 10
+  percent_metrics: []
+  query_mode: raw
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: false
+  slice_id: 291
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: Last week
+  url_params: {}
+  viz_type: table
+cache_timeout: null
+uuid: 11333c7a-94c3-4834-bfcf-8d7048c9a288
+version: 1.0.0
+dataset_uuid: 7d4a695f-2ab8-44e6-9b87-4dd909ab175d

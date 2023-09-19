@@ -1,0 +1,19 @@
+slice_name: SI - Part 1(s) to be notified
+viz_type: big_number_total
+params:
+  adhoc_filters: []
+  datasource: 48__table
+  granularity_sqla: original_closed_date
+  header_font_size: 0.4
+  metric: TOTAL_PART_1
+  slice_id: 165
+  subheader: ''
+  subheader_font_size: 0.15
+  time_range: No filter
+  url_params: {}
+  viz_type: big_number_total
+  y_axis_format: ',d'
+cache_timeout: null
+uuid: addab045-4a4b-5531-1d94-7ba56c9794ef
+version: 1.0.0
+dataset_uuid: f8317c8b-7468-9302-8dd4-bb1298e9d50c

@@ -1,0 +1,407 @@
+table_name: vw_fast_transactions
+main_dttm_col: deal_date
+description: Version 1.1 (16-08-2023) dpp-3193, transfer physical table to virtual
+  SQL, add column fund_name.
+default_endpoint: null
+offset: 0
+cache_timeout: 60
+schema: present
+sql: ''
+params: null
+template_params: null
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: 425aaa80-69f3-bb87-0d4c-9b280593557b
+metrics:
+- metric_name: count
+  verbose_name: Number of Deals
+  metric_type: null
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+columns:
+- column_name: Status trades
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: "case WHEN deal_origin is NULL then 'Failed trades' \nwhen deal_origin\
+    \ is not NULL  then 'Successful trades' end"
+  description: to be change 'deal_origin' to 'operator_id'
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: Deal Origin for STP
+  verbose_name: null
+  is_dttm: null
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: "case \n  when deal_origin = 'CTN'  then 'CTN'\n  when deal_origin =\
+    \ 'EMX'  then 'EMX'\n  else 'Other'\nend"
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: PRICE STATUS TXT
+  verbose_name: Price Status
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: case price_status when 'P' then 'Priced' else 'Unpriced' end
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: CURRENT DAY FLAG
+  verbose_name: Today
+  is_dttm: false
+  is_active: null
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: case when bookvp_date::date = Now()::date then 'Yes' else 'No' end
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: Time of Trade VP
+  verbose_name: Valuation Point
+  is_dttm: null
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: to_char(bookvp_date ,'HH24:MI')
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: Cash Gross Amount
+  verbose_name: Cash Amount
+  is_dttm: false
+  is_active: null
+  type: null
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: to_char(cash_gross_amount, 'FM999,999,999,999,990.00')
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: deal_date
+  verbose_name: Deal Date
+  is_dttm: false
+  is_active: null
+  type: TIMESTAMP WITHOUT TIME ZONE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: Unit Amount
+  verbose_name: Unit Amount
+  is_dttm: false
+  is_active: null
+  type: null
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: to_char(unit_amount, 'FM999,999,999,999,990.0000')
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: Transaction Price
+  verbose_name: Transaction Price
+  is_dttm: false
+  is_active: null
+  type: null
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: to_char(transaction_price, 'FM999,999,999,999,990.0000')
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: bookvp_date
+  verbose_name: null
+  is_dttm: true
+  is_active: null
+  type: TIMESTAMP WITHOUT TIME ZONE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: "Today\u2019s Cash Movement"
+  verbose_name: null
+  is_dttm: null
+  is_active: null
+  type: NUMERIC
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: (cash_gross_amount)
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: "Today\u2019s Unit Movement"
+  verbose_name: null
+  is_dttm: null
+  is_active: null
+  type: NUMERIC
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: (unit_amount)
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: fund_name
+  verbose_name: Fund Name
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: (fund_name)
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: transaction_seq
+  verbose_name: Transaction Seq.
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(20)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: deal_id
+  verbose_name: Deal ID
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(20)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: unitholder_id
+  verbose_name: Unitholder ID
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(20)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: deal_origin
+  verbose_name: Deal Origin
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(20)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: price_type
+  verbose_name: Price Type
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(20)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: share_class_name
+  verbose_name: Share Class
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(80)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: transaction_type
+  verbose_name: Transaction Type
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(80)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: cash_gross_amount
+  verbose_name: Cash Amount
+  is_dttm: false
+  is_active: null
+  type: NUMERIC
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: unit_amount
+  verbose_name: Unit Amount
+  is_dttm: false
+  is_active: null
+  type: NUMERIC
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: transaction_price
+  verbose_name: Transaction Price
+  is_dttm: false
+  is_active: null
+  type: NUMERIC
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: currency
+  verbose_name: Currency
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(3)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: Unitholder
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: (unitholder_id)
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: mco_name
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(100)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: price_status
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(1)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: emc_currency
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(3)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: ein
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+version: 1.0.0
+database_uuid: 980ffeea-a918-7739-250c-7d130b23d6c0

@@ -1,0 +1,43 @@
+slice_name: SI5 - Active Work by Stage
+viz_type: pie
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_tpmczlauh7_pgoxzswpag
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: UPPER(queuecd) <> 'END'
+    subject: null
+  color_scheme: supersetColors
+  datasource: 96__table
+  date_format: smart_date
+  donut: true
+  extra_form_data: {}
+  granularity_sqla: last_update_dattim
+  groupby:
+  - processing_stage
+  innerRadius: 50
+  label_line: true
+  label_type: key
+  labels_outside: true
+  legendOrientation: top
+  legendType: scroll
+  metric: count
+  number_format: ',d'
+  outerRadius: 65
+  row_limit: 100
+  show_labels: true
+  show_labels_threshold: 5
+  show_legend: false
+  slice_id: 547
+  sort_by_metric: true
+  time_range: No filter
+  url_params: {}
+  viz_type: pie
+cache_timeout: null
+uuid: 3ccb1aa2-2aca-4e7c-9a7c-550150741b81
+version: 1.0.0
+dataset_uuid: 2c52393b-92f3-4a51-9ff7-3d0349ae0245

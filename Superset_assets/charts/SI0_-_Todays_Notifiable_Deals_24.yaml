@@ -1,0 +1,43 @@
+slice_name: SI0 - Today's Notifiable Deals
+viz_type: table
+params:
+  adhoc_filters: []
+  all_columns:
+  - fund_name
+  - unitholder_id
+  - event_id
+  - deal_datetime
+  - deal_origin
+  - transaction_type_desc
+  - price_type
+  - vp_datetime
+  - '% of Fund'
+  - Actual Units
+  - Est. Actual Cash
+  - cancelled_flag
+  color_pn: true
+  conditional_formatting: []
+  datasource: 10__table
+  extra_form_data: {}
+  granularity_sqla: null
+  groupby: []
+  metrics:
+  - count
+  order_by_cols: []
+  order_desc: true
+  page_length: 10
+  percent_metrics: []
+  query_mode: raw
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: false
+  slice_id: 24
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: Last week
+  url_params: {}
+  viz_type: table
+cache_timeout: null
+uuid: 089b287f-de4d-88ee-32ad-8a3008130bf9
+version: 1.0.0
+dataset_uuid: 74c45b17-e480-1bd2-7d29-9583f81346c6

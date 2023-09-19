@@ -1,0 +1,147 @@
+slice_name: SI6 - Active Work Analysis View
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_0dhxiew6wful_f7hao5ylalb
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: UPPER(queuecd) <> 'END'
+    subject: null
+  all_columns: []
+  color_pn: false
+  column_config:
+    day_1:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    day_11-30:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    day_2:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    day_3:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    day_31+:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    day_4:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    day_5:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    day_6-10:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    discard:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    hold:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    personal:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    process:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    quality:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    refer:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    rescan:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    suspended:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    system:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    total:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    vetting:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+  conditional_formatting: []
+  datasource: 2000000005__table
+  extra_form_data: {}
+  granularity_sqla: last_update_dattim
+  groupby:
+  - owner_department
+  - owner_team
+  include_search: true
+  metrics:
+  - vetting
+  - process
+  - quality
+  - refer
+  - hold
+  - rescan
+  - discard
+  - personal
+  - system
+  - day_1
+  - day_2
+  - day_3
+  - day_4
+  - day_5
+  - day_6-10
+  - day_11-30
+  - day_31+
+  - suspended
+  - total
+  order_by_cols: []
+  order_desc: false
+  page_length: 20
+  percent_metrics: []
+  query_mode: aggregate
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: false
+  slice_id: 2000000033
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  timeseries_limit_metric:
+    aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: false
+    isNew: false
+    label: CONCAT(owner_department,owner_team)
+    optionName: metric_j2qay75uh9n_x4zp56jec8a
+    sqlExpression: CONCAT(owner_department,owner_team)
+  url_params: {}
+  viz_type: table
+cache_timeout: null
+uuid: 9a7fc9d8-91a1-4e82-a949-67b5de34643d
+version: 1.0.0
+dataset_uuid: deb426d2-5ea7-42ae-ae97-c99694c2ddff
