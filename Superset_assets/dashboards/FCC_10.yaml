@@ -1,4 +1,4 @@
-dashboard_title: FCC New Coder Survey 2018
+dashboard_title: FCC
 description: null
 css: ''
 slug: null
@@ -168,6 +168,40 @@ position:
     - TAB-l_9I0aNYZ
     - ROW-b7USYEngT
     type: CHART
+  CHART-UtSaz4pfV6:
+    children: []
+    id: CHART-UtSaz4pfV6
+    meta:
+      chartId: 72
+      height: 50
+      sliceName: Age distribution of respondents
+      uuid: 5f1ea868-604e-f69d-a241-5daa83ff33be
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-L-d9eyOE-b
+    - TAB-AsMaxdYL_t
+    - ROW-UsW-_RPAb
+    - COLUMN-OJ5spdMmNh
+    type: CHART
+  CHART-VvFbGxi3X_:
+    children: []
+    id: CHART-VvFbGxi3X_
+    meta:
+      chartId: 120
+      height: 62
+      sliceName: Top 15 Languages Spoken at Home
+      uuid: 03a74c97-52fc-cf87-233c-d4275f8c550c
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-L-d9eyOE-b
+    - TAB-AsMaxdYL_t
+    - ROW-UsW-_RPAb
+    - COLUMN-OJ5spdMmNh
+    type: CHART
   CHART-XHncHuS5pZ:
     children: []
     id: CHART-XHncHuS5pZ
@@ -216,6 +250,55 @@ position:
     - TABS-L-d9eyOE-b
     - TAB-l_9I0aNYZ
     - ROW-s3l4os7YY
+    type: CHART
+  CHART-aytwlT4GAq:
+    children: []
+    id: CHART-aytwlT4GAq
+    meta:
+      chartId: 84
+      height: 50
+      sliceName: Breakdown of Developer Type
+      uuid: b8386be8-f44e-6535-378c-2aa2ba461286
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-L-d9eyOE-b
+    - TAB-AsMaxdYL_t
+    - ROW-y-GwJPgxLr
+    type: CHART
+  CHART-d6vjW6rC6V:
+    children: []
+    id: CHART-d6vjW6rC6V
+    meta:
+      chartId: 79
+      height: 54
+      sliceName: Filter Segments
+      sliceNameOverride: Filter By
+      uuid: 6420629a-ce74-2c6b-ef7d-b2e78baa3cfe
+      width: 5
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-L-d9eyOE-b
+    - TAB-AsMaxdYL_t
+    - ROW-y-GwJPgxLr
+    type: CHART
+  CHART-fLpTSAHpAO:
+    children: []
+    id: CHART-fLpTSAHpAO
+    meta:
+      chartId: 77
+      height: 118
+      sliceName: Country of Citizenship
+      uuid: 2ba66056-a756-d6a3-aaec-0c243fb7062e
+      width: 9
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-L-d9eyOE-b
+    - TAB-AsMaxdYL_t
+    - ROW-UsW-_RPAb
     type: CHART
   CHART-lQVSAw0Or3:
     children: []
@@ -300,7 +383,9 @@ position:
     - ROW--BIzjz9F0
     type: COLUMN
   COLUMN-OJ5spdMmNh:
-    children: []
+    children:
+    - CHART-VvFbGxi3X_
+    - CHART-UtSaz4pfV6
     id: COLUMN-OJ5spdMmNh
     meta:
       background: BACKGROUND_TRANSPARENT
@@ -323,7 +408,7 @@ position:
   HEADER_ID:
     id: HEADER_ID
     meta:
-      text: FCC New Coder Survey 2018
+      text: FCC
     type: HEADER
   MARKDOWN-BUmyHM2s0x:
     children: []
@@ -396,6 +481,32 @@ position:
     - TAB-l_9I0aNYZ
     - ROW-b7USYEngT
     type: MARKDOWN
+  MARKDOWN-__u6CsUyfh:
+    children: []
+    id: MARKDOWN-__u6CsUyfh
+    meta:
+      code: '## FreeCodeCamp New Coder Survey 2018
+
+
+        Every year, FCC surveys its user base (mostly budding softwware developers)
+        to learn more about their interests, backgrounds, goals, job status, and socioeconomic
+        features. This dashboard visualizes survey data from the 2018 survey.
+
+
+        - [Survey link](https://freecodecamp.typeform.com/to/S3UeD9)
+
+        - [Dataset](https://github.com/freeCodeCamp/2018-new-coder-survey)
+
+        - [FCC Blog Post](https://www.freecodecamp.org/news/we-asked-20-000-people-who-they-are-and-how-theyre-learning-to-code-fff5d668969/)'
+      height: 45
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-L-d9eyOE-b
+    - TAB-AsMaxdYL_t
+    - ROW-y-GwJPgxLr
+    type: MARKDOWN
   MARKDOWN-zc2mWxZeox:
     children: []
     id: MARKDOWN-zc2mWxZeox
@@ -453,6 +564,7 @@ position:
   ROW-UsW-_RPAb:
     children:
     - COLUMN-OJ5spdMmNh
+    - CHART-fLpTSAHpAO
     id: ROW-UsW-_RPAb
     meta:
       background: BACKGROUND_TRANSPARENT
@@ -518,8 +630,23 @@ position:
     - TABS-L-d9eyOE-b
     - TAB-l_9I0aNYZ
     type: ROW
+  ROW-y-GwJPgxLr:
+    children:
+    - MARKDOWN-__u6CsUyfh
+    - CHART-aytwlT4GAq
+    - CHART-d6vjW6rC6V
+    id: ROW-y-GwJPgxLr
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-L-d9eyOE-b
+    - TAB-AsMaxdYL_t
+    type: ROW
   TAB-AsMaxdYL_t:
     children:
+    - ROW-y-GwJPgxLr
     - ROW-mOvr_xWm1
     - ROW-UsW-_RPAb
     id: TAB-AsMaxdYL_t
@@ -614,13 +741,14 @@ metadata:
   show_native_filters: true
   cross_filters_enabled: false
   shared_label_colors:
-    No, not an ethnic minority: '#1FA8C9'
-    Yes, an ethnic minority: '#454E7C'
     No Answer: '#D3B3DA'
-    Male: '#666666'
     Female: '#454E7C'
-    <NULL>: '#5AC189'
+    Yes, an ethnic minority: '#454E7C'
     Prefer not to say: '#E04355'
+    No, not an ethnic minority: '#1FA8C9'
+    Male: '#666666'
+    <NULL>: '#5AC189'
+    age: '#1FA8C9'
   color_scheme_domain:
   - '#1FA8C9'
   - '#454E7C'
@@ -642,5 +770,27 @@ metadata:
   - '#D3B3DA'
   - '#9EE5E5'
   - '#D1C6BC'
+  filter_scopes:
+    '79':
+      ethnic_minority:
+        scope:
+        - ROOT_ID
+        immune: []
+      gender:
+        scope:
+        - ROOT_ID
+        immune: []
+      developer_type:
+        scope:
+        - ROOT_ID
+        immune: []
+      lang_at_home:
+        scope:
+        - ROOT_ID
+        immune: []
+      country_live:
+        scope:
+        - ROOT_ID
+        immune: []
   chart_configuration: {}
 version: 1.0.0
