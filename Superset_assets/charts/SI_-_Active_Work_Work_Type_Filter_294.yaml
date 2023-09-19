@@ -1,0 +1,39 @@
+slice_name: SI - Active Work Work Type Filter
+description: null
+certified_by: null
+certification_details: null
+viz_type: filter_box
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_pbbw2jqwgi_cxurg1co9o
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: processing_stage <> 'End'
+    subject: null
+  datasource: 50__table
+  date_filter: false
+  extra_form_data: {}
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: wrktype
+    key: 9MfptIHB3
+    label: Work Type
+    multiple: true
+    searchAllOptions: false
+  granularity_sqla: last_update_dattim
+  instant_filtering: true
+  slice_id: 316
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+query_context: null
+cache_timeout: null
+uuid: 7a876266-3730-452c-a638-be39e7cf8c06
+version: 1.0.0
+dataset_uuid: 40f6d689-5a50-6435-4ddd-353a5940ae24

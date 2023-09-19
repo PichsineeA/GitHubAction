@@ -1,0 +1,65 @@
+slice_name: SI - Complaint Resolved Details
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    expressionType: SIMPLE
+    filterOptionName: filter_oqzjpsy3o1a_xi9f43fa85f
+    isExtra: false
+    isNew: false
+    operator: IS NOT NULL
+    sqlExpression: null
+    subject: resolved_date
+  - clause: WHERE
+    comparator:
+    - Void
+    expressionType: SIMPLE
+    filterOptionName: filter_naxomwdupe9_jvf55prv8em
+    isExtra: false
+    isNew: false
+    operator: NOT IN
+    sqlExpression: null
+    subject: complaint_status
+  all_columns:
+  - incident_ref
+  - client_ref
+  - client_name
+  - complaint_ref
+  - incident_root_cause_category
+  - incident_root_cause
+  - resolved_date
+  color_pn: true
+  column_config:
+    resolved_date:
+      d3TimeFormat: '%Y-%m-%d'
+  conditional_formatting: []
+  datasource: 49__table
+  extra_form_data: {}
+  granularity_sqla: resolved_date
+  groupby: []
+  include_search: true
+  metrics:
+  - COUNT
+  order_by_cols:
+  - '["resolved_date", true]'
+  order_desc: true
+  page_length: 20
+  percent_metrics: []
+  query_mode: raw
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: true
+  slice_id: 191
+  table_timestamp_format: smart_date
+  time_grain_sqla: null
+  time_range: Last year
+  url_params: {}
+  viz_type: table
+query_context: null
+cache_timeout: null
+uuid: 8d11e107-0e1d-6f7d-eedb-c9e444646c32
+version: 1.0.0
+dataset_uuid: e5094f0c-5391-2731-3de4-8bfb236135c9

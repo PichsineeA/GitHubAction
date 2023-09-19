@@ -1,0 +1,31 @@
+slice_name: SI6 - Active Work Complexity Filter
+description: null
+certified_by: null
+certification_details: null
+viz_type: filter_box
+params:
+  adhoc_filters: []
+  datasource: 2000000005__table
+  date_filter: false
+  extra_form_data: {}
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: complexity
+    key: xNYRITkq6
+    label: COMPLEXITY
+    multiple: true
+    searchAllOptions: false
+  granularity_sqla: last_update_dattim
+  instant_filtering: true
+  show_sqla_time_granularity: false
+  slice_id: 2000000044
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+query_context: null
+cache_timeout: null
+uuid: 6572028a-a58f-4286-8d74-6c60b5404ea2
+version: 1.0.0
+dataset_uuid: deb426d2-5ea7-42ae-ae97-c99694c2ddff

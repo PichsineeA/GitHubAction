@@ -1,0 +1,25 @@
+slice_name: SI5 - Complaints Resolved - Last 2 Weeks
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  adhoc_filters: []
+  datasource: 98__table
+  extra_form_data: {}
+  granularity_sqla: resolved_date
+  header_font_size: 0.4
+  metric: total_resolved
+  slice_id: 553
+  subheader: ''
+  subheader_font_size: 0.15
+  time_format: '%d-%m-%Y %H:%M:%S'
+  time_range: 'DATEADD(DATETIME("today"), -2, week) : today'
+  url_params: {}
+  viz_type: big_number_total
+  y_axis_format: ',d'
+query_context: null
+cache_timeout: null
+uuid: c42bc6d6-c8ef-49bf-b17a-aa9f6e78388e
+version: 1.0.0
+dataset_uuid: bdc5b0a1-522c-4e73-9560-249150a7e262

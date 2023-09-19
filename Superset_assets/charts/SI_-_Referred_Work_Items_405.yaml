@@ -1,0 +1,40 @@
+slice_name: SI - Referred Work Items
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: Management Company Refer
+    expressionType: SIMPLE
+    filterOptionName: filter_b95tg3k90b9_kr9cj4al6gp
+    isExtra: false
+    isNew: false
+    operator: ==
+    sqlExpression: null
+    subject: owner_team
+  - clause: WHERE
+    comparator: END
+    expressionType: SIMPLE
+    filterOptionName: filter_ea1dwx54kgg_iupf66ca9tc
+    isExtra: false
+    isNew: false
+    operator: '!='
+    sqlExpression: null
+    subject: queuecd
+  datasource: 50__table
+  granularity_sqla: last_update_dattim
+  header_font_size: 0.4
+  metric: count
+  slice_id: 153
+  subheader_font_size: 0.15
+  time_range: No filter
+  url_params: {}
+  viz_type: big_number_total
+  y_axis_format: ',d'
+query_context: null
+cache_timeout: null
+uuid: 977a16a7-d432-b7cf-02e9-95cc3ce51105
+version: 1.0.0
+dataset_uuid: 40f6d689-5a50-6435-4ddd-353a5940ae24

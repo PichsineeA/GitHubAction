@@ -1,0 +1,23 @@
+slice_name: SI - Complaints Resolved
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  adhoc_filters: []
+  datasource: 49__table
+  granularity_sqla: resolved_date
+  header_font_size: 0.4
+  metric: TOTAL_RESOLVED
+  slice_id: 185
+  subheader: in the time range
+  subheader_font_size: 0.15
+  time_range: Last 12 months
+  url_params: {}
+  viz_type: big_number_total
+  y_axis_format: ',d'
+query_context: null
+cache_timeout: null
+uuid: b6d69c17-77a7-ff87-47b0-1ba83e6bf81a
+version: 1.0.0
+dataset_uuid: e5094f0c-5391-2731-3de4-8bfb236135c9

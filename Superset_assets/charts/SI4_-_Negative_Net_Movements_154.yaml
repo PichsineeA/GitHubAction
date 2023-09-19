@@ -1,0 +1,55 @@
+slice_name: SI4 - Negative Net Movements
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: '0'
+    expressionType: SIMPLE
+    filterOptionName: filter_vcmtxx2r5b_j3nsrdj4yks
+    isExtra: false
+    isNew: false
+    operator: <
+    operatorId: LESS_THAN
+    sqlExpression: null
+    subject: Negative Net Movements
+  all_columns:
+  - fund_name
+  - Negative Net Movements
+  - Negative Net Movements %
+  color_pn: false
+  column_config:
+    Negative Net Movements:
+      d3NumberFormat: ',.2f'
+      d3SmallNumberFormat: ',.2f'
+    Negative Net Movements %:
+      d3NumberFormat: .2%
+      d3SmallNumberFormat: .2%
+  conditional_formatting: []
+  datasource: 87__table
+  extra_form_data: {}
+  granularity_sqla: null
+  groupby: []
+  include_search: true
+  order_by_cols:
+  - '["Negative Net Movements", true]'
+  order_desc: true
+  page_length: 10
+  percent_metrics: []
+  query_mode: raw
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: false
+  slice_id: 362
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+query_context: null
+cache_timeout: null
+uuid: 77f16bf0-32d9-4862-9e38-92b68e4f42f9
+version: 1.0.0
+dataset_uuid: 22a4c3aa-d02c-4d98-9493-d90c79f5d3ac

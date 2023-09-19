@@ -1,0 +1,49 @@
+slice_name: Mockup for SI UK - Clients Category by Client Risk
+description: null
+certified_by: null
+certification_details: null
+viz_type: dist_bar
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator:
+    - Low
+    - Unknown
+    expressionType: SIMPLE
+    filterOptionName: filter_8kpyjkpww48_16bilsfxy7s
+    isExtra: false
+    isNew: false
+    operator: IN
+    operatorId: IN
+    sqlExpression: null
+    subject: risk_rating
+  bar_stacked: true
+  bottom_margin: auto
+  color_scheme: supersetColors
+  columns:
+  - risk_rating
+  contribution: true
+  datasource: 93__table
+  extra_form_data: {}
+  granularity_sqla: eff_date
+  groupby:
+  - client_category
+  metrics:
+  - count distinct deal
+  order_bars: false
+  order_desc: true
+  row_limit: 10000
+  show_bar_value: false
+  time_range: No filter
+  url_params: {}
+  viz_type: dist_bar
+  x_ticks_layout: auto
+  y_axis_bounds:
+  - null
+  - null
+  y_axis_format: SMART_NUMBER
+query_context: null
+cache_timeout: null
+uuid: 07ebc894-815a-4c2a-907f-da0dbec49f17
+version: 1.0.0
+dataset_uuid: 74fa6896-5e25-4630-b057-9f43589743fa

@@ -1,0 +1,54 @@
+slice_name: SI - Outstanding Breach Details
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator:
+    - Void
+    - Closed
+    expressionType: SIMPLE
+    filterOptionName: filter_ves59z2cks_a7ynf6t3lvu
+    isExtra: false
+    isNew: false
+    operator: NOT IN
+    sqlExpression: null
+    subject: breach_status
+  all_columns:
+  - days_since_identified_txt
+  - breach_ref
+  - client_ref
+  - client_name
+  - date_identified
+  - part_outstanding
+  - control_refs
+  color_pn: true
+  datasource: 48__table
+  extra_form_data: {}
+  granularity_sqla: date_identified
+  groupby: []
+  include_search: true
+  metrics:
+  - count
+  order_by_cols:
+  - '["days_since_identified", false]'
+  order_desc: true
+  page_length: 20
+  percent_metrics: []
+  query_mode: raw
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: true
+  slice_id: 175
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+query_context: null
+cache_timeout: null
+uuid: 379092fe-3157-b70e-b24e-2ed761e5ab80
+version: 1.0.0
+dataset_uuid: f8317c8b-7468-9302-8dd4-bb1298e9d50c

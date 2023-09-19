@@ -1,0 +1,79 @@
+slice_name: SI4 - Dealing Volume
+description: null
+certified_by: null
+certification_details: null
+viz_type: dist_bar
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: 'Yes'
+    expressionType: SIMPLE
+    filterOptionName: filter_v8i77kqerw_31dr3v9fndm
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: Current Day Flag (Book VP Date)
+  - clause: WHERE
+    comparator: N
+    expressionType: SIMPLE
+    filterOptionName: filter_3wninuk2eke_10jgjcjjeiv
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: cancelled
+  bar_stacked: true
+  bottom_margin: auto
+  color_scheme: supersetColors
+  columns:
+  - Deal Origin for STP
+  datasource: 88__table
+  extra_form_data: {}
+  granularity_sqla: bookvp_date
+  groupby:
+  - Time of Trade VP
+  metrics:
+  - aggregate: COUNT_DISTINCT
+    column:
+      certification_details: null
+      certified_by: null
+      column_name: deal_id
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 2811
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: VARCHAR(30)
+      type_generic: 1
+      verbose_name: Deal ID
+      warning_markdown: null
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    isNew: false
+    label: COUNT_DISTINCT(Deal ID)
+    optionName: metric_gmdfjmayhzr_cmj3qkpqqpj
+    sqlExpression: null
+  order_bars: true
+  order_desc: false
+  row_limit: 10000
+  show_legend: true
+  slice_id: 415
+  time_range: No filter
+  url_params: {}
+  viz_type: dist_bar
+  x_ticks_layout: flat
+  y_axis_bounds:
+  - null
+  - null
+  y_axis_format: SMART_NUMBER
+query_context: null
+cache_timeout: null
+uuid: 5a4ac084-077a-427b-9c37-baa4443f3f2d
+version: 1.0.0
+dataset_uuid: 81bf2829-3db1-4e8d-a82f-c0aea2afff8a

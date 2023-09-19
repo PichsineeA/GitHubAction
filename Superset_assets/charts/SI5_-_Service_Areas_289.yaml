@@ -1,0 +1,47 @@
+slice_name: SI5 - Service Areas
+description: null
+certified_by: null
+certification_details: null
+viz_type: pie
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_bbsakyc2izl_n19oduu3tsk
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: UPPER(queuecd) <> 'END'
+    subject: null
+  color_scheme: supersetColors
+  datasource: 96__table
+  date_format: smart_date
+  donut: true
+  extra_form_data: {}
+  granularity_sqla: last_update_dattim
+  groupby:
+  - processing_stage
+  innerRadius: 50
+  label_line: true
+  label_type: key
+  labels_outside: true
+  legendOrientation: top
+  legendType: scroll
+  metric: count
+  number_format: ',d'
+  outerRadius: 65
+  row_limit: 100
+  show_labels: true
+  show_labels_threshold: 5
+  show_legend: false
+  slice_id: 528
+  sort_by_metric: true
+  time_range: No filter
+  url_params: {}
+  viz_type: pie
+query_context: null
+cache_timeout: null
+uuid: e9a4c89b-be68-4314-ac63-0d098683bc66
+version: 1.0.0
+dataset_uuid: 2c52393b-92f3-4a51-9ff7-3d0349ae0245

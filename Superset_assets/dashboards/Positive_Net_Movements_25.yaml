@@ -1,0 +1,200 @@
+dashboard_title: Positive Net Movements
+description: null
+css: "/* ---------------------------------------------------- */\n/* Filter controls\
+  \                                      */\n/* ----------------------------------------------------\
+  \ */\n\n/* Controls the visibility of native filters. \n   Comment out if you want\
+  \ native charts visble*/\n.css-1k877g7 {\n  visibility:hidden;\n}\n\n.background--white\
+  \ .dashboard-component>.chart-slice>.chart-header>.header-title{\n  display: none;\n\
+  }\n\n\n/*----------------------\n  Display CSS button for 1 chart\n  -Today's Movements\n\
+  -----------------------*/\n#slice_240-controls{\n  display:flex;\n}\n/*----------------------*/\n\
+  \n/*Hide all other drop down options, apart from refresh and CSV*/\n\n.chart-slice\
+  \ + div>div>.ant-dropdown>ul>li:not(:first-child):not(:last-child){\n  display:none;\n\
+  }\n\n"
+slug: positive-movements-1
+uuid: 6d35e42d-6c85-b2a2-f731-2745a9382aa4
+position:
+  CHART-L3oY4TTjxh:
+    children: []
+    id: CHART-L3oY4TTjxh
+    meta:
+      chartId: 392
+      height: 27
+      sliceName: SI - UK Filter
+      uuid: 2c2a64a5-07eb-6f55-6fb5-6becf9abfa43
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-apmUHXkevM
+    type: CHART
+  CHART-PqzyszB9ts:
+    children: []
+    id: CHART-PqzyszB9ts
+    meta:
+      chartId: 191
+      height: 76
+      sliceName: SI - Today's Positive Movements
+      sliceNameOverride: Today's Movements
+      uuid: e471a598-f4e2-821a-a813-4a98b6c04b9a
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-z1SIrWOMhI
+    - COLUMN-kePo6j7pal
+    type: CHART
+  CHART-eNzFBUJXtK:
+    children: []
+    id: CHART-eNzFBUJXtK
+    meta:
+      chartId: 189
+      height: 23
+      sliceName: SI - Fund & Share Class Filter
+      uuid: 7bb88364-fdab-034f-ec1e-7dd428270fc2
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-z1SIrWOMhI
+    - COLUMN-6mNnWGLk_U
+    - ROW-k6ojNPrLKv
+    type: CHART
+  CHART-nDZHIXnVxP:
+    children: []
+    id: CHART-nDZHIXnVxP
+    meta:
+      chartId: 334
+      height: 51
+      sliceName: SI - Today's Positive Net Movements
+      sliceNameOverride: Today's Positive Net Movements
+      uuid: d05b7809-1ca8-3a3f-d36b-5354f5ae8f48
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-z1SIrWOMhI
+    - COLUMN-6mNnWGLk_U
+    - ROW-Vt6vGS4RQV
+    type: CHART
+  COLUMN-6mNnWGLk_U:
+    children:
+    - ROW-k6ojNPrLKv
+    - ROW-Vt6vGS4RQV
+    id: COLUMN-6mNnWGLk_U
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-z1SIrWOMhI
+    type: COLUMN
+  COLUMN-kePo6j7pal:
+    children:
+    - CHART-PqzyszB9ts
+    id: COLUMN-kePo6j7pal
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 8
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-z1SIrWOMhI
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-apmUHXkevM
+    - ROW-z1SIrWOMhI
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Positive Net Movements
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-Vt6vGS4RQV:
+    children:
+    - CHART-nDZHIXnVxP
+    id: ROW-Vt6vGS4RQV
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-z1SIrWOMhI
+    - COLUMN-6mNnWGLk_U
+    type: ROW
+  ROW-apmUHXkevM:
+    children:
+    - CHART-L3oY4TTjxh
+    id: ROW-apmUHXkevM
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-k6ojNPrLKv:
+    children:
+    - CHART-eNzFBUJXtK
+    id: ROW-k6ojNPrLKv
+    meta:
+      background: BACKGROUND_WHITE
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-z1SIrWOMhI
+    - COLUMN-6mNnWGLk_U
+    type: ROW
+  ROW-z1SIrWOMhI:
+    children:
+    - COLUMN-6mNnWGLk_U
+    - COLUMN-kePo6j7pal
+    id: ROW-z1SIrWOMhI
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  timed_refresh_immune_slices: []
+  expanded_slices: {}
+  refresh_frequency: 0
+  default_filters: '{}'
+  color_scheme: ''
+  label_colors: {}
+  show_native_filters: true
+  filter_scopes:
+    '392':
+      bpo_identifier:
+        scope:
+        - ROOT_ID
+        immune: []
+      ein:
+        scope:
+        - ROOT_ID
+        immune: []
+      emc_currency:
+        scope:
+        - ROOT_ID
+        immune: []
+    '189':
+      fund_name:
+        scope:
+        - ROOT_ID
+        immune: []
+      share_class_name:
+        scope:
+        - ROOT_ID
+        immune: []
+  chart_configuration: {}
+version: 1.0.0

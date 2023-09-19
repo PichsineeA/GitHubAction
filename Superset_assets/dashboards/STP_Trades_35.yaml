@@ -1,0 +1,224 @@
+dashboard_title: STP Trades
+description: null
+css: "/*----------------------\n  Display CSS button for 1 chart\n  -STP Details-\n\
+  -----------------------*/\n#slice_488-controls{\n  display:flex;\n}\n/*----------------------*/\n\
+  \n/*Hide all other drop down options, apart from refresh and CSV*/\n\n.chart-slice\
+  \ + div>div>.ant-dropdown>ul>li:not(:first-child):not(:last-child){\n  display:none;\n\
+  }"
+slug: stp-trades-1
+uuid: 2769c1b9-f23d-44cf-a9a5-f611bec78314
+position:
+  CHART-fdk93INaLv:
+    children: []
+    id: CHART-fdk93INaLv
+    meta:
+      chartId: 392
+      height: 33
+      sliceName: SI - UK Filter
+      uuid: 2c2a64a5-07eb-6f55-6fb5-6becf9abfa43
+      width: 12
+    parents:
+    - ROOT_ID
+    - TABS-zB2_b_lFWu
+    - TAB-C5TwERa2Be
+    - ROW-ZJW2_8ThEB
+    type: CHART
+  CHART-g7XzaGdnfs:
+    children: []
+    id: CHART-g7XzaGdnfs
+    meta:
+      chartId: 298
+      height: 56
+      sliceName: SI - Dealing Volume
+      sliceNameOverride: Dealing Volume
+      uuid: 7bab9295-0531-4e0e-a967-91b81107ca7c
+      width: 6
+    parents:
+    - ROOT_ID
+    - TABS-zB2_b_lFWu
+    - TAB-C5TwERa2Be
+    - ROW-HVXffFS37r
+    - COLUMN-sn7m3BeS4c
+    - ROW-VlLkI9o8LN
+    type: CHART
+  CHART-k6btmXGgDY:
+    children: []
+    id: CHART-k6btmXGgDY
+    meta:
+      chartId: 243
+      height: 86
+      sliceName: SI - STP Detail
+      sliceNameOverride: STP Detail
+      uuid: 7f8682db-5f54-4ce2-95ba-0f20170ea0b6
+      width: 12
+    parents:
+    - ROOT_ID
+    - TABS-zB2_b_lFWu
+    - TAB-0IvboFeJR
+    - ROW-xAVF1pbTy2
+    type: CHART
+  CHART-xL9v0krjQa:
+    children: []
+    id: CHART-xL9v0krjQa
+    meta:
+      chartId: 313
+      height: 56
+      sliceName: "SI - Today\u2019s STP Dealing"
+      sliceNameOverride: "Today\u2019s STP Dealing"
+      uuid: 96f8d1a5-8968-4397-aaea-afc26336ad00
+      width: 4
+    parents:
+    - ROOT_ID
+    - TABS-zB2_b_lFWu
+    - TAB-C5TwERa2Be
+    - ROW-HVXffFS37r
+    - COLUMN-a1ALdufiuy
+    type: CHART
+  COLUMN-a1ALdufiuy:
+    children:
+    - CHART-xL9v0krjQa
+    id: COLUMN-a1ALdufiuy
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    parents:
+    - ROOT_ID
+    - TABS-zB2_b_lFWu
+    - TAB-C5TwERa2Be
+    - ROW-HVXffFS37r
+    type: COLUMN
+  COLUMN-sn7m3BeS4c:
+    children:
+    - ROW-VlLkI9o8LN
+    id: COLUMN-sn7m3BeS4c
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    parents:
+    - ROOT_ID
+    - TABS-zB2_b_lFWu
+    - TAB-C5TwERa2Be
+    - ROW-HVXffFS37r
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children: []
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: STP Trades
+    type: HEADER
+  ROOT_ID:
+    children:
+    - TABS-zB2_b_lFWu
+    id: ROOT_ID
+    type: ROOT
+  ROW-HVXffFS37r:
+    children:
+    - COLUMN-a1ALdufiuy
+    - COLUMN-sn7m3BeS4c
+    id: ROW-HVXffFS37r
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-zB2_b_lFWu
+    - TAB-C5TwERa2Be
+    type: ROW
+  ROW-VlLkI9o8LN:
+    children:
+    - CHART-g7XzaGdnfs
+    id: ROW-VlLkI9o8LN
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-zB2_b_lFWu
+    - TAB-C5TwERa2Be
+    - ROW-HVXffFS37r
+    - COLUMN-sn7m3BeS4c
+    type: ROW
+  ROW-ZJW2_8ThEB:
+    children:
+    - CHART-fdk93INaLv
+    id: ROW-ZJW2_8ThEB
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-zB2_b_lFWu
+    - TAB-C5TwERa2Be
+    type: ROW
+  ROW-xAVF1pbTy2:
+    children:
+    - CHART-k6btmXGgDY
+    id: ROW-xAVF1pbTy2
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-zB2_b_lFWu
+    - TAB-0IvboFeJR
+    type: ROW
+  TAB-0IvboFeJR:
+    children:
+    - ROW-xAVF1pbTy2
+    id: TAB-0IvboFeJR
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: STP Detail
+    parents:
+    - ROOT_ID
+    - TABS-zB2_b_lFWu
+    type: TAB
+  TAB-C5TwERa2Be:
+    children:
+    - ROW-ZJW2_8ThEB
+    - ROW-HVXffFS37r
+    id: TAB-C5TwERa2Be
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: STP Overview
+    parents:
+    - ROOT_ID
+    - TABS-zB2_b_lFWu
+    type: TAB
+  TABS-zB2_b_lFWu:
+    children:
+    - TAB-C5TwERa2Be
+    - TAB-0IvboFeJR
+    id: TABS-zB2_b_lFWu
+    meta: {}
+    parents:
+    - ROOT_ID
+    type: TABS
+metadata:
+  show_native_filters: true
+  color_scheme: ''
+  refresh_frequency: 0
+  expanded_slices: {}
+  label_colors: {}
+  timed_refresh_immune_slices: []
+  default_filters: '{}'
+  filter_scopes:
+    '392':
+      bpo_identifier:
+        scope:
+        - ROOT_ID
+        immune: []
+      ein:
+        scope:
+        - ROOT_ID
+        immune: []
+      emc_currency:
+        scope:
+        - ROOT_ID
+        immune: []
+  chart_configuration: {}
+version: 1.0.0

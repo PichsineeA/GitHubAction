@@ -1,0 +1,76 @@
+slice_name: SI - STP Detail
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator:
+    - CTN
+    - EMX
+    expressionType: SIMPLE
+    filterOptionName: filter_w2928lqcqi_80b8fcdl583
+    isExtra: false
+    isNew: false
+    operator: IN
+    operatorId: IN
+    sqlExpression: null
+    subject: Deal Origin for STP
+  - clause: WHERE
+    comparator: 'Yes'
+    expressionType: SIMPLE
+    filterOptionName: filter_yghm0nc5sw_slwcplh24n
+    isExtra: false
+    isNew: false
+    operator: '!='
+    operatorId: NOT_EQUALS
+    sqlExpression: null
+    subject: CURRENT DAY FLAG
+  all_columns:
+  - Fund Name
+  - Unitholder
+  - deal_id
+  - deal_origin
+  - transaction_type
+  - price_type
+  - Time of Trade VP
+  - "Today\u2019s Unit Movement"
+  - "Today\u2019s Cash Movement"
+  color_pn: false
+  column_config:
+    Time of Trade VP:
+      horizontalAlign: center
+    "Today\u2019s Cash Movement":
+      d3NumberFormat: ',.2f'
+      d3SmallNumberFormat: ',.2f'
+      showCellBars: false
+    "Today\u2019s Unit Movement":
+      d3NumberFormat: ',.4f'
+      d3SmallNumberFormat: ',.4f'
+      showCellBars: false
+  conditional_formatting: []
+  datasource: 57__table
+  extra_form_data: {}
+  granularity_sqla: bookvp_date
+  groupby: []
+  order_by_cols:
+  - '["deal_id", false]'
+  order_desc: true
+  page_length: 10
+  percent_metrics: []
+  query_mode: raw
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: false
+  slice_id: 488
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: '2022-11-04T00:00:00 : 2022-11-05T00:00:00'
+  url_params: {}
+  viz_type: table
+query_context: null
+cache_timeout: null
+uuid: 7f8682db-5f54-4ce2-95ba-0f20170ea0b6
+version: 1.0.0
+dataset_uuid: 425aaa80-69f3-bb87-0d4c-9b280593557b

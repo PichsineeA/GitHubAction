@@ -1,0 +1,81 @@
+slice_name: SI2 - Notifiable Deals
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_gtrww9hqj09_jmu2qi1gkhk
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: RTRIM(transaction_type) <> 'Stock Transfer In'
+    subject: null
+  - clause: WHERE
+    comparator: 'Yes'
+    expressionType: SIMPLE
+    filterOptionName: filter_2zb0b268jgk_pgoupg466zn
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: CURRENT DAY FLAG
+  - clause: WHERE
+    comparator: Y
+    expressionType: SIMPLE
+    filterOptionName: filter_g0w9dqvpxor_8ldrj29yrj
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: notifiable_deal_flag
+  - clause: WHERE
+    comparator: N
+    expressionType: SIMPLE
+    filterOptionName: filter_1c2zkps47j7_ghm6f1p23af
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: Cancelled
+  all_columns:
+  - transaction_type
+  - Transaction ID
+  - Est. Actual Cash
+  color_pn: true
+  column_config:
+    Est. Actual Cash:
+      d3NumberFormat: ',.2f '
+      d3SmallNumberFormat: ',.2f'
+      showCellBars: false
+  conditional_formatting: []
+  datasource: 76__table
+  extra_form_data: {}
+  granularity_sqla: deal_date
+  groupby: []
+  metrics: []
+  order_by_cols:
+  - '["Cash Gross Amount", false]'
+  order_desc: true
+  percent_metrics: []
+  query_mode: raw
+  row_limit: 10
+  server_page_length: 10
+  show_cell_bars: false
+  slice_id: 308
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+query_context: null
+cache_timeout: null
+uuid: 5b09e7a3-05f8-4069-812a-2f2253829817
+version: 1.0.0
+dataset_uuid: ebf32c00-65fc-4211-98df-7bbfec2a9c69

@@ -1,0 +1,32 @@
+slice_name: SI0 - Part 1(s) to be notified
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: '"Part 1"'
+    expressionType: SIMPLE
+    filterOptionName: filter_ed05nnlp6b_xk8poow3d2f
+    isExtra: false
+    isNew: false
+    operator: ==
+    sqlExpression: null
+    subject: Part_Outstanding
+  datasource: 20__table
+  granularity_sqla: manco_notified_date
+  header_font_size: 0.4
+  metric: count
+  slice_id: 50
+  subheader: ''
+  subheader_font_size: 0.15
+  time_range: No filter
+  url_params: {}
+  viz_type: big_number_total
+  y_axis_format: SMART_NUMBER
+query_context: null
+cache_timeout: null
+uuid: 016737cc-f79f-2608-63f0-2fb23e8ea852
+version: 1.0.0
+dataset_uuid: e86bd959-0878-588a-29d9-31157bd1370b

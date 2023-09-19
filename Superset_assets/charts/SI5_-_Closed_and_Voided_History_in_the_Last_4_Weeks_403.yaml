@@ -1,0 +1,71 @@
+slice_name: SI5 - Closed and Voided History in the Last 4 Weeks
+description: null
+certified_by: null
+certification_details: null
+viz_type: dist_bar
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_o1pn7efp0vr_r3vcr4ejdq
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: DATE_TRUNC('Week', COALESCE (closed_date, void_date)) >= date_trunc('Week',(current_date
+      - INTERVAL '3 weeks'))::date
+    subject: null
+  - clause: WHERE
+    comparator: null
+    expressionType: SIMPLE
+    filterOptionName: filter_ttbchvd1g4_4ldigepoc0x
+    isExtra: false
+    isNew: false
+    operator: IS NOT NULL
+    operatorId: IS_NOT_NULL
+    sqlExpression: null
+    subject: week_commencing
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_i83ccc7ky2o_cciznbjwvzg
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: upper(breach_status)  IN ('VOID', 'CLOSED')
+    subject: null
+  bottom_margin: auto
+  color_scheme: supersetColors
+  columns: []
+  contribution: false
+  datasource: 97__table
+  extra_form_data: {}
+  granularity_sqla: update_datetime
+  groupby:
+  - week_commencing
+  metrics:
+  - total_closed_status
+  - total_void_status
+  order_bars: true
+  order_desc: true
+  reduce_x_ticks: false
+  row_limit: 10000
+  show_bar_value: true
+  show_controls: false
+  show_legend: true
+  slice_id: 524
+  time_range: No filter
+  url_params: {}
+  viz_type: dist_bar
+  x_axis_label: Week commencing
+  x_ticks_layout: flat
+  y_axis_bounds:
+  - null
+  - null
+  y_axis_format: ',d'
+  y_axis_label: Number of Breaches
+query_context: null
+cache_timeout: null
+uuid: 9288d702-7679-44ca-a64c-d097981ab734
+version: 1.0.0
+dataset_uuid: 9f0a237b-3856-4149-9f7b-70e2e9a25367

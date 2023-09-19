@@ -1,0 +1,35 @@
+slice_name: SI0 - Oldest Items by Work Type
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters: []
+  all_columns: []
+  color_pn: true
+  datasource: 7__table
+  extra_form_data: {}
+  granularity_sqla: crdate
+  groupby:
+  - wrktype
+  metrics:
+  - Oldest item in Business Days
+  order_by_cols: []
+  order_desc: true
+  page_length: 0
+  percent_metrics: []
+  query_mode: aggregate
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: false
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  timeseries_limit_metric: Oldest item in Business Days
+  url_params: {}
+  viz_type: table
+query_context: null
+cache_timeout: null
+uuid: 71337947-f2cd-4732-ae2e-4f4f475fa17d
+version: 1.0.0
+dataset_uuid: fa1cab1e-d9ee-f116-392a-98ac627773a0

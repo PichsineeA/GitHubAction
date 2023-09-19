@@ -1,0 +1,31 @@
+slice_name: SI6 - Active Work Processing Stage Filter
+description: null
+certified_by: null
+certification_details: null
+viz_type: filter_box
+params:
+  adhoc_filters: []
+  datasource: 2000000005__table
+  date_filter: false
+  extra_form_data: {}
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: processing_stage
+    key: j1fMVRfFJ
+    label: PROCESSING STAGE
+    metric: processing_stage_filter
+    multiple: true
+    searchAllOptions: false
+  granularity_sqla: last_update_dattim
+  instant_filtering: true
+  slice_id: 2000000038
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+query_context: null
+cache_timeout: null
+uuid: 0dac590f-4a47-4f79-bf6b-b88443361793
+version: 1.0.0
+dataset_uuid: deb426d2-5ea7-42ae-ae97-c99694c2ddff

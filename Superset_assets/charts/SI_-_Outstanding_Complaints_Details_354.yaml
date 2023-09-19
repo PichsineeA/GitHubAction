@@ -1,0 +1,60 @@
+slice_name: SI - Outstanding Complaints Details
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    expressionType: SIMPLE
+    filterOptionName: filter_sr82ft4v1p_7l9qai06zpb
+    isExtra: false
+    isNew: false
+    operator: IS NULL
+    sqlExpression: null
+    subject: resolute_letter_date
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_93iuvex889o_efkv2tegntu
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: UPPER(complaint_status) NOT IN ('VOID')
+    subject: null
+  all_columns:
+  - days_since_received_txt
+  - incident_ref
+  - client_ref
+  - client_name
+  - complaint_ref
+  - received_date
+  color_pn: true
+  conditional_formatting: []
+  datasource: 49__table
+  extra_form_data: {}
+  granularity_sqla: received_date
+  groupby: []
+  include_search: true
+  metrics:
+  - COUNT
+  order_by_cols:
+  - '["received_date", true]'
+  order_desc: true
+  page_length: 20
+  percent_metrics: []
+  query_mode: raw
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: true
+  slice_id: 189
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+query_context: null
+cache_timeout: null
+uuid: 691d651c-b0ce-c07e-0ffe-8a089158bfb7
+version: 1.0.0
+dataset_uuid: e5094f0c-5391-2731-3de4-8bfb236135c9

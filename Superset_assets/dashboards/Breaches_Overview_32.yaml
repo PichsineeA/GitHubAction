@@ -1,0 +1,620 @@
+dashboard_title: Breaches Overview
+description: null
+css: "/* ---------------------------------------------------- */\n/* Big number charts\
+  \                                    */\n/* ----------------------------------------------------\
+  \ */\n\n/* Big number charts - SSNC Teal */\n.big_number_total {\n\ttext-align:\
+  \ center;\n\tbackground-color: #00667D;\n\tcolor: white;\n\tborder-radius: 5px;\n\
+  }\n/*----------------------\n  Display CSS button\nControl Failures - Last 4 Weeks:\
+  \ slice_526-controls\nOutstanding Breach Details: slice_517-controls\nClosed Breach\
+  \ Details - Last 4 Weeks: slice_519-controls\nVoided Breach Details - Last 4 Weeks:\
+  \ slice_518-controls\n-----------------------*/\n#slice_526-controls {\ndisplay:\
+  \ flex;\n}\n#slice_517-controls {\ndisplay: flex;\n}\n#slice_519-controls {\ndisplay:\
+  \ flex;\n}\n#slice_518-controls {\ndisplay: flex;\n}\n/*Hide all other drop down\
+  \ options, apart from refresh and CSV*/\n.chart-slice + div>div>.ant-dropdown>ul>li:not(:first-child):not(:last-child){\n\
+  \  display:none;\n}"
+slug: breaches-overview-5-bmi-bmam
+uuid: e71e730e-c705-45aa-8fc5-f038137da5f4
+position:
+  CHART--D6V828ZQW:
+    children: []
+    id: CHART--D6V828ZQW
+    meta:
+      chartId: 412
+      height: 21
+      sliceName: SI5 - Part 2(s) to be Closed
+      sliceNameOverride: Part 2(s) to be Closed
+      uuid: 09d263d9-ccfb-42f3-a448-6e7e78b6002a
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-6m6HQIgt6
+    - ROW-cZUPH6VY85
+    - COLUMN-Z8a8imNAyN
+    - ROW-aN88aw7Zbh
+    type: CHART
+  CHART-2i4ZB4j733:
+    children: []
+    id: CHART-2i4ZB4j733
+    meta:
+      chartId: 276
+      height: 113
+      sliceName: SI5- Outstanding Breach Details
+      sliceNameOverride: Outstanding Breach Details
+      uuid: e8d83fd1-b435-4673-84a2-a8bb834c02f9
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-wnIX0i978b
+    - ROW-Qm9Icf0135
+    - COLUMN-tw9BcZ0E1L
+    type: CHART
+  CHART-7hV93DU7oN:
+    children: []
+    id: CHART-7hV93DU7oN
+    meta:
+      chartId: 140
+      height: 21
+      sliceName: SI5 - Part 1(s) to be Notified
+      sliceNameOverride: Part 1(s) to be Notified
+      uuid: 1f8f5381-1eec-413d-b022-45b5448c406b
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-6m6HQIgt6
+    - ROW-cZUPH6VY85
+    - COLUMN-Z8a8imNAyN
+    - ROW-Dfoik_8_gu
+    type: CHART
+  CHART-BQc9ZQxlbc:
+    children: []
+    id: CHART-BQc9ZQxlbc
+    meta:
+      chartId: 403
+      height: 64
+      sliceName: SI5 - Closed and Voided History in the Last 4 Weeks
+      sliceNameOverride: Closed and Voided - Last 4 Weeks
+      uuid: 9288d702-7679-44ca-a64c-d097981ab734
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-6m6HQIgt6
+    - ROW-EKueyJYX7C
+    - COLUMN-xnFk1zF0SD
+    type: CHART
+  CHART-ElQKBpi8V0:
+    children: []
+    id: CHART-ElQKBpi8V0
+    meta:
+      chartId: 386
+      height: 113
+      sliceName: SI5 - Closed Breach Details
+      sliceNameOverride: Closed Breach Details - Last 4 Weeks
+      uuid: c31f97e5-8fb1-4f42-835a-fc033f11b094
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-Yo-aIhINl
+    - ROW-MShY_U8bSJ
+    - COLUMN-4E3RmNJJcy
+    type: CHART
+  CHART-H2dWFTRevo:
+    children: []
+    id: CHART-H2dWFTRevo
+    meta:
+      chartId: 208
+      height: 20
+      sliceName: SI5 - Total Breaches - Last 4 Weeks
+      sliceNameOverride: Total Breaches - Last 4 Weeks
+      uuid: 68429690-5d8e-4d24-867a-127937316c4a
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-6m6HQIgt6
+    - ROW-EKueyJYX7C
+    - COLUMN-tcBuwwl_85
+    - ROW-js7LJqcsRy
+    - COLUMN-W57dZymubY
+    type: CHART
+  CHART-LuklMArbGp:
+    children: []
+    id: CHART-LuklMArbGp
+    meta:
+      chartId: 390
+      height: 46
+      sliceName: SI5 - Notified in the Last 4 Weeks
+      sliceNameOverride: Notified - Last 4 Weeks
+      uuid: e63e4fa4-389f-456a-8bde-a889246f7578
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-6m6HQIgt6
+    - ROW-cZUPH6VY85
+    - COLUMN-E-hazTCjCg
+    type: CHART
+  CHART-VIcI5coxbN:
+    children: []
+    id: CHART-VIcI5coxbN
+    meta:
+      chartId: 322
+      height: 46
+      sliceName: SI5 - Outstanding Breaches by Age
+      sliceNameOverride: Outstanding Breaches by Age
+      uuid: 6e5e627a-dc90-4cda-8e24-7f1488c3234d
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-6m6HQIgt6
+    - ROW-cZUPH6VY85
+    - COLUMN-I_NFcqeWtR
+    type: CHART
+  CHART-bw0l2QdxdS:
+    children: []
+    id: CHART-bw0l2QdxdS
+    meta:
+      chartId: 133
+      height: 20
+      sliceName: SI5 - Significant Breaches - Last 4 Weeks
+      sliceNameOverride: Significant Breaches - Last 4 Weeks
+      uuid: 1a99791a-6aec-4dd5-ab24-ca69268f380b
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-6m6HQIgt6
+    - ROW-EKueyJYX7C
+    - COLUMN-tcBuwwl_85
+    - ROW-js7LJqcsRy
+    - COLUMN-YOrS-_Qt8F
+    type: CHART
+  CHART-k4AQOZopMM:
+    children: []
+    id: CHART-k4AQOZopMM
+    meta:
+      chartId: 210
+      height: 13
+      sliceName: SI5 - EIN Currency Filter
+      uuid: 8095ee41-3243-44be-9dda-ae55c4d59a5c
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW--h_c6mQ6gD
+    type: CHART
+  CHART-t9Q5tKa1xX:
+    children: []
+    id: CHART-t9Q5tKa1xX
+    meta:
+      chartId: 279
+      height: 38
+      sliceName: SI5 - Control Failures - Last 4 Weeks
+      sliceNameOverride: Control Failures - Last 4 Weeks
+      uuid: b8a0758b-35e5-4105-a430-acb1a138e014
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-6m6HQIgt6
+    - ROW-EKueyJYX7C
+    - COLUMN-tcBuwwl_85
+    - ROW-iyfPiQSOta
+    type: CHART
+  CHART-w_jz7BBVW8:
+    children: []
+    id: CHART-w_jz7BBVW8
+    meta:
+      chartId: 223
+      height: 113
+      sliceName: SI5 - Voided Breach Details
+      sliceNameOverride: Voided Breach Details - Last 4 Weeks
+      uuid: 24789feb-3e36-4d6f-b265-2fedabe6bd31
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-Bg79t6nlF
+    - ROW-ajyt2y-Pwt
+    - COLUMN-3QjK10Gd51
+    type: CHART
+  COLUMN-3QjK10Gd51:
+    children:
+    - CHART-w_jz7BBVW8
+    id: COLUMN-3QjK10Gd51
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-Bg79t6nlF
+    - ROW-ajyt2y-Pwt
+    type: COLUMN
+  COLUMN-4E3RmNJJcy:
+    children:
+    - CHART-ElQKBpi8V0
+    id: COLUMN-4E3RmNJJcy
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-Yo-aIhINl
+    - ROW-MShY_U8bSJ
+    type: COLUMN
+  COLUMN-E-hazTCjCg:
+    children:
+    - CHART-LuklMArbGp
+    id: COLUMN-E-hazTCjCg
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 5
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-6m6HQIgt6
+    - ROW-cZUPH6VY85
+    type: COLUMN
+  COLUMN-I_NFcqeWtR:
+    children:
+    - CHART-VIcI5coxbN
+    id: COLUMN-I_NFcqeWtR
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 5
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-6m6HQIgt6
+    - ROW-cZUPH6VY85
+    type: COLUMN
+  COLUMN-W57dZymubY:
+    children:
+    - CHART-H2dWFTRevo
+    id: COLUMN-W57dZymubY
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-6m6HQIgt6
+    - ROW-EKueyJYX7C
+    - COLUMN-tcBuwwl_85
+    - ROW-js7LJqcsRy
+    type: COLUMN
+  COLUMN-YOrS-_Qt8F:
+    children:
+    - CHART-bw0l2QdxdS
+    id: COLUMN-YOrS-_Qt8F
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-6m6HQIgt6
+    - ROW-EKueyJYX7C
+    - COLUMN-tcBuwwl_85
+    - ROW-js7LJqcsRy
+    type: COLUMN
+  COLUMN-Z8a8imNAyN:
+    children:
+    - ROW-Dfoik_8_gu
+    - ROW-aN88aw7Zbh
+    id: COLUMN-Z8a8imNAyN
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-6m6HQIgt6
+    - ROW-cZUPH6VY85
+    type: COLUMN
+  COLUMN-tcBuwwl_85:
+    children:
+    - ROW-js7LJqcsRy
+    - ROW-iyfPiQSOta
+    id: COLUMN-tcBuwwl_85
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-6m6HQIgt6
+    - ROW-EKueyJYX7C
+    type: COLUMN
+  COLUMN-tw9BcZ0E1L:
+    children:
+    - CHART-2i4ZB4j733
+    id: COLUMN-tw9BcZ0E1L
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-wnIX0i978b
+    - ROW-Qm9Icf0135
+    type: COLUMN
+  COLUMN-xnFk1zF0SD:
+    children:
+    - CHART-BQc9ZQxlbc
+    id: COLUMN-xnFk1zF0SD
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-6m6HQIgt6
+    - ROW-EKueyJYX7C
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW--h_c6mQ6gD
+    - TABS-aYXBQz8fjh
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Breaches Overview
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW--h_c6mQ6gD:
+    children:
+    - CHART-k4AQOZopMM
+    id: ROW--h_c6mQ6gD
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-Dfoik_8_gu:
+    children:
+    - CHART-7hV93DU7oN
+    id: ROW-Dfoik_8_gu
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-6m6HQIgt6
+    - ROW-cZUPH6VY85
+    - COLUMN-Z8a8imNAyN
+    type: ROW
+  ROW-EKueyJYX7C:
+    children:
+    - COLUMN-xnFk1zF0SD
+    - COLUMN-tcBuwwl_85
+    id: ROW-EKueyJYX7C
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-6m6HQIgt6
+    type: ROW
+  ROW-MShY_U8bSJ:
+    children:
+    - COLUMN-4E3RmNJJcy
+    id: ROW-MShY_U8bSJ
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-Yo-aIhINl
+    type: ROW
+  ROW-Qm9Icf0135:
+    children:
+    - COLUMN-tw9BcZ0E1L
+    id: ROW-Qm9Icf0135
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-wnIX0i978b
+    type: ROW
+  ROW-aN88aw7Zbh:
+    children:
+    - CHART--D6V828ZQW
+    id: ROW-aN88aw7Zbh
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-6m6HQIgt6
+    - ROW-cZUPH6VY85
+    - COLUMN-Z8a8imNAyN
+    type: ROW
+  ROW-ajyt2y-Pwt:
+    children:
+    - COLUMN-3QjK10Gd51
+    id: ROW-ajyt2y-Pwt
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-Bg79t6nlF
+    type: ROW
+  ROW-cZUPH6VY85:
+    children:
+    - COLUMN-Z8a8imNAyN
+    - COLUMN-I_NFcqeWtR
+    - COLUMN-E-hazTCjCg
+    id: ROW-cZUPH6VY85
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-6m6HQIgt6
+    type: ROW
+  ROW-iyfPiQSOta:
+    children:
+    - CHART-t9Q5tKa1xX
+    id: ROW-iyfPiQSOta
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-6m6HQIgt6
+    - ROW-EKueyJYX7C
+    - COLUMN-tcBuwwl_85
+    type: ROW
+  ROW-js7LJqcsRy:
+    children:
+    - COLUMN-YOrS-_Qt8F
+    - COLUMN-W57dZymubY
+    id: ROW-js7LJqcsRy
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    - TAB-6m6HQIgt6
+    - ROW-EKueyJYX7C
+    - COLUMN-tcBuwwl_85
+    type: ROW
+  TAB-6m6HQIgt6:
+    children:
+    - ROW-cZUPH6VY85
+    - ROW-EKueyJYX7C
+    id: TAB-6m6HQIgt6
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Breaches Overview
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    type: TAB
+  TAB-Bg79t6nlF:
+    children:
+    - ROW-ajyt2y-Pwt
+    id: TAB-Bg79t6nlF
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Voided Breaches
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    type: TAB
+  TAB-Yo-aIhINl:
+    children:
+    - ROW-MShY_U8bSJ
+    id: TAB-Yo-aIhINl
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Closed Breaches
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    type: TAB
+  TAB-wnIX0i978b:
+    children:
+    - ROW-Qm9Icf0135
+    id: TAB-wnIX0i978b
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Outstanding Breaches
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-aYXBQz8fjh
+    type: TAB
+  TABS-aYXBQz8fjh:
+    children:
+    - TAB-6m6HQIgt6
+    - TAB-wnIX0i978b
+    - TAB-Yo-aIhINl
+    - TAB-Bg79t6nlF
+    id: TABS-aYXBQz8fjh
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: TABS
+metadata:
+  show_native_filters: true
+  color_scheme: ''
+  refresh_frequency: 0
+  expanded_slices: {}
+  label_colors: {}
+  timed_refresh_immune_slices: []
+  default_filters: '{}'
+  chart_configuration: {}
+  filter_scopes:
+    '210':
+      bpo_identifier:
+        scope:
+        - ROOT_ID
+        immune: []
+      ein:
+        scope:
+        - ROOT_ID
+        immune: []
+      emc_currency:
+        scope:
+        - ROOT_ID
+        immune: []
+version: 1.0.0

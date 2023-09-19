@@ -1,0 +1,62 @@
+slice_name: SI5 - Non-END Work Items
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_81ulg5nfqzb_djjq2m32dkt
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: UPPER(queuecd) <> 'END'
+    subject: null
+  all_columns: []
+  color_pn: false
+  conditional_formatting: []
+  datasource: 96__table
+  extra_form_data: {}
+  granularity_sqla: last_update_dattim
+  groupby:
+  - awd_crdattim
+  - unitcd
+  - wrktype
+  - processing_stage
+  - suspend_flag
+  - age_bus_days_band
+  - contact_id
+  - portfolio_id
+  include_search: true
+  include_time: false
+  order_by_cols: []
+  order_desc: false
+  page_length: 20
+  percent_metrics: []
+  query_mode: aggregate
+  row_limit: 10000
+  server_page_length: 20
+  server_pagination: false
+  show_cell_bars: false
+  slice_id: 561
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  timeseries_limit_metric:
+    aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: false
+    isNew: false
+    label: awd_crdattim
+    optionName: metric_7eeyu9licnb_6a14q51yu1k
+    sqlExpression: awd_crdattim
+  url_params: {}
+  viz_type: table
+query_context: null
+cache_timeout: null
+uuid: 36abc570-35fe-4148-bce8-a54740467f15
+version: 1.0.0
+dataset_uuid: 2c52393b-92f3-4a51-9ff7-3d0349ae0245

@@ -1,0 +1,38 @@
+slice_name: SI2 - Trade Value Filter
+description: null
+certified_by: null
+certification_details: null
+viz_type: filter_box
+params:
+  adhoc_filters: []
+  datasource: 76__table
+  date_filter: false
+  extra_form_data: {}
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: Cash Gross Amount Group
+    defaultValue: ''
+    key: 7vgKXlh68
+    label: Trade Cash Value Range
+    multiple: true
+    searchAllOptions: false
+  - asc: true
+    clearable: true
+    column: share_class_name
+    key: UHZxsQ8cj
+    label: Share Class
+    multiple: true
+    searchAllOptions: false
+  granularity_sqla: deal_date
+  instant_filtering: true
+  slice_id: 311
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+query_context: null
+cache_timeout: null
+uuid: 17e2e74c-3e8f-4bd7-a9ad-1c7d53abc56a
+version: 1.0.0
+dataset_uuid: ebf32c00-65fc-4211-98df-7bbfec2a9c69

@@ -1,0 +1,22 @@
+slice_name: SI - Outstanding Breaches
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  adhoc_filters: []
+  datasource: 48__table
+  granularity_sqla: date_identified
+  header_font_size: 0.4
+  metric: TOTAL_OUTSTANDING
+  slice_id: 172
+  subheader_font_size: 0.15
+  time_range: No filter
+  url_params: {}
+  viz_type: big_number_total
+  y_axis_format: ',d'
+query_context: null
+cache_timeout: null
+uuid: ac8ea3da-b8ac-47a6-8fbf-0dd2f2486c56
+version: 1.0.0
+dataset_uuid: f8317c8b-7468-9302-8dd4-bb1298e9d50c

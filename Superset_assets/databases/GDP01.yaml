@@ -5,6 +5,7 @@ expose_in_sqllab: true
 allow_run_async: true
 allow_ctas: false
 allow_cvas: false
+allow_dml: false
 allow_csv_upload: false
 extra:
   metadata_params: {}

@@ -1,0 +1,269 @@
+dashboard_title: Service Insights
+description: null
+css: "/* ---------------------------------------------------- */\n/* Big number charts\
+  \                                    */\n/* ----------------------------------------------------\
+  \ */\n\n/* Big number charts - SSNC Teal */\n.big_number_total {\n\ttext-align:\
+  \ center;\n\tbackground-color: #00667D;\n\tcolor: white;\n\tborder-radius: 5px;\n\
+  }\n/*Hide all other drop down options, apart from refresh and CSV*/\n.chart-slice\
+  \ + div>div>.ant-dropdown>ul>li:not(:first-child):not(:last-child){\n  display:none;\n\
+  }"
+slug: service-insights-5-rwd
+uuid: 557c13a2-f17f-43b0-b9f0-fc8454c687f6
+position:
+  CHART-0JxcVN1tDV:
+    children: []
+    id: CHART-0JxcVN1tDV
+    meta:
+      chartId: 178
+      height: 20
+      sliceName: SI5 - Total Work Items
+      sliceNameOverride: Total Work Items
+      uuid: f915cd53-ec0c-435b-846a-a0c298c0ddd1
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-PSTGWy92BH
+    - COLUMN-ebVkAs_r-1
+    type: CHART
+  CHART-5N-F3hS97J:
+    children: []
+    id: CHART-5N-F3hS97J
+    meta:
+      chartId: 286
+      height: 50
+      sliceName: SI5 - Outstanding Work by Team
+      sliceNameOverride: Active Work by Team
+      uuid: 70cc7e89-75b9-4f7c-94e4-8ebf60c2ffe9
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-7yLG-ss4KI
+    - COLUMN-KpJSVxKIA9
+    type: CHART
+  CHART-ALtwQR7QIH:
+    children: []
+    id: CHART-ALtwQR7QIH
+    meta:
+      chartId: 289
+      height: 50
+      sliceName: SI5 - Service Areas
+      sliceNameOverride: Service Areas
+      uuid: e9a4c89b-be68-4314-ac63-0d098683bc66
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-O_ZjHIrLYx
+    type: CHART
+  CHART-IDznxmMrOX:
+    children: []
+    id: CHART-IDznxmMrOX
+    meta:
+      chartId: 326
+      height: 20
+      sliceName: SI5 - Referred Work Items
+      sliceNameOverride: Referred Work Items
+      uuid: dfc1756e-acfa-444f-ac68-f2bacc1e33b5
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-PSTGWy92BH
+    - COLUMN-yroKMGFE9C
+    type: CHART
+  CHART-Wa-Wv0oS1x:
+    children: []
+    id: CHART-Wa-Wv0oS1x
+    meta:
+      chartId: 262
+      height: 20
+      sliceName: SI5 - Outstanding Breaches
+      sliceNameOverride: Outstanding Breaches
+      uuid: c5cc9a15-fa0f-4d2b-a03b-e6a3132271aa
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-PSTGWy92BH
+    - COLUMN-q3p572AgIZ
+    type: CHART
+  CHART-XE8sQHE7wc:
+    children: []
+    id: CHART-XE8sQHE7wc
+    meta:
+      chartId: 210
+      height: 16
+      sliceName: SI5 - EIN Currency Filter
+      uuid: 8095ee41-3243-44be-9dda-ae55c4d59a5c
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-urf8h93Xbu
+    type: CHART
+  CHART-qloHgTGXTn:
+    children: []
+    id: CHART-qloHgTGXTn
+    meta:
+      chartId: 194
+      height: 50
+      sliceName: SI5 - Breaches Overview
+      sliceNameOverride: Breaches Overview
+      uuid: f0e04b2c-f758-4e72-957b-19e19e312262
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-7yLG-ss4KI
+    - COLUMN-7F57be4BFI
+    type: CHART
+  COLUMN-7F57be4BFI:
+    children:
+    - CHART-qloHgTGXTn
+    id: COLUMN-7F57be4BFI
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-7yLG-ss4KI
+    type: COLUMN
+  COLUMN-KpJSVxKIA9:
+    children:
+    - CHART-5N-F3hS97J
+    id: COLUMN-KpJSVxKIA9
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-7yLG-ss4KI
+    type: COLUMN
+  COLUMN-ebVkAs_r-1:
+    children:
+    - CHART-0JxcVN1tDV
+    id: COLUMN-ebVkAs_r-1
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-PSTGWy92BH
+    type: COLUMN
+  COLUMN-q3p572AgIZ:
+    children:
+    - CHART-Wa-Wv0oS1x
+    id: COLUMN-q3p572AgIZ
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-PSTGWy92BH
+    type: COLUMN
+  COLUMN-yroKMGFE9C:
+    children:
+    - CHART-IDznxmMrOX
+    id: COLUMN-yroKMGFE9C
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-PSTGWy92BH
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-urf8h93Xbu
+    - ROW-O_ZjHIrLYx
+    - ROW-PSTGWy92BH
+    - ROW-7yLG-ss4KI
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Service Insights
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-7yLG-ss4KI:
+    children:
+    - COLUMN-7F57be4BFI
+    - COLUMN-KpJSVxKIA9
+    id: ROW-7yLG-ss4KI
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-O_ZjHIrLYx:
+    children:
+    - CHART-ALtwQR7QIH
+    id: ROW-O_ZjHIrLYx
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-PSTGWy92BH:
+    children:
+    - COLUMN-q3p572AgIZ
+    - COLUMN-yroKMGFE9C
+    - COLUMN-ebVkAs_r-1
+    id: ROW-PSTGWy92BH
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-urf8h93Xbu:
+    children:
+    - CHART-XE8sQHE7wc
+    id: ROW-urf8h93Xbu
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  show_native_filters: true
+  color_scheme: ''
+  refresh_frequency: 0
+  expanded_slices: {}
+  label_colors: {}
+  timed_refresh_immune_slices: []
+  default_filters: '{}'
+  chart_configuration: {}
+  filter_scopes:
+    '210':
+      bpo_identifier:
+        scope:
+        - ROOT_ID
+        immune: []
+      ein:
+        scope:
+        - ROOT_ID
+        immune: []
+      emc_currency:
+        scope:
+        - ROOT_ID
+        immune: []
+version: 1.0.0

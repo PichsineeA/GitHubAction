@@ -1,0 +1,174 @@
+dashboard_title: Test filter panel
+description: null
+css: "\n.dashboard .chart-header {\n    align-items: flex-start;\n    display: none;\n\
+  \    font-size: 16px;\n    font-weight: 700;\n    margin-bottom: 4px;\n    max-width:\
+  \ 100%;\n}\n.dragdroppable .dragdroppable-row{\n  margin-bottom: 0px;\n}\n#GRID_ID-panel-GRID_ID\
+  \ > div > div > div:nth-child(2) > div > div > div > div > div > div > div:nth-child(1){\n\
+  \  margin-bottom: 0px;\n}\n\n#GRID_ID-panel-GRID_ID > div > div > div:nth-child(3)\
+  \ > div > div.grid-row.background--transparent > div > div{\n  margin-bottom: 0px;\n\
+  }"
+slug: null
+uuid: f507949f-d971-4ebb-a313-90669400db12
+position:
+  CHART-ImEbIRQWOF:
+    children: []
+    id: CHART-ImEbIRQWOF
+    meta:
+      chartId: 346
+      height: 15
+      sliceName: SI5 - Active Work Work Type Filter
+      uuid: fbb24e38-1464-44ca-85c9-134b175f1449
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-9UILAmggpz
+    - COLUMN-tJ6ZHkRBip
+    - ROW-RwawXJlDZA
+    type: CHART
+  CHART-Pyr7GDjRG_:
+    children: []
+    id: CHART-Pyr7GDjRG_
+    meta:
+      chartId: 275
+      height: 15
+      sliceName: SI5 - Active Work Team Filter
+      uuid: b60a77a2-445c-4728-b5c6-7ae90db25d0e
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-9UILAmggpz
+    - COLUMN-tJ6ZHkRBip
+    - ROW-4FmkgZ0xuX
+    type: CHART
+  CHART-lfobAFMQW3:
+    children: []
+    id: CHART-lfobAFMQW3
+    meta:
+      chartId: 161
+      height: 15
+      sliceName: SI5 - Active Work Processing Stage Filter
+      uuid: b8badfc0-d118-4726-8924-264b43339831
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-9UILAmggpz
+    - COLUMN-tJ6ZHkRBip
+    - ROW-f0Geq3Q1EA
+    type: CHART
+  COLUMN-tJ6ZHkRBip:
+    children:
+    - ROW-4FmkgZ0xuX
+    - ROW-RwawXJlDZA
+    - ROW-f0Geq3Q1EA
+    id: COLUMN-tJ6ZHkRBip
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-9UILAmggpz
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW--VHIEUWjrf
+    - ROW-9UILAmggpz
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Test filter panel
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW--VHIEUWjrf:
+    children: []
+    id: ROW--VHIEUWjrf
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-4FmkgZ0xuX:
+    children:
+    - CHART-Pyr7GDjRG_
+    id: ROW-4FmkgZ0xuX
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-9UILAmggpz
+    - COLUMN-tJ6ZHkRBip
+    type: ROW
+  ROW-9UILAmggpz:
+    children:
+    - COLUMN-tJ6ZHkRBip
+    id: ROW-9UILAmggpz
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-RwawXJlDZA:
+    children:
+    - CHART-ImEbIRQWOF
+    id: ROW-RwawXJlDZA
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-9UILAmggpz
+    - COLUMN-tJ6ZHkRBip
+    type: ROW
+  ROW-f0Geq3Q1EA:
+    children:
+    - CHART-lfobAFMQW3
+    id: ROW-f0Geq3Q1EA
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-9UILAmggpz
+    - COLUMN-tJ6ZHkRBip
+    type: ROW
+metadata:
+  show_native_filters: true
+  color_scheme: ''
+  refresh_frequency: 0
+  expanded_slices: {}
+  label_colors: {}
+  timed_refresh_immune_slices: []
+  default_filters: '{}'
+  filter_scopes:
+    '275':
+      owner_team:
+        scope:
+        - ROOT_ID
+        immune: []
+    '346':
+      wrktype:
+        scope:
+        - ROOT_ID
+        immune: []
+    '161':
+      processing_stage:
+        scope:
+        - ROOT_ID
+        immune: []
+  chart_configuration: {}
+version: 1.0.0

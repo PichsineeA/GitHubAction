@@ -1,0 +1,180 @@
+dashboard_title: Notifiable Deals
+description: null
+css: "/* ---------------------------------------------------- */\n/* Filter controls\
+  \                                      */\n/* ----------------------------------------------------\
+  \ */\n\n/* Controls the visibility of native filters. \n   Comment out if you want\
+  \ native charts visble*/\n.css-1k877g7 {\n  visibility:hidden;\n}\n\n/*Hide all\
+  \ other drop down options, apart from refresh and CSV*/\n.chart-slice + div>div>.ant-dropdown>ul>li:not(:first-child):not(:last-child){\n\
+  \  display:none;\n}\n\n/*----------------------\n  Display CSS button for Slice\
+  \ 310 (Todays Notifiable Deals)\n-----------------------*/\n#slice_310-controls{\n\
+  \  display:flex;\n}\n/*----------------------*/"
+slug: notifiable-deals-2
+uuid: 502b16c6-a297-4af4-936a-62b103d0b8aa
+position:
+  CHART-cQoA1Fkz47:
+    children: []
+    id: CHART-cQoA1Fkz47
+    meta:
+      chartId: 424
+      height: 81
+      sliceName: SI2 - Today's Notifiable Deals by Origin
+      sliceNameOverride: Today's Notifiable Deals by Origin
+      uuid: 19fceb69-76dd-4f03-b572-b0666df33ef8
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-jlMhTf2u9j
+    - COLUMN-EwG6oDHHEY
+    type: CHART
+  CHART-oY0THE3MJR:
+    children: []
+    id: CHART-oY0THE3MJR
+    meta:
+      chartId: 180
+      height: 81
+      sliceName: SI2 - Today's Notifiable Deals
+      sliceNameOverride: Today's Notifiable Deals
+      uuid: 985a686f-296f-418e-b348-bf3aae5a4268
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-jlMhTf2u9j
+    - COLUMN-9ZD11xKmCj
+    type: CHART
+  CHART-qOafCApNmU:
+    children: []
+    id: CHART-qOafCApNmU
+    meta:
+      chartId: 361
+      height: 27
+      sliceName: SI2 - Share Class Currency Filter
+      uuid: 9ea23ad5-c301-4a3a-a646-8420a7803938
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-BprJTExp08
+    - COLUMN-w-KoAkmUoK
+    type: CHART
+  CHART-vBIVyDkm4n:
+    children: []
+    id: CHART-vBIVyDkm4n
+    meta:
+      chartId: 372
+      height: 27
+      sliceName: SI2 - EIN Currency Filter
+      uuid: eda2b707-4a81-484e-9140-9837ae914f12
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-BprJTExp08
+    type: CHART
+  COLUMN-9ZD11xKmCj:
+    children:
+    - CHART-oY0THE3MJR
+    id: COLUMN-9ZD11xKmCj
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 8
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-jlMhTf2u9j
+    type: COLUMN
+  COLUMN-EwG6oDHHEY:
+    children:
+    - CHART-cQoA1Fkz47
+    id: COLUMN-EwG6oDHHEY
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-jlMhTf2u9j
+    type: COLUMN
+  COLUMN-w-KoAkmUoK:
+    children:
+    - CHART-qOafCApNmU
+    id: COLUMN-w-KoAkmUoK
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-BprJTExp08
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-BprJTExp08
+    - ROW-jlMhTf2u9j
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Notifiable Deals
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-BprJTExp08:
+    children:
+    - CHART-vBIVyDkm4n
+    - COLUMN-w-KoAkmUoK
+    id: ROW-BprJTExp08
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-jlMhTf2u9j:
+    children:
+    - COLUMN-EwG6oDHHEY
+    - COLUMN-9ZD11xKmCj
+    id: ROW-jlMhTf2u9j
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  timed_refresh_immune_slices: []
+  expanded_slices: {}
+  refresh_frequency: 0
+  default_filters: '{}'
+  color_scheme: ''
+  filter_scopes:
+    '372':
+      bpo_identifier:
+        scope:
+        - ROOT_ID
+        immune: []
+      ein:
+        scope:
+        - ROOT_ID
+        immune: []
+      emc_currency:
+        scope:
+        - ROOT_ID
+        immune: []
+    '361':
+      emc_currency:
+        scope:
+        - ROOT_ID
+        immune: []
+  show_native_filters: true
+  label_colors: {}
+  chart_configuration: {}
+version: 1.0.0

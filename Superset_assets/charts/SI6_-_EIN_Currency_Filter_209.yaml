@@ -1,0 +1,43 @@
+slice_name: SI6 - EIN Currency Filter
+description: null
+certified_by: null
+certification_details: null
+viz_type: filter_box
+params:
+  adhoc_filters: []
+  datasource: 47__table
+  date_filter: false
+  extra_form_data: {}
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: bpo_identifier
+    key: 61UlwqbWy
+    label: BPO
+    multiple: true
+    searchAllOptions: false
+  - asc: true
+    clearable: true
+    column: ein
+    key: 6uoVyxmp0
+    label: EIN
+    multiple: true
+    searchAllOptions: false
+  - asc: true
+    clearable: true
+    column: emc_currency
+    key: MdxgPuu0Z
+    label: Currency
+    multiple: true
+    searchAllOptions: false
+  granularity_sqla: null
+  instant_filtering: true
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+query_context: null
+cache_timeout: null
+uuid: 2fd7b927-beb6-4e40-8be9-34c01e6300a8
+version: 1.0.0
+dataset_uuid: 9a8d10d9-ddab-ce94-c003-5f6f275d928f

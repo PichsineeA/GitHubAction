@@ -1,0 +1,200 @@
+dashboard_title: Positive Net Movements
+description: null
+css: "/*Adjust the search bar's size so that it does not overlap.*/\ninput.form-control.input-sm\
+  \ {\n    width: 100%;\n}\n/*----------------------\n  Display CSS button for 2 charts\n\
+  \  -Today's Positive Movements\n-----------------------*/\n\n#slice_367-controls\
+  \ {\ndisplay: flex;\n}\n\n\n/*Hide all other drop down options, apart from refresh\
+  \ and CSV*/\n.chart-slice + div>div>.ant-dropdown>ul>li:not(:first-child):not(:last-child){\n\
+  \  display:none;\n}"
+slug: positive-movements-4
+uuid: 9ab318f5-dd57-422c-b15a-6d2cf9023c02
+position:
+  CHART--cXgWDDedd:
+    children: []
+    id: CHART--cXgWDDedd
+    meta:
+      chartId: 166
+      height: 29
+      sliceName: SI4 - EIN Currency Filter
+      uuid: 9c8337c3-8ae7-4519-9c5c-e6d7dc3cc2de
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-XaBJkjg8L8
+    - COLUMN-ZuYRAR0qwq
+    type: CHART
+  CHART-qsNqjHik2Z:
+    children: []
+    id: CHART-qsNqjHik2Z
+    meta:
+      chartId: 339
+      height: 16
+      sliceName: SI4 - Security Table Filter
+      sliceNameOverride: Selection Criteria
+      uuid: 521f990b-5375-4ea7-94cb-317b1cb4fbb9
+      width: 5
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ZJKnjRhfmu
+    - COLUMN-jEzbdRREMP
+    type: CHART
+  CHART-shTrKUl0HU:
+    children: []
+    id: CHART-shTrKUl0HU
+    meta:
+      chartId: 437
+      height: 70
+      sliceName: SI4 - Today's Positive Movements
+      sliceNameOverride: "Today\u2019s Positive Movements"
+      uuid: adb7bddb-4e53-425b-9ece-ffcb7aa4e89d
+      width: 8
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ZJKnjRhfmu
+    type: CHART
+  CHART-uWi_cRxgaV:
+    children: []
+    id: CHART-uWi_cRxgaV
+    meta:
+      chartId: 235
+      height: 52
+      sliceName: SI4 - Today's Positive Net Movements
+      sliceNameOverride: Today's Positive Net Movements
+      uuid: 7fdb683d-195f-4761-9e30-35b549a01640
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ZJKnjRhfmu
+    - COLUMN-jEzbdRREMP
+    type: CHART
+  CHART-wZvT1TfGjG:
+    children: []
+    id: CHART-wZvT1TfGjG
+    meta:
+      chartId: 367
+      height: 29
+      sliceName: SI4 - Share Class Currency Filter
+      uuid: c7d71035-2a21-42a0-8e36-e2523bd4d4d0
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-XaBJkjg8L8
+    - COLUMN-3NyLskfASr
+    type: CHART
+  COLUMN-3NyLskfASr:
+    children:
+    - CHART-wZvT1TfGjG
+    id: COLUMN-3NyLskfASr
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 7
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-XaBJkjg8L8
+    type: COLUMN
+  COLUMN-ZuYRAR0qwq:
+    children:
+    - CHART--cXgWDDedd
+    id: COLUMN-ZuYRAR0qwq
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 5
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-XaBJkjg8L8
+    type: COLUMN
+  COLUMN-jEzbdRREMP:
+    children:
+    - CHART-qsNqjHik2Z
+    - CHART-uWi_cRxgaV
+    id: COLUMN-jEzbdRREMP
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ZJKnjRhfmu
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-XaBJkjg8L8
+    - ROW-ZJKnjRhfmu
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Positive Net Movements
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-XaBJkjg8L8:
+    children:
+    - COLUMN-ZuYRAR0qwq
+    - COLUMN-3NyLskfASr
+    id: ROW-XaBJkjg8L8
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-ZJKnjRhfmu:
+    children:
+    - COLUMN-jEzbdRREMP
+    - CHART-shTrKUl0HU
+    id: ROW-ZJKnjRhfmu
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  show_native_filters: true
+  color_scheme: ''
+  refresh_frequency: 0
+  expanded_slices: {}
+  label_colors: {}
+  timed_refresh_immune_slices: []
+  default_filters: '{}'
+  chart_configuration: {}
+  filter_scopes:
+    '166':
+      bpo_identifier:
+        scope:
+        - ROOT_ID
+        immune: []
+      ein:
+        scope:
+        - ROOT_ID
+        immune: []
+      emc_currency:
+        scope:
+        - ROOT_ID
+        immune: []
+    '339':
+      fund_name:
+        scope:
+        - ROOT_ID
+        immune: []
+    '367':
+      emc_currency:
+        scope:
+        - ROOT_ID
+        immune: []
+version: 1.0.0

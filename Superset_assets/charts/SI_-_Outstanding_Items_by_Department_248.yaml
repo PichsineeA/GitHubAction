@@ -1,0 +1,42 @@
+slice_name: SI - Outstanding Items by Department
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: END
+    expressionType: SIMPLE
+    filterOptionName: filter_vfmtktiblc_vvk1776djs
+    isExtra: false
+    isNew: false
+    operator: '!='
+    sqlExpression: null
+    subject: queuecd
+  all_columns: []
+  color_pn: true
+  datasource: 50__table
+  granularity_sqla: last_update_dattim
+  groupby:
+  - owner_department
+  metrics:
+  - count
+  order_by_cols: []
+  order_desc: true
+  page_length: 0
+  percent_metrics: []
+  query_mode: aggregate
+  row_limit: 10000
+  show_cell_bars: false
+  slice_id: 156
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+query_context: null
+cache_timeout: null
+uuid: 49a9dabf-b54a-2c07-bd40-20a855286e26
+version: 1.0.0
+dataset_uuid: 40f6d689-5a50-6435-4ddd-353a5940ae24

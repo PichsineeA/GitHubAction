@@ -1,0 +1,42 @@
+slice_name: SI - UK Filter
+description: null
+certified_by: null
+certification_details: null
+viz_type: filter_box
+params:
+  adhoc_filters: []
+  datasource: 47__table
+  date_filter: false
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: bpo_identifier
+    key: yBwri3Ict
+    label: BPO Identifier
+    multiple: true
+    searchAllOptions: false
+  - asc: true
+    clearable: true
+    column: ein
+    key: NO9fOv9EA
+    label: EIN
+    multiple: true
+    searchAllOptions: false
+  - asc: true
+    clearable: true
+    column: emc_currency
+    key: sF9h9jxBN
+    label: Currency
+    multiple: true
+    searchAllOptions: false
+  instant_filtering: true
+  slice_id: 164
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+query_context: null
+cache_timeout: null
+uuid: d3795811-f0d0-429f-b7ca-5fe0ffb13acb
+version: 1.0.0
+dataset_uuid: 9a8d10d9-ddab-ce94-c003-5f6f275d928f

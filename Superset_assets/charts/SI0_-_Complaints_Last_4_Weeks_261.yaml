@@ -1,0 +1,37 @@
+slice_name: SI0 - Complaints Last 4 Weeks
+description: null
+certified_by: null
+certification_details: null
+viz_type: pie
+params:
+  adhoc_filters: []
+  color_scheme: supersetColors
+  datasource: 12__table
+  date_format: smart_date
+  donut: true
+  extra_form_data: {}
+  groupby:
+  - comp_status
+  innerRadius: 50
+  label_line: true
+  label_type: key_value
+  labels_outside: true
+  legendOrientation: top
+  legendType: scroll
+  metric: Number of Complaints
+  number_format: SMART_NUMBER
+  outerRadius: 65
+  row_limit: 100
+  show_labels: true
+  show_labels_threshold: 5
+  show_legend: false
+  slice_id: 37
+  sort_by_metric: true
+  time_range: Last week
+  url_params: {}
+  viz_type: pie
+query_context: null
+cache_timeout: null
+uuid: 1f913722-b96a-2802-a36d-c0861f12d333
+version: 1.0.0
+dataset_uuid: 69e301fa-a835-ac1c-ae96-a6372bbed5e9

@@ -1,0 +1,43 @@
+slice_name: SI5 - EIN Currency Filter
+description: null
+certified_by: null
+certification_details: null
+viz_type: filter_box
+params:
+  adhoc_filters: []
+  datasource: 47__table
+  date_filter: false
+  extra_form_data: {}
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: bpo_identifier
+    key: iarv-gUkp
+    label: BPO Identifier
+    multiple: true
+    searchAllOptions: false
+  - asc: true
+    clearable: true
+    column: ein
+    key: PsLjdu27S
+    label: EIN
+    multiple: true
+    searchAllOptions: false
+  - asc: true
+    clearable: true
+    column: emc_currency
+    key: BAbNGVlXZ
+    label: Currency
+    multiple: true
+    searchAllOptions: false
+  instant_filtering: true
+  slice_id: 516
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+query_context: null
+cache_timeout: null
+uuid: 8095ee41-3243-44be-9dda-ae55c4d59a5c
+version: 1.0.0
+dataset_uuid: 9a8d10d9-ddab-ce94-c003-5f6f275d928f

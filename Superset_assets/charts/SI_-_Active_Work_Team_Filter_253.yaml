@@ -1,0 +1,39 @@
+slice_name: SI - Active Work Team Filter
+description: null
+certified_by: null
+certification_details: null
+viz_type: filter_box
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_0kr7xtzjbp6_37zv97ekfzd
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: processing_stage <> 'End'
+    subject: null
+  datasource: 50__table
+  date_filter: false
+  extra_form_data: {}
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: owner_team
+    key: aN7xjfo_t
+    label: Team
+    multiple: true
+    searchAllOptions: false
+  granularity_sqla: last_update_dattim
+  instant_filtering: true
+  slice_id: 315
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+query_context: null
+cache_timeout: null
+uuid: 14339d8e-2a67-4123-9d04-b05896ba9bc2
+version: 1.0.0
+dataset_uuid: 40f6d689-5a50-6435-4ddd-353a5940ae24
