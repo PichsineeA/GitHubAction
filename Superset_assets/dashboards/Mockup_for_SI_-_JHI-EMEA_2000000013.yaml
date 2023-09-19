@@ -181,6 +181,7 @@ position:
   GRID_ID:
     children:
     - ROW-M1IdUIGgSU
+    - ROW-N-VH0M81VH
     id: GRID_ID
     parents:
     - ROOT_ID
@@ -466,6 +467,31 @@ position:
     - ROW-M1IdUIGgSU
     - COLUMN-otSkZ7soGT
     type: ROW
+  ROW-N-VH0M81VH:
+    children:
+    - CHART-FNPQM378
+    id: ROW-N-VH0M81VH
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+    parents:
+    - ROOT_ID
+    - GRID_ID
+  CHART-FNPQM378:
+    children: []
+    id: CHART-FNPQM378
+    meta:
+      chartId: 530
+      height: 50
+      sliceName: SI5 - Referred Work Items
+      uuid: dfc1756e-acfa-444f-ac68-f2bacc1e33b5
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-VH0M81VH
 metadata:
   show_native_filters: true
   color_scheme: ''

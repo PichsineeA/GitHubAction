@@ -10,15 +10,6 @@ css: "/* ---------------------------------------------------- */\n/* Filter cont
   }\n/*----------------------*/\n"
 slug: null
 uuid: 73d2bf4c-e885-4fd6-86fa-7f09135e3a45
-metadata:
-  timed_refresh_immune_slices: []
-  expanded_slices: {}
-  refresh_frequency: 0
-  default_filters: '{}'
-  color_scheme: ''
-  show_native_filters: true
-  label_colors: {}
-  chart_configuration: {}
 position:
   DASHBOARD_VERSION_KEY: v2
   ROOT_ID:
@@ -123,4 +114,13 @@ position:
     - ROOT_ID
     - GRID_ID
     - ROW-N-4O2N18TG
+metadata:
+  timed_refresh_immune_slices: []
+  expanded_slices: {}
+  refresh_frequency: 0
+  default_filters: '{}'
+  color_scheme: ''
+  show_native_filters: true
+  label_colors: {}
+  chart_configuration: {}
 version: 1.0.0
