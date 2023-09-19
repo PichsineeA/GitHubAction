@@ -219,22 +219,6 @@ position:
     - TAB-YT6eNksV-
     - ROW-DR80aHJA2c
     type: CHART
-  CHART-YSzS5GOOLf:
-    children: []
-    id: CHART-YSzS5GOOLf
-    meta:
-      chartId: 130
-      height: 54
-      sliceName: Ethnic Minority & Gender
-      uuid: 4880e4f4-b701-4be0-86f3-e7e89432e83b
-      width: 3
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - TABS-L-d9eyOE-b
-    - TAB-AsMaxdYL_t
-    - ROW-mOvr_xWm1
-    type: CHART
   CHART-ZECnzPz8Bi:
     children: []
     id: CHART-ZECnzPz8Bi
@@ -250,39 +234,6 @@ position:
     - TABS-L-d9eyOE-b
     - TAB-l_9I0aNYZ
     - ROW-s3l4os7YY
-    type: CHART
-  CHART-aytwlT4GAq:
-    children: []
-    id: CHART-aytwlT4GAq
-    meta:
-      chartId: 84
-      height: 50
-      sliceName: Breakdown of Developer Type
-      uuid: b8386be8-f44e-6535-378c-2aa2ba461286
-      width: 4
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - TABS-L-d9eyOE-b
-    - TAB-AsMaxdYL_t
-    - ROW-y-GwJPgxLr
-    type: CHART
-  CHART-d6vjW6rC6V:
-    children: []
-    id: CHART-d6vjW6rC6V
-    meta:
-      chartId: 79
-      height: 54
-      sliceName: Filter Segments
-      sliceNameOverride: Filter By
-      uuid: 6420629a-ce74-2c6b-ef7d-b2e78baa3cfe
-      width: 5
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - TABS-L-d9eyOE-b
-    - TAB-AsMaxdYL_t
-    - ROW-y-GwJPgxLr
     type: CHART
   CHART-fLpTSAHpAO:
     children: []
@@ -316,22 +267,6 @@ position:
     - TABS-L-d9eyOE-b
     - TAB-YT6eNksV-
     - ROW--BIzjz9F0
-    type: CHART
-  CHART-o-JPAWMZK-:
-    children: []
-    id: CHART-o-JPAWMZK-
-    meta:
-      chartId: 101
-      height: 50
-      sliceName: Gender
-      uuid: 0f6b447c-828c-e71c-87ac-211bc412b214
-      width: 3
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - TABS-L-d9eyOE-b
-    - TAB-AsMaxdYL_t
-    - ROW-mOvr_xWm1
     type: CHART
   CHART-v22McUFMtx:
     children: []
@@ -408,7 +343,7 @@ position:
   HEADER_ID:
     id: HEADER_ID
     meta:
-      text: FCC New Coder Survey 2018
+      text: add new
     type: HEADER
   MARKDOWN-BUmyHM2s0x:
     children: []
@@ -606,8 +541,6 @@ position:
     children:
     - MARKDOWN-zc2mWxZeox
     - CHART-Q3pbwsH3id
-    - CHART-o-JPAWMZK-
-    - CHART-YSzS5GOOLf
     id: ROW-mOvr_xWm1
     meta:
       background: BACKGROUND_TRANSPARENT
@@ -633,8 +566,6 @@ position:
   ROW-y-GwJPgxLr:
     children:
     - MARKDOWN-__u6CsUyfh
-    - CHART-aytwlT4GAq
-    - CHART-d6vjW6rC6V
     id: ROW-y-GwJPgxLr
     meta:
       background: BACKGROUND_TRANSPARENT
@@ -740,7 +671,11 @@ metadata:
     From Home: '#1FA8C9'
   show_native_filters: true
   cross_filters_enabled: false
-  shared_label_colors: {}
+  shared_label_colors:
+    No, not an ethnic minority: '#1FA8C9'
+    Yes, an ethnic minority: '#454E7C'
+    No Answer: '#D3B3DA'
+    age: '#1FA8C9'
   color_scheme_domain:
   - '#1FA8C9'
   - '#454E7C'
@@ -762,26 +697,5 @@ metadata:
   - '#D3B3DA'
   - '#9EE5E5'
   - '#D1C6BC'
-  filter_scopes:
-    '79':
-      ethnic_minority:
-        scope:
-        - ROOT_ID
-        immune: []
-      gender:
-        scope:
-        - ROOT_ID
-        immune: []
-      developer_type:
-        scope:
-        - ROOT_ID
-        immune: []
-      lang_at_home:
-        scope:
-        - ROOT_ID
-        immune: []
-      country_live:
-        scope:
-        - ROOT_ID
-        immune: []
+  chart_configuration: {}
 version: 1.0.0
