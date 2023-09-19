@@ -1,0 +1,127 @@
+dashboard_title: deck.gl Demo
+description: null
+css: null
+slug: deck
+uuid: 4e2ad8d8-100b-46e3-9606-5c1fe6ed4722
+position:
+  CHART-3afd9d70:
+    meta:
+      chartId: 267
+      sliceName: Deck.gl Scatterplot
+      width: 6
+      height: 50
+      uuid: 031d31fd-6f9f-4a28-8768-0606b975b8bb
+    type: CHART
+    id: CHART-3afd9d70
+    children: []
+  CHART-2ee7fa5e:
+    meta:
+      chartId: 268
+      sliceName: Deck.gl Screen grid
+      width: 6
+      height: 50
+      uuid: a919aadd-5934-4d59-bd4a-71a178bb2e98
+    type: CHART
+    id: CHART-2ee7fa5e
+    children: []
+  CHART-201f7715:
+    meta:
+      chartId: 269
+      sliceName: Deck.gl Hexagons
+      width: 6
+      height: 50
+      uuid: 101a3db6-8d33-4232-af00-b507cdbaff5e
+    type: CHART
+    id: CHART-201f7715
+    children: []
+  CHART-d02f6c40:
+    meta:
+      chartId: 270
+      sliceName: Deck.gl Grid
+      width: 6
+      height: 50
+      uuid: fcd91f1b-a410-4cd3-a0ca-bef787b5ca54
+    type: CHART
+    id: CHART-d02f6c40
+    children: []
+  CHART-2673431d:
+    meta:
+      chartId: 271
+      sliceName: Deck.gl Polygons
+      width: 6
+      height: 50
+      uuid: 556bac99-559d-4785-85e8-d3dab4bec0ed
+    type: CHART
+    id: CHART-2673431d
+    children: []
+  CHART-85265a60:
+    meta:
+      chartId: 272
+      sliceName: Deck.gl Arcs
+      width: 6
+      height: 50
+      uuid: 177cd927-5063-4dc3-8cb8-fd6d50860e0c
+    type: CHART
+    id: CHART-85265a60
+    children: []
+  CHART-2b87513c:
+    meta:
+      chartId: 273
+      sliceName: Deck.gl Path
+      width: 6
+      height: 50
+      uuid: 83be2e36-c121-4a1b-bc26-6040f07087a6
+    type: CHART
+    id: CHART-2b87513c
+    children: []
+  GRID_ID:
+    type: GRID
+    id: GRID_ID
+    children:
+    - ROW-a7b16cb5
+    - ROW-72c218a5
+    - ROW-957ba55b
+    - ROW-af041bdd
+  HEADER_ID:
+    meta:
+      text: deck.gl Demo
+    type: HEADER
+    id: HEADER_ID
+  ROOT_ID:
+    type: ROOT
+    id: ROOT_ID
+    children:
+    - GRID_ID
+  ROW-72c218a5:
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+    id: ROW-72c218a5
+    children:
+    - CHART-d02f6c40
+    - CHART-201f7715
+  ROW-957ba55b:
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+    id: ROW-957ba55b
+    children:
+    - CHART-2673431d
+    - CHART-85265a60
+  ROW-a7b16cb5:
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+    id: ROW-a7b16cb5
+    children:
+    - CHART-3afd9d70
+    - CHART-2ee7fa5e
+  ROW-af041bdd:
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+    id: ROW-af041bdd
+    children:
+    - CHART-2b87513c
+  DASHBOARD_VERSION_KEY: v2
+version: 1.0.0
