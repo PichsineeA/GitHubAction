@@ -1,8 +1,8 @@
-dashboard_title: FCC New Coder Survey 2018
+dashboard_title: add new
 description: null
 css: ''
 slug: null
-uuid: 5b12b583-8204-08e9-392c-422209c29787
+uuid: bf22e868-1b22-474f-8ffc-36dc5fe1628d
 position:
   CHART--0GPGmD-pO:
     children: []
@@ -108,7 +108,7 @@ position:
     meta:
       chartId: 75
       height: 50
-      sliceName: "\U0001F393 Highest degree held"
+      sliceName: Highest degree held
       uuid: 9f7d2b9c-6b3a-69f9-f03e-d3a141514639
       width: 2
     parents:
@@ -739,7 +739,7 @@ metadata:
     No Preference: '#D1C6BC'
     From Home: '#1FA8C9'
   show_native_filters: true
-  cross_filters_enabled: true
+  cross_filters_enabled: false
   shared_label_colors: {}
   color_scheme_domain:
   - '#1FA8C9'
@@ -762,4 +762,26 @@ metadata:
   - '#D3B3DA'
   - '#9EE5E5'
   - '#D1C6BC'
+  filter_scopes:
+    '79':
+      ethnic_minority:
+        scope:
+        - ROOT_ID
+        immune: []
+      gender:
+        scope:
+        - ROOT_ID
+        immune: []
+      developer_type:
+        scope:
+        - ROOT_ID
+        immune: []
+      lang_at_home:
+        scope:
+        - ROOT_ID
+        immune: []
+      country_live:
+        scope:
+        - ROOT_ID
+        immune: []
 version: 1.0.0
