@@ -11,7 +11,7 @@ template_params: null
 filter_select_enabled: true
 fetch_values_predicate: null
 extra: null
-uuid: 2a157421-0608-459e-85bb-204ed46486c9
+uuid: 60004f76-1c61-40db-b82a-a885e171cdd6
 metrics:
 - metric_name: avg__2004
   verbose_name: null
@@ -38,7 +38,7 @@ columns:
   advanced_data_type: null
   groupby: true
   filterable: true
-  expression: ''
+  expression: null
   description: null
   python_date_format: null
   extra: null
@@ -50,7 +50,7 @@ columns:
   advanced_data_type: null
   groupby: true
   filterable: true
-  expression: ''
+  expression: null
   description: null
   python_date_format: null
   extra: null
@@ -62,7 +62,7 @@ columns:
   advanced_data_type: null
   groupby: true
   filterable: true
-  expression: ''
+  expression: null
   description: null
   python_date_format: null
   extra: null
@@ -74,7 +74,7 @@ columns:
   advanced_data_type: null
   groupby: true
   filterable: true
-  expression: ''
+  expression: null
   description: null
   python_date_format: null
   extra: null
@@ -86,7 +86,7 @@ columns:
   advanced_data_type: null
   groupby: true
   filterable: true
-  expression: ''
+  expression: null
   description: null
   python_date_format: null
   extra: null
@@ -98,7 +98,7 @@ columns:
   advanced_data_type: null
   groupby: true
   filterable: true
-  expression: ''
+  expression: null
   description: null
   python_date_format: null
   extra: null
@@ -110,7 +110,7 @@ columns:
   advanced_data_type: null
   groupby: true
   filterable: true
-  expression: ''
+  expression: null
   description: null
   python_date_format: null
   extra: null
@@ -122,7 +122,7 @@ columns:
   advanced_data_type: null
   groupby: true
   filterable: true
-  expression: ''
+  expression: null
   description: null
   python_date_format: null
   extra: null
@@ -134,7 +134,7 @@ columns:
   advanced_data_type: null
   groupby: true
   filterable: true
-  expression: ''
+  expression: null
   description: null
   python_date_format: null
   extra: null
@@ -146,7 +146,7 @@ columns:
   advanced_data_type: null
   groupby: true
   filterable: true
-  expression: ''
+  expression: null
   description: null
   python_date_format: null
   extra: null
@@ -158,7 +158,7 @@ columns:
   advanced_data_type: null
   groupby: true
   filterable: true
-  expression: ''
+  expression: null
   description: null
   python_date_format: null
   extra: null
@@ -170,7 +170,7 @@ columns:
   advanced_data_type: null
   groupby: true
   filterable: true
-  expression: ''
+  expression: null
   description: null
   python_date_format: null
   extra: null
@@ -182,7 +182,7 @@ columns:
   advanced_data_type: null
   groupby: true
   filterable: true
-  expression: ''
+  expression: null
   description: null
   python_date_format: null
   extra: null
@@ -194,7 +194,7 @@ columns:
   advanced_data_type: null
   groupby: true
   filterable: true
-  expression: ''
+  expression: null
   description: null
   python_date_format: null
   extra: null

@@ -1,0 +1,28 @@
+slice_name: Most Populated Countries
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  compare_lag: '10'
+  compare_suffix: o10Y
+  country_fieldtype: cca3
+  entity: country_code
+  granularity_sqla: year
+  groupby:
+  - country_name
+  limit: '25'
+  markup_type: markdown
+  metrics:
+  - sum__SP_POP_TOTL
+  row_limit: 50000
+  show_bubbles: true
+  since: '2014-01-01'
+  time_range: '2014-01-01 : 2014-01-02'
+  until: '2014-01-02'
+  viz_type: table
+query_context: null
+cache_timeout: null
+uuid: 263889d4-c870-4572-9fac-dfad5b797f36
+version: 1.0.0
+dataset_uuid: c7dd508d-22a5-4ad4-bcb0-89eeca3dd9e4

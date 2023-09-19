@@ -1,0 +1,31 @@
+slice_name: Pivot Table
+description: null
+certified_by: null
+certification_details: null
+viz_type: pivot_table
+params:
+  columns:
+  - state
+  compare_lag: '10'
+  compare_suffix: o10Y
+  granularity_sqla: ds
+  groupby:
+  - name
+  limit: '25'
+  markup_type: markdown
+  metrics:
+  - aggregate: SUM
+    column:
+      column_name: num
+      type: BIGINT
+    expressionType: SIMPLE
+    label: Births
+    optionName: metric_11
+  row_limit: 50000
+  time_range: '100 years ago : now'
+  viz_type: pivot_table
+query_context: null
+cache_timeout: null
+uuid: 61125a1e-efd7-46a0-adab-161ce43b12a2
+version: 1.0.0
+dataset_uuid: 78f5a5a2-610c-4f44-bf00-9462763be2ba

@@ -11,7 +11,7 @@ template_params: null
 filter_select_enabled: true
 fetch_values_predicate: null
 extra: null
-uuid: 53a4d095-751f-4775-950d-67d13223d914
+uuid: 78f5a5a2-610c-4f44-bf00-9462763be2ba
 metrics:
 - metric_name: count
   verbose_name: COUNT(*)
