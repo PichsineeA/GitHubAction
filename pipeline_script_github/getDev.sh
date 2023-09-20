@@ -1,3 +1,5 @@
+#!/bin/bash
+
 curl -X 'POST' \
   'https://superset.dev.kea.ifdsfs.com/api/v1/security/login' \
   -H 'accept: application/json' \
