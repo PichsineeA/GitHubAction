@@ -11,6 +11,7 @@ jobs:
         run: 
            #bash ./export_local.sh
            #bash ./import_local.sh
+           chmod +x ./pipeline_script_github/getDev.sh
            ./pipeline_script_github/getDev.sh
       # - name: Commit export
       #   run: |
