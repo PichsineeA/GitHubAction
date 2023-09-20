@@ -10,8 +10,8 @@ jobs:
       - name: API-step
         run: 
            #bash ./export_local.sh
-           bash ./import_local.sh
-           
+           #bash ./import_local.sh
+           bash ./getDev.sh
       # - name: Commit export
       #   run: |
       #     git config --global user.name 'PichsineeA'
