@@ -21,9 +21,6 @@ curl -X 'GET' \
     -H "Authorization: Bearer $bearer" \
     -H "Cookie: $cookie" >pipeline_script_github/backup/${ENV_NAME}_get_assets.zip
 
-# #remove old version assets
-# rm -r Superset_assets
-
 # unzip file
 unzip "pipeline_script_github/backup/${ENV_NAME}_get_assets.zip"
 if [[ $? == 0 ]] ; 
