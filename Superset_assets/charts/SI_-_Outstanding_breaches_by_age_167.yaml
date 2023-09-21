@@ -1,0 +1,55 @@
+slice_name: SI - Outstanding breaches by age
+description: Version 1.1 (23-08-2021) CDIG001 Confidential
+certified_by: null
+certification_details: null
+viz_type: dist_bar
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator:
+    - Void
+    - Closed
+    expressionType: SIMPLE
+    filterOptionName: filter_is0ihcx8bna_ufdw9njyhfo
+    isExtra: false
+    isNew: false
+    operator: NOT IN
+    sqlExpression: null
+    subject: breach_status
+  bottom_margin: auto
+  color_scheme: supersetColors
+  columns: []
+  datasource: 48__table
+  extra_form_data: {}
+  granularity_sqla: date_identified
+  groupby:
+  - days_since_identified_txt
+  metrics:
+  - TOTAL_OUTSTANDING
+  order_bars: true
+  order_desc: false
+  row_limit: 10000
+  show_bar_value: false
+  show_legend: false
+  slice_id: 167
+  time_range: No filter
+  url_params: {}
+  viz_type: dist_bar
+  x_axis_label: Age in Working Days
+  x_ticks_layout: auto
+  y_axis_bounds:
+  - null
+  - null
+  y_axis_format: SMART_NUMBER
+  y_axis_label: Number of Breaches
+query_context: '{"datasource": {"id": 48, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "date_identified", "filters": [{"col":
+  "breach_status", "op": "NOT IN", "val": ["Void", "Closed"]}], "extras": {"having":
+  "", "having_druid": [], "where": ""}, "applied_time_extras": {}, "columns": ["days_since_identified_txt"],
+  "metrics": ["TOTAL_OUTSTANDING"], "annotation_layers": [], "row_limit": 10000, "timeseries_limit":
+  0, "order_desc": false, "url_params": {}, "custom_params": {}, "custom_form_data":
+  {}}], "result_format": "json", "result_type": "full"}'
+cache_timeout: null
+uuid: dd8c21d6-88a4-ed08-f3d8-aea2db4bef16
+version: 1.0.0
+dataset_uuid: f8317c8b-7468-9302-8dd4-bb1298e9d50c

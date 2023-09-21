@@ -1,0 +1,46 @@
+slice_name: SI - Notified in the part 4 weeks
+description: Version 1.0 (23-08-2021) CDIG001 Confidential
+certified_by: null
+certification_details: null
+viz_type: pie
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_kti8rsa8tkf_pa79vx45ejq
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: original_closed_date >= date_trunc('Week',(current_date - INTERVAL
+      '3 weeks'))::date
+    subject: null
+  color_scheme: supersetColors
+  datasource: 48__table
+  donut: true
+  granularity_sqla: original_closed_date
+  groupby:
+  - breach_type
+  innerRadius: 50
+  label_line: true
+  label_type: key
+  labels_outside: true
+  legendOrientation: bottom
+  legendType: scroll
+  metric: COUNT
+  number_format: SMART_NUMBER
+  outerRadius: 65
+  row_limit: 100
+  show_labels: false
+  show_legend: true
+  slice_id: 168
+  time_range: No filter
+  url_params: {}
+  viz_type: pie
+query_context: '{"datasource":{"id":48,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"original_closed_date","filters":[],"extras":{"having":"","having_druid":[],"where":"(original_closed_date
+  >= date_trunc(''Week'',(current_date - INTERVAL ''3 weeks''))::date)"},"applied_time_extras":{},"columns":["breach_type"],"metrics":["COUNT"],"annotation_layers":[],"row_limit":100,"timeseries_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: fa78dbe5-830b-5738-2dc0-59d1e33a2645
+version: 1.0.0
+dataset_uuid: f8317c8b-7468-9302-8dd4-bb1298e9d50c

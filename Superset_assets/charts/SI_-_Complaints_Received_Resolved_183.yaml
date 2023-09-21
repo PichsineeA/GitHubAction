@@ -1,0 +1,49 @@
+slice_name: SI - Complaints Received/Resolved
+description: null
+certified_by: null
+certification_details: null
+viz_type: dist_bar
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_whej0c6r82p_bsbpkngd75m
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: 'week_commencing::date >= (current_date - INTERVAL ''3 months'') '
+    subject: null
+  - clause: WHERE
+    expressionType: SIMPLE
+    filterOptionName: filter_0p0trboadeb_wt8dc6s7b2
+    isExtra: false
+    isNew: false
+    operator: IS NOT NULL
+    sqlExpression: null
+    subject: week_commencing
+  bottom_margin: auto
+  color_scheme: supersetColors
+  columns: []
+  datasource: 73__table
+  granularity_sqla: received_date
+  groupby:
+  - week_commencing
+  label_colors: {}
+  metrics:
+  - total_received
+  - total_resolved
+  order_bars: true
+  row_limit: 10000
+  show_legend: true
+  slice_id: 183
+  time_range: No filter
+  url_params: {}
+  viz_type: dist_bar
+  x_ticks_layout: auto
+  y_axis_format: SMART_NUMBER
+query_context: null
+cache_timeout: null
+uuid: bb73f648-578c-4862-d2a2-939b82ae6cb7
+version: 1.0.0
+dataset_uuid: 751d293c-9ee2-4071-bc71-672ac6f3f8e3

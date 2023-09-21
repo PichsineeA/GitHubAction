@@ -1,0 +1,38 @@
+slice_name: SI0 - Complaints Resolved in Last Month
+description: null
+certified_by: null
+certification_details: null
+viz_type: pie
+params:
+  adhoc_filters: []
+  color_scheme: supersetColors
+  datasource: 14__table
+  date_format: smart_date
+  donut: true
+  extra_form_data: {}
+  granularity_sqla: resolved_date
+  groupby:
+  - category_group
+  innerRadius: 50
+  label_line: true
+  label_type: value
+  labels_outside: true
+  legendOrientation: right
+  legendType: scroll
+  metric: count
+  number_format: null
+  outerRadius: 65
+  row_limit: 100
+  show_labels: true
+  show_labels_threshold: 5
+  show_legend: true
+  slice_id: 48
+  sort_by_metric: true
+  time_range: '2020-10-01 : 2020-10-31'
+  url_params: {}
+  viz_type: pie
+query_context: null
+cache_timeout: null
+uuid: c42b3e89-82b9-d90a-af16-41470eeb805d
+version: 1.0.0
+dataset_uuid: c2a9fe9e-ff47-13b1-3e32-484896e4481c

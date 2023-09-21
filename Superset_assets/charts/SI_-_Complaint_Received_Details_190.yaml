@@ -1,0 +1,63 @@
+slice_name: SI - Complaint Received Details
+description: Version 1.0 (23-08-2021) CDIG001 Confidential
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    expressionType: SIMPLE
+    filterOptionName: filter_nailmywra58_5r8vwv93h0e
+    isExtra: false
+    isNew: false
+    operator: IS NOT NULL
+    sqlExpression: null
+    subject: received_date
+  - clause: WHERE
+    comparator:
+    - Void
+    expressionType: SIMPLE
+    filterOptionName: filter_lw3219xw6ec_o54b524fbbl
+    isExtra: false
+    isNew: false
+    operator: NOT IN
+    sqlExpression: null
+    subject: complaint_status
+  all_columns:
+  - incident_ref
+  - client_ref
+  - client_name
+  - complaint_ref
+  - received_date
+  color_pn: true
+  column_config:
+    received_date:
+      d3TimeFormat: '%Y-%m-%d'
+  conditional_formatting: []
+  datasource: 49__table
+  extra_form_data: {}
+  granularity_sqla: received_date
+  groupby: []
+  include_search: true
+  metrics:
+  - COUNT
+  order_by_cols:
+  - '["received_date", true]'
+  order_desc: true
+  page_length: 20
+  percent_metrics: []
+  query_mode: raw
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: true
+  slice_id: 190
+  table_timestamp_format: smart_date
+  time_grain_sqla: null
+  time_range: Last year
+  url_params: {}
+  viz_type: table
+query_context: null
+cache_timeout: null
+uuid: 1d18bc35-fbfb-3ae1-1a4d-8b4252a1b440
+version: 1.0.0
+dataset_uuid: e5094f0c-5391-2731-3de4-8bfb236135c9

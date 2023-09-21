@@ -1,0 +1,52 @@
+slice_name: SI0 - Manual Deals
+description: null
+certified_by: null
+certification_details: null
+viz_type: pie
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_g51suxq29y7_65vj4fkevek
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: unitcd like 'METRO%'
+    subject: null
+  - clause: WHERE
+    comparator: 'Yes'
+    expressionType: SIMPLE
+    filterOptionName: filter_cbj74wyyl7_av40xr4p026
+    isExtra: false
+    isNew: false
+    operator: ==
+    sqlExpression: null
+    subject: manual_deal_flag
+  color_scheme: supersetColors
+  datasource: 7__table
+  donut: true
+  granularity_sqla: crdate
+  groupby:
+  - processing_stage
+  innerRadius: 50
+  label_line: true
+  label_type: key_value
+  labels_outside: true
+  legendOrientation: top
+  legendType: scroll
+  metric: count
+  number_format: SMART_NUMBER
+  outerRadius: 65
+  row_limit: 100
+  show_labels: true
+  show_legend: false
+  slice_id: 35
+  time_range: No filter
+  url_params: {}
+  viz_type: pie
+query_context: null
+cache_timeout: null
+uuid: aba39aa9-4ff0-2daa-56f2-a975e26afa9d
+version: 1.0.0
+dataset_uuid: fa1cab1e-d9ee-f116-392a-98ac627773a0

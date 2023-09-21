@@ -1,0 +1,166 @@
+slice_name: SI5 - AWD Non-END Analysis View
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_jbkusg25v6_cn0k06jzk8g
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: UPPER(queuecd) <> 'END'
+    subject: null
+  all_columns: []
+  color_pn: false
+  column_config:
+    Day 11-30:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    Day 31+:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    Day 6-10:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    day_1:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    day_2:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    day_3:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    day_4:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    day_5:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    discard:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    hold:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    num_of_work_item:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    personal:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    process:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    quality:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    refer:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    rescan:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    system:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    total_suspended:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+    vetting:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+  conditional_formatting: []
+  datasource: 96__table
+  extra_form_data: {}
+  granularity_sqla: last_update_dattim
+  groupby:
+  - owner_department
+  - owner_team
+  include_search: false
+  metrics:
+  - vetting
+  - process
+  - quality
+  - refer
+  - hold
+  - rescan
+  - discard
+  - personal
+  - system
+  - day_1
+  - day_2
+  - day_3
+  - day_4
+  - day_5
+  - Day 6-10
+  - Day 11-30
+  - Day 31+
+  - total_suspended
+  - num_of_work_item
+  order_by_cols: []
+  order_desc: false
+  page_length: 20
+  percent_metrics: []
+  query_mode: aggregate
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: false
+  slice_id: 560
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  timeseries_limit_metric:
+    aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: false
+    isNew: false
+    label: owner_department
+    optionName: metric_q40wbmjpknb_9njfqtr0kdf
+    sqlExpression: owner_department
+  url_params: {}
+  viz_type: table
+query_context: '{"datasource": {"id": 96, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "last_update_dattim", "filters": [],
+  "extras": {"time_grain_sqla": "P1D", "having": "", "having_druid": [], "where":
+  "(UPPER(queuecd) <> ''END'')"}, "applied_time_extras": {}, "columns": ["owner_department",
+  "owner_team"], "metrics": ["vetting", "process", "quality", "refer", "hold", "rescan",
+  "discard", "personal", "system", "day_1", "day_2", "day_3", "day_4", "day_5", "Day
+  6-10", "Day 11-30", "Day 31+", "total_suspended", "num_of_work_item"], "orderby":
+  [[{"aggregate": null, "column": null, "expressionType": "SQL", "hasCustomLabel":
+  false, "isNew": false, "label": "owner_department", "optionName": "metric_q40wbmjpknb_9njfqtr0kdf",
+  "sqlExpression": "owner_department"}, true]], "annotation_layers": [], "row_limit":
+  10000, "timeseries_limit": 0, "timeseries_limit_metric": {"aggregate": null, "column":
+  null, "expressionType": "SQL", "hasCustomLabel": false, "isNew": false, "label":
+  "owner_department", "optionName": "metric_q40wbmjpknb_9njfqtr0kdf", "sqlExpression":
+  "owner_department"}, "order_desc": false, "url_params": {}, "custom_params": {},
+  "custom_form_data": {}, "post_processing": []}], "result_format": "json", "result_type":
+  "full"}'
+cache_timeout: null
+uuid: fd0451b9-d1e7-4b71-b0c0-1737ea47ac66
+version: 1.0.0
+dataset_uuid: 2c52393b-92f3-4a51-9ff7-3d0349ae0245

@@ -1,0 +1,36 @@
+slice_name: SI0 - Control failures
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters: []
+  all_columns: []
+  color_pn: true
+  datasource: 19__table
+  granularity_sqla: manco_notified_date
+  groupby:
+  - control_failure
+  metrics:
+  - Total Number of Breaches
+  order_by_cols: []
+  order_desc: true
+  percent_metrics: []
+  query_mode: aggregate
+  row_limit: 10000
+  show_cell_bars: true
+  slice_id: 58
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+query_context: '{"datasource":{"id":19,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"manco_notified_date","filters":[],"extras":{"time_grain_sqla":"P1D","having":"","having_druid":[],"where":""},"applied_time_extras":{},"columns":["control_failure"],"metrics":["Total
+  Number of Breaches"],"orderby":[["Total Number of Breaches",false]],"annotation_layers":[],"row_limit":10000,"timeseries_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[]}],"form_data":{"adhoc_filters":[],"all_columns":[],"color_pn":true,"datasource":"19__table","granularity_sqla":"manco_notified_date","groupby":["control_failure"],"metrics":["Total
+  Number of Breaches"],"order_by_cols":[],"order_desc":true,"percent_metrics":[],"query_mode":"aggregate","row_limit":10000,"show_cell_bars":true,"slice_id":58,"table_timestamp_format":"smart_date","time_grain_sqla":"P1D","time_range":"No
+  filter","url_params":{},"viz_type":"table","force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 787b2f4f-0d63-c08a-8856-48212f3dd489
+version: 1.0.0
+dataset_uuid: 2c547240-669b-1566-c497-e9841401ead7

@@ -1,0 +1,383 @@
+table_name: vw_ifast_assets
+main_dttm_col: null
+description: Version 1.0 (21-07-2021) CDIG016 Confidential
+default_endpoint: null
+offset: 0
+cache_timeout: 60
+schema: present
+sql: ''
+params: null
+template_params: null
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: 7d4a695f-2ab8-44e6-9b87-4dd909ab175d
+metrics:
+- metric_name: Largest Neg Movement %
+  verbose_name: Largest Negative Movement %
+  metric_type: null
+  expression: min(fund_movement_percent)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Largest Pos Movement %
+  verbose_name: Largest Positive Movement %
+  metric_type: null
+  expression: max(fund_movement_percent)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Last Fund Value
+  verbose_name: Last Fund Value
+  metric_type: null
+  expression: sum(last_fund_value) + sum(fund_movement_value)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Largest Neg Movement Value
+  verbose_name: Largest Negative Movement Value
+  metric_type: null
+  expression: min(fund_movement_value)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Largest Pos Movement Value
+  verbose_name: Largest Positive Movement Value
+  metric_type: null
+  expression: max(fund_movement_value)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Movement % Total
+  verbose_name: Net Movement %
+  metric_type: null
+  expression: sum(fund_movement_percent)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: Movement Value Total
+  verbose_name: Net Movement Value
+  metric_type: null
+  expression: sum(fund_movement_value)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: count
+  verbose_name: Number of Share Classes
+  metric_type: null
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+columns:
+- column_name: Net Movement %
+  verbose_name: Net Movement %
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: 'case when round(fund_movement_percent,3) = 0 and fund_movement_percent
+    > 0 then ''<0.001%''
+
+    when round(fund_movement_percent,3) = 0 and fund_movement_percent < 0 then ''>-0.001%''
+
+    else to_char(fund_movement_percent, ''FM990.000'') || ''%'' end"'
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Price Status
+  verbose_name: Price Status
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: case price_status when 'P' then 'Priced' else 'Unpriced' end
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Last Fund Value
+  verbose_name: Last Fund Value
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: to_char(last_fund_value, 'FM999,999,999,999,990.00')
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Net Movement Value
+  verbose_name: Net Movement Value
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: to_char(fund_movement_value, 'FM999,999,999,999,990.00')
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Today's Movement %
+  verbose_name: Today's Movement %
+  is_dttm: false
+  is_active: null
+  type: NUMERIC
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: fund_movement_percent
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Today's Movement % test
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: null
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: fund_movement_value
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Today's Movement
+  verbose_name: Today's Movement
+  is_dttm: false
+  is_active: null
+  type: NUMERIC
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: fund_movement_value
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: fund_movement_percent
+  verbose_name: Today's Movement %
+  is_dttm: false
+  is_active: null
+  type: NUMERIC
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Latest Price
+  verbose_name: Latest Price
+  is_dttm: false
+  is_active: null
+  type: NUMERIC
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: last_price_amount
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: units_in_constitution
+  verbose_name: Units in Constitution
+  is_dttm: false
+  is_active: null
+  type: NUMERIC
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: last_fund_value
+  verbose_name: Last Fund Value
+  is_dttm: false
+  is_active: null
+  type: NUMERIC
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: fund_movement_value
+  verbose_name: Today's Movement
+  is_dttm: false
+  is_active: null
+  type: NUMERIC
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: NAV
+  verbose_name: NAV
+  is_dttm: false
+  is_active: null
+  type: NUMERIC
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: round(last_fund_value, 2)
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: isin_code
+  verbose_name: ISIN Code
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(20)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: fund_code
+  verbose_name: Fund Code
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(50)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: share_class_name
+  verbose_name: Share Class
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(80)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: fund_name
+  verbose_name: Fund Name
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(80)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: currency
+  verbose_name: Currency
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(3)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: nav_status
+  verbose_name: Price
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(3)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: mco_name
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(100)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: price_status
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(1)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: emc_currency
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: VARCHAR(3)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: last_price_amount
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: NUMERIC
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: ein
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 980ffeea-a918-7739-250c-7d130b23d6c0

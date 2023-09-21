@@ -1,0 +1,64 @@
+slice_name: SI2 - Today's Negative Movements
+description: Version 1.0 (18-01-2022) CDIG002 Confidential
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: '0'
+    expressionType: SIMPLE
+    filterOptionName: filter_fnu1cnzvnn6_918d7kmgmjk
+    isExtra: false
+    isNew: false
+    operator: <
+    operatorId: LESS_THAN
+    sqlExpression: null
+    subject: fund_movement_value
+  all_columns:
+  - fund_code
+  - share_class_name
+  - isin_code
+  - Latest Price
+  - Today's Movement
+  - fund_movement_percent
+  color_pn: false
+  column_config:
+    Latest Price:
+      d3NumberFormat: ',.4f'
+      d3SmallNumberFormat: ',.4f'
+      showCellBars: false
+    Today's Movement:
+      d3NumberFormat: ',.2f'
+      d3SmallNumberFormat: ',.2f'
+      showCellBars: false
+    fund_movement_percent:
+      d3NumberFormat: .2%
+      d3SmallNumberFormat: .2%
+      showCellBars: false
+  conditional_formatting: []
+  datasource: 68__table
+  extra_form_data: {}
+  groupby: []
+  include_search: true
+  metrics:
+  - count
+  order_by_cols:
+  - '["Today''s Movement", true]'
+  order_desc: true
+  percent_metrics: []
+  query_mode: raw
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: false
+  slice_id: 337
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: Last week
+  url_params: {}
+  viz_type: table
+query_context: null
+cache_timeout: null
+uuid: b8145cd2-f073-4741-8cc7-b04b1ed3e88c
+version: 1.0.0
+dataset_uuid: 7d4a695f-2ab8-44e6-9b87-4dd909ab175d

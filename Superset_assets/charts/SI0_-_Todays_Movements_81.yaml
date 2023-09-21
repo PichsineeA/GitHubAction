@@ -1,0 +1,45 @@
+slice_name: SI0 - Today's Movements
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters: []
+  all_columns:
+  - ivc_code
+  - investment_vehicle_class
+  - isin
+  - price_status
+  - Net Movement Percent
+  color_pn: true
+  datasource: 29__table
+  extra_form_data: {}
+  groupby:
+  - ivc_code
+  - investment_vehicle_class
+  - isin
+  - price_status
+  include_search: true
+  metrics:
+  - Last Fund Value
+  - Today's Movement
+  order_by_cols: []
+  order_desc: true
+  page_length: 20
+  percent_metrics:
+  - Movement
+  query_mode: aggregate
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: false
+  slice_id: 81
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: Last week
+  url_params: {}
+  viz_type: table
+query_context: null
+cache_timeout: null
+uuid: 5c3c460b-dab9-fd84-03df-b68a20e831e4
+version: 1.0.0
+dataset_uuid: b7a6fe58-57ec-ae45-849e-d27bf2cd4961

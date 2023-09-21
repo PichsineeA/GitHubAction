@@ -1,0 +1,58 @@
+slice_name: SI5 - Control Failures - Last 4 Weeks
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_6t6g93uooy8_w7n1d6mlohd
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: original_closed_date >= date_trunc('Week',(current_date - INTERVAL
+      '3 weeks'))::date
+    subject: null
+  all_columns: []
+  color_pn: false
+  column_config:
+    count:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+      showCellBars: false
+  conditional_formatting: []
+  datasource: 97__table
+  extra_form_data: {}
+  granularity_sqla: original_closed_date
+  groupby:
+  - control_failure
+  metrics:
+  - count
+  order_by_cols: []
+  order_desc: true
+  percent_metrics: []
+  query_mode: aggregate
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: false
+  show_totals: false
+  slice_id: 526
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+query_context: '{"datasource": {"id": 97, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "original_closed_date", "filters": [],
+  "extras": {"time_grain_sqla": "P1D", "having": "", "having_druid": [], "where":
+  "(original_closed_date >= date_trunc(''Week'',(current_date - INTERVAL ''3 weeks''))::date)"},
+  "applied_time_extras": {}, "columns": ["control_failure"], "metrics": ["count"],
+  "orderby": [["count", false]], "annotation_layers": [], "row_limit": 10000, "timeseries_limit":
+  0, "order_desc": true, "url_params": {}, "custom_params": {}, "custom_form_data":
+  {}, "post_processing": []}], "result_format": "json", "result_type": "full"}'
+cache_timeout: null
+uuid: b8a0758b-35e5-4105-a430-acb1a138e014
+version: 1.0.0
+dataset_uuid: 9f0a237b-3856-4149-9f7b-70e2e9a25367

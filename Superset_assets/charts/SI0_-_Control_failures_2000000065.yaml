@@ -1,0 +1,32 @@
+slice_name: SI0 - Control failures
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters: []
+  all_columns: []
+  color_pn: true
+  datasource: 19__table
+  granularity_sqla: manco_notified_date
+  groupby:
+  - control_failure
+  metrics:
+  - Total Number of Breaches
+  order_by_cols: []
+  order_desc: true
+  percent_metrics: []
+  query_mode: aggregate
+  row_limit: 10000
+  show_cell_bars: true
+  slice_id: 58
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+query_context: null
+cache_timeout: null
+uuid: 4d786f7d-8057-4c45-be27-b2cadb769e4a
+version: 1.0.0
+dataset_uuid: 2c547240-669b-1566-c497-e9841401ead7

@@ -1,0 +1,46 @@
+slice_name: FMR - FBS - MaxRows
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters: []
+  align_pn: false
+  all_columns: []
+  color_pn: false
+  datasource: 45__table
+  granularity_sqla: transaction_date
+  groupby: []
+  include_search: false
+  metrics:
+  - aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: true
+    isNew: false
+    label: Row Limit Alert
+    optionName: metric_ei0crsabwdu_qxmw5qzi7h
+    sqlExpression: "CASE WHEN COUNT(DISTINCT ivc_id)-30000 > 0 \n     THEN '<div class\
+      \ = \"limit-red\">The total number of rows this query returned is: <STRONG>'\
+      \ || COUNT(DISTINCT ivc_id) || '</STRONG>, exports are limited to <STRONG>30,000</STRONG>\
+      \ rows. <br>Either filter the table to a suitable length or contact the administrator\
+      \ if you wish to export more than 30,000 rows</div>'\n     ELSE '<div class\
+      \ = \"limit-green\">All rows returned by the query are displayed</div>' END"
+  order_by_cols: []
+  order_desc: false
+  page_length: 0
+  percent_metrics: []
+  query_mode: aggregate
+  row_limit: 10
+  show_cell_bars: false
+  slice_id: 279
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+query_context: null
+cache_timeout: null
+uuid: d62e6e2f-0ed3-458b-9484-4ce8fccf4b00
+version: 1.0.0
+dataset_uuid: 684545bb-cddf-d2d0-9669-f67301bffd4e

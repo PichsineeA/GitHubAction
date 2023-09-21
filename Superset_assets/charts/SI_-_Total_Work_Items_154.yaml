@@ -1,0 +1,31 @@
+slice_name: SI - Total Work Items
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: END
+    expressionType: SIMPLE
+    filterOptionName: filter_ea1dwx54kgg_iupf66ca9tc
+    isExtra: false
+    isNew: false
+    operator: '!='
+    sqlExpression: null
+    subject: queuecd
+  datasource: 50__table
+  granularity_sqla: last_update_dattim
+  header_font_size: 0.4
+  metric: count
+  slice_id: 154
+  subheader_font_size: 0.15
+  time_range: No filter
+  url_params: {}
+  viz_type: big_number_total
+  y_axis_format: ',d'
+query_context: null
+cache_timeout: null
+uuid: df45eaae-428d-9458-c9c8-1f2273cdd345
+version: 1.0.0
+dataset_uuid: 40f6d689-5a50-6435-4ddd-353a5940ae24

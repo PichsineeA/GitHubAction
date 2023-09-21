@@ -1,0 +1,46 @@
+slice_name: SI0 - Complaints Received
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters: []
+  all_columns:
+  - incident_ref
+  - client_id
+  - client_name
+  - complaint_ref
+  - received_date
+  color_pn: true
+  datasource: 15__table
+  extra_form_data: {}
+  granularity_sqla: received_date
+  groupby: []
+  include_search: true
+  metrics:
+  - count
+  order_by_cols: []
+  order_desc: true
+  page_length: 10
+  percent_metrics: []
+  query_mode: raw
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: false
+  slice_id: 40
+  table_timestamp_format: '%d/%m/%Y'
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+query_context: '{"datasource": {"id": 15, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "received_date", "filters": [], "extras":
+  {"time_grain_sqla": "P1D", "having": "", "having_druid": [], "where": ""}, "applied_time_extras":
+  {}, "columns": ["incident_ref", "client_id", "client_name", "complaint_ref", "received_date"],
+  "orderby": [], "annotation_layers": [], "row_limit": 10000, "timeseries_limit":
+  0, "order_desc": true, "url_params": {}, "custom_params": {}, "custom_form_data":
+  {}, "post_processing": []}], "result_format": "json", "result_type": "full"}'
+cache_timeout: null
+uuid: 40a49d1e-2b5f-0fe4-0d7a-be17e4644c23
+version: 1.0.0
+dataset_uuid: 15464cf9-c639-d9cb-4f5f-eaa791a90ea0

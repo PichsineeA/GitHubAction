@@ -1,0 +1,24 @@
+slice_name: SI - Cancelled Deals
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  adhoc_filters: []
+  datasource: 95__table
+  extra_form_data: {}
+  granularity_sqla: deal_date
+  header_font_size: 0.4
+  metric: '% of Cancelled Deals'
+  slice_id: 505
+  subheader_font_size: 0.15
+  time_format: '%d-%m-%Y %H:%M:%S'
+  time_range: 'DATEADD(DATETIME("today"), -2, month) : today'
+  url_params: {}
+  viz_type: big_number_total
+  y_axis_format: .2%
+query_context: null
+cache_timeout: null
+uuid: 50fb9b82-c77d-4059-8fc3-af2b41d43746
+version: 1.0.0
+dataset_uuid: 1f183292-9794-4769-b7a7-a08acfeb402a

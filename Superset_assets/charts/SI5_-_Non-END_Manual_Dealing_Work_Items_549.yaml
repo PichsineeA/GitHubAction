@@ -1,0 +1,70 @@
+slice_name: SI5 - Non-END Manual Dealing Work Items
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_dx9l1eqme5h_iety22r83go
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: upper(WRKTYPE) = 'FXTRADE'
+    subject: null
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_mcour8gtoj_vc8jyjrfzlb
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: upper(queuecd) <> 'END'
+    subject: null
+  all_columns:
+  - awd_crdattim
+  - unitcd
+  - wrktype
+  - processing_stage
+  - suspend_flag
+  - age_bus_days_band
+  - contact_id
+  - portfolio_id
+  color_pn: false
+  conditional_formatting: []
+  datasource: 96__table
+  extra_form_data: {}
+  granularity_sqla: last_update_dattim
+  groupby: []
+  include_search: true
+  order_by_cols:
+  - '["awd_crdattim", true]'
+  order_desc: true
+  page_length: 20
+  percent_metrics: []
+  query_mode: raw
+  row_limit: 10000
+  server_page_length: 20
+  server_pagination: false
+  show_cell_bars: false
+  slice_id: 549
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+query_context: '{"datasource": {"id": 96, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "last_update_dattim", "filters": [],
+  "extras": {"time_grain_sqla": "P1D", "having": "", "having_druid": [], "where":
+  "(upper(WRKTYPE) = ''FXTRADE'') AND (upper(queuecd) <> ''END'')"}, "applied_time_extras":
+  {}, "columns": ["awd_crdattim", "unitcd", "wrktype", "processing_stage", "suspend_flag",
+  "age_bus_days_band", "contact_id", "portfolio_id"], "orderby": [["awd_crdattim",
+  true]], "annotation_layers": [], "row_limit": 10000, "timeseries_limit": 0, "order_desc":
+  true, "url_params": {}, "custom_params": {}, "custom_form_data": {}, "post_processing":
+  []}], "result_format": "json", "result_type": "full"}'
+cache_timeout: null
+uuid: 356e53e1-c323-44ad-a1c5-f07435ff2d28
+version: 1.0.0
+dataset_uuid: 2c52393b-92f3-4a51-9ff7-3d0349ae0245

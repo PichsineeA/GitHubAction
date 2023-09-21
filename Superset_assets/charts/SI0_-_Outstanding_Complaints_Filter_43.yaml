@@ -1,0 +1,29 @@
+slice_name: SI0 - Outstanding Complaints Filter
+description: null
+certified_by: null
+certification_details: null
+viz_type: filter_box
+params:
+  adhoc_filters: []
+  datasource: 16__table
+  date_filter: false
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: category_group
+    key: THy3912M6
+    label: Complaint Category Group
+    multiple: true
+    searchAllOptions: false
+  granularity_sqla: received_date
+  instant_filtering: true
+  queryFields: {}
+  slice_id: 43
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+query_context: null
+cache_timeout: null
+uuid: e1255886-ee68-8e58-eccb-81ebf7743754
+version: 1.0.0
+dataset_uuid: 53d7ac4c-c765-3cf2-0f5a-bca3a8b3b625

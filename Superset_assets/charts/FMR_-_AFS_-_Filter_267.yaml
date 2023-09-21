@@ -1,0 +1,52 @@
+slice_name: FMR - AFS - Filter
+description: null
+certified_by: null
+certification_details: null
+viz_type: filter_box
+params:
+  adhoc_filters: []
+  datasource: 66__table
+  date_filter: true
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: agent_name
+    key: 1NigXGfX1
+    label: Agent/Dealer
+    multiple: true
+    searchAllOptions: true
+  - asc: true
+    clearable: true
+    column: txnt_description
+    key: v4z2vFmm2
+    label: Transaction Type
+    multiple: true
+    searchAllOptions: false
+  - asc: true
+    clearable: true
+    column: ivh_description
+    key: aBQPtXfzg
+    label: Fund Name
+    multiple: true
+    searchAllOptions: false
+  - asc: true
+    clearable: true
+    column: ccy_id_fund
+    key: tARUDIMgd
+    label: Fund Currency
+    multiple: true
+    searchAllOptions: false
+  granularity_sqla: transaction_date
+  instant_filtering: false
+  show_sqla_time_column: false
+  show_sqla_time_granularity: false
+  slice_id: 267
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+query_context: null
+cache_timeout: null
+uuid: 37baa98e-b8e2-dd91-a6bf-ccb54c7f399b
+version: 1.0.0
+dataset_uuid: 29d8b276-e616-60d1-b49e-eb657f9cb0d3

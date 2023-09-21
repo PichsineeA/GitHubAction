@@ -1,0 +1,62 @@
+slice_name: FMR - PO - Investor Risk
+description: null
+certified_by: null
+certification_details: null
+viz_type: pie
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: ''
+    expressionType: SIMPLE
+    filterOptionName: filter_7i60xd6gmd8_2a1igsxdt0o
+    isExtra: false
+    isNew: false
+    operator: IS NOT NULL
+    sqlExpression: null
+    subject: client_number
+  color_scheme: supersetColors
+  datasource: 54__table
+  donut: true
+  granularity_sqla: latest_valuation_date
+  groupby:
+  - crr_description
+  innerRadius: 50
+  label_line: true
+  labels_outside: true
+  legendOrientation: top
+  legendType: scroll
+  metric:
+    aggregate: COUNT_DISTINCT
+    column:
+      column_name: client_number
+      description: Unit holder's ID
+      expression: null
+      filterable: true
+      groupby: true
+      id: 895
+      is_dttm: false
+      optionName: _col_client_number
+      python_date_format: null
+      type: VARCHAR(20)
+      verbose_name: Investor ID
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    isNew: false
+    label: Investors
+    optionName: metric_oxxnta24nfm_xibmrsj272
+    sqlExpression: null
+  number_format: SMART_NUMBER
+  outerRadius: 65
+  pie_label_type: key_percent
+  row_limit: 100
+  show_labels: true
+  show_legend: false
+  slice_id: 199
+  time_range: No filter
+  url_params: {}
+  viz_type: pie
+query_context: null
+cache_timeout: null
+uuid: 26245396-4ff2-e0af-33c2-7c4facc4b81f
+version: 1.0.0
+dataset_uuid: 294bb475-bd97-fe6c-dec6-ec4cd42fc6fa

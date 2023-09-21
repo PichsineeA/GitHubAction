@@ -1,0 +1,22 @@
+slice_name: SI - Outstanding Complaints
+description: Version 1.0 (23-08-2021) CDIG001 Confidential
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  adhoc_filters: []
+  datasource: 49__table
+  granularity_sqla: resolute_letter_date
+  header_font_size: 0.4
+  metric: TOTAL_OUTSTANDING
+  slice_id: 179
+  subheader_font_size: 0.15
+  time_range: No filter
+  url_params: {}
+  viz_type: big_number_total
+  y_axis_format: ',d'
+query_context: null
+cache_timeout: null
+uuid: 0a3edd41-e144-d786-2728-b6a49d8c52bf
+version: 1.0.0
+dataset_uuid: e5094f0c-5391-2731-3de4-8bfb236135c9

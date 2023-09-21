@@ -1,0 +1,35 @@
+slice_name: SI6 - Active Work Work Type Filter
+description: null
+certified_by: null
+certification_details: null
+viz_type: filter_box
+params:
+  adhoc_filters: []
+  datasource: 2000000005__table
+  date_filter: false
+  extra_form_data: {}
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: wrktype
+    key: MVBT55VGP
+    label: WORKTYPE
+    multiple: true
+    searchAllOptions: false
+  granularity_sqla: last_update_dattim
+  instant_filtering: true
+  slice_id: 2000000037
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+query_context: '{"datasource": {"id": 2000000005, "type": "table"}, "force": false,
+  "queries": [{"time_range": "No filter", "granularity": "last_update_dattim", "filters":
+  [], "extras": {"time_grain_sqla": "P1D", "having": "", "having_druid": [], "where":
+  ""}, "applied_time_extras": {}, "columns": [], "metrics": [], "annotation_layers":
+  [], "timeseries_limit": 0, "order_desc": true, "url_params": {}, "custom_params":
+  {}, "custom_form_data": {}}], "result_format": "json", "result_type": "full"}'
+cache_timeout: null
+uuid: d002bff5-da17-41b8-bcab-cdabc855e479
+version: 1.0.0
+dataset_uuid: deb426d2-5ea7-42ae-ae97-c99694c2ddff
