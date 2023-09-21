@@ -38,5 +38,5 @@ curl -X 'GET' \
 # else
 #     echo No
 # fi
-a=$(find -type f -name 'assets_export*')
+a=$(find . -iname \*.zip)
 echo ${a}
