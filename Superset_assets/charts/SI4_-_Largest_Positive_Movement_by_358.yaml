@@ -1,0 +1,24 @@
+slice_name: SI4 - Largest Positive Movement by %
+description: Version 1.0 (21-04-2022) CDIG029 Confidential
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  adhoc_filters: []
+  datasource: 87__table
+  extra_form_data: {}
+  granularity_sqla: null
+  header_font_size: 0.4
+  metric: Largest Positive Movement Percent
+  slice_id: 358
+  subheader_font_size: 0.15
+  time_format: '%d-%m-%Y %H:%M:%S'
+  time_range: No filter
+  url_params: {}
+  viz_type: big_number_total
+  y_axis_format: .2%
+query_context: null
+cache_timeout: null
+uuid: f28c5ad9-0844-416b-8a30-5911d8343986
+version: 1.0.0
+dataset_uuid: 22a4c3aa-d02c-4d98-9493-d90c79f5d3ac

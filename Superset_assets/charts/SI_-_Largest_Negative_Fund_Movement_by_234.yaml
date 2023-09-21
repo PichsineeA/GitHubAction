@@ -1,0 +1,23 @@
+slice_name: SI - Largest Negative Fund Movement by %
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  adhoc_filters: []
+  datasource: 58__table
+  extra_form_data: {}
+  header_font_size: 0.4
+  metric: Largest Negative Movement Percent
+  slice_id: 234
+  subheader_font_size: 0.15
+  time_format: '%d-%m-%Y %H:%M:%S'
+  time_range: Last week
+  url_params: {}
+  viz_type: big_number_total
+  y_axis_format: .2%
+query_context: null
+cache_timeout: null
+uuid: 11b6b19e-70d8-e13e-91e6-40392d5d4440
+version: 1.0.0
+dataset_uuid: c28fef52-923b-a734-0b83-4cec471c48cc

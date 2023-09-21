@@ -1,0 +1,47 @@
+slice_name: SI2 - EIN Currency Filter
+description: Version 1.0 (21-07-2021) CDIG002 Confidential
+certified_by: null
+certification_details: null
+viz_type: filter_box
+params:
+  adhoc_filters: []
+  datasource: 82__table
+  date_filter: false
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: bpo_identifier
+    key: SU-cURPyU
+    label: BPO Identifier
+    multiple: true
+    searchAllOptions: false
+  - asc: true
+    clearable: true
+    column: ein
+    key: GZ2vzsNiT
+    label: EIN
+    multiple: true
+    searchAllOptions: false
+  - asc: true
+    clearable: true
+    column: emc_currency
+    key: aClv95MC6
+    label: Currency
+    multiple: true
+    searchAllOptions: false
+  instant_filtering: true
+  slice_id: 293
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+query_context: '{"datasource": {"id": 68, "type": "table"}, "force": false, "queries":
+  [{"time_range": "Last week", "filters": [], "extras": {"time_grain_sqla": "P1D",
+  "having": "", "having_druid": [], "where": ""}, "applied_time_extras": {}, "columns":
+  [], "metrics": [], "annotation_layers": [], "timeseries_limit": 0, "order_desc":
+  true, "url_params": {}, "custom_params": {}, "custom_form_data": {}}], "result_format":
+  "json", "result_type": "full"}'
+cache_timeout: null
+uuid: eda2b707-4a81-484e-9140-9837ae914f12
+version: 1.0.0
+dataset_uuid: 41b77b55-e2d7-4eba-8ad6-bcfca3b85678

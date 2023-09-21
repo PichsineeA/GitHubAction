@@ -1,0 +1,308 @@
+dashboard_title: Anti-Money Laundering by Clients
+description: null
+css: "/*----------------------\n  Display CSS button for 2 charts\n  -Trades from\
+  \ High Risk Clients\n  -Clients with a Failed AML Status\n-----------------------*/\n\
+  \n#slice_428-controls {\ndisplay: flex;\n}\n#slice_429-controls {\ndisplay: flex;\n\
+  }\n\n/*Hide all other drop down options, apart from refresh and CSV*/\n.chart-slice\
+  \ + div>div>.ant-dropdown>ul>li:not(:first-child):not(:last-child){\n  display:none;\n\
+  }\n"
+slug: anti-money-laundering-by-clients-4
+uuid: f8fe42be-2e5b-47e3-b91e-5b18e2b07d57
+position:
+  CHART-5-4UJ0RIQG:
+    children: []
+    id: CHART-5-4UJ0RIQG
+    meta:
+      chartId: 426
+      height: 50
+      sliceName: SI4 - Client's by Risk Category
+      sliceNameOverride: Number of Clients by Risk Category
+      uuid: 27819956-3b08-4f23-acc3-cf6791763413
+      width: 8
+    parents:
+    - ROOT_ID
+    - TABS-LqeL6RPXb1
+    - TAB-116Bd8ho89
+    - ROW-uErLAyY4YU
+    type: CHART
+  CHART-5u2gJOJ6Kr:
+    children: []
+    id: CHART-5u2gJOJ6Kr
+    meta:
+      chartId: 427
+      height: 50
+      sliceName: SI4 - Money Laundering Status by Client Type
+      sliceNameOverride: Money Laundering Status by Client Type
+      uuid: bd0ae1dc-0e57-4f1d-9ec6-99bddffb40b4
+      width: 12
+    parents:
+    - ROOT_ID
+    - TABS-LqeL6RPXb1
+    - TAB-116Bd8ho89
+    - ROW-W99NbgJpu
+    type: CHART
+  CHART-ELo72HVTc9:
+    children: []
+    id: CHART-ELo72HVTc9
+    meta:
+      chartId: 428
+      height: 105
+      sliceName: SI4 - Trades from Customers in High Risk Countries
+      sliceNameOverride: Trades from High Risk Clients
+      uuid: 21d8dd3b-bfce-4eaf-a099-c0f35912a8c7
+      width: 12
+    parents:
+    - ROOT_ID
+    - TABS-LqeL6RPXb1
+    - TAB-pXVXyz9NF
+    - ROW-FfmW5pmtlm
+    type: CHART
+  CHART-F-VmYkBVg2:
+    children: []
+    id: CHART-F-VmYkBVg2
+    meta:
+      chartId: 363
+      height: 33
+      sliceName: SI4 - EIN Currency Filter
+      uuid: 9c8337c3-8ae7-4519-9c5c-e6d7dc3cc2de
+      width: 4
+    parents:
+    - ROOT_ID
+    - TABS-LqeL6RPXb1
+    - TAB-116Bd8ho89
+    - ROW-h9aeJrMCwG
+    type: CHART
+  CHART-cn1nHYMUJs:
+    children: []
+    id: CHART-cn1nHYMUJs
+    meta:
+      chartId: 425
+      height: 50
+      sliceName: SI4 - Transactions By Country
+      sliceNameOverride: Transactions by Country
+      uuid: 56599a86-c55a-449f-b3e7-dbead332d032
+      width: 4
+    parents:
+    - ROOT_ID
+    - TABS-LqeL6RPXb1
+    - TAB-116Bd8ho89
+    - ROW-uErLAyY4YU
+    type: CHART
+  CHART-j4iGqpZB2a:
+    children: []
+    id: CHART-j4iGqpZB2a
+    meta:
+      chartId: 392
+      height: 33
+      sliceName: SI4 - Share Class Currency Filter
+      uuid: c7d71035-2a21-42a0-8e36-e2523bd4d4d0
+      width: 8
+    parents:
+    - ROOT_ID
+    - TABS-LqeL6RPXb1
+    - TAB-116Bd8ho89
+    - ROW-h9aeJrMCwG
+    type: CHART
+  CHART-nLuk5E6_02:
+    children: []
+    id: CHART-nLuk5E6_02
+    meta:
+      chartId: 429
+      height: 103
+      sliceName: SI4 - Clients With a Failed AML Status
+      sliceNameOverride: Clients with a Failed AML Status
+      uuid: 34116ead-5da6-4431-a4fd-4aa3a8c2c1d0
+      width: 12
+    parents:
+    - ROOT_ID
+    - TABS-LqeL6RPXb1
+    - TAB-7GH6sd_FE
+    - ROW-edZBLwLBPu
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children: []
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER-REiQ2OMqE0:
+    children: []
+    id: HEADER-REiQ2OMqE0
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      headerSize: SMALL_HEADER
+      text: Anti-Money Laundering by Clients in the last 2 months
+    parents:
+    - ROOT_ID
+    - TABS-LqeL6RPXb1
+    - TAB-116Bd8ho89
+    type: HEADER
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Anti-Money Laundering by Clients
+    type: HEADER
+  ROOT_ID:
+    children:
+    - TABS-LqeL6RPXb1
+    id: ROOT_ID
+    type: ROOT
+  ROW-FfmW5pmtlm:
+    children:
+    - CHART-ELo72HVTc9
+    id: ROW-FfmW5pmtlm
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-LqeL6RPXb1
+    - TAB-pXVXyz9NF
+    type: ROW
+  ROW-W99NbgJpu:
+    children:
+    - CHART-5u2gJOJ6Kr
+    id: ROW-W99NbgJpu
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-LqeL6RPXb1
+    - TAB-116Bd8ho89
+    type: ROW
+  ROW-YoBNu5RBGe:
+    children: []
+    id: ROW-YoBNu5RBGe
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-LqeL6RPXb1
+    - TAB-pXVXyz9NF
+    type: ROW
+  ROW-bX0EUchveD:
+    children: []
+    id: ROW-bX0EUchveD
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-LqeL6RPXb1
+    - TAB-7GH6sd_FE
+    type: ROW
+  ROW-edZBLwLBPu:
+    children:
+    - CHART-nLuk5E6_02
+    id: ROW-edZBLwLBPu
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-LqeL6RPXb1
+    - TAB-7GH6sd_FE
+    type: ROW
+  ROW-h9aeJrMCwG:
+    children:
+    - CHART-F-VmYkBVg2
+    - CHART-j4iGqpZB2a
+    id: ROW-h9aeJrMCwG
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-LqeL6RPXb1
+    - TAB-116Bd8ho89
+    type: ROW
+  ROW-uErLAyY4YU:
+    children:
+    - CHART-cn1nHYMUJs
+    - CHART-5-4UJ0RIQG
+    id: ROW-uErLAyY4YU
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - TABS-LqeL6RPXb1
+    - TAB-116Bd8ho89
+    type: ROW
+  TAB-116Bd8ho89:
+    children:
+    - ROW-h9aeJrMCwG
+    - HEADER-REiQ2OMqE0
+    - ROW-uErLAyY4YU
+    - ROW-W99NbgJpu
+    id: TAB-116Bd8ho89
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Anti-Money Laundering by Clients
+    parents:
+    - ROOT_ID
+    - TABS-LqeL6RPXb1
+    type: TAB
+  TAB-7GH6sd_FE:
+    children:
+    - ROW-bX0EUchveD
+    - ROW-edZBLwLBPu
+    id: TAB-7GH6sd_FE
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Clients with a Failed AML Status
+    parents:
+    - ROOT_ID
+    - TABS-LqeL6RPXb1
+    type: TAB
+  TAB-pXVXyz9NF:
+    children:
+    - ROW-YoBNu5RBGe
+    - ROW-FfmW5pmtlm
+    id: TAB-pXVXyz9NF
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Trades from High Risk Clients
+    parents:
+    - ROOT_ID
+    - TABS-LqeL6RPXb1
+    type: TAB
+  TABS-LqeL6RPXb1:
+    children:
+    - TAB-116Bd8ho89
+    - TAB-pXVXyz9NF
+    - TAB-7GH6sd_FE
+    id: TABS-LqeL6RPXb1
+    meta: {}
+    parents:
+    - ROOT_ID
+    type: TABS
+metadata:
+  show_native_filters: true
+  color_scheme: ''
+  refresh_frequency: 0
+  expanded_slices: {}
+  label_colors: {}
+  timed_refresh_immune_slices: []
+  default_filters: '{}'
+  chart_configuration: {}
+  filter_scopes:
+    '363':
+      bpo_identifier:
+        scope:
+        - ROOT_ID
+        immune: []
+      ein:
+        scope:
+        - ROOT_ID
+        immune: []
+      emc_currency:
+        scope:
+        - ROOT_ID
+        immune: []
+    '392':
+      emc_currency:
+        scope:
+        - ROOT_ID
+        immune: []
+version: 1.0.0

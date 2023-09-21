@@ -1,0 +1,72 @@
+slice_name: SI - Notifiable Deals
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: 'Yes'
+    expressionType: SIMPLE
+    filterOptionName: filter_pk27ux9tye_pdmxxfxuhnc
+    isExtra: false
+    isNew: false
+    operator: ==
+    sqlExpression: null
+    subject: CURRENT DAY FLAG
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_eodk2v810n_jap6t55orx
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: RTRIM(transaction_type_desc) <> 'Stock Transfer In'
+    subject: null
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_rrnra9knaxj_k5tcpt4t4iq
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: cancelled_flag <> 'Y'
+    subject: null
+  all_columns:
+  - event_id
+  - transaction_type_desc
+  - Est. Actual Cash
+  color_pn: false
+  datasource: 51__table
+  extra_form_data: {}
+  groupby: []
+  metrics:
+  - count
+  order_by_cols:
+  - '["time_of_deal", false]'
+  order_desc: true
+  page_length: 0
+  percent_metrics: []
+  query_mode: raw
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: false
+  slice_id: 161
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+query_context: '{"datasource": {"id": 51, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "filters": [{"col": "CURRENT DAY FLAG", "op": "==",
+  "val": "Yes"}], "extras": {"time_grain_sqla": "P1D", "having": "", "having_druid":
+  [], "where": "(RTRIM(transaction_type_desc) <> ''Stock Transfer In'') AND (cancelled_flag
+  <> ''Y'')"}, "applied_time_extras": {}, "columns": ["event_id", "transaction_type_desc",
+  "Est. Actual Cash"], "orderby": [["time_of_deal", false]], "annotation_layers":
+  [], "row_limit": 10000, "timeseries_limit": 0, "order_desc": true, "url_params":
+  {}, "custom_params": {}, "custom_form_data": {}, "post_processing": []}], "result_format":
+  "json", "result_type": "full"}'
+cache_timeout: null
+uuid: 6e694810-0640-c3c1-46d9-200f52f4d9ef
+version: 1.0.0
+dataset_uuid: 47f9e1f7-837a-05ee-d094-bf9eb1a8be98

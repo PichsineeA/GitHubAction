@@ -1,0 +1,45 @@
+slice_name: SI0 - Service Areas
+description: null
+certified_by: null
+certification_details: null
+viz_type: pie
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_qhhbghcdftr_f9hlh60unm8
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: unitcd like 'METRO%'
+    subject: null
+  color_scheme: supersetColors
+  datasource: 7__table
+  donut: true
+  granularity_sqla: crdate
+  groupby:
+  - processing_stage
+  innerRadius: 50
+  label_line: true
+  label_type: key_value
+  labels_outside: true
+  legendOrientation: top
+  legendType: scroll
+  metric: count
+  number_format: SMART_NUMBER
+  outerRadius: 65
+  row_limit: 100
+  show_labels: true
+  show_legend: false
+  slice_id: 31
+  time_range: No filter
+  url_params: {}
+  viz_type: pie
+query_context: '{"datasource":{"id":7,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"crdate","filters":[],"extras":{"having":"","having_druid":[],"where":"(unitcd
+  like ''METRO%'')"},"applied_time_extras":{},"columns":["processing_stage"],"metrics":["count"],"annotation_layers":[],"row_limit":100,"timeseries_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 2b04b36e-97eb-95dc-18fa-ec93d6a9cf57
+version: 1.0.0
+dataset_uuid: fa1cab1e-d9ee-f116-392a-98ac627773a0

@@ -1,0 +1,54 @@
+slice_name: POC - Parent Entity Filter
+description: null
+certified_by: null
+certification_details: null
+viz_type: filter_box
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SIMPLE
+    filterOptionName: filter_idnuzamt2t_a5ldc12mqgr
+    isExtra: false
+    isNew: false
+    operator: IS NOT NULL
+    operatorId: IS_NOT_NULL
+    sqlExpression: null
+    subject: Parent Entity
+  - clause: WHERE
+    comparator: null
+    expressionType: SIMPLE
+    filterOptionName: filter_q9asbywmwx_rs1x2u31m0t
+    isExtra: false
+    isNew: false
+    operator: IS NOT NULL
+    operatorId: IS_NOT_NULL
+    sqlExpression: null
+    subject: Client
+  datasource: 2000000004__table
+  date_filter: false
+  extra_form_data: {}
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: Parent Entity
+    key: iNP-XZaoz
+    multiple: false
+    searchAllOptions: false
+  granularity_sqla: last_update_dattim
+  instant_filtering: true
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+query_context: '{"datasource": {"id": 2000000004, "type": "table"}, "force": false,
+  "queries": [{"time_range": "No filter", "granularity": "last_update_dattim", "filters":
+  [{"col": "Parent Entity", "op": "IS NOT NULL"}, {"col": "Client", "op": "IS NOT
+  NULL"}], "extras": {"time_grain_sqla": "P1D", "having": "", "having_druid": [],
+  "where": ""}, "applied_time_extras": {}, "columns": [], "metrics": [], "annotation_layers":
+  [], "timeseries_limit": 0, "order_desc": true, "url_params": {}, "custom_params":
+  {}, "custom_form_data": {}}], "result_format": "json", "result_type": "full"}'
+cache_timeout: null
+uuid: 1f1edd25-2695-4402-8ba8-18a5979ab344
+version: 1.0.0
+dataset_uuid: a2979166-4c9b-409b-93d1-b92b6a3d39ad

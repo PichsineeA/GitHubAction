@@ -1,0 +1,32 @@
+slice_name: FMR - CP Filter
+description: null
+certified_by: null
+certification_details: null
+viz_type: filter_box
+params:
+  adhoc_filters: []
+  datasource: 47__table
+  date_filter: false
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: ein
+    key: 68Y3KWrsi
+    label: Environment Instance Number
+    multiple: true
+    searchAllOptions: false
+  granularity_sqla: valuation_date
+  show_druid_time_granularity: false
+  show_druid_time_origin: false
+  show_sqla_time_column: false
+  show_sqla_time_granularity: false
+  slice_id: 145
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+query_context: null
+cache_timeout: null
+uuid: 88d4ce2e-696d-48cf-9e52-8fe81e19e1d1
+version: 1.0.0
+dataset_uuid: 9a8d10d9-ddab-ce94-c003-5f6f275d928f

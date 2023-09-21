@@ -1,0 +1,74 @@
+slice_name: SI5 - Complaint Resolved Details
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_qsuht284ghc_ypt96heva28
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: upper(complaint_status) NOT IN ('VOID')
+    subject: null
+  - clause: WHERE
+    comparator: null
+    expressionType: SIMPLE
+    filterOptionName: filter_qjtouza8k6_gup9iieks2
+    isExtra: false
+    isNew: false
+    operator: IS NOT NULL
+    operatorId: IS_NOT_NULL
+    sqlExpression: null
+    subject: resolved_date
+  all_columns:
+  - incident_ref
+  - client_ref
+  - client_name
+  - complaint_ref
+  - incident_category_group
+  - incident_root_cause_category
+  - incident_root_cause
+  - resolved_date
+  color_pn: false
+  column_config:
+    resolved_date:
+      d3TimeFormat: '%Y-%m-%d'
+  conditional_formatting: []
+  datasource: 98__table
+  extra_form_data: {}
+  granularity_sqla: received_date
+  groupby: []
+  include_search: true
+  order_by_cols:
+  - '["resolved_date", true]'
+  order_desc: true
+  page_length: 20
+  percent_metrics: []
+  query_mode: raw
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: false
+  slice_id: 559
+  table_timestamp_format: smart_date
+  time_grain_sqla: null
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+query_context: '{"datasource": {"id": 98, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "received_date", "filters": [{"col":
+  "resolved_date", "op": "IS NOT NULL"}], "extras": {"time_grain_sqla": null, "having":
+  "", "having_druid": [], "where": "(upper(complaint_status) NOT IN (''VOID''))"},
+  "applied_time_extras": {}, "columns": ["incident_ref", "client_ref", "client_name",
+  "complaint_ref", "incident_category_group", "incident_root_cause_category", "incident_root_cause",
+  "resolved_date"], "orderby": [["resolved_date", true]], "annotation_layers": [],
+  "row_limit": 10000, "timeseries_limit": 0, "order_desc": true, "url_params": {},
+  "custom_params": {}, "custom_form_data": {}, "post_processing": []}], "result_format":
+  "json", "result_type": "full"}'
+cache_timeout: null
+uuid: e86e0f59-cb1e-476a-b401-f8ed4adb7f37
+version: 1.0.0
+dataset_uuid: bdc5b0a1-522c-4e73-9560-249150a7e262

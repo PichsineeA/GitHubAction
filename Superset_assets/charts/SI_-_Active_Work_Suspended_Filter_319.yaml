@@ -1,0 +1,45 @@
+slice_name: SI - Active Work Suspended Filter
+description: Version 1.1 (02-08-2021) CDIG001 Confidential
+certified_by: null
+certification_details: null
+viz_type: filter_box
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_ajm350rt8lo_6ubw5uomb4l
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: processing_stage <> 'End'
+    subject: null
+  datasource: 50__table
+  date_filter: false
+  extra_form_data: {}
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: suspend_flag
+    key: 6Nk6Dl1nm
+    label: Suspended
+    multiple: true
+    searchAllOptions: false
+  granularity_sqla: last_update_dattim
+  instant_filtering: true
+  slice_id: 319
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+query_context: '{"datasource": {"id": 50, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "last_update_dattim", "filters": [],
+  "extras": {"time_grain_sqla": "P1D", "having": "", "having_druid": [], "where":
+  "(processing_stage <> ''End'')"}, "applied_time_extras": {}, "columns": [], "metrics":
+  [], "annotation_layers": [], "timeseries_limit": 0, "order_desc": true, "url_params":
+  {}, "custom_params": {}, "custom_form_data": {}}], "result_format": "json", "result_type":
+  "full"}'
+cache_timeout: null
+uuid: 75ef7d9a-9cd7-43ae-82e0-ffc010cfc50a
+version: 1.0.0
+dataset_uuid: 40f6d689-5a50-6435-4ddd-353a5940ae24

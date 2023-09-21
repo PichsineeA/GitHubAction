@@ -1,0 +1,56 @@
+slice_name: SI5 - Complaints by Category
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_6j2t3mi2s8u_loa94ignh9
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: complaint_status NOT IN ('Void')
+    subject: null
+  all_columns: []
+  color_pn: false
+  column_config:
+    count:
+      d3NumberFormat: ',d'
+      d3SmallNumberFormat: ',d'
+  conditional_formatting: []
+  datasource: 98__table
+  extra_form_data: {}
+  granularity_sqla: received_date
+  groupby:
+  - incident_category_group
+  include_search: false
+  metrics:
+  - count
+  order_by_cols: []
+  order_desc: true
+  percent_metrics: []
+  query_mode: aggregate
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: false
+  slice_id: 536
+  table_timestamp_format: smart_date
+  time_grain_sqla: null
+  time_range: 'DATEADD(DATETIME("today"), -4, week) : today'
+  url_params: {}
+  viz_type: table
+query_context: '{"datasource": {"id": 98, "type": "table"}, "force": false, "queries":
+  [{"time_range": "DATEADD(DATETIME(\"today\"), -4, week) : today", "granularity":
+  "received_date", "filters": [], "extras": {"time_grain_sqla": null, "having": "",
+  "having_druid": [], "where": "(complaint_status NOT IN (''Void''))"}, "applied_time_extras":
+  {}, "columns": ["incident_category_group"], "metrics": ["count"], "orderby": [["count",
+  false]], "annotation_layers": [], "row_limit": 10000, "timeseries_limit": 0, "order_desc":
+  true, "url_params": {}, "custom_params": {}, "custom_form_data": {}, "post_processing":
+  []}], "result_format": "json", "result_type": "full"}'
+cache_timeout: null
+uuid: 5cfb91f7-5607-4387-b660-7e72b777cbff
+version: 1.0.0
+dataset_uuid: bdc5b0a1-522c-4e73-9560-249150a7e262

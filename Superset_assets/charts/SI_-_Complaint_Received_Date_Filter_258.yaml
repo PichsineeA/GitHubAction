@@ -1,0 +1,21 @@
+slice_name: SI - Complaint Received Date Filter
+description: Version 1.0 (23-08-2021) CDIG001 Confidential
+certified_by: null
+certification_details: null
+viz_type: filter_box
+params:
+  adhoc_filters: []
+  datasource: 49__table
+  date_filter: true
+  granularity_sqla: received_date
+  instant_filtering: true
+  queryFields: {}
+  slice_id: 258
+  time_range: Last 12 months
+  url_params: {}
+  viz_type: filter_box
+query_context: null
+cache_timeout: null
+uuid: 6a426c7a-f7de-fcc7-6645-471c656bb1c2
+version: 1.0.0
+dataset_uuid: e5094f0c-5391-2731-3de4-8bfb236135c9
