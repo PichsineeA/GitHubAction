@@ -32,6 +32,4 @@ then
 rm -r Superset_assets
 #rename
 find . -depth -type d -name 'assets_export*' -execdir mv {} Superset_assets \;
-else
-echo "Some failure."
 fi ;
