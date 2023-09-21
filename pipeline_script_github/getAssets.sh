@@ -21,9 +21,22 @@ curl -X 'GET' \
     -H "Authorization: Bearer $bearer" \
     -H "Cookie: $cookie" >pipeline_script_github/backup/${ENV_NAME}_get_assets.zip
 
-#remove old version assets
-rm -r Superset_assets
+# #remove old version assets
+# rm -r Superset_assets
 
-# unzip file
-unzip "pipeline_script_github/backup/${ENV_NAME}_get_assets.zip"
-find . -depth -type d -name 'assets_export*' -execdir mv {} Superset_assets \;
+# # unzip file
+# unzip "pipeline_script_github/backup/${ENV_NAME}_get_assets.zip"
+# find . -depth -type d -name 'assets_export*' -execdir mv {} Superset_assets \;
+# if [ find -type f -name 'assets_export*' ]
+# then
+#     #remove old version assets
+#     rm -r Superset_assets
+#     # unzip file
+#     unzip "pipeline_script_github/backup/${ENV_NAME}_get_assets.zip"
+#     #rename file
+#     find . -depth -type d -name 'assets_export*' -execdir mv {} Superset_assets \;
+# else
+#     echo No
+# fi
+a=$(find -type f -name 'assets_export*')
+echo ${a}
