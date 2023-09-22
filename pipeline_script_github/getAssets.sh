@@ -29,4 +29,6 @@ then
 rm -r Superset_assets
 #rename
 find . -depth -type d -name 'assets_export*' -execdir mv {} Superset_assets \;
+else
+exit 1
 fi ;
