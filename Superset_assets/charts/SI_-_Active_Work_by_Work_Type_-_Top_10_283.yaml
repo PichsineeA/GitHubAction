@@ -1,0 +1,40 @@
+slice_name: SI - Active Work by Work Type - Top 10
+description: null
+certified_by: null
+certification_details: null
+viz_type: dist_bar
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: END
+    expressionType: SIMPLE
+    filterOptionName: filter_zi644ll6faj_c9dhg8gmcb5
+    isExtra: false
+    isNew: false
+    operator: '!='
+    sqlExpression: null
+    subject: queuecd
+  bottom_margin: auto
+  color_scheme: supersetColors
+  columns: []
+  datasource: 50__table
+  granularity_sqla: last_update_dattim
+  groupby:
+  - wrktype
+  label_colors: {}
+  metrics:
+  - count
+  row_limit: 10
+  show_legend: false
+  time_range: No filter
+  url_params: {}
+  viz_type: dist_bar
+  x_ticks_layout: auto
+  y_axis_format: SMART_NUMBER
+  y_axis_label: Number of Work Items
+query_context: '{"datasource":{"id":50,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"last_update_dattim","filters":[{"col":"queuecd","op":"!=","val":"END"}],"extras":{"having":"","having_druid":[],"where":""},"applied_time_extras":{},"columns":["wrktype"],"metrics":["count"],"annotation_layers":[],"row_limit":10,"timeseries_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 15ec2b25-fca8-424a-8604-4c1db30f7397
+version: 1.0.0
+dataset_uuid: 40f6d689-5a50-6435-4ddd-353a5940ae24

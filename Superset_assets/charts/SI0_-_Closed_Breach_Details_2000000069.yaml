@@ -1,0 +1,43 @@
+slice_name: SI0 - Closed Breach Details
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters: []
+  all_columns:
+  - age
+  - breach_ref
+  - client_id
+  - client_name
+  - original_closed_date
+  - breach_control_ref
+  color_pn: true
+  datasource: 17__table
+  granularity_sqla: original_closed_date
+  groupby: []
+  include_search: true
+  metrics:
+  - count
+  order_by_cols:
+  - '["age", false]'
+  order_desc: true
+  page_length: 20
+  percent_metrics: []
+  queryFields:
+    groupby: groupby
+    metrics: metrics
+  query_mode: raw
+  row_limit: 10000
+  show_cell_bars: true
+  slice_id: 80
+  table_timestamp_format: '%d-%b-%Y'
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+query_context: null
+cache_timeout: null
+uuid: f4137a03-02b3-4d7a-825d-e1b8b8078763
+version: 1.0.0
+dataset_uuid: c46c70cb-d57f-47ae-bf11-4fe8b3d9aa99

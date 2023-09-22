@@ -1,0 +1,46 @@
+slice_name: SI - Active Work Age in Business Days Filter
+description: Version 1.1 (02-08-2021) CDIG001 Confidential
+certified_by: null
+certification_details: null
+viz_type: filter_box
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_vlhc9u09v8_raqql1khsli
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: processing_stage <> 'End'
+    subject: null
+  datasource: 50__table
+  date_filter: false
+  extra_form_data: {}
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: age_bus_days_band
+    key: E9RnI4eoz
+    label: Age in Business Days
+    metric: Age Business day filter
+    multiple: true
+    searchAllOptions: false
+  granularity_sqla: last_update_dattim
+  instant_filtering: true
+  slice_id: 318
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+query_context: '{"datasource": {"id": 50, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "last_update_dattim", "filters": [],
+  "extras": {"time_grain_sqla": "P1D", "having": "", "having_druid": [], "where":
+  "(processing_stage <> ''End'')"}, "applied_time_extras": {}, "columns": [], "metrics":
+  [], "annotation_layers": [], "timeseries_limit": 0, "order_desc": true, "url_params":
+  {}, "custom_params": {}, "custom_form_data": {}}], "result_format": "json", "result_type":
+  "full"}'
+cache_timeout: null
+uuid: 5416fa87-c90c-4db3-8367-fbcbbc40b5d6
+version: 1.0.0
+dataset_uuid: 40f6d689-5a50-6435-4ddd-353a5940ae24

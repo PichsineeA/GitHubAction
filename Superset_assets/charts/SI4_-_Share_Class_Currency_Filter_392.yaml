@@ -1,0 +1,34 @@
+slice_name: SI4 - Share Class Currency Filter
+description: Version 1.0 (21-04-2022) CDIG029 Confidential
+certified_by: null
+certification_details: null
+viz_type: filter_box
+params:
+  adhoc_filters: []
+  datasource: 88__table
+  date_filter: false
+  extra_form_data: {}
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: emc_currency
+    key: T2jfPYgUX
+    label: Share Class Currency
+    multiple: true
+    searchAllOptions: false
+  granularity_sqla: deal_date
+  instant_filtering: true
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+query_context: '{"datasource": {"id": 88, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "deal_date", "filters": [], "extras":
+  {"time_grain_sqla": "P1D", "having": "", "having_druid": [], "where": ""}, "applied_time_extras":
+  {}, "columns": [], "metrics": [], "annotation_layers": [], "timeseries_limit": 0,
+  "order_desc": true, "url_params": {}, "custom_params": {}, "custom_form_data": {}}],
+  "result_format": "json", "result_type": "full"}'
+cache_timeout: null
+uuid: c7d71035-2a21-42a0-8e36-e2523bd4d4d0
+version: 1.0.0
+dataset_uuid: 81bf2829-3db1-4e8d-a82f-c0aea2afff8a

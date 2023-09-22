@@ -1,0 +1,69 @@
+slice_name: SI0 - Non-END Manual Dealing Work Items
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_jgdqei9u0ob_gu30gxe2uws
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: unitcd in ('METROGBP','METROEUR','METROUSD')
+    subject: null
+  - clause: WHERE
+    comparator: 'Yes'
+    expressionType: SIMPLE
+    filterOptionName: filter_gb0f7x1lczb_48pkr1nsu0u
+    isExtra: false
+    isNew: false
+    operator: ==
+    sqlExpression: null
+    subject: manual_deal_flag
+  all_columns:
+  - crdattim
+  - unitcd
+  - wrktype
+  - processing_stage
+  - suspend_flag
+  - age_bus_days
+  - uh_id
+  - agent_id
+  color_pn: true
+  datasource: 7__table
+  extra_form_data: {}
+  granularity_sqla: crdate
+  groupby: []
+  include_search: true
+  metrics:
+  - count
+  order_by_cols: []
+  order_desc: true
+  page_length: 10
+  percent_metrics: []
+  query_mode: raw
+  row_limit: 10000
+  server_page_length: 10
+  show_cell_bars: false
+  slice_id: 28
+  table_timestamp_format: smart_date
+  time_grain_sqla: null
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+query_context: '{"datasource": {"id": 7, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "crdate", "filters": [{"col": "manual_deal_flag",
+  "op": "==", "val": "Yes"}], "extras": {"time_grain_sqla": null, "having": "", "having_druid":
+  [], "where": "(unitcd in (''METROGBP'',''METROEUR'',''METROUSD''))"}, "applied_time_extras":
+  {}, "columns": ["crdattim", "unitcd", "wrktype", "processing_stage", "suspend_flag",
+  "age_bus_days", "uh_id", "agent_id"], "orderby": [], "annotation_layers": [], "row_limit":
+  10000, "timeseries_limit": 0, "order_desc": true, "url_params": {}, "custom_params":
+  {}, "custom_form_data": {}, "post_processing": []}], "result_format": "json", "result_type":
+  "full"}'
+cache_timeout: null
+uuid: 85ca2d46-9a00-e0e4-11a8-c20558aae79b
+version: 1.0.0
+dataset_uuid: fa1cab1e-d9ee-f116-392a-98ac627773a0

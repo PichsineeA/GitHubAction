@@ -1,0 +1,23 @@
+slice_name: SI - Largest Positive Fund Movement by %
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  adhoc_filters: []
+  datasource: 58__table
+  extra_form_data: {}
+  header_font_size: 0.4
+  metric: Largest Positive Movement Percent
+  slice_id: 235
+  subheader_font_size: 0.15
+  time_format: '%d-%m-%Y %H:%M:%S'
+  time_range: Last week
+  url_params: {}
+  viz_type: big_number_total
+  y_axis_format: .2%
+query_context: null
+cache_timeout: null
+uuid: bb8fdac5-0c21-35a4-d45d-618bc33e8208
+version: 1.0.0
+dataset_uuid: c28fef52-923b-a734-0b83-4cec471c48cc

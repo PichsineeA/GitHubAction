@@ -1,0 +1,47 @@
+slice_name: SI5 - Manual Deals [copy]
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_tpmczlauh7_pgoxzswpag
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: UPPER(queuecd) <> 'END'
+    subject: null
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_8xcxpu98cfj_2622syavu1l
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: UPPER(wrktype) = 'FXTRADE'
+    subject: null
+  datasource: 96__table
+  extra_form_data: {}
+  granularity_sqla: last_update_dattim
+  header_font_size: 0.4
+  metric: count
+  slice_id: 2000000074
+  subheader_font_size: 0.15
+  time_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  viz_type: big_number_total
+  y_axis_format: SMART_NUMBER
+query_context: '{"datasource":{"id":96,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"last_update_dattim","filters":[],"extras":{"time_grain_sqla":"P1D","having":"","having_druid":[],"where":"(UPPER(queuecd)
+  <> ''END'') AND (UPPER(wrktype) = ''FXTRADE'')"},"applied_time_extras":{},"columns":[],"metrics":["count"],"annotation_layers":[],"timeseries_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"96__table","viz_type":"big_number_total","slice_id":2000000074,"granularity_sqla":"last_update_dattim","time_grain_sqla":"P1D","time_range":"No
+  filter","metric":"count","adhoc_filters":[{"clause":"WHERE","comparator":null,"expressionType":"SQL","filterOptionName":"filter_tpmczlauh7_pgoxzswpag","isExtra":false,"isNew":false,"operator":null,"sqlExpression":"UPPER(queuecd)
+  <> ''END''","subject":null},{"clause":"WHERE","comparator":null,"expressionType":"SQL","filterOptionName":"filter_8xcxpu98cfj_2622syavu1l","isExtra":false,"isNew":false,"operator":null,"sqlExpression":"UPPER(wrktype)
+  = ''FXTRADE''","subject":null}],"header_font_size":0.4,"subheader_font_size":0.15,"y_axis_format":"SMART_NUMBER","time_format":"smart_date","extra_form_data":{},"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 25fa870f-c454-40c9-8f85-e9421e70a0f8
+version: 1.0.0
+dataset_uuid: 2c52393b-92f3-4a51-9ff7-3d0349ae0245

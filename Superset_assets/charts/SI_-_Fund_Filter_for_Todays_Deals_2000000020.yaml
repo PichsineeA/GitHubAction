@@ -1,0 +1,46 @@
+slice_name: SI - Fund Filter for Today's Deals
+description: null
+certified_by: null
+certification_details: null
+viz_type: filter_box
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: 'Yes'
+    expressionType: SIMPLE
+    filterOptionName: filter_8un2yicl2af_f888e3jitnm
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: CURRENT DAY FLAG
+  datasource: 57__table
+  date_filter: false
+  extra_form_data: {}
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: fund_name
+    key: Rd-KYBFEm
+    label: FUND
+    multiple: true
+    searchAllOptions: false
+  granularity_sqla: bookvp_date
+  instant_filtering: true
+  slice_id: 2000000020
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+query_context: '{"datasource": {"id": 57, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "bookvp_date", "filters": [{"col": "CURRENT
+  DAY FLAG", "op": "==", "val": "Yes"}], "extras": {"time_grain_sqla": "P1D", "having":
+  "", "having_druid": [], "where": ""}, "applied_time_extras": {}, "columns": [],
+  "metrics": [], "annotation_layers": [], "timeseries_limit": 0, "order_desc": true,
+  "url_params": {}, "custom_params": {}, "custom_form_data": {}}], "result_format":
+  "json", "result_type": "full"}'
+cache_timeout: null
+uuid: f64988d6-70b1-4abe-9632-0ae139da8747
+version: 1.0.0
+dataset_uuid: 425aaa80-69f3-bb87-0d4c-9b280593557b

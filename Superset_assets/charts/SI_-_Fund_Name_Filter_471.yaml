@@ -1,0 +1,58 @@
+slice_name: SI - Fund Name Filter
+description: null
+certified_by: null
+certification_details: null
+viz_type: filter_box
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_pykaihaspap_pz2xxoh60bf
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: RTRIM(transaction_type_desc) <> 'Stock Transfer In'
+    subject: null
+  - clause: WHERE
+    comparator: 'Yes'
+    expressionType: SIMPLE
+    filterOptionName: filter_79jodjcvtm6_u7mhwmc4pqc
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: CURRENT DAY FLAG
+  - clause: WHERE
+    comparator: Y
+    expressionType: SIMPLE
+    filterOptionName: filter_cfbo0qrgk9_yi54qy3wpam
+    isExtra: false
+    isNew: false
+    operator: '!='
+    operatorId: NOT_EQUALS
+    sqlExpression: null
+    subject: cancelled_flag
+  datasource: 51__table
+  date_filter: false
+  extra_form_data: {}
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: fund_name
+    key: Kt9NlHhSg
+    label: Fund Name
+    multiple: true
+    searchAllOptions: false
+  instant_filtering: true
+  slice_id: 471
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+query_context: null
+cache_timeout: null
+uuid: 57556844-59ca-485a-8423-0ae83b0ed0ae
+version: 1.0.0
+dataset_uuid: 47f9e1f7-837a-05ee-d094-bf9eb1a8be98

@@ -1,0 +1,21 @@
+slice_name: SI0 - Largest Negative Fund Movement by Value
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  adhoc_filters: []
+  datasource: 24__table
+  header_font_size: 0.4
+  metric: Largest Negative Movement Value
+  slice_id: 67
+  subheader_font_size: 0.15
+  time_range: Last week
+  url_params: {}
+  viz_type: big_number_total
+  y_axis_format: .3s
+query_context: null
+cache_timeout: null
+uuid: c6d09425-1f76-b519-36bd-7e56bbb03218
+version: 1.0.0
+dataset_uuid: 20e76911-9eef-cdc5-25b3-223b1a47ac35

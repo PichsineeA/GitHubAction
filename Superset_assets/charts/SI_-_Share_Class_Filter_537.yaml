@@ -1,0 +1,34 @@
+slice_name: SI - Share Class Filter
+description: null
+certified_by: null
+certification_details: null
+viz_type: filter_box
+params:
+  adhoc_filters: []
+  datasource: 58__table
+  date_filter: false
+  extra_form_data: {}
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: share_class_name
+    key: cnEjbGHtJ
+    label: Share Class
+    multiple: true
+    searchAllOptions: false
+  instant_filtering: true
+  slice_id: 537
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+query_context: '{"datasource": {"id": 58, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "filters": [], "extras": {"time_grain_sqla": "P1D",
+  "having": "", "having_druid": [], "where": ""}, "applied_time_extras": {}, "columns":
+  [], "metrics": [], "annotation_layers": [], "timeseries_limit": 0, "order_desc":
+  true, "url_params": {}, "custom_params": {}, "custom_form_data": {}}], "result_format":
+  "json", "result_type": "full"}'
+cache_timeout: null
+uuid: fef28e79-506a-4fef-8a59-7a84c02ab23f
+version: 1.0.0
+dataset_uuid: c28fef52-923b-a734-0b83-4cec471c48cc

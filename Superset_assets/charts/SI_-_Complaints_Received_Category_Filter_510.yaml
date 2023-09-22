@@ -1,0 +1,48 @@
+slice_name: SI - Complaints Received Category Filter
+description: null
+certified_by: null
+certification_details: null
+viz_type: filter_box
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_h485r4d2ats_a539ou9i8pt
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: received_date IS NOT NULL
+    subject: null
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_6sv2iq936xy_pxvbntlpgdr
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: complaint_status NOT IN ('Void')
+    subject: null
+  datasource: 49__table
+  date_filter: false
+  extra_form_data: {}
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: incident_category_group
+    key: 4LGkZZMme
+    label: COMPLAINT CATEGORY GROUP
+    multiple: true
+    searchAllOptions: false
+  granularity_sqla: received_date
+  instant_filtering: true
+  slice_id: 510
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+query_context: null
+cache_timeout: null
+uuid: 9050b1e6-dafe-46b8-8d8f-a75693a1b1c9
+version: 1.0.0
+dataset_uuid: e5094f0c-5391-2731-3de4-8bfb236135c9

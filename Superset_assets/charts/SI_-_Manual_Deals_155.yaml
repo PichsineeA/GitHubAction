@@ -1,0 +1,53 @@
+slice_name: SI - Manual Deals
+description: null
+certified_by: null
+certification_details: null
+viz_type: pie
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: END
+    expressionType: SIMPLE
+    filterOptionName: filter_wu56acqiry_iujuzvnlpk
+    isExtra: false
+    isNew: false
+    operator: '!='
+    sqlExpression: null
+    subject: queuecd
+  - clause: WHERE
+    comparator: 'Yes'
+    expressionType: SIMPLE
+    filterOptionName: filter_1qzhnj2jsud_b6s476c96jm
+    isExtra: false
+    isNew: false
+    operator: ==
+    sqlExpression: null
+    subject: manual_deal_flag
+  color_scheme: supersetColors
+  datasource: 50__table
+  donut: true
+  granularity_sqla: last_update_dattim
+  groupby:
+  - processing_stage
+  innerRadius: 50
+  label_line: true
+  label_type: key_value
+  labels_outside: true
+  legendOrientation: top
+  legendType: scroll
+  metric: count
+  number_format: SMART_NUMBER
+  outerRadius: 65
+  row_limit: 100
+  show_labels: true
+  show_legend: false
+  slice_id: 155
+  time_range: No filter
+  url_params: {}
+  viz_type: pie
+query_context: '{"datasource":{"id":50,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"last_update_dattim","filters":[{"col":"queuecd","op":"!=","val":"END"},{"col":"manual_deal_flag","op":"==","val":"Yes"}],"extras":{"having":"","having_druid":[],"where":""},"applied_time_extras":{},"columns":["processing_stage"],"metrics":["count"],"annotation_layers":[],"row_limit":100,"timeseries_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: d893dd36-ef39-e1d8-12d8-03d5eea937fc
+version: 1.0.0
+dataset_uuid: 40f6d689-5a50-6435-4ddd-353a5940ae24

@@ -1,0 +1,47 @@
+slice_name: SI0 - Outstanding Breach Details
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters: []
+  align_pn: false
+  all_columns:
+  - Age
+  - breach_ref
+  - client_id
+  - client_name
+  - identified_date
+  - Part_Outstanding
+  - breach_control_ref
+  color_pn: true
+  datasource: 20__table
+  granularity_sqla: identified_date
+  groupby: []
+  include_search: true
+  metrics:
+  - count
+  order_by_cols:
+  - '["Demo_age", false]'
+  - '["breach_control_ref", true]'
+  order_desc: true
+  page_length: 20
+  percent_metrics: []
+  queryFields:
+    groupby: groupby
+    metrics: metrics
+  query_mode: raw
+  row_limit: 10000
+  show_cell_bars: true
+  slice_id: 74
+  table_filter: false
+  table_timestamp_format: '%d-%b-%Y'
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+query_context: null
+cache_timeout: null
+uuid: bb07e955-5d65-4f93-abd9-5656253dc031
+version: 1.0.0
+dataset_uuid: e86bd959-0878-588a-29d9-31157bd1370b

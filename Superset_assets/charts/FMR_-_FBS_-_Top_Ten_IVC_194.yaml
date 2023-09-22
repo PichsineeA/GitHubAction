@@ -1,0 +1,78 @@
+slice_name: FMR - FBS - Top Ten IVC
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters: []
+  all_columns:
+  - ivc_long_name
+  - adaptive_total_value
+  color_pn: false
+  datasource: 45__table
+  granularity_sqla: valuation_date
+  groupby:
+  - ivc_long_name
+  - ccy_id
+  metrics:
+  - aggregate: SUM
+    column:
+      column_name: total_value
+      description: Total units x Price
+      expression: null
+      filterable: true
+      groupby: true
+      id: 623
+      is_dttm: false
+      optionName: _col_total_value
+      python_date_format: null
+      type: NUMERIC(20, 3)
+      verbose_name: Total Value
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    isNew: false
+    label: Total Value
+    optionName: metric_b45ylflwtqw_cfwkow3lewb
+    sqlExpression: null
+  order_by_cols:
+  - '["total_value", false]'
+  order_desc: true
+  page_length: 0
+  percent_metrics: null
+  queryFields:
+    groupby: groupby
+    metrics: metrics
+  query_mode: raw
+  row_limit: 10
+  show_cell_bars: false
+  slice_id: 194
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  timeseries_limit_metric:
+    aggregate: SUM
+    column:
+      column_name: total_value
+      description: Total units x Price
+      expression: null
+      filterable: true
+      groupby: true
+      id: 623
+      is_dttm: false
+      optionName: _col_total_value
+      python_date_format: null
+      type: NUMERIC(20, 3)
+      verbose_name: Total Value
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    isNew: false
+    label: SUM(total_value)
+    optionName: metric_14qil6ffvmq_fy5iopwqk9l
+    sqlExpression: null
+  url_params: {}
+  viz_type: table
+query_context: null
+cache_timeout: null
+uuid: 5c0ccb64-e8f8-144c-74c4-5b177ccc8528
+version: 1.0.0
+dataset_uuid: 684545bb-cddf-d2d0-9669-f67301bffd4e

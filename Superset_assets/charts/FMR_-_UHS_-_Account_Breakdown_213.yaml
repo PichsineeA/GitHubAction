@@ -1,0 +1,51 @@
+slice_name: FMR - UHS - Account Breakdown
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  adhoc_filters: []
+  all_columns: []
+  color_pn: true
+  datasource: 54__table
+  granularity_sqla: latest_valuation_date
+  groupby:
+  - act_description
+  - account_currency
+  - start_date
+  - primary_indicator
+  - ccy_id
+  metrics:
+  - aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: true
+    isNew: false
+    label: Total Value of Distribution Eligible Units
+    optionName: metric_vs5vtb8kpv_in6w05ah75s
+    sqlExpression: sum(g1_balance*latest_price_amount)
+  - aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: true
+    isNew: false
+    label: Total Value of ineligible Units
+    optionName: metric_4kj5lf1nnd3_bzytjtap3l
+    sqlExpression: sum(g2_balance*latest_price_amount)
+  order_by_cols: []
+  order_desc: true
+  percent_metrics: []
+  query_mode: aggregate
+  row_limit: null
+  show_cell_bars: false
+  slice_id: 213
+  table_timestamp_format: smart_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: table
+query_context: null
+cache_timeout: null
+uuid: 3105a0dd-b2bd-21cb-e420-935d56807df4
+version: 1.0.0
+dataset_uuid: 294bb475-bd97-fe6c-dec6-ec4cd42fc6fa

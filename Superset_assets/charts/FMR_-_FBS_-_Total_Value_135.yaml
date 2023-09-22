@@ -1,0 +1,31 @@
+slice_name: FMR - FBS - Total Value
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  adhoc_filters: []
+  datasource: 45__table
+  granularity_sqla: valuation_date
+  header_font_size: 0.4
+  metric:
+    aggregate: null
+    column: null
+    expressionType: SQL
+    hasCustomLabel: false
+    isNew: false
+    label: coalesce(SUM(total_value),0)
+    optionName: metric_8abhmim7hpk_p4o6cd7m48l
+    sqlExpression: coalesce(SUM(total_value),0)
+  slice_id: 135
+  subheader: Current Value
+  subheader_font_size: 0.15
+  time_range: No filter
+  url_params: {}
+  viz_type: big_number_total
+  y_axis_format: SMART_NUMBER
+query_context: null
+cache_timeout: null
+uuid: 43fda5c2-0aea-b699-9006-777b7b25e43d
+version: 1.0.0
+dataset_uuid: 684545bb-cddf-d2d0-9669-f67301bffd4e

@@ -1,0 +1,45 @@
+slice_name: SI5 - Active Work Work Type Filter
+description: null
+certified_by: null
+certification_details: null
+viz_type: filter_box
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    expressionType: SQL
+    filterOptionName: filter_es94fzff50w_6ta797evzqv
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: UPPER(processing_stage) <> 'END'
+    subject: null
+  datasource: 96__table
+  date_filter: false
+  extra_form_data: {}
+  filter_configs:
+  - asc: true
+    clearable: true
+    column: wrktype
+    key: ku7P2bEq9
+    label: WORK TYPE
+    multiple: true
+    searchAllOptions: false
+  granularity_sqla: last_update_dattim
+  instant_filtering: true
+  slice_id: 542
+  time_grain_sqla: P1D
+  time_range: No filter
+  url_params: {}
+  viz_type: filter_box
+query_context: '{"datasource": {"id": 96, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "last_update_dattim", "filters": [],
+  "extras": {"time_grain_sqla": "P1D", "having": "", "having_druid": [], "where":
+  "(UPPER(processing_stage) <> ''END'')"}, "applied_time_extras": {}, "columns": [],
+  "metrics": [], "annotation_layers": [], "timeseries_limit": 0, "order_desc": true,
+  "url_params": {}, "custom_params": {}, "custom_form_data": {}}], "result_format":
+  "json", "result_type": "full"}'
+cache_timeout: null
+uuid: fbb24e38-1464-44ca-85c9-134b175f1449
+version: 1.0.0
+dataset_uuid: 2c52393b-92f3-4a51-9ff7-3d0349ae0245
