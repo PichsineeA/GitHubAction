@@ -12,7 +12,7 @@ on:
 jobs:
 
   get_assets:
-    runs-on: [ LAPTOP-POEEE0VC ] #[ self-hosted ]
+    runs-on: [ self-hosted ] #[ self-hosted ]
     environment: ${{ inputs.environment }}
     
     steps:
